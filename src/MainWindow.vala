@@ -89,7 +89,7 @@ namespace Reminduck {
         }
 
         private void build_welcome() {
-            this.welcome_widget = new Granite. Widgets.Welcome(
+            this.welcome_widget = new Granite.Placeholder(
                 _("QUACK! I'm Reminduck"),
                 _("The duck that reminds you")
             );
@@ -105,7 +105,7 @@ namespace Reminduck {
                 }
             });
 
-            this.welcome_widget.append("document-new", _("New Reminder"), _("Create a new reminder for a set date and time"));
+            this.welcome_widget.add("document-new", _("New Reminder"), _("Create a new reminder for a set date and time"));
             if (ReminduckApp.reminders.size > 0) {
                 this.view_reminders_action_reference = this.welcome_widget.append("accessories-text-editor", _("View Reminders"), _("See reminders you've created"));
             }
