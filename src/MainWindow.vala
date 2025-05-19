@@ -27,7 +27,7 @@ namespace Reminduck {
 
         private GLib.Settings settings;
 
-        Granite.Widgets.Welcome welcome_widget = null;
+        Granite.Placeholder welcome_widget = null;
         int? view_reminders_action_reference = null;
 
         Widgets.Views.ReminderEditor reminder_editor;
@@ -35,9 +35,6 @@ namespace Reminduck {
 
         public MainWindow() {
             settings = new GLib.Settings("com.github.matfantinel.reminduck.state");
-
-            move(settings.get_int("window-x"), settings.get_int("window-y"));
-            resize(settings.get_int("window-width"), settings.get_int("window-height"));
 
             build_ui();
         }
@@ -51,20 +48,20 @@ namespace Reminduck {
             this.build_welcome();
             
             var image = new Gtk.Image();
-            image.set_from_icon_name("com.github.matfantinel.reminduck", Gtk.IconSize.DIALOG);
+            image.set_from_icon_name("com.github.matfantinel.reminduck");
             image.set_margin_top(30);
 
             var fields_box = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
-            fields_box.get_style_context().add_class("reminduck-welcome-box");
-            fields_box.pack_start(image, false, false, 0);
-            fields_box.pack_start(this.welcome_widget, true, true, 0);
+            fields_box.add_css_class("reminduck-welcome-box");
+            fields_box.append(image);
+            fields_box.append(this.welcome_widget);
 
             stack.add_named(fields_box, "welcome");
 
             this.build_reminder_editor();
             this.build_reminders_view();
 
-            add(stack);            
+            set_child(stack);            
 
             this.show_welcome_view(Gtk.StackTransitionType.NONE);
 
@@ -77,12 +74,12 @@ namespace Reminduck {
             this.headerbar = new Gtk.HeaderBar();
             this.headerbar.show_close_button = true;
             this.headerbar.title = "Reminduck";
-            this.headerbar.get_style_context().add_class("default-decoration");
-            this.headerbar.get_style_context().add_class("reminduck-headerbar");
+            this.headerbar.add_css_class("default-decoration");
+            this.headerbar.add_css_class("reminduck-headerbar");
             set_titlebar(this.headerbar);
 
             this.back_button = new Gtk.Button.with_label(_("Back"));
-            this.back_button.get_style_context().add_class("back-button");
+            this.back_button.add_css_class("back-button");
             this.back_button.valign = Gtk.Align.CENTER;
             this.headerbar.pack_start(this.back_button);
             
@@ -92,7 +89,7 @@ namespace Reminduck {
         }
 
         private void build_welcome() {
-            this.welcome_widget = new Granite.Widgets.Welcome(
+            this.welcome_widget = new Granite. Widgets.Welcome(
                 _("QUACK! I'm Reminduck"),
                 _("The duck that reminds you")
             );
@@ -118,7 +115,7 @@ namespace Reminduck {
             if (ReminduckApp.reminders.size > 0) {
                 if (this.view_reminders_action_reference == null) {
                     this.view_reminders_action_reference = this.welcome_widget.append("accessories-text-editor", _("View Reminders"), _("See reminders you've created"));
-                    this.welcome_widget.show_all();
+                    this.welcome_widget.show();
                 }
             } else {
                 if (this.view_reminders_action_reference != null) {
@@ -170,7 +167,7 @@ namespace Reminduck {
         private void show_reminder_editor(Reminder? reminder = null) {
             stack.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT);
             stack.set_visible_child_name("reminder_editor");
-            this.back_button.show_all();
+            this.back_button.show();
             this.reminder_editor.edit_reminder(reminder);
         }
 
@@ -178,7 +175,7 @@ namespace Reminduck {
             stack.set_transition_type(slide);
             stack.set_visible_child_name("reminders_view");
             this.reminders_view.build_reminders_list();
-            this.back_button.show_all();
+            this.back_button.show();
             this.reminder_editor.reset_fields();
         }
 
@@ -191,13 +188,10 @@ namespace Reminduck {
         }
 
         private bool before_destroy() {
-            int x, y, width, height;
+            int width, height;
+
+            get_default_size(out width, out height);
     
-            get_position(out x, out y);
-            get_size(out width, out height);
-    
-            this.settings.set_int("window-x", x);
-            this.settings.set_int("window-y", y);
             this.settings.set_int("window-width", width);
             this.settings.set_int("window-height", height);
     

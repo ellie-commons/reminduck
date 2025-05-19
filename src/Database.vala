@@ -31,7 +31,7 @@ public class Reminduck.Database {
 
         if (connection != Sqlite.OK) {
             stderr.printf("Can't open database: %d: %s\n", database.errcode(), database.errmsg());
-            Gtk.main_quit();
+            //Gtk.main_quit();
         }
     }    
 

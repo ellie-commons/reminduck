@@ -65,11 +65,11 @@ namespace Reminduck {
 
             var first_run = this.settings.get_boolean("first-run");
 
-            if (first_run) {
-                stdout.printf("\n🎉️ First run");
-                install_autostart();
-                this.settings.set_boolean("first-run", false);
-            }
+            //  if (first_run) {
+            //      stdout.printf("\n🎉️ First run");
+            //      install_autostart();
+            //      this.settings.set_boolean("first-run", false);
+            //  }
             
             reload_reminders();
 
@@ -78,8 +78,8 @@ namespace Reminduck {
                 this.main_window.set_application(this);                
                                 
                 var provider = new Gtk.CssProvider();                
-                Gtk.StyleContext.add_provider_for_screen(
-                    Gdk.Screen.get_default(),
+                Gtk.StyleContext.add_provider_for_display(
+                    Gdk.Display.get_default(),
                     provider,
                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
                 );
@@ -101,14 +101,14 @@ namespace Reminduck {
                 load_stylesheet(gtk_settings, provider);
 
                 if (!this.headless) {
-                    this.main_window.show_all();
+                    this.main_window.show();
                     this.main_window.show_welcome_view(Gtk.StackTransitionType.NONE);
                     this.main_window.present();
                 }
             }
             
             if (this.main_window != null && !this.headless) {
-                this.main_window.show_all();
+                this.main_window.show();
                 this.main_window.show_welcome_view(Gtk.StackTransitionType.NONE);
                 this.main_window.present();
             }
@@ -163,35 +163,6 @@ namespace Reminduck {
             activate();
             return 0;
         }                
-
-        private void install_autostart() {
-            var desktop_file_name = application_id + ".desktop";
-            var desktop_file_path = new DesktopAppInfo(desktop_file_name).filename;
-            var desktop_file = File.new_for_path(desktop_file_path);
-            var dest_path = Path.build_path(
-                Path.DIR_SEPARATOR_S,
-                Environment.get_user_config_dir(),
-                "autostart",
-                desktop_file_name
-            );
-            var dest_file = File.new_for_path(dest_path);
-            try {
-                desktop_file.copy(dest_file, FileCopyFlags.OVERWRITE);
-                stdout.printf("\n📃️ Copied desktop file at: %s", dest_path);
-            } catch(Error e) {
-                warning("Error making copy of desktop file for autostart: %s", e.message);
-            }
-    
-            var keyfile = new KeyFile();
-            try {
-                keyfile.load_from_file(dest_path, KeyFileFlags.NONE);
-                keyfile.set_boolean("Desktop Entry", "X-GNOME-Autostart-enabled", true);
-                keyfile.set_string("Desktop Entry", "Exec", application_id + " --headless");
-                keyfile.save_to_file(dest_path);
-            } catch(Error e) {
-                warning("Error enabling autostart: %s", e.message);
-            }
-        }
 
         public static void reload_reminders() {
             reminders = database.fetch_reminders();

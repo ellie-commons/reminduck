@@ -14,25 +14,5 @@
       <summary>The saved height of the window.</summary>
       <description>The saved height of the window.</description>
     </key>
-    <key name="window-x" type="i">
-      <default>250</default>
-      <summary>The saved X position of the window</summary>
-      <description>The saved X position of the window</description>
-    </key>
-    <key name="window-y" type="i">
-      <default>250</default>
-      <summary>The saved Y position of the window</summary>
-      <description>The saved Y position of the window</description>
-    </key>
-    <key name="first-run" type="b">
-      <default>true</default>
-      <summary>Whether this is the first time that Reminduck has opened</summary>
-      <description>Used to determine whether or not to perform initial install steps</description>
-    </key>
-    <key name="use-dark-theme" type="b">
-      <default>false</default>
-      <summary>Whether the app should use a dark style or not</summary>
-      <description>Used to determine whether or not to use dark mode stylesheet</description>
-    </key>
   </schema>
 </schemalist>

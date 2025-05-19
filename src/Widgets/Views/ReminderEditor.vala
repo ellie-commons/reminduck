@@ -26,8 +26,8 @@ namespace Reminduck.Widgets.Views {
 
         Gtk.Label title;
         Gtk.Entry reminder_input;
-        Granite.Widgets.DatePicker date_picker;
-        Granite.Widgets.TimePicker time_picker;
+        Granite.DatePicker date_picker;
+        Granite.TimePicker time_picker;
 
         Gtk.Box recurrency_switch_container;
         Gtk.Switch recurrency_switch;
@@ -49,20 +49,20 @@ namespace Reminduck.Widgets.Views {
         }
 
         private void build_ui() {
-            this.margin = 15;
+            this.margin_top = 15;
 
             this.title = new Gtk.Label(_("Create a new reminder"));
-            this.title.get_style_context().add_class("h2");
+            this.title.add_css_class("h2");
 
             this.reminder_input = new Gtk.Entry();
             this.reminder_input.placeholder_text = _("What do you want to be reminded of?");
             this.reminder_input.show_emoji_icon = true;
             
-            this.date_picker = new Granite.Widgets.DatePicker.with_format(
+            this.date_picker = new Granite.DatePicker.with_format(
                 Granite.DateTime.get_default_date_format(false, true, true)
             );
 
-            this.time_picker = new Granite.Widgets.TimePicker.with_format(
+            this.time_picker = new Granite.TimePicker.with_format(
                 Granite.DateTime.get_default_time_format(true), 
                 Granite.DateTime.get_default_time_format(false)
             );
@@ -72,31 +72,31 @@ namespace Reminduck.Widgets.Views {
             this.reset_fields();
 
             var date_time_container = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 5);
-            date_time_container.pack_start(this.date_picker, true, true, 0);
-            date_time_container.pack_start(this.time_picker, true, true, 0);
+            date_time_container.append(this.date_picker);
+            date_time_container.append(this.time_picker);
 
             var fields_box = new Gtk.Box(Gtk.Orientation.VERTICAL, 5);
-            fields_box.margin = 75;
-            fields_box.pack_start(this.reminder_input, true, false, 0);
-            fields_box.pack_start(date_time_container, true, false, 0);
+            fields_box.margin_top = 75;
+            fields_box.append(this.reminder_input);
+            fields_box.append(date_time_container);
 
             var repeat_label_box = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 0);
             repeat_label_box.margin_top = 5;
-            repeat_label_box.pack_start(new Gtk.Label(_("Repeat")), false, false, 0);
+            repeat_label_box.append(new Gtk.Label(_("Repeat")));
 
-            fields_box.pack_start(repeat_label_box, true, false, 0);
-            fields_box.pack_start(this.recurrency_switch_container, true, false, 0);
+            fields_box.append(repeat_label_box);
+            fields_box.append(this.recurrency_switch_container);
 
             this.save_button = new Gtk.Button.with_label(_("Save reminder"));
             this.save_button.halign = Gtk.Align.END;
-            this.save_button.get_style_context().add_class("suggested-action");
+            this.save_button.add_css_class("suggested-action");
             this.save_button.activate.connect(on_save);
             this.save_button.clicked.connect(on_save);
             this.save_button.set_sensitive(false);
 
-            pack_start(title, true, false, 0);
-            pack_start(fields_box, true, false, 0);
-            pack_end(this.save_button, false, false, 0);
+            append(title);
+            append(fields_box);
+            append(this.save_button);
 
             this.reminder_input.changed.connect(() => {
                 this.touched = true;
@@ -107,11 +107,11 @@ namespace Reminduck.Widgets.Views {
                 this.save_button.clicked();
             });
 
-            this.date_picker.date_changed.connect(() => {
+            this.date_picker.changed.connect(() => {
                 this.validate();
             });
 
-            this.time_picker.time_changed.connect(() => {
+            this.time_picker.changed.connect(() => {
                 this.validate();
             });
 
@@ -148,7 +148,7 @@ namespace Reminduck.Widgets.Views {
 
             this.recurrency_switch_container = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 5);
 
-            this.recurrency_switch_container.pack_start(this.recurrency_switch, false, false, 0);            
+            this.recurrency_switch_container.append(this.recurrency_switch);            
             
             string[] recurrency_options = {
                 RecurrencyType.EVERY_X_MINUTES.to_friendly_string(),
@@ -171,12 +171,12 @@ namespace Reminduck.Widgets.Views {
 
             this.recurrency_combobox.set_attributes(cell, "text", 0);            
 
-            this.recurrency_switch_container.pack_start(this.recurrency_combobox, false, false, 0);
+            this.recurrency_switch_container.append(this.recurrency_combobox);
 
             this.recurrency_interval = new Gtk.SpinButton.with_range(0, 1000, 1);
             this.recurrency_interval.value = 30;
 
-            this.recurrency_switch_container.pack_start(this.recurrency_interval, false, false, 0);
+            this.recurrency_switch_container.append(this.recurrency_interval);
         }
 
         public bool validate() {
@@ -184,26 +184,26 @@ namespace Reminduck.Widgets.Views {
 
             if (this.reminder_input.get_text() == null || this.reminder_input.get_text().length <= 0) {
                 if (this.touched) {
-                    this.reminder_input.get_style_context().add_class(Gtk.STYLE_CLASS_ERROR);
+                    this.reminder_input.add_css_class(Granite.STYLE_CLASS_ERROR);
                 }
 
                 this.save_button.set_sensitive(false);
                 result = false;
             } else {
-                this.reminder_input.get_style_context().remove_class(Gtk.STYLE_CLASS_ERROR);
+                this.reminder_input.remove_css_class(Granite.STYLE_CLASS_ERROR);
             }            
 
             var dateTime = this.mount_datetime(this.date_picker.date, this.time_picker.time);
 
             if (dateTime.compare(new GLib.DateTime.now_local()) <= 0) {
-                this.date_picker.get_style_context().add_class(Gtk.STYLE_CLASS_ERROR);
-                this.time_picker.get_style_context().add_class(Gtk.STYLE_CLASS_ERROR);
+                this.date_picker.add_css_class(Granite.STYLE_CLASS_ERROR);
+                this.time_picker.add_css_class(Granite.STYLE_CLASS_ERROR);
 
                 this.save_button.set_sensitive(false);
                 result = false;
             } else {
-                this.date_picker.get_style_context().remove_class(Gtk.STYLE_CLASS_ERROR);
-                this.time_picker.get_style_context().remove_class(Gtk.STYLE_CLASS_ERROR);
+                this.date_picker.remove_css_class(Granite.STYLE_CLASS_ERROR);
+                this.time_picker.remove_css_class(Granite.STYLE_CLASS_ERROR);
             }            
             
             if (result) {
