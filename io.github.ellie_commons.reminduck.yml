@@ -1,0 +1,18 @@
+app-id: io.github.ellie_commons.reminduck
+runtime: io.elementary.Platform
+runtime-version: '8.2'
+sdk: io.elementary.Sdk
+command: io.github.ellie_commons.reminduck
+finish-args:
+  - '--share=ipc'
+  - '--device=dri'
+  - '--socket=fallback-x11'
+  - '--socket=wayland'
+  # Required to send notifications
+  - '--socket=session-bus'
+modules:
+  - name: reminduck
+    buildsystem: meson
+    sources:
+    - type: dir
+      path: "."
