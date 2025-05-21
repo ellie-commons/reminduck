@@ -1,0 +1,39 @@
+---
+
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  flatpak:
+    name: Flatpak
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        arch: [x86_64]
+      # Don't fail the whole workflow if one architecture fails
+      fail-fast: false
+
+    container:
+      image: ghcr.io/elementary/flatpak-platform/runtime:8-${{ matrix.arch }}
+      options: --privileged
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build
+        uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+        with:
+          bundle: jorts.flatpak
+          manifest-path: io.github.ellie_commons.reminduck.yml
+          run-tests: true
+          repository-name: appcenter
+          repository-url: https://flatpak.elementary.io/repo.flatpakrepo
+          cache-key: "flatpak-builder-${{ github.sha }}"
+          branch: daily
+          arch: ${{ matrix.arch }}
