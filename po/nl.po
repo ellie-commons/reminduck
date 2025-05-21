@@ -1,10 +1,10 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the com.github.matfantinel.reminduck package.
+# This file is distributed under the same license as the io.github.ellie_commons.reminduck package.
 #
 # Heimen Stoffels <vistausss@outlook.com>, 2019.
 msgid ""
 msgstr ""
-"Project-Id-Version: com.github.matfantinel.reminduck\n"
+"Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-31 11:48-0300\n"
 "PO-Revision-Date: 2019-11-29 18:14+0100\n"

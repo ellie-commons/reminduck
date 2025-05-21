@@ -1,11 +1,11 @@
-# Portuguese translations for com.github.matfantinel.reminduck package.
-# Copyright (C) 2018 THE com.github.matfantinel.reminduck'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the com.github.matfantinel.reminduck package.
+# Portuguese translations for io.github.ellie_commons.reminduck package.
+# Copyright (C) 2018 THE io.github.ellie_commons.reminduck'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.ellie_commons.reminduck package.
 # Automatically generated, 2018.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: com.github.matfantinel.reminduck\n"
+"Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-31 11:48-0300\n"
 "PO-Revision-Date: 2018-08-02 15:09-0300\n"

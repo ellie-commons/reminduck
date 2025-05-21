@@ -18,32 +18,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: data/com.github.matfantinel.reminduck.desktop.in:3
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:7
+#: data/io.github.ellie_commons.reminduck.desktop.in:3
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:7
 msgid "Reminduck"
 msgstr "Reminduck"
 
-#: data/com.github.matfantinel.reminduck.desktop.in:4
+#: data/io.github.ellie_commons.reminduck.desktop.in:4
 msgid "Reminders"
 msgstr "Promemoria"
 
-#: data/com.github.matfantinel.reminduck.desktop.in:5
+#: data/io.github.ellie_commons.reminduck.desktop.in:5
 msgid "Don't forget about your stuff in an adorably annoying way"
 msgstr "Ricordati dei tuoi promemoria in un modo adorabile"
 
-#: data/com.github.matfantinel.reminduck.desktop.in:8
-msgid "com.github.matfantinel.reminduck"
-msgstr "com.github.matfantinel.reminduck"
+#: data/io.github.ellie_commons.reminduck.desktop.in:8
+msgid "io.github.ellie_commons.reminduck"
+msgstr "io.github.ellie_commons.reminduck"
 
-#: data/com.github.matfantinel.reminduck.desktop.in:12
+#: data/io.github.ellie_commons.reminduck.desktop.in:12
 msgid "Reminduck;Personal;Assistant;Reminders;"
 msgstr "Reminduck;Persinale;Assistente;Promemoria;"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:8
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:8
 msgid "Remember your stuff in an adorably annoying way."
 msgstr "Ricordati dei tuoi promemoria in un modo adorabile."
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:10
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:10
 msgid ""
 "Reminduck is a simple reminder app made to be quick and easy - it focuses on "
 "simple or recurrent reminders with set time and date and nothing else."
@@ -52,7 +52,7 @@ msgstr ""
 "veloce- si concentra su promemoria semplici o ricorrenti con data e ora "
 "impostate, nient'altro."
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:12
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:12
 msgid ""
 "It's perfect if all you want are simple or daily/weekly/monthly reminders. "
 "Anything more than that is not achievable by Reminduck right now - but you "
@@ -62,23 +62,23 @@ msgstr ""
 "giornalieri/settimanali/mensili. Al momento Reminduck si limita a questo - "
 "ma tupuò aiutare! Segnala un problema o effettua una richiesta."
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:14
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:14
 msgid "And it quacks."
 msgstr "E quack."
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:20
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:20
 msgid "🐞 Enable translations on Flatpak"
 msgstr "🐞 Abilita le traduzioni su Flatpak"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:27
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:27
 msgid "🗃️ Flatpak Support!"
 msgstr "🗃️ Supporto per Flatpak!"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:34
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:34
 msgid "🌑 Dark-mode toggle on the header bar"
 msgstr "🌑 Attiva/disattiva modalità scura sulla barra dell'intestazione"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:35
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:35
 msgid ""
 "🔔 Notifications now stick around until you close them, to make sure you "
 "don't miss your quacks"
@@ -86,19 +86,19 @@ msgstr ""
 "🔔 Le notifiche ora restano in attesa fino a quando non le chiudi, per assicurarti di "
 "non perdere i tuoi quacks"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:36
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:36
 msgid "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
 msgstr "🌟 Supporto per temi GTK aggiuntivi, rendendo Reminduck distro-agnostico"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:37
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:37
 msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
 msgstr "🇪🇸 Traduzione Spagnola (Alejandro Elí | @onerbs)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:38
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:38
 msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
 msgstr "🇮🇹 Traduzione Italiana (Mirko Brombin | @mirkobrombin e Albano Battistella)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:45
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:45
 msgid ""
 "🐥️ New Icon! - hopefully this one looks better than the previous one. With "
 "great help from Nararyans R.I. (@Fatih20)"
@@ -106,15 +106,15 @@ msgstr ""
 "🐥️ Nuova icona! - si spera che questa sia migliore della precedente. Con "
 "grande aiuto di Nararyans R.I. (@ Fatih20)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:46
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:46
 msgid "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
 msgstr "💁‍ Maggiore compatibilità con le traduzioni (Corentin Noël | @tintou)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:47
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:47
 msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
 msgstr "🇨🇵️ Traduzione francese (Nathan Bonnemains | @NathanBnm)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:54
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:54
 msgid ""
 "🔁️ Recurrent reminders - you can now have reminders that show up in set "
 "periods of time: every day, week, month, or a set interval"
@@ -123,34 +123,34 @@ msgstr ""
 "nei periodi di tempo: ogni giorno, settimana, mese o ad intervallo"
 "prestabilito"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:55
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:55
 msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
 msgstr "🌟️ Miglioramenti alla UI per migliorare il quak migliore"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:56
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:56
 msgid "🌃️ Dark Mode is now prettier"
 msgstr "🌃️ La modalità scura è ora più carina"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:57
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:57
 msgid "🇹🇷 Turkish translation (libreajans)"
 msgstr "🇹🇷 Traduzione in Turco(libreajans)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:58
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:58
 msgid "🇳🇱 Dutch translation (Vistaus)"
 msgstr "🇳🇱 Traduzione in Tedesco (Vistaus)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:65
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:65
 msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
 msgstr "Supporto alla impostazione non ufficiale \"Preferisci il tema dark\" 🌝️"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:66
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:66
 msgid "This should also make it work with other dark GTK themes"
 msgstr "Dovrebbe supportare anche ad altri temi GTK scuri."
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:72
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:72
 msgid "Initial Release 🦆"
 msgstr "Rilascio iniziale 🦆"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:108
+#: data/io.github.ellie_commons.reminduck.appdata.xml.in:108
 msgid "Matheus Fantinel"
 msgstr "Matheus Fantinel"

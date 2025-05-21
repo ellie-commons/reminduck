@@ -7,10 +7,10 @@ If you or someone you know wants to keep the project going, feel free to fork an
 # Reminduck
 
 <p align="center">
-    <a href="https://appcenter.elementary.io/com.github.matfantinel.reminduck" target="_blank">
+    <a href="https://appcenter.elementary.io/io.github.ellie_commons.reminduck" target="_blank">
         <img src="https://appcenter.elementary.io/badge.svg">
     </a>
-    <a href='https://flathub.org/apps/details/com.github.matfantinel.reminduck' target="_blank"><img width='150' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
+    <a href='https://flathub.org/apps/details/io.github.ellie_commons.reminduck' target="_blank"><img width='150' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
 </p>
 
 <p align="center">
@@ -45,8 +45,8 @@ You can help translating this app with the following steps:
   
   ```shell
   cd build
-  ninja com.github.matfantinel.reminduck-pot
-  ninja com.github.matfantinel.reminduck-update-po
+  ninja io.github.ellie_commons.reminduck-pot
+  ninja io.github.ellie_commons.reminduck-update-po
   ```
 * Then, update your language file in `po` folder with your translations. For example, portuguese (pt) translation file is `po/pt.po`;
 * Some additional translation files can be found in `po/extra/` (stuff for the xml and .desktop files)
@@ -94,7 +94,7 @@ sudo ninja install
 Then run it with:
 
 ```shell
-com.github.matfantinel.reminduck
+io.github.ellie_commons.reminduck
 ```
 
 ## Flatpak
@@ -111,13 +111,13 @@ flatpak install flathub io.elementary.BaseApp/x86_64/juno-19.08
 Then, from the project root:
 
 ```shell
-flatpak-builder --install repo com.github.matfantinel.reminduck.json --force-clean --user
+flatpak-builder --install repo io.github.ellie_commons.reminduck.json --force-clean --user
 ```
 
 The app should be displayed on your apps list, or you can run it with:
 
 ```shell
-com.github.matfantinel.reminduck
+io.github.ellie_commons.reminduck
 ```
 
 [elementary OS]: https://elementary.io

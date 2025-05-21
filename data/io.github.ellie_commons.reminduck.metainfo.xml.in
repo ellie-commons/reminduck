@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018 Matheus Fantinel <matfantinel@gmail.com> -->
 <component type="desktop">
-  <id>com.github.matfantinel.reminduck</id>
+  <id>io.github.ellie_commons.reminduck</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Reminduck</name>
@@ -100,7 +100,7 @@
     </release>
   </releases>
   <provides>
-    <binary>com.github.matfantinel.reminduck</binary>
+    <binary>io.github.ellie_commons.reminduck</binary>
   </provides>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>

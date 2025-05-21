@@ -1,11 +1,11 @@
-# German translations for com.github.matfantinel.reminduck package.
-# Copyright (C) 2020 THE com.github.matfantinel.reminduck'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the com.github.matfantinel.reminduck package.
+# German translations for io.github.ellie_commons.reminduck package.
+# Copyright (C) 2020 THE io.github.ellie_commons.reminduck'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.ellie_commons.reminduck package.
 # Automatically generated, then modified to need, 2020.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: com.github.matfantinel.reminduck\n"
+"Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-31 11:48-0300\n"
 "PO-Revision-Date: 2020-01-13 15:11+0100\n"

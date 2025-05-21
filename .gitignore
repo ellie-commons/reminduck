@@ -1,5 +1,4 @@
-build
-Application
+builddir
 .flatpak-builder
 repo
 _build

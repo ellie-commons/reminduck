@@ -19,24 +19,9 @@
 * Authored by: Matheus Fantinel <matfantinel@gmail.com>
 */
 
-using Gee;
-
 namespace Reminduck {
-
     public class ReminduckApp : Gtk.Application {
 
-        construct {
-            application_id = "com.github.matfantinel.reminduck";
-            flags = ApplicationFlags.HANDLES_COMMAND_LINE;
-            database = new Reminduck.Database();
-
-            // Init internationalization support
-            Intl.setlocale (LocaleCategory.ALL, "");
-            string langpack_dir = Path.build_filename (Constants.INSTALL_PREFIX, "share", "locale");
-            Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, langpack_dir);
-            Intl.bind_textdomain_codeset (Constants.GETTEXT_PACKAGE, "UTF-8");
-            Intl.textdomain (Constants.GETTEXT_PACKAGE);
-        }
 
         public static ArrayList<Reminder> reminders;
         public bool headless = false;
@@ -46,6 +31,45 @@ namespace Reminduck {
 
         public MainWindow main_window { get; private set; default = null; }
         public static Reminduck.Database database;
+
+
+        construct {
+            application_id = "io.github.ellie_commons.reminduck";
+            flags = ApplicationFlags.HANDLES_COMMAND_LINE;
+            database = new Reminduck.Database();
+
+            // Init internationalization support
+            Intl.setlocale (LocaleCategory.ALL, "");
+            string langpack_dir = Path.build_filename (Constants.INSTALL_PREFIX, "share", "locale");
+            Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, langpack_dir);
+            Intl.bind_textdomain_codeset (Constants.GETTEXT_PACKAGE, "UTF-8");
+            Intl.textdomain (Constants.GETTEXT_PACKAGE);
+
+            // Follow dark and light, use bananana
+            var granite_settings = Granite.Settings.get_default ();
+            var gtk_settings = Gtk.Settings.get_default ();
+            gtk_settings.gtk_icon_theme_name = "elementary";
+            gtk_settings.gtk_theme_name =   "io.elementary.stylesheet.banana";
+
+            gtk_settings.gtk_application_prefer_dark_theme = (
+	                granite_settings.prefers_color_scheme == DARK
+                );
+	
+            granite_settings.notify["prefers-color-scheme"].connect (() => {
+                gtk_settings.gtk_application_prefer_dark_theme = (
+                        granite_settings.prefers_color_scheme == DARK
+                    );
+            }); 
+
+            // Use reminduck styling
+            var app_provider = new Gtk.CssProvider ();
+            app_provider.load_from_resource ("/io/github/ellie_commons/reminduck/stylesheet.css");
+            Gtk.StyleContext.add_provider_for_display (
+                Gdk.Display.get_default (),
+                app_provider,
+                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
+            );
+        }
 
         public static int main(string[] args) {
             var app = new ReminduckApp();
@@ -61,16 +85,11 @@ namespace Reminduck {
             stdout.printf("\n✔️ Activated");
             database.verify_database();
 
-            this.settings = new GLib.Settings("com.github.matfantinel.reminduck.state");
+            this.settings = new GLib.Settings("io.github.ellie_commons.reminduck.state");
 
             var first_run = this.settings.get_boolean("first-run");
+            // Set autostart here
 
-            //  if (first_run) {
-            //      stdout.printf("\n🎉️ First run");
-            //      install_autostart();
-            //      this.settings.set_boolean("first-run", false);
-            //  }
-            
             reload_reminders();
 
             if (this.main_window == null) {
@@ -83,22 +102,6 @@ namespace Reminduck {
                     provider,
                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
                 );
-
-                // First we get the default instances for Granite.Settings and Gtk.Settings
-                var granite_settings = Granite.Settings.get_default ();
-                var gtk_settings = Gtk.Settings.get_default ();
-
-                // Then, we check if the user's preference is for the dark style and set it if it is
-                gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
-
-                // Finally, we listen to changes in Granite.Settings and update our app if the user changes their preference
-                granite_settings.notify["prefers-color-scheme"].connect (() => {
-                    gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
-
-                    load_stylesheet(gtk_settings, provider);
-                });
-
-                load_stylesheet(gtk_settings, provider);
 
                 if (!this.headless) {
                     this.main_window.show();
@@ -120,9 +123,9 @@ namespace Reminduck {
 
         private void load_stylesheet(Gtk.Settings gtk_settings, Gtk.CssProvider provider) {
           if (gtk_settings.gtk_application_prefer_dark_theme) {
-            provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet-dark.css");
+            provider.load_from_resource("/io/github/ellie_commons/reminduck/stylesheet-dark.css");
           } else {
-            provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet.css");
+            provider.load_from_resource("/io/github/ellie_commons/reminduck/stylesheet.css");
           }
         }
         
