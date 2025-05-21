@@ -1,4 +1,4 @@
-# ![icon](data/icons/64/io.github.ellie_commons.reminduck.svg) Reminduck
+# ![icon](data/icons/io.github.ellie_commons.reminduck.png) Reminduck
 
 Remember your stuff in an adorably annoying way
 
@@ -16,10 +16,9 @@ _And it quacks._
 
 ## 🛣️ Roadmap
 
-Currently dusting this off!!!
-
-(Help wanted)
-
+ - Currently dusting this off!!! (Help wanted)
+ - Setting to have the app quack
+ - Request autostart
 
 
 ## 💝 Donations

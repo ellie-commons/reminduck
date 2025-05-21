@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018 Matheus Fantinel <matfantinel@gmail.com> -->
-<component type="desktop">
+<component type="desktop-application">
   <id>io.github.ellie_commons.reminduck</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
@@ -16,7 +16,7 @@
   <releases>
     <release version="2.0.0" date="2025-06-16">
       <description>
-        <p>Under the hood modernization</p>
+        <p>Under the hood modernization for elementary OS 8</p>
       </description>
     </release>
     <release version="1.6.2" date="2021-11-16">
