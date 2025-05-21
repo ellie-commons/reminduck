@@ -10,6 +10,17 @@ finish-args:
   - '--socket=wayland'
   # Required to send notifications
   - '--socket=session-bus'
+cleanup:
+  -  '/include'
+  -  '/lib/pkgconfig'
+  -  '/man'
+  -  '/share/doc'
+  -  '/share/gtk-doc'
+  -  '/share/man'
+  -  '/share/pkgconfig'
+  -  '/share/installed-tests'
+  -  '*.la'
+  -  '*.a'
 modules:
   - name: reminduck
     buildsystem: meson
