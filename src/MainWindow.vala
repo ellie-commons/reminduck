@@ -34,7 +34,7 @@ namespace Reminduck {
         Widgets.Views.RemindersView reminders_view;
 
         public MainWindow() {
-            settings = new GLib.Settings("com.github.matfantinel.reminduck.state");
+            settings = new GLib.Settings("io.github.ellie_commons.reminduck.state");
 
             build_ui();
         }
@@ -48,7 +48,7 @@ namespace Reminduck {
             this.build_welcome();
             
             var image = new Gtk.Image();
-            image.set_from_icon_name("com.github.matfantinel.reminduck");
+            image.set_from_icon_name("io.github.ellie_commons.reminduck");
             image.set_margin_top(30);
 
             var fields_box = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
@@ -89,10 +89,9 @@ namespace Reminduck {
         }
 
         private void build_welcome() {
-            this.welcome_widget = new Granite.Placeholder(
-                _("QUACK! I'm Reminduck"),
-                _("The duck that reminds you")
-            );
+            this.welcome_widget = new Granite.Placeholder(_("QUACK! I'm Reminduck") {
+                description = _("The duck that reminds you")
+            };
 
             this.welcome_widget.activated.connect((index) => {
                 switch(index) {
