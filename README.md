@@ -70,3 +70,9 @@ On elementary OS or with its appcenter remote installed
 ```bash
 flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.reminduck.yml
 ```
+
+## ACKNOWLEDGMENTS
+
+Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=40345">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=40345">Pixabay</a>
+
+
