@@ -24,7 +24,7 @@ jobs:
       - name: Build
         uses: flatpak/flatpak-github-actions/flatpak-builder@v6
         with:
-          bundle: badger.flatpak
+          bundle: reminduck.flatpak
           manifest-path: io.github.ellie_commons.reminduck.yml
           run-tests: true
           repository-name: appcenter
