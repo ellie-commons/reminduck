@@ -60,7 +60,14 @@ namespace Reminduck {
             this.build_reminder_editor ();
             this.build_reminders_view ();
 
-            set_child (stack);
+            stack.halign = stack.valign = Gtk.Align.CENTER;
+            stack.hexpand = stack.vexpand = true;
+
+            var handle = new Gtk.WindowHandle () {
+                child = stack
+            }
+
+            set_child (handle);
 
             this.show_welcome_view (Gtk.StackTransitionType.NONE);
 
