@@ -1,6 +1,15 @@
-# ![icon](data/icons/io.github.ellie_commons.reminduck.png) Reminduck
+<p align="center">
+    <img src="data/icons/hicolor/io.github.ellie_commons.reminduck.png" alt="Icon" />
+</p>
 
-Remember your stuff in an adorably annoying way
+<h1 align="center">Reminduck</h1>
+<p align="center">Remember your stuff in an adorably annoying way</p>
+
+<p align="center">
+  <a href="https://appcenter.elementary.io/io.github.ellie_commons.reminduck">
+    <img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" />
+  </a>
+</p>
 
 <p align="center">
     <img src="data/screenshots/Main.png" alt="Screenshot" />
@@ -11,7 +20,6 @@ Reminduck is a simple reminder app made to be quick and easy - it focuses on sim
 It's perfect if all you want are simple or daily/weekly/monthly reminders. Anything more than that is not achievable by Reminduck right now - but you can help! Open an issue or a pull request if you have any ideas or requests.
 
 _And it quacks._
-
 
 
 ## 🛣️ Roadmap
@@ -41,29 +49,6 @@ Stella, current main dev:
 
 
 ## 🏗️ Building
-
-Please make sure you have these dependencies first before building Jorts.
-
-```bash
-flatpak-builder
-libgranite-7-dev
-gtk+-4.0
-libjson-glib-dev
-libgee-0.8-dev
-libsqlite3-dev
-meson
-valac
-gettext
-```
-
-here are the package names to install:
-
-```bash
-sudo apt install libgranite-7-common libsqlite3-dev libgee-0.8-2 meson valac libvala-0.56-0 flatpak-builder gettext
-```
-
-Installation is as simple as installing the above, downloading and extracting the zip archive, changing to the new repo's directory,
-and run the following command:
 
 On elementary OS or with its appcenter remote installed
 
