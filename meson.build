@@ -38,7 +38,8 @@ executable(
         dependency('gtk4'),
         dependency('gee-0.8'),
         dependency('sqlite3'),
-        dependency('granite-7')
+        dependency('granite-7'),
+        dependency('libportal')
     ],
     install: true
 )

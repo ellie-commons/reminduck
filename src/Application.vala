@@ -22,17 +22,15 @@
 
 namespace Reminduck {
     public class ReminduckApp : Gtk.Application {
-
-
         public static Gee.ArrayList<Reminduck.Reminder> reminders;
         public bool headless = false;
+        public bool ask_autostart = false;
         private uint timeout_id = 0;
 
         private GLib.Settings settings;
 
         public MainWindow main_window { get; private set; default = null; }
         public static Reminduck.Database database;
-
 
         construct {
             application_id = "io.github.ellie_commons.reminduck";
