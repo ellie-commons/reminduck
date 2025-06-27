@@ -16,7 +16,13 @@
   <releases>
     <release version="2.0.0" date="2025-06-16">
       <description>
-        <p>Under the hood modernization for elementary OS 8</p>
+        <p>The quack is back! </br> A continuation of Reminduck, with the blessing of its original creator!</p>
+        <ul>
+          <li>Adapt to modern libraries (GTK4, Flatpak)</li>
+          <li>Make the whole window grabbable</li>
+          <li>No quack sound yet but that will come</li>
+          <li>Minor regression: titlebar is not coloured</li>
+        </ul>
       </description>
     </release>
     <release version="1.6.2" date="2021-11-16">
