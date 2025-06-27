@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-31 11:48-0300\n"
+"POT-Creation-Date: 2025-06-27 19:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,39 +18,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: src/MainWindow.vala:84
+#: src/Application.vala:191
+msgid "Autostart Badger in background to send reminders"
+msgstr ""
+
+#: src/MainWindow.vala:93
 msgid "Back"
 msgstr ""
 
-#: src/MainWindow.vala:94
-msgid "Light mode"
-msgstr ""
-
-#: src/MainWindow.vala:95
-msgid "Dark mode"
-msgstr ""
-
-#: src/MainWindow.vala:133
+#: src/MainWindow.vala:105
 msgid "QUACK! I'm Reminduck"
 msgstr ""
 
-#: src/MainWindow.vala:134
+#: src/MainWindow.vala:106
 msgid "The duck that reminds you"
 msgstr ""
 
-#: src/MainWindow.vala:148
+#: src/MainWindow.vala:111
 msgid "New Reminder"
 msgstr ""
 
-#: src/MainWindow.vala:148
+#: src/MainWindow.vala:112
 msgid "Create a new reminder for a set date and time"
 msgstr ""
 
-#: src/MainWindow.vala:150 src/MainWindow.vala:157
+#: src/MainWindow.vala:123 src/MainWindow.vala:136
 msgid "View Reminders"
 msgstr ""
 
-#: src/MainWindow.vala:150 src/MainWindow.vala:157
+#: src/MainWindow.vala:124 src/MainWindow.vala:137
 msgid "See reminders you've created"
 msgstr ""
 
@@ -105,19 +101,19 @@ msgstr ""
 msgid "Create another"
 msgstr ""
 
-#: src/Widgets/Views/RemindersView.vala:93
+#: src/Widgets/Views/RemindersView.vala:91
 #, c-format
 msgid "Reminded: %s"
 msgstr ""
 
-#: src/Widgets/Views/RemindersView.vala:104
+#: src/Widgets/Views/RemindersView.vala:102
 msgid "Delete"
 msgstr ""
 
-#: src/Widgets/Views/RemindersView.vala:111
+#: src/Widgets/Views/RemindersView.vala:109
 msgid "Edit"
 msgstr ""
 
-#: src/Widgets/Views/RemindersView.vala:120
+#: src/Widgets/Views/RemindersView.vala:118
 msgid "Today"
 msgstr ""

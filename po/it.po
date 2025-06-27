@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-31 11:48-0300\n"
+"POT-Creation-Date: 2025-06-27 19:52+0200\n"
 "PO-Revision-Date: 2020-01-03 13:53+0100\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Italian\n"
@@ -18,39 +18,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/MainWindow.vala:84
+#: src/Application.vala:191
+msgid "Autostart Badger in background to send reminders"
+msgstr ""
+
+#: src/MainWindow.vala:93
 msgid "Back"
 msgstr "Indietro"
 
-#: src/MainWindow.vala:94
-msgid "Light mode"
-msgstr "Modalità chiara"
-
-#: src/MainWindow.vala:95
-msgid "Dark mode"
-msgstr "Modalità scura"
-
-#: src/MainWindow.vala:133
+#: src/MainWindow.vala:105
 msgid "QUACK! I'm Reminduck"
 msgstr "QUACK! Sono Reminduck"
 
-#: src/MainWindow.vala:134
+#: src/MainWindow.vala:106
 msgid "The duck that reminds you"
 msgstr "La papera che ti ricorda"
 
-#: src/MainWindow.vala:148
+#: src/MainWindow.vala:111
 msgid "New Reminder"
 msgstr "Nuovo Promemoria"
 
-#: src/MainWindow.vala:148
+#: src/MainWindow.vala:112
 msgid "Create a new reminder for a set date and time"
 msgstr "Crea un nuovo promemoria con data e ora prestabilita"
 
-#: src/MainWindow.vala:150 src/MainWindow.vala:157
+#: src/MainWindow.vala:123 src/MainWindow.vala:136
 msgid "View Reminders"
 msgstr "Vedi Promemoria"
 
-#: src/MainWindow.vala:150 src/MainWindow.vala:157
+#: src/MainWindow.vala:124 src/MainWindow.vala:137
 msgid "See reminders you've created"
 msgstr "Visualizza i promemoria creati"
 
@@ -105,19 +101,25 @@ msgstr "I tuoi promemoria"
 msgid "Create another"
 msgstr "Crea un altro"
 
-#: src/Widgets/Views/RemindersView.vala:93
+#: src/Widgets/Views/RemindersView.vala:91
 #, c-format
 msgid "Reminded: %s"
 msgstr "Promemoria : %s"
 
-#: src/Widgets/Views/RemindersView.vala:104
+#: src/Widgets/Views/RemindersView.vala:102
 msgid "Delete"
 msgstr "Cancella"
 
-#: src/Widgets/Views/RemindersView.vala:111
+#: src/Widgets/Views/RemindersView.vala:109
 msgid "Edit"
 msgstr "Modifica"
 
-#: src/Widgets/Views/RemindersView.vala:120
+#: src/Widgets/Views/RemindersView.vala:118
 msgid "Today"
 msgstr "Oggi"
+
+#~ msgid "Light mode"
+#~ msgstr "Modalità chiara"
+
+#~ msgid "Dark mode"
+#~ msgstr "Modalità scura"

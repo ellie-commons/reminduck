@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-31 11:49-0300\n"
+"POT-Creation-Date: 2025-06-27 19:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/io.github.ellie_commons.reminduck.desktop.in:3
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:7
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:7
 msgid "Reminduck"
 msgstr ""
 
@@ -30,113 +30,148 @@ msgstr ""
 msgid "Don't forget about your stuff in an adorably annoying way"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.desktop.in:8
-msgid "io.github.ellie_commons.reminduck"
-msgstr ""
-
-#: data/io.github.ellie_commons.reminduck.desktop.in:12
+#: data/io.github.ellie_commons.reminduck.desktop.in:13
 msgid "Reminduck;Personal;Assistant;Reminders;"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:8
-msgid "Remember your stuff in an adorably annoying way."
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:8
+msgid "Remember your stuff in an adorably annoying way"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:10
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:10
 msgid ""
-"Reminduck is a simple reminder app made to be quick and easy - it focuses on "
+"A simple reminder app made to be quick and easy - Reminduck focuses on "
 "simple or recurrent reminders with set time and date and nothing else."
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:12
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:12
 msgid ""
 "It's perfect if all you want are simple or daily/weekly/monthly reminders. "
 "Anything more than that is not achievable by Reminduck right now - but you "
 "can help! Open an issue or a pull request if you have any ideas or requests."
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:14
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:14
 msgid "And it quacks."
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:20
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:19
+msgid ""
+"The quack is back! A continuation of Reminduck, with the blessing of its "
+"original creator!"
+msgstr ""
+
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:22
+msgid "Adapt to modern libraries (GTK4, Flatpak)"
+msgstr ""
+
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:23
+msgid "Make the whole window grabbable"
+msgstr ""
+
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:24
+msgid "No quack sound yet but that will come"
+msgstr ""
+
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:25
+msgid "Minor regression: titlebar is not coloured"
+msgstr ""
+
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:31
+msgid "Add \"Office\" category to launcher"
+msgstr ""
+
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:37
+msgid "- Support for elementary OS 6.0 Odin!"
+msgstr ""
+
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:38
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:46
+msgid "- 🇮🇹 Updated italian translation (@albanobattistella)"
+msgstr ""
+
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:45
+msgid "- 🇩🇪 German translation (@Technipion)"
+msgstr ""
+
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:53
 msgid "🐞 Enable translations on Flatpak"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:27
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:60
 msgid "🗃️ Flatpak Support!"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:34
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:67
 msgid "🌑 Dark-mode toggle on the header bar"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:35
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:68
 msgid ""
 "🔔 Notifications now stick around until you close them, to make sure you "
 "don't miss your quacks"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:36
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:69
 msgid "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:37
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:70
 msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:38
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:71
 msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:45
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:78
 msgid ""
 "🐥️ New Icon! - hopefully this one looks better than the previous one. With "
 "great help from Nararyans R.I. (@Fatih20)"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:46
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:79
 msgid "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:47
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:80
 msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:54
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:87
 msgid ""
 "🔁️ Recurrent reminders - you can now have reminders that show up in set "
 "periods of time: every day, week, month, or a set interval"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:55
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:88
 msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:56
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:89
 msgid "🌃️ Dark Mode is now prettier"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:57
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:90
 msgid "🇹🇷 Turkish translation (libreajans)"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:58
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:91
 msgid "🇳🇱 Dutch translation (Vistaus)"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:65
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:98
 msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:66
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:99
 msgid "This should also make it work with other dark GTK themes"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:72
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:105
 msgid "Initial Release 🦆"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.appdata.xml.in:108
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:141
 msgid "Matheus Fantinel"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-31 11:48-0300\n"
+"POT-Creation-Date: 2025-06-27 19:52+0200\n"
 "PO-Revision-Date: 2019-11-29 18:14+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <vistausss@outlook.com>\n"
@@ -17,39 +17,35 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2.4\n"
 
-#: src/MainWindow.vala:84
+#: src/Application.vala:191
+msgid "Autostart Badger in background to send reminders"
+msgstr ""
+
+#: src/MainWindow.vala:93
 msgid "Back"
 msgstr "Terug"
 
-#: src/MainWindow.vala:94
-msgid "Light mode"
-msgstr "Licht thema"
-
-#: src/MainWindow.vala:95
-msgid "Dark mode"
-msgstr "Donker thema"
-
-#: src/MainWindow.vala:133
+#: src/MainWindow.vala:105
 msgid "QUACK! I'm Reminduck"
 msgstr "KWAK! Ik ben Reminduck"
 
-#: src/MainWindow.vala:134
+#: src/MainWindow.vala:106
 msgid "The duck that reminds you"
 msgstr "De eend die je herinnert"
 
-#: src/MainWindow.vala:148
+#: src/MainWindow.vala:111
 msgid "New Reminder"
 msgstr "Nieuwe herinnering"
 
-#: src/MainWindow.vala:148
+#: src/MainWindow.vala:112
 msgid "Create a new reminder for a set date and time"
 msgstr "Stel een nieuwe herinnering in op een door jou gekozen datum en tijd"
 
-#: src/MainWindow.vala:150 src/MainWindow.vala:157
+#: src/MainWindow.vala:123 src/MainWindow.vala:136
 msgid "View Reminders"
 msgstr "Herinneringen bekijken"
 
-#: src/MainWindow.vala:150 src/MainWindow.vala:157
+#: src/MainWindow.vala:124 src/MainWindow.vala:137
 msgid "See reminders you've created"
 msgstr "Bekijk eerder ingestelde herinneringen"
 
@@ -104,19 +100,25 @@ msgstr "Mijn herinneringen"
 msgid "Create another"
 msgstr "Nog een herinnering instellen"
 
-#: src/Widgets/Views/RemindersView.vala:93
+#: src/Widgets/Views/RemindersView.vala:91
 #, c-format
 msgid "Reminded: %s"
 msgstr "Herinnerd aan: %s"
 
-#: src/Widgets/Views/RemindersView.vala:104
+#: src/Widgets/Views/RemindersView.vala:102
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: src/Widgets/Views/RemindersView.vala:111
+#: src/Widgets/Views/RemindersView.vala:109
 msgid "Edit"
 msgstr "Aanpassen"
 
-#: src/Widgets/Views/RemindersView.vala:120
+#: src/Widgets/Views/RemindersView.vala:118
 msgid "Today"
 msgstr "Vandaag"
+
+#~ msgid "Light mode"
+#~ msgstr "Licht thema"
+
+#~ msgid "Dark mode"
+#~ msgstr "Donker thema"
