@@ -154,11 +154,11 @@ public class Reminduck.Database {
         open_database (out db);
         string errmsg;
 
-        var exec_query = db.exec(query,(n, v, c) => {
+        var exec_query = db.exec (query, (n, v, c) => {
             var reminder = new Reminder ();
             reminder.rowid = v[0];
             reminder.description = v[1];
-            reminder.time = new GLib.DateTime.from_unix_local (int64.parse(v[2]));
+            reminder.time = new GLib.DateTime.from_unix_local (int64.parse (v[2]));
 
             if (v[3] != null) {
                 reminder.recurrency_type = (RecurrencyType)int.parse (v[3]);
@@ -178,7 +178,7 @@ public class Reminduck.Database {
     }
 
     public bool delete_reminder (string row_id) {
-        var query = """DELETE FROM reminders WHERE rowid = """+ row_id +""";""";
+        var query = """DELETE FROM reminders WHERE rowid = """+ row_id + """;""";
 
         Sqlite.Database db;
         open_database (out db);

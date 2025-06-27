@@ -49,6 +49,7 @@ namespace Reminduck {
             var image = new Gtk.Image ();
             image.set_from_icon_name ("io.github.ellie_commons.reminduck");
             image.set_margin_top (30);
+            image.set_pixel_size (96);
 
             var fields_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             fields_box.add_css_class ("reminduck-welcome-box");
