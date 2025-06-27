@@ -23,7 +23,7 @@ namespace Reminduck {
     public class ReminduckApp : Gtk.Application {
 
 
-        public static ArrayList<Reminder> reminders;
+        public static Gee.ArrayList<Reminduck.Reminder> reminders;
         public bool headless = false;
         private uint timeout_id = 0;
 
@@ -183,7 +183,7 @@ namespace Reminduck {
         public bool remind() {
             reload_reminders();
             
-            var reminders_to_delete = new ArrayList<string>();
+            Gee.ArrayList<string> reminders_to_delete;
             foreach(var reminder in reminders) {
                 //If reminder date < current date
                 if (reminder.time.compare(new GLib.DateTime.now()) <= 0) {
