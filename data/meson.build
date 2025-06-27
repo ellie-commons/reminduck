@@ -1,10 +1,24 @@
 
 
+
 install_data(
     'icons' / 'scalable.svg',
     install_dir: get_option('datadir') / 'icons' / 'scalable' / 'apps',
     rename: meson.project_name() + '.svg'
 )
+
+# Install our icons in all the required sizes
+icon_sizes = ['16', '24', '32', '48', '64', '128']
+
+foreach i : icon_sizes
+    install_data(
+        'icons' / 'hicolor' / 'io.github.ellie_commons.reminduck.png',
+        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps',
+        rename: meson.project_name() + '.png'
+    )
+endforeach
+
+
 
 i18n.merge_file(
     input: meson.project_name() + '.desktop.in',

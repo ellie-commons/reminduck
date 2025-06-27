@@ -72,65 +72,65 @@ namespace Reminduck {
         }
 
         public static int main(string[] args) {
-            var app = new ReminduckApp();
+            var app = new ReminduckApp ();
 
             if (args.length > 1 && args[1] == "--headless") {
                 app.headless = true;
             }
 
-            return app.run(args);
+            return app.run (args);
         }
 
-        protected override void activate() {
-            stdout.printf("\n✔️ Activated");
-            database.verify_database();
+        protected override void activate () {
+            stdout.printf ("\n✔️ Activated");
+            database.verify_database ();
 
-            this.settings = new GLib.Settings("io.github.ellie_commons.reminduck.state");
+            this.settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
 
-            var first_run = this.settings.get_boolean("first-run");
+            var first_run = this.settings.get_boolean ("first-run");
             // Set autostart here
 
-            reload_reminders();
+            reload_reminders ();
 
             if (this.main_window == null) {
-                this.main_window = new MainWindow();
-                this.main_window.set_application(this);                
+                this.main_window = new MainWindow ();
+                this.main_window.set_application (this);                
                                 
-                var provider = new Gtk.CssProvider();                
-                Gtk.StyleContext.add_provider_for_display(
-                    Gdk.Display.get_default(),
+                var provider = new Gtk.CssProvider ();                
+                Gtk.StyleContext.add_provider_for_display (
+                    Gdk.Display.get_default (),
                     provider,
                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
                 );
 
                 if (!this.headless) {
-                    this.main_window.show();
-                    this.main_window.show_welcome_view(Gtk.StackTransitionType.NONE);
-                    this.main_window.present();
+                    this.main_window.show ();
+                    this.main_window.show_welcome_view (Gtk.StackTransitionType.NONE);
+                    this.main_window.present ();
                 }
             }
             
             if (this.main_window != null && !this.headless) {
-                this.main_window.show();
-                this.main_window.show_welcome_view(Gtk.StackTransitionType.NONE);
-                this.main_window.present();
+                this.main_window.show ();
+                this.main_window.show_welcome_view (Gtk.StackTransitionType.NONE);
+                this.main_window.present ();
             }
 
             if (timeout_id == 0) {
-                set_reminder_interval();
+                set_reminder_interval ();
             }
         }
 
-        private void load_stylesheet(Gtk.Settings gtk_settings, Gtk.CssProvider provider) {
+        private void load_stylesheet (Gtk.Settings gtk_settings, Gtk.CssProvider provider) {
           if (gtk_settings.gtk_application_prefer_dark_theme) {
-            provider.load_from_resource("/io/github/ellie_commons/reminduck/stylesheet-dark.css");
+            provider.load_from_resource ("/io/github/ellie_commons/reminduck/stylesheet-dark.css");
           } else {
-            provider.load_from_resource("/io/github/ellie_commons/reminduck/stylesheet.css");
+            provider.load_from_resource ("/io/github/ellie_commons/reminduck/stylesheet.css");
           }
         }
         
-        public override int command_line(ApplicationCommandLine command_line) {
-            stdout.printf("\n💲️ Command line mode started");
+        public override int command_line (ApplicationCommandLine command_line) {
+            stdout.printf ("\n💲️ Command line mode started");
     
             bool headless_mode = false;
             OptionEntry[] options = new OptionEntry[1];
@@ -141,20 +141,20 @@ namespace Reminduck {
     
             // We have to make an extra copy of the array, since .parse assumes
             // that it can remove strings from the array without freeing them.
-            string[] args = command_line.get_arguments();
+            string[] args = command_line.get_arguments ();
             string[] _args = new string[args.length];
-            for(int i = 0; i < args.length; i++) {
+            for (int i = 0; i < args.length; i++) {
                 _args[i] = args[i];
             }
     
             try {
-                var ctx = new OptionContext();
-                ctx.set_help_enabled(true);
-                ctx.add_main_entries(options, null);
+                var ctx = new OptionContext ();
+                ctx.set_help_enabled (true);
+                ctx.add_main_entries (options, null);
                 unowned string[] tmp = _args;
                 ctx.parse(ref tmp);
-            } catch(OptionError e) {
-                command_line.print("error: %s\n", e.message);
+            } catch (OptionError e) {
+                command_line.print ("error: %s\n", e.message);
                 return 0;
             }
     
@@ -162,13 +162,13 @@ namespace Reminduck {
 
             stdout.printf(this.headless ? "\n✔️ Headless" : "\n️️️️ ✔️ Interface");
     
-            hold();
-            activate();
+            hold ();
+            activate ();
             return 0;
         }                
 
-        public static void reload_reminders() {
-            reminders = database.fetch_reminders();
+        public static void reload_reminders () {
+            reminders = database.fetch_reminders ();
         }
 
         public void set_reminder_interval() {
@@ -177,20 +177,20 @@ namespace Reminduck {
                 Source.remove(timeout_id);
             }
 
-            timeout_id = Timeout.add_seconds(1 * 60, remind);
+            timeout_id = Timeout.add_seconds (1 * 60, remind);
         }
     
-        public bool remind() {
-            reload_reminders();
+        public bool remind () {
+            reload_reminders ();
             
-            Gee.ArrayList<string> reminders_to_delete;
+            Gee.ArrayList<string> reminders_to_delete = new Gee.ArrayList<string> ();
             foreach(var reminder in reminders) {
                 //If reminder date < current date
-                if (reminder.time.compare(new GLib.DateTime.now()) <= 0) {
-                    var notification = new Notification("QUACK!");
-                    notification.set_body(reminder.description);
-                    notification.set_priority(GLib.NotificationPriority.URGENT);
-                    this.send_notification("notify.app", notification);
+                if (reminder.time.compare (new GLib.DateTime.now ()) <= 0) {
+                    var notification = new Notification ("QUACK!");
+                    notification.set_body (reminder.description);
+                    notification.set_priority (GLib.NotificationPriority.URGENT);
+                    this.send_notification ("notify.app", notification);
 
                     if (reminder.recurrency_type != RecurrencyType.NONE) {
                         GLib.DateTime new_time = reminder.time;
@@ -203,44 +203,44 @@ namespace Reminduck {
                         for (var i = 0; i < 30; i++) {
                             switch (reminder.recurrency_type) {
                                 case RecurrencyType.EVERY_X_MINUTES:
-                                    new_time = reminder.time.add_minutes(reminder.recurrency_interval);
+                                    new_time = reminder.time.add_minutes (reminder.recurrency_interval);
                                     break;
                                 case RecurrencyType.EVERY_DAY:
-                                    new_time = reminder.time.add_days(1);
+                                    new_time = reminder.time.add_days (1);
                                     break;
                                 case RecurrencyType.EVERY_WEEK:
-                                    new_time = reminder.time.add_weeks(1);
+                                    new_time = reminder.time.add_weeks (1);
                                     break;
                                 case RecurrencyType.EVERY_MONTH:
-                                    new_time = reminder.time.add_months(1);
+                                    new_time = reminder.time.add_months (1);
                                     break;
                                 default:
                                     break;
                             }
 
                             //if new_time > current time
-                            if (new_time.compare(new GLib.DateTime.now()) > 0) {
+                            if (new_time.compare (new GLib.DateTime.now ()) > 0) {
                                 var new_reminder = new Reminder();
                                 new_reminder.time = new_time;
                                 new_reminder.description = reminder.description;
                                 new_reminder.recurrency_type = reminder.recurrency_type;
 
-                                database.upsert_reminder(new_reminder);
+                                database.upsert_reminder (new_reminder);
                                 break;
                             }
                             //else, keep looping
                         }
                     }
 
-                    reminders_to_delete.add(reminder.rowid);
+                    reminders_to_delete.add (reminder.rowid);
                 }
             }
 
             if (reminders_to_delete.size > 0) {
                 foreach(var reminder in reminders_to_delete) {
-                    database.delete_reminder(reminder);
+                    database.delete_reminder (reminder);
                 }
-                reload_reminders();
+                reload_reminders ();
             }
 
             return true;

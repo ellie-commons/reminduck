@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/io/github/ellie_commons/reminduck">
-    <file alias="AppIcon.png">icons/io.github.ellie_commons.reminduck.png</file>
+    <file alias="AppIcon.png">icons/hicolor/io.github.ellie_commons.reminduck.png</file>
     <file alias="stylesheet.css">stylesheet.css</file>
   </gresource>
 </gresources>
