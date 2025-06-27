@@ -3,5 +3,6 @@
   <gresource prefix="/io/github/ellie_commons/reminduck">
     <file alias="AppIcon.png">icons/scalable.svg</file>
     <file alias="stylesheet.css">stylesheet.css</file>
+    <file alias="quack.mp3">quack.mp3</file>
   </gresource>
 </gresources>

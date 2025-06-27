@@ -10,6 +10,8 @@ finish-args:
   - '--socket=wayland'
   # Required to send notifications
   - '--socket=session-bus'
+  # Required to do a quack sound
+  - '--socket=pulseaudio'
 cleanup:
   -  '/include'
   -  '/lib/pkgconfig'
