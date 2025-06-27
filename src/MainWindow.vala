@@ -65,7 +65,7 @@ namespace Reminduck {
 
             var handle = new Gtk.WindowHandle () {
                 child = stack
-            }
+            };
 
             set_child (handle);
 
