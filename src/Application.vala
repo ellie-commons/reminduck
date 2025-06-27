@@ -86,9 +86,19 @@ namespace Reminduck {
             database.verify_database ();
 
             this.settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
+        // On first run, request autostart
+        if (settings.get_boolean ("first-run") || ask_autostart) {
 
-            var first_run = this.settings.get_boolean ("first-run");
-            // Set autostart here
+            // Show first run message only if really first run
+            if (settings.get_boolean ("first-run")) {
+                stdout.printf ("\n🎉️ First run");
+                settings.set_boolean ("first-run", false);
+            } else {
+                ask_autostart = false;
+            }
+            request_autostart ();
+
+        }
 
             reload_reminders ();
 
@@ -138,6 +148,10 @@ namespace Reminduck {
                 "headless", 0, 0, OptionArg.NONE,
                 ref headless_mode, "Run without window", null
             };
+        options[1] = {
+            "request-autostart", 0, 0, OptionArg.NONE,
+            ref ask_autostart, "Request autostart permission", null
+        };
     
             // We have to make an extra copy of the array, since .parse assumes
             // that it can remove strings from the array without freeing them.
@@ -165,7 +179,23 @@ namespace Reminduck {
             hold ();
             activate ();
             return 0;
-        }                
+        }
+
+    private static void request_autostart () {
+        Xdp.Portal portal = new Xdp.Portal ();
+        GenericArray<weak string> cmd = new GenericArray<weak string> ();
+        cmd.add ("com.github.elfenware.badger");
+        cmd.add ("--headless");
+
+        portal.request_background.begin (
+            null,
+            _("Autostart Badger in background to send reminders"),
+            cmd,
+            Xdp.BackgroundFlags.AUTOSTART,
+            null);
+
+        stdout.printf ("\n🚀 Requested autostart for Badger");
+    }
 
         public static void reload_reminders () {
             reminders = database.fetch_reminders ();
