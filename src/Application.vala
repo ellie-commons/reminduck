@@ -33,17 +33,29 @@ namespace Reminduck {
 
         public MainWindow main_window { get; private set; default = null; }
         public static Reminduck.Database database;
+   
+        public ReminduckApp () {
+            Object (
+                application_id: "io.github.ellie_commons.reminduck",
+                flags: ApplicationFlags.HANDLES_COMMAND_LINE
+            );
+        }
 
         construct {
-            application_id = "io.github.ellie_commons.reminduck";
-            flags = ApplicationFlags.HANDLES_COMMAND_LINE;
-            database = new Reminduck.Database();
-
             // Init internationalization support
             Intl.setlocale (LocaleCategory.ALL, "");
             Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
             Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
             Intl.textdomain (GETTEXT_PACKAGE);
+        }
+
+        public override void startup () {
+            base.startup ();
+
+            var quit_action = new SimpleAction ("quit", null);
+            add_action (quit_action);
+            set_accels_for_action ("app.quit", {"<Control>q"});
+            quit_action.activate.connect (quit);
 
             // Follow dark and light, use bananana
             granite_settings = Granite.Settings.get_default ();
@@ -59,27 +71,13 @@ namespace Reminduck {
                 gtk_settings.gtk_application_prefer_dark_theme = (
                         granite_settings.prefers_color_scheme == DARK
                     );
-            }); 
+            });
 
-            // Use reminduck styling
-            var app_provider = new Gtk.CssProvider ();
-            app_provider.load_from_resource ("/io/github/ellie_commons/reminduck/stylesheet.css");
-
-            Gtk.StyleContext.add_provider_for_display (
-                Gdk.Display.get_default (),
-                app_provider,
-                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
-            );
+            database = new Reminduck.Database();
         }
 
         public static int main(string[] args) {
-            var app = new ReminduckApp ();
-
-            if (args.length > 1 && args[1] == "--headless") {
-                app.headless = true;
-            }
-
-            return app.run (args);
+            return new ReminduckApp ().run (args);
         }
 
         protected override void activate () {
@@ -136,7 +134,7 @@ namespace Reminduck {
           if (gtk_settings.gtk_application_prefer_dark_theme) {
             provider.load_from_resource ("/io/github/ellie_commons/reminduck/stylesheet-dark.css");
           } else {
-            provider.load_from_resource ("/io/github/ellie_commons/reminduck/stylesheet.css");
+            provider.load_from_resource ("/io/github/ellie_commons/reminduck/Application.css");
           }
         }
         

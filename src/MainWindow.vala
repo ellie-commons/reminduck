@@ -37,12 +37,11 @@ namespace Reminduck {
 
         public MainWindow () {
             settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
-            gtk_settings = Gtk.Settings.get_default ();
-            gtk_settings.gtk_theme_name = "io.elementary.stylesheet.banana";
+            Intl.setlocale ();
 
             // Use reminduck styling
             var app_provider = new Gtk.CssProvider ();
-            app_provider.load_from_resource ("/io/github/ellie_commons/reminduck/stylesheet.css");
+            app_provider.load_from_resource ("/io/github/ellie_commons/reminduck/Application.css");
 
             Gtk.StyleContext.add_provider_for_display (
                 Gdk.Display.get_default (),
