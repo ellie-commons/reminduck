@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 20:27+0200\n"
+"POT-Creation-Date: 2025-06-28 22:45+0200\n"
 "PO-Revision-Date: 2021-08-16 23:13+0200\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: italian\n"
@@ -29,12 +29,10 @@ msgid "Reminduck;Personal;Assistant;Reminders;"
 msgstr "Reminduck;Persinale;Assistente;Promemoria;"
 
 #: data/reminduck.metainfo.xml.in:8
-#, fuzzy
 msgid "Remember your stuff in an adorably annoying way"
 msgstr "Ricordati dei tuoi promemoria in un modo adorabile."
 
 #: data/reminduck.metainfo.xml.in:10
-#, fuzzy
 msgid ""
 "A simple reminder app made to be quick and easy - Reminduck focuses on "
 "simple or recurrent reminders with set time and date and nothing else."
@@ -59,10 +57,10 @@ msgstr "E quack."
 
 #: data/reminduck.metainfo.xml.in:19
 msgid ""
-"The quack is back! A continuation of Reminduck, with the blessing of its "
-"original creator!"
+"🦆🦆The quack is back!🦆🦆 A continuation of Reminduck, with the blessing of "
+"its original creator!"
 msgstr ""
-"Il ciarlatano è tornato! Una continuazione di Reminduck, con la benedizione "
+"🦆🦆Il ciarlare è tornato!🦆🦆 Una continuazione di Reminduck, con la benedizione "
 "del suo creatore originale!"
 
 #: data/reminduck.metainfo.xml.in:22
@@ -75,7 +73,7 @@ msgstr "Rendere l'intera finestra afferrabile"
 
 #: data/reminduck.metainfo.xml.in:24
 msgid "No quack sound yet but that will come"
-msgstr "Non c'è ancora il suono del quack, ma arriverà"
+msgstr "Non c'è ancora il suono del ciarlare, ma arriverà"
 
 #: data/reminduck.metainfo.xml.in:30
 msgid "Add \"Office\" category to launcher"
@@ -181,9 +179,27 @@ msgstr "Dovrebbe supportare anche ad altri temi GTK scuri."
 msgid "Initial Release 🦆"
 msgstr "Rilascio iniziale 🦆"
 
-#: data/reminduck.metainfo.xml.in:140
-msgid "Matheus Fantinel"
+#: data/reminduck.metainfo.xml.in:120
+#, fuzzy
+msgid "Matheus Fantinel + Stella"
 msgstr "Matheus Fantinel"
+
+#: data/reminduck.metainfo.xml.in:138
+msgid "The welcome view"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:142
+#, fuzzy
+msgid "Add new reminders"
+msgstr "Promemoria"
+
+#: data/reminduck.metainfo.xml.in:146
+msgid "Add new reminders but in dark"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:150
+msgid "See current reminders"
+msgstr ""
 
 #~ msgid "io.github.ellie_commons.reminduck"
 #~ msgstr "io.github.ellie_commons.reminduck"

@@ -14,9 +14,9 @@
     <p>And it quacks.</p>
   </description>
   <releases>
-    <release version="2.0.0" date="2025-06-16">
+    <release version="2.0.0" date="2025-06-28">
       <description>
-        <p>The quack is back!
+        <p>🦆🦆The quack is back!🦆🦆
         A continuation of Reminduck, with the blessing of its original creator!</p>
         <ul>
           <li>Adapted to modern libraries (GTK4, Flatpak)</li>

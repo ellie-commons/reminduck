@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 20:27+0200\n"
+"POT-Creation-Date: 2025-06-28 22:45+0200\n"
 "PO-Revision-Date: 2020-01-03 13:53+0100\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Italian\n"
@@ -12,35 +12,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/Application.vala:193
+#: src/Application.vala:183
 msgid "Autostart Badger in background to send reminders"
 msgstr "Avvio automatico di Badger in background per l'invio di promemoria"
 
-#: src/MainWindow.vala:71
+#: src/MainWindow.vala:70
 msgid "Back"
 msgstr "Indietro"
 
-#: src/MainWindow.vala:81
+#: src/MainWindow.vala:80
 msgid "QUACK! I'm Reminduck"
 msgstr "QUACK! Sono Reminduck"
 
-#: src/MainWindow.vala:82
+#: src/MainWindow.vala:81
 msgid "The duck that reminds you"
 msgstr "La papera che ti ricorda"
 
-#: src/MainWindow.vala:88
+#: src/MainWindow.vala:87
 msgid "New Reminder"
 msgstr "Nuovo Promemoria"
 
-#: src/MainWindow.vala:89
+#: src/MainWindow.vala:88
 msgid "Create a new reminder for a set date and time"
 msgstr "Crea un nuovo promemoria con data e ora prestabilita"
 
-#: src/MainWindow.vala:100
+#: src/MainWindow.vala:99
 msgid "View Reminders"
 msgstr "Vedi Promemoria"
 
-#: src/MainWindow.vala:101
+#: src/MainWindow.vala:100
 msgid "See reminders you've created"
 msgstr "Visualizza i promemoria creati"
 

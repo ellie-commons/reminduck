@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 20:27+0200\n"
+"POT-Creation-Date: 2025-06-28 22:45+0200\n"
 "PO-Revision-Date: 2019-11-04 14:49+0100\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -63,9 +63,10 @@ msgid "And it quacks."
 msgstr "Vaklamasını da bilir."
 
 #: data/reminduck.metainfo.xml.in:19
+#, fuzzy
 msgid ""
-"The quack is back! A continuation of Reminduck, with the blessing of its "
-"original creator!"
+"🦆🦆The quack is back!🦆🦆 A continuation of Reminduck, with the blessing of "
+"its original creator!"
 msgstr ""
 "Vakvak geri döndü! Orijinal yaratıcısının onayıyla Reminduck'ın devamı!"
 
@@ -187,9 +188,27 @@ msgid "Initial Release 🦆"
 msgstr "İlk Sürüm 🎉️"
 
 # Geliştirici adı, çevirmeyin.
-#: data/reminduck.metainfo.xml.in:140
-msgid "Matheus Fantinel"
+#: data/reminduck.metainfo.xml.in:120
+#, fuzzy
+msgid "Matheus Fantinel + Stella"
 msgstr "Matheus Fantinel"
+
+#: data/reminduck.metainfo.xml.in:138
+msgid "The welcome view"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:142
+#, fuzzy
+msgid "Add new reminders"
+msgstr "Hatırlatıcılar"
+
+#: data/reminduck.metainfo.xml.in:146
+msgid "Add new reminders but in dark"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:150
+msgid "See current reminders"
+msgstr ""
 
 # Uygulama kimliği, çevirmeyin
 #~ msgid "io.github.ellie_commons.reminduck"

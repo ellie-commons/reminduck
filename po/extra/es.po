@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 20:27+0200\n"
+"POT-Creation-Date: 2025-06-28 22:45+0200\n"
 "PO-Revision-Date: DATEME\n"
 "Last-Translator: Alejandro Elí\n"
 "Language-Team: none\n"
@@ -56,11 +56,12 @@ msgid "And it quacks."
 msgstr "Y grazna."
 
 #: data/reminduck.metainfo.xml.in:19
+#, fuzzy
 msgid ""
-"The quack is back! A continuation of Reminduck, with the blessing of its "
-"original creator!"
+"🦆🦆The quack is back!🦆🦆 A continuation of Reminduck, with the blessing of "
+"its original creator!"
 msgstr ""
-"¡El matasanos ha vuelto! Una continuación de Reminduck, ¡con la bendición de "
+"🦆🦆¡El graznar ha vuelto!🦆🦆 Una continuación de Reminduck, ¡con la bendición de "
 "su creador original!"
 
 #: data/reminduck.metainfo.xml.in:22
@@ -177,6 +178,24 @@ msgstr "Debería funcionar con otros temas GTK oscuros"
 msgid "Initial Release 🦆"
 msgstr "Versión inicial 🦆"
 
-#: data/reminduck.metainfo.xml.in:140
-msgid "Matheus Fantinel"
+#: data/reminduck.metainfo.xml.in:120
+#, fuzzy
+msgid "Matheus Fantinel + Stella"
 msgstr "Matheus Fantinel"
+
+#: data/reminduck.metainfo.xml.in:138
+msgid "The welcome view"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:142
+#, fuzzy
+msgid "Add new reminders"
+msgstr "Recordatorios"
+
+#: data/reminduck.metainfo.xml.in:146
+msgid "Add new reminders but in dark"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:150
+msgid "See current reminders"
+msgstr ""
