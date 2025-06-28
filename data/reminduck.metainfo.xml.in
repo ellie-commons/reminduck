@@ -108,57 +108,47 @@
   <provides>
     <binary>io.github.ellie_commons.reminduck</binary>
   </provides>
-  <content_rating type="oars-1.1">
-    <content_attribute id="violence-cartoon">none</content_attribute>
-    <content_attribute id="violence-fantasy">none</content_attribute>
-    <content_attribute id="violence-realistic">none</content_attribute>
-    <content_attribute id="violence-bloodshed">none</content_attribute>
-    <content_attribute id="violence-sexual">none</content_attribute>
-    <content_attribute id="violence-desecration">none</content_attribute>
-    <content_attribute id="violence-slavery">none</content_attribute>
-    <content_attribute id="violence-worship">none</content_attribute>
-    <content_attribute id="drugs-alcohol">none</content_attribute>
-    <content_attribute id="drugs-narcotics">none</content_attribute>
-    <content_attribute id="drugs-tobacco">none</content_attribute>
-    <content_attribute id="sex-nudity">none</content_attribute>
-    <content_attribute id="sex-themes">none</content_attribute>
-    <content_attribute id="sex-homosexuality">none</content_attribute>
-    <content_attribute id="sex-prostitution">none</content_attribute>
-    <content_attribute id="sex-adultery">none</content_attribute>
-    <content_attribute id="sex-appearance">none</content_attribute>
-    <content_attribute id="language-profanity">none</content_attribute>
-    <content_attribute id="language-humor">none</content_attribute>
-    <content_attribute id="language-discrimination">none</content_attribute>
-    <content_attribute id="social-chat">none</content_attribute>
-    <content_attribute id="social-info">none</content_attribute>
-    <content_attribute id="social-audio">none</content_attribute>
-    <content_attribute id="social-location">none</content_attribute>
-    <content_attribute id="social-contacts">none</content_attribute>
-    <content_attribute id="money-purchasing">none</content_attribute>
-    <content_attribute id="money-gambling">none</content_attribute>
-  </content_rating>
-  <developer_name>Matheus Fantinel</developer_name>
-  <url type="homepage">https://github.com/matfantinel/reminduck</url>
-  <url type="bugtracker">https://github.com/matfantinel/reminduck/issues</url>
-  <url type="help">https://github.com/matfantinel/reminduck/issues</url>
-  <update_contact>matfantinel@gmail.com</update_contact>
+    <content_rating type="oars-1.1"/>
+    <translation type="gettext" source_locale="en_GB">io.github.ellie_commons.jorts</translation>
+    <recommends>
+      <control>keyboard</control>
+      <control>pointing</control>
+      <control>touch</control>
+    </recommends>
+
+    <developer id="io.github.teamcons">
+        <name>Matheus Fantinel + Stella</name>
+    </developer>
+    <project_group>ellie-commons</project_group>
+    <url type="homepage">https://github.com/ellie-commons/reminduck</url>
+    <url type="bugtracker">https://github.com/ellie-commons/reminduck/issues</url>
+    <url type="help">https://github.com/ellie-commons/reminduck/issues</url>
+    <url type="translate">https://github.com/ellie-commons/reminduck/blob/main/po/README.md</url>
+    <url type="donation">https://ko-fi.com/teamcons</url>
+
+    <branding>
+      <color type="primary" scheme_preference="light">#fff394</color>
+      <color type="primary-text" scheme_preference="light">#fff</color>
+      <color type="primary" scheme_preference="dark">#ad5f00</color>
+      <color type="primary-text" scheme_preference="dark">#000</color>
+    </branding>
+
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/Welcome.png</image>
+      <caption>The welcome view</caption>
+      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/Welcome.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/Editor.png</image>
+      <caption>Add new reminders</caption>
+      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/Editor.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/Editor-dark.png</image>
+      <caption>Add new reminders but in dark</caption>
+      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/Editor-dark.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/List.png</image>
+      <caption>See current reminders</caption>
+      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/List.png</image>
     </screenshot>
   </screenshots>
-  <custom>
-     <value key="x-appcenter-color-primary">#3D3D3D</value>
-     <value key="x-appcenter-color-primary-text">#FFF394</value>
-     <value key="x-appcenter-suggested-price">0</value>
-  </custom>
 </component>

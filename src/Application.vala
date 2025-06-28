@@ -41,21 +41,20 @@ namespace Reminduck {
             );
         }
 
-        construct {
+        public override void startup () {
+            base.startup ();
+
             // Init internationalization support
             Intl.setlocale (LocaleCategory.ALL, "");
             Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
             Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
             Intl.textdomain (GETTEXT_PACKAGE);
-        }
-
-        public override void startup () {
-            base.startup ();
 
             var quit_action = new SimpleAction ("quit", null);
             add_action (quit_action);
             set_accels_for_action ("app.quit", {"<Control>q"});
             quit_action.activate.connect (quit);
+
 
             // Follow dark and light, use bananana
             granite_settings = Granite.Settings.get_default ();
