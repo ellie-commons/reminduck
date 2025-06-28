@@ -41,9 +41,7 @@ namespace Reminduck {
             );
         }
 
-        public override void startup () {
-            base.startup ();
-
+        construct {
             // Init internationalization support
             Intl.setlocale (LocaleCategory.ALL, "");
             Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
@@ -55,6 +53,11 @@ namespace Reminduck {
             set_accels_for_action ("app.quit", {"<Control>q"});
             quit_action.activate.connect (quit);
 
+            database = new Reminduck.Database();
+        }
+
+        public override void startup () {
+            base.startup ();
 
             // Follow dark and light, use bananana
             granite_settings = Granite.Settings.get_default ();
@@ -71,8 +74,6 @@ namespace Reminduck {
                         granite_settings.prefers_color_scheme == DARK
                     );
             });
-
-            database = new Reminduck.Database();
         }
 
         public static int main(string[] args) {
