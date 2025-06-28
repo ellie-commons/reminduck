@@ -175,17 +175,17 @@ namespace Reminduck {
         private static void request_autostart () {
             Xdp.Portal portal = new Xdp.Portal ();
             GenericArray<weak string> cmd = new GenericArray<weak string> ();
-            cmd.add ("com.github.elfenware.badger");
+            cmd.add ("com.github.elfenware.reminduck");
             cmd.add ("--headless");
 
             portal.request_background.begin (
                 null,
-                _("Autostart Badger in background to send reminders"),
+                _("Autostart Reminduck in background to send reminders"),
                 cmd,
                 Xdp.BackgroundFlags.AUTOSTART,
                 null);
 
-            stdout.printf ("\n🚀 Requested autostart for Badger");
+            stdout.printf ("\n🚀 Requested autostart");
         }
 
         public static void reload_reminders () {
