@@ -11,8 +11,10 @@ finish-args:
   - '--device=dri'
   - '--socket=fallback-x11'
   - '--socket=wayland'
-  # Required to send notifications
+  # Allow Reminduck to send reminders
   - '--socket=session-bus'
+  # Allow Reminduck to autostart and keep timers in the background
+  - '--talk-name=org.freedesktop.portal.Background'
   # Required to do a quack sound
   - '--socket=pulseaudio'
 cleanup:

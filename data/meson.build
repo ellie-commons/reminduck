@@ -21,7 +21,7 @@ endforeach
 
 
 i18n.merge_file(
-    input: meson.project_name() + '.desktop.in',
+    input: 'reminduck.desktop.in',
     output: meson.project_name() + '.desktop',
     po_dir: join_paths(meson.global_source_root(), 'po', 'extra'),
     type: 'desktop',
@@ -30,7 +30,7 @@ i18n.merge_file(
 )
 
 i18n.merge_file(
-    input: meson.project_name() + '.metainfo.xml.in',
+    input: 'reminduck.metainfo.xml.in',
     output: meson.project_name() + '.metainfo.xml',
     po_dir: join_paths(meson.global_source_root(), 'po', 'extra'),
     install: true,
@@ -38,6 +38,6 @@ i18n.merge_file(
 )
 
 install_data(
-    meson.project_name() + '.gschema.xml',
+    'reminduck.gschema.xml',
     install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
 )

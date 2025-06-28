@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-27 19:52+0200\n"
+"POT-Creation-Date: 2025-06-28 20:09+0200\n"
 "PO-Revision-Date: 2020-01-13 15:11+0100\n"
 "Last-Translator: Alexander Schneider <kokoskern@gmail.com>\n"
 "Language-Team: none\n"
@@ -17,35 +17,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/Application.vala:191
+#: src/Application.vala:194
 msgid "Autostart Badger in background to send reminders"
 msgstr ""
 
-#: src/MainWindow.vala:93
+#: src/MainWindow.vala:71
 msgid "Back"
 msgstr "Zurück"
 
-#: src/MainWindow.vala:105
+#: src/MainWindow.vala:81
 msgid "QUACK! I'm Reminduck"
 msgstr "QUAK! Ich bin Reminduck"
 
-#: src/MainWindow.vala:106
+#: src/MainWindow.vala:82
 msgid "The duck that reminds you"
 msgstr "Die Ente die dich erinnert"
 
-#: src/MainWindow.vala:111
+#: src/MainWindow.vala:88
 msgid "New Reminder"
 msgstr "Neue Erinnerung"
 
-#: src/MainWindow.vala:112
+#: src/MainWindow.vala:89
 msgid "Create a new reminder for a set date and time"
 msgstr "Erstelle neue Erinnerung für bestimmte Zeit und Datum"
 
-#: src/MainWindow.vala:123 src/MainWindow.vala:136
+#: src/MainWindow.vala:100
 msgid "View Reminders"
 msgstr "Zeige Erinnerungen an"
 
-#: src/MainWindow.vala:124 src/MainWindow.vala:137
+#: src/MainWindow.vala:101
 msgid "See reminders you've created"
 msgstr "Zeige bisher erstellte Erinnerungen an"
 
@@ -76,19 +76,19 @@ msgstr "Jede Woche"
 msgid "Every month"
 msgstr "Jeden Monat"
 
-#: src/Widgets/Views/ReminderEditor.vala:54
+#: src/Widgets/Views/ReminderEditor.vala:57
 msgid "Create a new reminder"
 msgstr "Erstelle eine neue Erinnerung"
 
-#: src/Widgets/Views/ReminderEditor.vala:58
+#: src/Widgets/Views/ReminderEditor.vala:64
 msgid "What do you want to be reminded of?"
 msgstr "An was möchtest Du erinnert werden?"
 
-#: src/Widgets/Views/ReminderEditor.vala:85
+#: src/Widgets/Views/ReminderEditor.vala:93
 msgid "Repeat"
 msgstr "Wiederhole"
 
-#: src/Widgets/Views/ReminderEditor.vala:90
+#: src/Widgets/Views/ReminderEditor.vala:98
 msgid "Save reminder"
 msgstr "Speichere Erinnerung"
 
@@ -96,26 +96,26 @@ msgstr "Speichere Erinnerung"
 msgid "Your reminders"
 msgstr "Deine Erinnerungen"
 
-#: src/Widgets/Views/RemindersView.vala:52
+#: src/Widgets/Views/RemindersView.vala:57
 msgid "Create another"
 msgstr "Weitere Erinnerung erstellen"
 
-#: src/Widgets/Views/RemindersView.vala:91
+#: src/Widgets/Views/RemindersView.vala:102
 #, c-format
 msgid "Reminded: %s"
 msgstr "Erinnerung an: %s"
 
-#: src/Widgets/Views/RemindersView.vala:102
-msgid "Delete"
-msgstr "Löschen"
-
-#: src/Widgets/Views/RemindersView.vala:109
-msgid "Edit"
-msgstr "Bearbeiten"
-
 #: src/Widgets/Views/RemindersView.vala:118
 msgid "Today"
 msgstr "Heute"
+
+#: src/Widgets/Views/RemindersView.vala:130
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: src/Widgets/Views/RemindersView.vala:137
+msgid "Delete"
+msgstr "Löschen"
 
 #~ msgid "Light mode"
 #~ msgstr "Heller Modus"

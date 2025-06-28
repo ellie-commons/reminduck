@@ -22,7 +22,6 @@
           <li>Adapt to modern libraries (GTK4, Flatpak)</li>
           <li>Make the whole window grabbable</li>
           <li>No quack sound yet but that will come</li>
-          <li>Minor regression: titlebar is not coloured</li>
         </ul>
       </description>
     </release>

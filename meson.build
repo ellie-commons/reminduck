@@ -3,26 +3,20 @@ project('io.github.ellie_commons.reminduck', 'vala', 'c', version: '2.0.0')
 gnome = import('gnome')
 i18n = import('i18n')
 
-add_project_arguments(
-    '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
-    language: 'c'
-)
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
-conf_data = configuration_data()
-conf_data.set_quoted('PROJECT_NAME', meson.project_name())
-conf_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
-conf_data.set_quoted('VERSION', meson.project_version())
-conf_data.set_quoted('PREFIX', get_option('prefix'))
-conf_data.set_quoted('DATADIR', join_paths (get_option('prefix'), get_option('datadir')))
-config_header = configure_file(
-    input : 'config.vala.in',
-    output : 'config.vala',
-    configuration : conf_data
+config_data = configuration_data()
+config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
+config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
+config_file = configure_file(
+    input: 'src/Config.vala.in',
+    output: '@BASENAME@',
+    configuration: config_data
 )
 
 asresources = gnome.compile_resources(
     'as-resources',
-    join_paths('data', meson.project_name()) + '.gresource.xml',
+    join_paths('data', 'reminduck.gresource.xml'),
     source_dir: 'data',
     c_name: 'as'
 )
@@ -33,7 +27,7 @@ executable(
     meson.project_name(),
     sources,
     asresources,
-    config_header,
+    config_file,
     dependencies: [
         dependency('gtk4'),
         dependency('gee-0.8'),

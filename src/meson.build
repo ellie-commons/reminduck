@@ -1,4 +1,4 @@
-sources = files(
+sources = files (
     'Application.vala',
     'MainWindow.vala',
     'Database.vala',

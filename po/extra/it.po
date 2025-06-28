@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-27 19:53+0200\n"
+"POT-Creation-Date: 2025-06-28 20:09+0200\n"
 "PO-Revision-Date: 2021-08-16 23:13+0200\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: italian\n"
@@ -82,40 +82,36 @@ msgstr ""
 msgid "No quack sound yet but that will come"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:25
-msgid "Minor regression: titlebar is not coloured"
-msgstr ""
-
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:31
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:30
 msgid "Add \"Office\" category to launcher"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:37
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:36
 msgid "- Support for elementary OS 6.0 Odin!"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:38
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:46
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:37
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:45
 msgid "- 🇮🇹 Updated italian translation (@albanobattistella)"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:45
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:44
 msgid "- 🇩🇪 German translation (@Technipion)"
 msgstr ""
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:53
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:52
 msgid "🐞 Enable translations on Flatpak"
 msgstr "🐞 Abilita le traduzioni su Flatpak"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:60
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:59
 msgid "🗃️ Flatpak Support!"
 msgstr "🗃️ Supporto per Flatpak!"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:67
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:66
 msgid "🌑 Dark-mode toggle on the header bar"
 msgstr "🌑 Attiva/disattiva modalità scura sulla barra dell'intestazione"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:68
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:67
 msgid ""
 "🔔 Notifications now stick around until you close them, to make sure you "
 "don't miss your quacks"
@@ -123,21 +119,21 @@ msgstr ""
 "🔔 Le notifiche ora restano in attesa fino a quando non le chiudi, per "
 "assicurarti di non perdere i tuoi quacks"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:69
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:68
 msgid "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
 msgstr ""
 "🌟 Supporto per temi GTK aggiuntivi, rendendo Reminduck distro-agnostico"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:70
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:69
 msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
 msgstr "🇪🇸 Traduzione Spagnola (Alejandro Elí | @onerbs)"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:71
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:70
 msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
 msgstr ""
 "🇮🇹 Traduzione Italiana (Mirko Brombin | @mirkobrombin e Albano Battistella)"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:78
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:77
 msgid ""
 "🐥️ New Icon! - hopefully this one looks better than the previous one. With "
 "great help from Nararyans R.I. (@Fatih20)"
@@ -145,15 +141,15 @@ msgstr ""
 "🐥️ Nuova icona! - si spera che questa sia migliore della precedente. Con "
 "grande aiuto di Nararyans R.I. (@ Fatih20)"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:79
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:78
 msgid "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
 msgstr "💁‍ Maggiore compatibilità con le traduzioni (Corentin Noël | @tintou)"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:80
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:79
 msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
 msgstr "🇨🇵️ Traduzione francese (Nathan Bonnemains | @NathanBnm)"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:87
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:86
 msgid ""
 "🔁️ Recurrent reminders - you can now have reminders that show up in set "
 "periods of time: every day, week, month, or a set interval"
@@ -162,36 +158,36 @@ msgstr ""
 "nei periodi di tempo: ogni giorno, settimana, mese o ad "
 "intervalloprestabilito"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:88
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:87
 msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
 msgstr "🌟️ Miglioramenti alla UI per migliorare il quak migliore"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:89
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:88
 msgid "🌃️ Dark Mode is now prettier"
 msgstr "🌃️ La modalità scura è ora più carina"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:90
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:89
 msgid "🇹🇷 Turkish translation (libreajans)"
 msgstr "🇹🇷 Traduzione in Turco(libreajans)"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:91
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:90
 msgid "🇳🇱 Dutch translation (Vistaus)"
 msgstr "🇳🇱 Traduzione in Tedesco (Vistaus)"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:98
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:97
 msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
 msgstr ""
 "Supporto alla impostazione non ufficiale \"Preferisci il tema dark\" 🌝️"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:99
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:98
 msgid "This should also make it work with other dark GTK themes"
 msgstr "Dovrebbe supportare anche ad altri temi GTK scuri."
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:105
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:104
 msgid "Initial Release 🦆"
 msgstr "Rilascio iniziale 🦆"
 
-#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:141
+#: data/io.github.ellie_commons.reminduck.metainfo.xml.in:140
 msgid "Matheus Fantinel"
 msgstr "Matheus Fantinel"
 
