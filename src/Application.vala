@@ -129,14 +129,6 @@ namespace Reminduck {
                 set_reminder_interval ();
             }
         }
-
-        private void load_stylesheet (Gtk.Settings gtk_settings, Gtk.CssProvider provider) {
-          if (gtk_settings.gtk_application_prefer_dark_theme) {
-            provider.load_from_resource ("/io/github/ellie_commons/reminduck/stylesheet-dark.css");
-          } else {
-            provider.load_from_resource ("/io/github/ellie_commons/reminduck/Application.css");
-          }
-        }
         
         public override int command_line (ApplicationCommandLine command_line) {
             stdout.printf ("\n💲️ Command line mode started");

@@ -241,7 +241,7 @@ namespace Reminduck.Widgets.Views {
                     }
                 }
             } else {
-                this.reminder = new Reminder();
+                this.reminder = new Reminder ();
                 this.reset_fields ();
             }
         }

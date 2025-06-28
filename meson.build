@@ -1,11 +1,12 @@
-project('io.github.ellie_commons.reminduck', 'vala', 'c', version: '2.0.0')
+project('io.github.ellie_commons.reminduck', 
+'vala', 'c', 
+version: '2.0.0')
 
 gnome = import('gnome')
 i18n = import('i18n')
 
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
-
 
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))

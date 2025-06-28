@@ -52,17 +52,13 @@ public class Reminduck.Database {
     }
 
     public void verify_database () {
-        try {
-            string path = Environment.get_user_data_dir () + "/.local/share/io.github.ellie_commons.reminduck";
+         string path = Environment.get_user_data_dir () + "/.local/share/io.github.ellie_commons.reminduck";
             File tmp = File.new_for_path (path);
             if (tmp.query_file_type (0) != FileType.DIRECTORY) {
                 GLib.DirUtils.create_with_parents (path, 0775);
             }
 
             initialize_database ();
-        } catch (Error e) {
-             stderr.printf ("Error: %s\n", e.message);
-        }
     }
 
     //  private void create_new_columns() {
