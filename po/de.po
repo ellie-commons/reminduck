@@ -1,13 +1,8 @@
-# German translations for io.github.ellie_commons.reminduck package.
-# Copyright (C) 2020 THE io.github.ellie_commons.reminduck'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the io.github.ellie_commons.reminduck package.
-# Automatically generated, then modified to need, 2020.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 20:09+0200\n"
+"POT-Creation-Date: 2025-06-28 20:27+0200\n"
 "PO-Revision-Date: 2020-01-13 15:11+0100\n"
 "Last-Translator: Alexander Schneider <kokoskern@gmail.com>\n"
 "Language-Team: none\n"
@@ -17,9 +12,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/Application.vala:194
+#: src/Application.vala:193
 msgid "Autostart Badger in background to send reminders"
-msgstr ""
+msgstr "Autostart von Badger im Hintergrund, um Erinnerungen zu versenden"
 
 #: src/MainWindow.vala:71
 msgid "Back"
@@ -76,44 +71,44 @@ msgstr "Jede Woche"
 msgid "Every month"
 msgstr "Jeden Monat"
 
-#: src/Widgets/Views/ReminderEditor.vala:57
+#: src/Views/ReminderEditor.vala:57
 msgid "Create a new reminder"
 msgstr "Erstelle eine neue Erinnerung"
 
-#: src/Widgets/Views/ReminderEditor.vala:64
+#: src/Views/ReminderEditor.vala:64
 msgid "What do you want to be reminded of?"
 msgstr "An was möchtest Du erinnert werden?"
 
-#: src/Widgets/Views/ReminderEditor.vala:93
+#: src/Views/ReminderEditor.vala:93
 msgid "Repeat"
 msgstr "Wiederhole"
 
-#: src/Widgets/Views/ReminderEditor.vala:98
+#: src/Views/ReminderEditor.vala:98
 msgid "Save reminder"
 msgstr "Speichere Erinnerung"
 
-#: src/Widgets/Views/RemindersView.vala:47
+#: src/Views/RemindersView.vala:47
 msgid "Your reminders"
 msgstr "Deine Erinnerungen"
 
-#: src/Widgets/Views/RemindersView.vala:57
+#: src/Views/RemindersView.vala:57
 msgid "Create another"
 msgstr "Weitere Erinnerung erstellen"
 
-#: src/Widgets/Views/RemindersView.vala:102
+#: src/Views/RemindersView.vala:102
 #, c-format
 msgid "Reminded: %s"
 msgstr "Erinnerung an: %s"
 
-#: src/Widgets/Views/RemindersView.vala:118
+#: src/Views/RemindersView.vala:118
 msgid "Today"
 msgstr "Heute"
 
-#: src/Widgets/Views/RemindersView.vala:130
+#: src/Views/RemindersView.vala:130
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: src/Widgets/Views/RemindersView.vala:137
+#: src/Views/RemindersView.vala:137
 msgid "Delete"
 msgstr "Löschen"
 

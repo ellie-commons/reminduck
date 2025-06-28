@@ -1,9 +1,8 @@
 sources = files (
     'Application.vala',
     'MainWindow.vala',
-    'Database.vala',
+    'Services/Database.vala',
     'Objects/Reminder.vala',
-    'Widgets/Views/ReminderEditor.vala',
-    'Widgets/Views/RemindersView.vala'
-    
+    'Views/ReminderEditor.vala',
+    'Views/RemindersView.vala'
 )

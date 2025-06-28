@@ -1,12 +1,8 @@
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the io.github.ellie_commons.reminduck package.
-#
-# Heimen Stoffels <vistausss@outlook.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 20:09+0200\n"
+"POT-Creation-Date: 2025-06-28 20:27+0200\n"
 "PO-Revision-Date: 2019-11-29 18:14+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <vistausss@outlook.com>\n"
@@ -17,9 +13,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2.4\n"
 
-#: src/Application.vala:194
+#: src/Application.vala:193
 msgid "Autostart Badger in background to send reminders"
 msgstr ""
+"Badger automatisch op de achtergrond starten om herinneringen te versturen"
 
 #: src/MainWindow.vala:71
 msgid "Back"
@@ -76,44 +73,44 @@ msgstr "Elke week"
 msgid "Every month"
 msgstr "Elke maand"
 
-#: src/Widgets/Views/ReminderEditor.vala:57
+#: src/Views/ReminderEditor.vala:57
 msgid "Create a new reminder"
 msgstr "Stel een nieuwe herinnering in"
 
-#: src/Widgets/Views/ReminderEditor.vala:64
+#: src/Views/ReminderEditor.vala:64
 msgid "What do you want to be reminded of?"
 msgstr "Waar wil je aan herinnerd worden?"
 
-#: src/Widgets/Views/ReminderEditor.vala:93
+#: src/Views/ReminderEditor.vala:93
 msgid "Repeat"
 msgstr "Herhalen"
 
-#: src/Widgets/Views/ReminderEditor.vala:98
+#: src/Views/ReminderEditor.vala:98
 msgid "Save reminder"
 msgstr "Herinnering opslaan"
 
-#: src/Widgets/Views/RemindersView.vala:47
+#: src/Views/RemindersView.vala:47
 msgid "Your reminders"
 msgstr "Mijn herinneringen"
 
-#: src/Widgets/Views/RemindersView.vala:57
+#: src/Views/RemindersView.vala:57
 msgid "Create another"
 msgstr "Nog een herinnering instellen"
 
-#: src/Widgets/Views/RemindersView.vala:102
+#: src/Views/RemindersView.vala:102
 #, c-format
 msgid "Reminded: %s"
 msgstr "Herinnerd aan: %s"
 
-#: src/Widgets/Views/RemindersView.vala:118
+#: src/Views/RemindersView.vala:118
 msgid "Today"
 msgstr "Vandaag"
 
-#: src/Widgets/Views/RemindersView.vala:130
+#: src/Views/RemindersView.vala:130
 msgid "Edit"
 msgstr "Aanpassen"
 
-#: src/Widgets/Views/RemindersView.vala:137
+#: src/Views/RemindersView.vala:137
 msgid "Delete"
 msgstr "Verwijderen"
 

@@ -1,13 +1,8 @@
-# Spanish translations for Reminduck.
-# Copyright (C) 2019 THE Reminduck'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the io.github.ellie_commons.reminduck package.
-# Alejandro Elí, 2019.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 20:09+0200\n"
+"POT-Creation-Date: 2025-06-28 20:27+0200\n"
 "PO-Revision-Date: DATEME\n"
 "Last-Translator: Alejandro Elí\n"
 "Language-Team: none\n"
@@ -17,9 +12,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/Application.vala:194
+#: src/Application.vala:193
 msgid "Autostart Badger in background to send reminders"
-msgstr ""
+msgstr "Inicio automático de Badger en segundo plano para enviar recordatorios"
 
 #: src/MainWindow.vala:71
 msgid "Back"
@@ -76,44 +71,44 @@ msgstr "Semanalmente"
 msgid "Every month"
 msgstr "Mensualmente"
 
-#: src/Widgets/Views/ReminderEditor.vala:57
+#: src/Views/ReminderEditor.vala:57
 msgid "Create a new reminder"
 msgstr "Nuevo recordatorio"
 
-#: src/Widgets/Views/ReminderEditor.vala:64
+#: src/Views/ReminderEditor.vala:64
 msgid "What do you want to be reminded of?"
 msgstr "¿Qué desea que le recuerde?"
 
-#: src/Widgets/Views/ReminderEditor.vala:93
+#: src/Views/ReminderEditor.vala:93
 msgid "Repeat"
 msgstr "Repetir"
 
-#: src/Widgets/Views/ReminderEditor.vala:98
+#: src/Views/ReminderEditor.vala:98
 msgid "Save reminder"
 msgstr "Guardar"
 
-#: src/Widgets/Views/RemindersView.vala:47
+#: src/Views/RemindersView.vala:47
 msgid "Your reminders"
 msgstr "Pendientes"
 
-#: src/Widgets/Views/RemindersView.vala:57
+#: src/Views/RemindersView.vala:57
 msgid "Create another"
 msgstr "Nuevo"
 
-#: src/Widgets/Views/RemindersView.vala:102
+#: src/Views/RemindersView.vala:102
 #, c-format
 msgid "Reminded: %s"
 msgstr "Recordado: %s"
 
-#: src/Widgets/Views/RemindersView.vala:118
+#: src/Views/RemindersView.vala:118
 msgid "Today"
 msgstr "Hoy"
 
-#: src/Widgets/Views/RemindersView.vala:130
+#: src/Views/RemindersView.vala:130
 msgid "Edit"
 msgstr "Editar"
 
-#: src/Widgets/Views/RemindersView.vala:137
+#: src/Views/RemindersView.vala:137
 msgid "Delete"
 msgstr "Borrar"
 

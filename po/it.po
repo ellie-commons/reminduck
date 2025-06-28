@@ -1,14 +1,8 @@
-# Italian translations for io.github.ellie_commons.reminduck package.
-# Copyright (C) 2019 THE io.github.ellie_commons.reminduck'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the io.github.ellie_commons.reminduck package.
-# Mirko Brombin, 2019.
-# Albano Battistella,2020.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 20:09+0200\n"
+"POT-Creation-Date: 2025-06-28 20:27+0200\n"
 "PO-Revision-Date: 2020-01-03 13:53+0100\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: Italian\n"
@@ -18,9 +12,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/Application.vala:194
+#: src/Application.vala:193
 msgid "Autostart Badger in background to send reminders"
-msgstr ""
+msgstr "Avvio automatico di Badger in background per l'invio di promemoria"
 
 #: src/MainWindow.vala:71
 msgid "Back"
@@ -77,44 +71,44 @@ msgstr "Ogni settimana"
 msgid "Every month"
 msgstr "Ogni mese"
 
-#: src/Widgets/Views/ReminderEditor.vala:57
+#: src/Views/ReminderEditor.vala:57
 msgid "Create a new reminder"
 msgstr "Crea un nuovo promemoria"
 
-#: src/Widgets/Views/ReminderEditor.vala:64
+#: src/Views/ReminderEditor.vala:64
 msgid "What do you want to be reminded of?"
 msgstr "Cosa vuoi che ti ricordi?"
 
-#: src/Widgets/Views/ReminderEditor.vala:93
+#: src/Views/ReminderEditor.vala:93
 msgid "Repeat"
 msgstr "Ripeti"
 
-#: src/Widgets/Views/ReminderEditor.vala:98
+#: src/Views/ReminderEditor.vala:98
 msgid "Save reminder"
 msgstr "Salva promemoria"
 
-#: src/Widgets/Views/RemindersView.vala:47
+#: src/Views/RemindersView.vala:47
 msgid "Your reminders"
 msgstr "I tuoi promemoria"
 
-#: src/Widgets/Views/RemindersView.vala:57
+#: src/Views/RemindersView.vala:57
 msgid "Create another"
 msgstr "Crea un altro"
 
-#: src/Widgets/Views/RemindersView.vala:102
+#: src/Views/RemindersView.vala:102
 #, c-format
 msgid "Reminded: %s"
 msgstr "Promemoria : %s"
 
-#: src/Widgets/Views/RemindersView.vala:118
+#: src/Views/RemindersView.vala:118
 msgid "Today"
 msgstr "Oggi"
 
-#: src/Widgets/Views/RemindersView.vala:130
+#: src/Views/RemindersView.vala:130
 msgid "Edit"
 msgstr "Modifica"
 
-#: src/Widgets/Views/RemindersView.vala:137
+#: src/Views/RemindersView.vala:137
 msgid "Delete"
 msgstr "Cancella"
 

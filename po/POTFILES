@@ -1,5 +1,5 @@
 src/Application.vala
 src/MainWindow.vala
 src/Objects/Reminder.vala
-src/Widgets/Views/ReminderEditor.vala
-src/Widgets/Views/RemindersView.vala
+src/Views/ReminderEditor.vala
+src/Views/RemindersView.vala

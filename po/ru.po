@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-31 11:48-0300\n"
+"POT-Creation-Date: 2025-06-28 20:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Andrey Sudarikov <andrewsudarikov@gmail.com>\n"
 "Language-Team: None\n"
@@ -18,39 +18,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: src/MainWindow.vala:84
+#: src/Application.vala:193
+msgid "Autostart Badger in background to send reminders"
+msgstr ""
+
+#: src/MainWindow.vala:71
 msgid "Back"
 msgstr "Назад"
 
-#: src/MainWindow.vala:94
-msgid "Light mode"
-msgstr "Светлая тема"
-
-#: src/MainWindow.vala:95
-msgid "Dark mode"
-msgstr "Темная тема"
-
-#: src/MainWindow.vala:133
+#: src/MainWindow.vala:81
 msgid "QUACK! I'm Reminduck"
 msgstr "КРЯ! Меня зовут Reminduck"
 
-#: src/MainWindow.vala:134
+#: src/MainWindow.vala:82
 msgid "The duck that reminds you"
 msgstr "Утка, которая напоминает"
 
-#: src/MainWindow.vala:148
+#: src/MainWindow.vala:88
 msgid "New Reminder"
 msgstr "Новое напоминание"
 
-#: src/MainWindow.vala:148
+#: src/MainWindow.vala:89
 msgid "Create a new reminder for a set date and time"
 msgstr "Создайте напоминание на конкретную дату и время"
 
-#: src/MainWindow.vala:150 src/MainWindow.vala:157
+#: src/MainWindow.vala:100
 msgid "View Reminders"
 msgstr "Смотреть напоминания"
 
-#: src/MainWindow.vala:150 src/MainWindow.vala:157
+#: src/MainWindow.vala:101
 msgid "See reminders you've created"
 msgstr "Просмотрите созданные вами напоминания"
 
@@ -81,43 +77,49 @@ msgstr "Каждую неделю"
 msgid "Every month"
 msgstr "Каждый месяц"
 
-#: src/Widgets/Views/ReminderEditor.vala:54
+#: src/Views/ReminderEditor.vala:57
 msgid "Create a new reminder"
 msgstr "Создать напоминание"
 
-#: src/Widgets/Views/ReminderEditor.vala:58
+#: src/Views/ReminderEditor.vala:64
 msgid "What do you want to be reminded of?"
 msgstr "О чем вам напоминть?"
 
-#: src/Widgets/Views/ReminderEditor.vala:85
+#: src/Views/ReminderEditor.vala:93
 msgid "Repeat"
 msgstr "Повторить"
 
-#: src/Widgets/Views/ReminderEditor.vala:90
+#: src/Views/ReminderEditor.vala:98
 msgid "Save reminder"
 msgstr "Сохранить напоминание"
 
-#: src/Widgets/Views/RemindersView.vala:47
+#: src/Views/RemindersView.vala:47
 msgid "Your reminders"
 msgstr "Ваши напоминания"
 
-#: src/Widgets/Views/RemindersView.vala:52
+#: src/Views/RemindersView.vala:57
 msgid "Create another"
 msgstr "Создать ещё"
 
-#: src/Widgets/Views/RemindersView.vala:93
+#: src/Views/RemindersView.vala:102
 #, c-format
 msgid "Reminded: %s"
 msgstr "Уже напомнил: %s"
 
-#: src/Widgets/Views/RemindersView.vala:104
-msgid "Delete"
-msgstr "Удалить"
+#: src/Views/RemindersView.vala:118
+msgid "Today"
+msgstr "Сегодня"
 
-#: src/Widgets/Views/RemindersView.vala:111
+#: src/Views/RemindersView.vala:130
 msgid "Edit"
 msgstr "Править"
 
-#: src/Widgets/Views/RemindersView.vala:120
-msgid "Today"
-msgstr "Сегодня"
+#: src/Views/RemindersView.vala:137
+msgid "Delete"
+msgstr "Удалить"
+
+#~ msgid "Light mode"
+#~ msgstr "Светлая тема"
+
+#~ msgid "Dark mode"
+#~ msgstr "Темная тема"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 20:09+0200\n"
+"POT-Creation-Date: 2025-06-28 20:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: src/Application.vala:194
+#: src/Application.vala:193
 msgid "Autostart Badger in background to send reminders"
 msgstr ""
 
@@ -77,43 +77,43 @@ msgstr ""
 msgid "Every month"
 msgstr ""
 
-#: src/Widgets/Views/ReminderEditor.vala:57
+#: src/Views/ReminderEditor.vala:57
 msgid "Create a new reminder"
 msgstr ""
 
-#: src/Widgets/Views/ReminderEditor.vala:64
+#: src/Views/ReminderEditor.vala:64
 msgid "What do you want to be reminded of?"
 msgstr ""
 
-#: src/Widgets/Views/ReminderEditor.vala:93
+#: src/Views/ReminderEditor.vala:93
 msgid "Repeat"
 msgstr ""
 
-#: src/Widgets/Views/ReminderEditor.vala:98
+#: src/Views/ReminderEditor.vala:98
 msgid "Save reminder"
 msgstr ""
 
-#: src/Widgets/Views/RemindersView.vala:47
+#: src/Views/RemindersView.vala:47
 msgid "Your reminders"
 msgstr ""
 
-#: src/Widgets/Views/RemindersView.vala:57
+#: src/Views/RemindersView.vala:57
 msgid "Create another"
 msgstr ""
 
-#: src/Widgets/Views/RemindersView.vala:102
+#: src/Views/RemindersView.vala:102
 #, c-format
 msgid "Reminded: %s"
 msgstr ""
 
-#: src/Widgets/Views/RemindersView.vala:118
+#: src/Views/RemindersView.vala:118
 msgid "Today"
 msgstr ""
 
-#: src/Widgets/Views/RemindersView.vala:130
+#: src/Views/RemindersView.vala:130
 msgid "Edit"
 msgstr ""
 
-#: src/Widgets/Views/RemindersView.vala:137
+#: src/Views/RemindersView.vala:137
 msgid "Delete"
 msgstr ""

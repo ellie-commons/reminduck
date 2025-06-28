@@ -1,13 +1,8 @@
-# Turkish translations for Reminduck package.
-# Copyright (C) 2019 Reminduck'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the Reminduck package.
-# Sabri Ünal <libreajans@gmail.com>, 2019.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 20:09+0200\n"
+"POT-Creation-Date: 2025-06-28 20:27+0200\n"
 "PO-Revision-Date: 2019-10-12 16:21+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -18,9 +13,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: src/Application.vala:194
+#: src/Application.vala:193
 msgid "Autostart Badger in background to send reminders"
-msgstr ""
+msgstr "Hatırlatıcı göndermek için Badger'ı arka planda otomatik başlatma"
 
 #: src/MainWindow.vala:71
 msgid "Back"
@@ -78,46 +73,46 @@ msgstr "Her hafta"
 msgid "Every month"
 msgstr "Her ay"
 
-#: src/Widgets/Views/ReminderEditor.vala:57
+#: src/Views/ReminderEditor.vala:57
 msgid "Create a new reminder"
 msgstr "Yeni hatırlatıcı oluştur"
 
-#: src/Widgets/Views/ReminderEditor.vala:64
+#: src/Views/ReminderEditor.vala:64
 msgid "What do you want to be reminded of?"
 msgstr "Neyi hatırlamak istersin?"
 
-#: src/Widgets/Views/ReminderEditor.vala:93
+#: src/Views/ReminderEditor.vala:93
 msgid "Repeat"
 msgstr "Tekrarla"
 
-#: src/Widgets/Views/ReminderEditor.vala:98
+#: src/Views/ReminderEditor.vala:98
 msgid "Save reminder"
 msgstr "Hatırlatıcıyı kaydet"
 
 # Your kelimesi çeviri uyumu için kullanılmadı
-#: src/Widgets/Views/RemindersView.vala:47
+#: src/Views/RemindersView.vala:47
 msgid "Your reminders"
 msgstr "Hatırlatıcılar"
 
 # Çeviri uyumu için Reminder kelimesi çeviriye eklendi
-#: src/Widgets/Views/RemindersView.vala:57
+#: src/Views/RemindersView.vala:57
 msgid "Create another"
 msgstr "Yeni bir hatırlatıcı oluştur"
 
-#: src/Widgets/Views/RemindersView.vala:102
+#: src/Views/RemindersView.vala:102
 #, c-format
 msgid "Reminded: %s"
 msgstr "Hatırlatıcı: %s"
 
-#: src/Widgets/Views/RemindersView.vala:118
+#: src/Views/RemindersView.vala:118
 msgid "Today"
 msgstr "Bugün"
 
-#: src/Widgets/Views/RemindersView.vala:130
+#: src/Views/RemindersView.vala:130
 msgid "Edit"
 msgstr "Düzenle"
 
-#: src/Widgets/Views/RemindersView.vala:137
+#: src/Views/RemindersView.vala:137
 msgid "Delete"
 msgstr "Sil"
 

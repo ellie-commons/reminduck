@@ -6,6 +6,7 @@ runtime: org.gnome.Platform
 runtime-version: '48'
 sdk: org.gnome.Sdk
 command: io.github.ellie_commons.reminduck
+
 finish-args:
   - '--share=ipc'
   - '--device=dri'
@@ -17,6 +18,7 @@ finish-args:
   - '--talk-name=org.freedesktop.portal.Background'
   # Required to do a quack sound
   - '--socket=pulseaudio'
+
 cleanup:
   -  '/include'
   -  '/lib/pkgconfig'
@@ -28,6 +30,7 @@ cleanup:
   -  '/share/installed-tests'
   -  '*.la'
   -  '*.a'
+
 modules:
   - name: reminduck
     buildsystem: meson
