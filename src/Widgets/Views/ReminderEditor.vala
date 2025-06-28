@@ -41,6 +41,7 @@ namespace Reminduck.Widgets.Views {
 
         construct {
             orientation = Gtk.Orientation.VERTICAL;
+            valign = Gtk.Align.FILL;
             hexpand = vexpand = true;
             margin_start = 24;
             margin_end = 24;
@@ -52,9 +53,11 @@ namespace Reminduck.Widgets.Views {
         }
 
         private void build_ui () {
-            this.margin_top = 15;
 
-            this.title = new Gtk.Label (_("Create a new reminder"));
+            this.title = new Gtk.Label (_("Create a new reminder")) {
+                margin_top = 24,
+                margin_bottom = 12
+            };
             this.title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
             this.reminder_input = new Gtk.Entry ();
@@ -78,13 +81,15 @@ namespace Reminduck.Widgets.Views {
             date_time_container.append (this.date_picker);
             date_time_container.append (this.time_picker);
 
-            var fields_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-            fields_box.margin_top = 75;
+            var fields_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
+                valign = Gtk.Align.CENTER,
+                vexpand = true
+            };
             fields_box.append (this.reminder_input);
             fields_box.append (date_time_container);
 
             var repeat_label_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            repeat_label_box.margin_top = 5;
+            repeat_label_box.margin_top = 6;
             repeat_label_box.append (new Gtk.Label (_("Repeat")));
 
             fields_box.append (repeat_label_box);
@@ -96,10 +101,10 @@ namespace Reminduck.Widgets.Views {
             this.save_button.activate.connect (on_save);
             this.save_button.clicked.connect (on_save);
             this.save_button.set_sensitive (false);
+            fields_box.append (this.save_button);
 
             append (title);
             append (fields_box);
-            append (this.save_button);
 
             this.reminder_input.changed.connect (() => {
                 this.touched = true;

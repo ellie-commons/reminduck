@@ -32,6 +32,7 @@ namespace Reminduck.Widgets.Views {
 
         construct {
             orientation = Gtk.Orientation.VERTICAL;
+            valign = Gtk.Align.FILL;
             hexpand = vexpand = true;
             margin_start = 24;
             margin_end = 24;
@@ -42,15 +43,16 @@ namespace Reminduck.Widgets.Views {
         }
 
         public void build_ui () {
-            this.margin_top = 15;
 
-            var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-            box.margin_top = 10;
-
-            this.title = new Gtk.Label (_("Your reminders"));
+            this.title = new Gtk.Label (_("Your reminders")) {
+                margin_top = 24,
+                margin_bottom = 12
+            };
             this.title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
-            box.append (this.title);
+            append (this.title);
+
+            var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
 
             var add_new_button = new Gtk.Button.with_label (_("Create another"));
             add_new_button.halign = Gtk.Align.CENTER;
@@ -60,13 +62,19 @@ namespace Reminduck.Widgets.Views {
 
             box.append (add_new_button);
 
+            var scrolled_window = new Gtk.ScrolledWindow () {
+                vexpand = true,
+                valign = Gtk.Align.FILL,
+            };
+
+            build_reminders_list ();
+
+            scrolled_window.set_child (this.reminders_list);
+            box.append (scrolled_window);
+
             append (box);
 
-            var scrolled_window = new Gtk.ScrolledWindow ();
-            build_reminders_list ();
-            scrolled_window.set_child (this.reminders_list);
 
-            append (scrolled_window);
         }
 
         public void add_reminder () {
@@ -88,7 +96,7 @@ namespace Reminduck.Widgets.Views {
                 box.add_css_class ("list-item");
 
                 if (reminder.recurrency_type != RecurrencyType.NONE) {
-                    var recurrency_indicator = new Gtk.Image();
+                    var recurrency_indicator = new Gtk.Image ();
                     recurrency_indicator.gicon = new ThemedIcon ("media-playlist-repeat");
                     recurrency_indicator.pixel_size = 18;
                     recurrency_indicator.tooltip_text = _("Reminded: %s").printf (reminder.recurrency_type.to_friendly_string (reminder.recurrency_interval));
@@ -96,26 +104,13 @@ namespace Reminduck.Widgets.Views {
                 }
 
                 var description = new Gtk.Label (reminder.description) {
-                    hexpand = true
+                    hexpand = true,
+                    halign = Gtk.Align.START
                 };
                 description.wrap = true;
                 description.single_line_mode = false;
 
                 box.append (description);
-
-                var delete_button = new Gtk.Button.from_icon_name ("edit-delete");
-                delete_button.tooltip_text = _("Delete");
-                delete_button.activate.connect (() => { on_delete (reminder); } );
-                delete_button.clicked.connect (() => { on_delete (reminder); } );
-
-                box.append (delete_button);
-                
-                var edit_button = new Gtk.Button.from_icon_name ("edit");
-                edit_button.tooltip_text = _("Edit");
-                edit_button.activate.connect (() => { on_edit (reminder); } );
-                edit_button.clicked.connect (() => { on_edit (reminder); } );
-
-                box.append (edit_button);
 
                 string date_label_text = "";
                 var is_today = reminder.time.format ("%x") == new GLib.DateTime.now ().format ("%x");
@@ -130,6 +125,20 @@ namespace Reminduck.Widgets.Views {
                 date_label_text += " " + time_text_split[0].concat (":", time_text_split[1]);
 
                 box.append (new Gtk.Label (date_label_text));
+
+                var edit_button = new Gtk.Button.from_icon_name ("edit");
+                edit_button.tooltip_text = _("Edit");
+                edit_button.activate.connect (() => { on_edit (reminder); } );
+                edit_button.clicked.connect (() => { on_edit (reminder); } );
+
+                box.append (edit_button);
+
+                var delete_button = new Gtk.Button.from_icon_name ("edit-delete");
+                delete_button.tooltip_text = _("Delete");
+                delete_button.activate.connect (() => { on_delete (reminder); } );
+                delete_button.clicked.connect (() => { on_delete (reminder); } );
+
+                box.append (delete_button);
 
                 var row = new Gtk.ListBoxRow ();
                 row.set_child (box);
