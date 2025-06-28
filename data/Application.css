@@ -1,3 +1,4 @@
+
 @define-color accent_color @BANANA_500;
 @define-color color_primary @BANANA_300;
 
@@ -13,4 +14,17 @@
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid #d4d4d4;
+}
+
+.reminduck-headerbar-dark * {
+    color: black;
+    text-shadow: none;
+}
+
+.reminduck-headerbar-dark .text-button * {
+    color: white;
+}
+
+.reminduck-headerbar-dark .back-button  {
+    color: white;
 }

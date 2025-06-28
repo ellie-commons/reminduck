@@ -28,6 +28,7 @@ namespace Reminduck {
 
         private GLib.Settings settings;
         public Gtk.Settings gtk_settings;
+        public Granite.Settings granite_settings;
 
         Granite.Placeholder welcome_widget = null;
         int? view_reminders_action_reference = null;
@@ -64,8 +65,23 @@ namespace Reminduck {
             this.headerbar = new Gtk.HeaderBar ();
             this.headerbar.title_widget = title_widget;
             this.headerbar.add_css_class ("default-decoration");
-            this.headerbar.add_css_class ("reminduck-headerbar");
+
             set_titlebar (this.headerbar);
+
+            granite_settings = Granite.Settings.get_default ();
+                if (granite_settings.prefers_color_scheme == DARK) {
+                    this.headerbar.add_css_class ("reminduck-headerbar-dark");
+                } else {
+                    this.headerbar.remove_css_class ("reminduck-headerbar-dark");
+                }
+
+            granite_settings.notify["prefers-color-scheme"].connect (() => {
+                if (granite_settings.prefers_color_scheme == DARK) {
+                    this.headerbar.add_css_class ("reminduck-headerbar-dark");
+                } else {
+                    this.headerbar.remove_css_class ("reminduck-headerbar-dark");
+                }
+            });
 
             this.back_button = new Gtk.Button.with_label (_("Back"));
             this.back_button.add_css_class ("back-button");

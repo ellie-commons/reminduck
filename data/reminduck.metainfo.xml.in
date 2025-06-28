@@ -109,14 +109,14 @@
     <binary>io.github.ellie_commons.reminduck</binary>
   </provides>
     <content_rating type="oars-1.1"/>
-    <translation type="gettext" source_locale="en_GB">io.github.ellie_commons.jorts</translation>
+    <translation type="gettext" source_locale="en_GB">io.github.ellie_commons.reminduck</translation>
     <recommends>
       <control>keyboard</control>
       <control>pointing</control>
       <control>touch</control>
     </recommends>
 
-    <developer id="io.github.teamcons">
+    <developer id="io.github.ellie-commons">
         <name>Matheus Fantinel + Stella</name>
     </developer>
     <project_group>ellie-commons</project_group>
@@ -138,17 +138,21 @@
       <caption>The welcome view</caption>
       <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/Welcome.png</image>
     </screenshot>
-    <screenshot>
+    <screenshot environment="pantheon">
       <caption>Add new reminders</caption>
       <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/Editor.png</image>
     </screenshot>
-    <screenshot>
+    <screenshot environment="pantheon:dark">
       <caption>Add new reminders but in dark</caption>
       <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/Editor-dark.png</image>
     </screenshot>
-    <screenshot>
+    <screenshot environment="pantheon">
       <caption>See current reminders</caption>
       <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/List.png</image>
+    </screenshot>
+    <screenshot environment="pantheon:dark">
+      <caption>See current reminders but in dark</caption>
+      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/List-dark.png</image>
     </screenshot>
   </screenshots>
 </component>
