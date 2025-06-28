@@ -38,9 +38,12 @@ namespace Reminduck.Widgets.Views {
         Reminder reminder;
 
         bool touched;
-        
+
         construct {
             orientation = Gtk.Orientation.VERTICAL;
+            hexpand = vexpand = true;
+            margin_start = 24;
+            margin_end = 24;
             this.reminder = new Reminder ();
         }
 
@@ -52,14 +55,14 @@ namespace Reminduck.Widgets.Views {
             this.margin_top = 15;
 
             this.title = new Gtk.Label (_("Create a new reminder"));
-            this.title.add_css_class ("h2");
+            this.title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
             this.reminder_input = new Gtk.Entry ();
             this.reminder_input.placeholder_text = _("What do you want to be reminded of?");
             this.reminder_input.show_emoji_icon = true;
 
             this.date_picker = new Granite.DatePicker.with_format (
-                Granite.DateTime.get_default_date_format(false, true, true)
+                Granite.DateTime.get_default_date_format (false, true, true)
             );
 
             this.time_picker = new Granite.TimePicker.with_format (

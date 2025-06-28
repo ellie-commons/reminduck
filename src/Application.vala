@@ -27,7 +27,9 @@ namespace Reminduck {
         public bool ask_autostart = false;
         private uint timeout_id = 0;
 
-        private GLib.Settings settings;
+        public Granite.Settings granite_settings;
+        public Gtk.Settings gtk_settings;
+        public GLib.Settings settings;
 
         public MainWindow main_window { get; private set; default = null; }
         public static Reminduck.Database database;
@@ -45,8 +47,8 @@ namespace Reminduck {
             Intl.textdomain (Constants.GETTEXT_PACKAGE);
 
             // Follow dark and light, use bananana
-            var granite_settings = Granite.Settings.get_default ();
-            var gtk_settings = Gtk.Settings.get_default ();
+            granite_settings = Granite.Settings.get_default ();
+            gtk_settings = Gtk.Settings.get_default ();
             gtk_settings.gtk_icon_theme_name = "elementary";
             gtk_settings.gtk_theme_name =   "io.elementary.stylesheet.banana";
 
@@ -63,6 +65,7 @@ namespace Reminduck {
             // Use reminduck styling
             var app_provider = new Gtk.CssProvider ();
             app_provider.load_from_resource ("/io/github/ellie_commons/reminduck/stylesheet.css");
+
             Gtk.StyleContext.add_provider_for_display (
                 Gdk.Display.get_default (),
                 app_provider,

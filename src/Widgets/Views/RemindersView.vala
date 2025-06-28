@@ -32,6 +32,9 @@ namespace Reminduck.Widgets.Views {
 
         construct {
             orientation = Gtk.Orientation.VERTICAL;
+            hexpand = vexpand = true;
+            margin_start = 24;
+            margin_end = 24;
         }
 
         public RemindersView () {
@@ -45,7 +48,7 @@ namespace Reminduck.Widgets.Views {
             box.margin_top = 10;
 
             this.title = new Gtk.Label (_("Your reminders"));
-            this.title.add_css_class ("h2");
+            this.title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
             box.append (this.title);
 
