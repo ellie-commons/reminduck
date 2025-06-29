@@ -175,7 +175,7 @@ namespace Reminduck {
         private static void request_autostart () {
             Xdp.Portal portal = new Xdp.Portal ();
             GenericArray<weak string> cmd = new GenericArray<weak string> ();
-            cmd.add ("com.github.elfenware.reminduck");
+            cmd.add ("io.github.ellie_commons.reminduck");
             cmd.add ("--headless");
 
             portal.request_background.begin (
