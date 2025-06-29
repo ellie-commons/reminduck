@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-29 15:25+0200\n"
-"PO-Revision-Date: 2025-06-29 11:13+0200\n"
+"PO-Revision-Date: 2025-06-29 15:13+0200\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: italian\n"
 "Language: it\n"
@@ -200,9 +200,8 @@ msgid "See current reminders"
 msgstr "Visualizza i promemoria attuali"
 
 #: data/reminduck.metainfo.xml.in:154
-#, fuzzy
 msgid "See current reminders but in dark"
-msgstr "Visualizza i promemoria attuali"
+msgstr "Visualizza i promemoria correnti ma in modalità scura"
 
 #~ msgid "io.github.ellie_commons.reminduck"
 #~ msgstr "io.github.ellie_commons.reminduck"
