@@ -21,31 +21,31 @@ msgstr ""
 msgid "Autostart Badger in background to send reminders"
 msgstr "Avvia automaticamente Reminduck in background per inviare promemoria"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:86
 msgid "Back"
 msgstr "Indietro"
 
-#: src/MainWindow.vala:80
+#: src/MainWindow.vala:96
 msgid "QUACK! I'm Reminduck"
 msgstr "QUACK! Io sono Reminduck"
 
-#: src/MainWindow.vala:81
+#: src/MainWindow.vala:97
 msgid "The duck that reminds you"
 msgstr "La papera che ti ricorda"
 
-#: src/MainWindow.vala:87
+#: src/MainWindow.vala:103
 msgid "New Reminder"
 msgstr "Nuovo promemoria"
 
-#: src/MainWindow.vala:88
+#: src/MainWindow.vala:104
 msgid "Create a new reminder for a set date and time"
 msgstr "Crea un nuovo promemoria per una data e un'ora impostata"
 
-#: src/MainWindow.vala:99
+#: src/MainWindow.vala:115
 msgid "View Reminders"
 msgstr "Visualizza promemoria"
 
-#: src/MainWindow.vala:100
+#: src/MainWindow.vala:116
 msgid "See reminders you've created"
 msgstr "Visualizza i promemoria che hai creato"
 
@@ -97,8 +97,8 @@ msgid "Your reminders"
 msgstr "I tuoi promemoria"
 
 #: src/Views/RemindersView.vala:57
-msgid "CCreane un altroreate another"
-msgstr ""
+msgid "Create another"
+msgstr "Creane un altroreate another"
 
 #: src/Views/RemindersView.vala:102
 #, c-format
