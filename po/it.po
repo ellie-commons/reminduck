@@ -1,20 +1,25 @@
+# ITALIAN TRANSLATION.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.ellie_commons.reminduck package.
+# ALBANO BATTISTELLA <ALBANOBATTISTELLA@GMAIL.COM>, 2025.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-28 22:45+0200\n"
-"PO-Revision-Date: 2020-01-03 13:53+0100\n"
-"Last-Translator: Albano Battistella\n"
-"Language-Team: Italian\n"
+"PO-Revision-Date: 2025-06-29 11:25+0200\n"
+"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
+"Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=UTF-8\n""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: src/Application.vala:183
 msgid "Autostart Badger in background to send reminders"
-msgstr "Avvio automatico di Badger in background per l'invio di promemoria"
+msgstr "Avvia automaticamente Reminduck in background per inviare promemoria"
 
 #: src/MainWindow.vala:70
 msgid "Back"
@@ -22,7 +27,7 @@ msgstr "Indietro"
 
 #: src/MainWindow.vala:80
 msgid "QUACK! I'm Reminduck"
-msgstr "QUACK! Sono Reminduck"
+msgstr "QUACK! Io sono Reminduck"
 
 #: src/MainWindow.vala:81
 msgid "The duck that reminds you"
@@ -30,23 +35,23 @@ msgstr "La papera che ti ricorda"
 
 #: src/MainWindow.vala:87
 msgid "New Reminder"
-msgstr "Nuovo Promemoria"
+msgstr "Nuovo promemoria"
 
 #: src/MainWindow.vala:88
 msgid "Create a new reminder for a set date and time"
-msgstr "Crea un nuovo promemoria con data e ora prestabilita"
+msgstr "Crea un nuovo promemoria per una data e un'ora impostata"
 
 #: src/MainWindow.vala:99
 msgid "View Reminders"
-msgstr "Vedi Promemoria"
+msgstr "Visualizza promemoria"
 
 #: src/MainWindow.vala:100
 msgid "See reminders you've created"
-msgstr "Visualizza i promemoria creati"
+msgstr "Visualizza i promemoria che hai creato"
 
 #: src/Objects/Reminder.vala:45
 msgid "Don't Repeat"
-msgstr "Non Ripetere"
+msgstr "Non ripetere"
 
 #: src/Objects/Reminder.vala:49
 msgid "Every X minutes"
@@ -77,7 +82,7 @@ msgstr "Crea un nuovo promemoria"
 
 #: src/Views/ReminderEditor.vala:64
 msgid "What do you want to be reminded of?"
-msgstr "Cosa vuoi che ti ricordi?"
+msgstr "Cosa vuoi che ti venga ricordato?"
 
 #: src/Views/ReminderEditor.vala:93
 msgid "Repeat"
@@ -92,13 +97,13 @@ msgid "Your reminders"
 msgstr "I tuoi promemoria"
 
 #: src/Views/RemindersView.vala:57
-msgid "Create another"
-msgstr "Crea un altro"
+msgid "CCreane un altroreate another"
+msgstr ""
 
 #: src/Views/RemindersView.vala:102
 #, c-format
 msgid "Reminded: %s"
-msgstr "Promemoria : %s"
+msgstr "Ricordato: %s"
 
 #: src/Views/RemindersView.vala:118
 msgid "Today"
@@ -110,10 +115,4 @@ msgstr "Modifica"
 
 #: src/Views/RemindersView.vala:137
 msgid "Delete"
-msgstr "Cancella"
-
-#~ msgid "Light mode"
-#~ msgstr "Modalità chiara"
-
-#~ msgid "Dark mode"
-#~ msgstr "Modalità scura"
+msgstr "Elimina"
