@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 22:45+0200\n"
+"POT-Creation-Date: 2025-06-29 15:25+0200\n"
 "PO-Revision-Date: 2019-11-29 18:21+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <vistausss@outlook.com>\n"
@@ -212,6 +212,10 @@ msgstr ""
 
 #: data/reminduck.metainfo.xml.in:150
 msgid "See current reminders"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:154
+msgid "See current reminders but in dark"
 msgstr ""
 
 #~ msgid "io.github.ellie_commons.reminduck"

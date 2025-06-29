@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 22:45+0200\n"
+"POT-Creation-Date: 2025-06-29 15:25+0200\n"
 "PO-Revision-Date: 2019-11-06 07:13+0100\n"
 "Last-Translator: Nathan Bonnemains\n"
 "Language-Team: none\n"
@@ -61,8 +61,8 @@ msgid ""
 "🦆🦆The quack is back!🦆🦆 A continuation of Reminduck, with the blessing of "
 "its original creator!"
 msgstr ""
-"🦆🦆Le coin est de retour !🦆🦆 Une suite de Reminduck, avec la bénédiction de "
-"son créateur original !"
+"🦆🦆Le coin est de retour !🦆🦆 Une suite de Reminduck, avec la bénédiction "
+"de son créateur original !"
 
 #: data/reminduck.metainfo.xml.in:22
 msgid "Adapted to modern libraries (GTK4, Flatpak)"
@@ -203,6 +203,10 @@ msgstr ""
 
 #: data/reminduck.metainfo.xml.in:150
 msgid "See current reminders"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:154
+msgid "See current reminders but in dark"
 msgstr ""
 
 #~ msgid "io.github.ellie_commons.reminduck"

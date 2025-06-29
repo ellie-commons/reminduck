@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 22:45+0200\n"
+"POT-Creation-Date: 2025-06-29 15:25+0200\n"
 "PO-Revision-Date: 2019-11-29 18:14+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <vistausss@outlook.com>\n"
@@ -14,35 +14,36 @@ msgstr ""
 "X-Generator: Poedit 2.2.4\n"
 
 #: src/Application.vala:183
-msgid "Autostart Badger in background to send reminders"
+#, fuzzy
+msgid "Autostart Reminduck in background to send reminders"
 msgstr ""
 "Badger automatisch op de achtergrond starten om herinneringen te versturen"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:86
 msgid "Back"
 msgstr "Terug"
 
-#: src/MainWindow.vala:80
+#: src/MainWindow.vala:96
 msgid "QUACK! I'm Reminduck"
 msgstr "KWAK! Ik ben Reminduck"
 
-#: src/MainWindow.vala:81
+#: src/MainWindow.vala:97
 msgid "The duck that reminds you"
 msgstr "De eend die je herinnert"
 
-#: src/MainWindow.vala:87
+#: src/MainWindow.vala:103
 msgid "New Reminder"
 msgstr "Nieuwe herinnering"
 
-#: src/MainWindow.vala:88
+#: src/MainWindow.vala:104
 msgid "Create a new reminder for a set date and time"
 msgstr "Stel een nieuwe herinnering in op een door jou gekozen datum en tijd"
 
-#: src/MainWindow.vala:99
+#: src/MainWindow.vala:115
 msgid "View Reminders"
 msgstr "Herinneringen bekijken"
 
-#: src/MainWindow.vala:100
+#: src/MainWindow.vala:116
 msgid "See reminders you've created"
 msgstr "Bekijk eerder ingestelde herinneringen"
 

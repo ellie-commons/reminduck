@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 22:45+0200\n"
+"POT-Creation-Date: 2025-06-29 15:25+0200\n"
 "PO-Revision-Date: 2025-06-29 11:13+0200\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: italian\n"
@@ -60,8 +60,8 @@ msgid ""
 "🦆🦆The quack is back!🦆🦆 A continuation of Reminduck, with the blessing of "
 "its original creator!"
 msgstr ""
-"🦆🦆Il ciarlare è tornato!🦆🦆 Una continuazione di Reminduck, con la benedizione "
-"del suo creatore originale!"
+"🦆🦆Il ciarlare è tornato!🦆🦆 Una continuazione di Reminduck, con la "
+"benedizione del suo creatore originale!"
 
 #: data/reminduck.metainfo.xml.in:22
 msgid "Adapted to modern libraries (GTK4, Flatpak)"
@@ -197,6 +197,11 @@ msgstr "Aggiunti nuovi promemoria in modalità scura"
 
 #: data/reminduck.metainfo.xml.in:150
 msgid "See current reminders"
+msgstr "Visualizza i promemoria attuali"
+
+#: data/reminduck.metainfo.xml.in:154
+#, fuzzy
+msgid "See current reminders but in dark"
 msgstr "Visualizza i promemoria attuali"
 
 #~ msgid "io.github.ellie_commons.reminduck"
