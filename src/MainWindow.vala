@@ -108,7 +108,7 @@ namespace Reminduck {
             });
 
 
-            if (ReminduckApp.reminders.size > 0) {
+            //if (ReminduckApp.reminders.size > 0) {
 
                 var reminders_view = this.welcome_widget.append_button (
                         new ThemedIcon ("accessories-text-editor"),
@@ -120,7 +120,7 @@ namespace Reminduck {
                 reminders_view.clicked.connect (() => {
                         show_reminders_view (Gtk.StackTransitionType.SLIDE_LEFT);
                     });
-            }
+            //}
 
             var image = new Gtk.Image () {
                 icon_name = "io.github.ellie_commons.reminduck",
