@@ -14,7 +14,7 @@
     <p>And it quacks.</p>
   </description>
   <releases>
-    <release version="2.0.4" date="2025-06-30">
+    <release version="2.0.5" date="2025-06-30">
       <description>
         <ul>
           <li>Repaired autostart feature</li>
@@ -125,7 +125,7 @@
       <control>touch</control>
     </recommends>
 
-    <launchable type="desktop-id">io.github.ellie-commons.reminduck.desktop</launchable>
+    <launchable type="desktop-id">io.github.ellie_commons.reminduck.desktop</launchable>
     <developer id="io.github.ellie-commons">
         <name>Matheus Fantinel + Stella</name>
     </developer>
