@@ -14,6 +14,15 @@
     <p>And it quacks.</p>
   </description>
   <releases>
+    <release version="2.0.4" date="2025-06-30">
+      <description>
+        <ul>
+          <li>Repaired autostart feature</li>
+          <li>Updated IT translation by @albanobattistella</li>
+          <li>Corrections for appcenter</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.0.0" date="2025-06-28">
       <description>
         <p>🦆🦆The quack is back!🦆🦆
@@ -116,6 +125,7 @@
       <control>touch</control>
     </recommends>
 
+    <launchable type="desktop-id">io.github.ellie-commons.reminduck.desktop</launchable>
     <developer id="io.github.ellie-commons">
         <name>Matheus Fantinel + Stella</name>
     </developer>
@@ -123,14 +133,11 @@
     <url type="homepage">https://github.com/ellie-commons/reminduck</url>
     <url type="bugtracker">https://github.com/ellie-commons/reminduck/issues</url>
     <url type="help">https://github.com/ellie-commons/reminduck/issues</url>
-    <url type="translate">https://github.com/ellie-commons/reminduck/blob/main/po/README.md</url>
     <url type="donation">https://ko-fi.com/teamcons</url>
 
     <branding>
       <color type="primary" scheme_preference="light">#fff394</color>
-      <color type="primary-text" scheme_preference="light">#fff</color>
       <color type="primary" scheme_preference="dark">#ad5f00</color>
-      <color type="primary-text" scheme_preference="dark">#000</color>
     </branding>
 
   <screenshots>
