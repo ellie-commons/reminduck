@@ -1,0 +1,44 @@
+
+
+public class Reminduck.Views.WelcomeView : Gtk.Box {
+
+    Granite.Placeholder welcome_widget;
+
+    construct {
+
+        orientation = Gtk.Orientation.VERTICAL;
+        spacing = 24;
+        margin_top = 24;
+        margin_bottom = 24;
+        margin_start = 24;
+        margin_end = 24;
+        valign = Gtk.Align.CENTER;
+
+        add_css_class ("reminduck-welcome-box");
+
+        var image = new Gtk.Image () {
+            icon_name = "io.github.ellie_commons.reminduck",
+            pixel_size = 96,
+            valign = Gtk.Align.FILL
+        };
+        append (image);
+
+        welcome_widget = new Granite.Placeholder ( _("QUACK! I'm Reminduck")) {
+                description = _("The duck that reminds you"),
+                valign = Gtk.Align.FILL
+        };
+        append (welcome_widget);
+
+        var reminder_editor = this.welcome_widget.append_button (
+                new ThemedIcon ("document-new"),
+                _("New Reminder"),
+                _("Create a new reminder for a set date and time")
+        );
+
+        var reminders_view = this.welcome_widget.append_button (
+            new ThemedIcon ("accessories-text-editor"),
+            _("View Reminders"),
+            _("See reminders you've created"
+        ));
+    }
+}
