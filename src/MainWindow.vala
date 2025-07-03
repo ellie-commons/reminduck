@@ -118,14 +118,6 @@ namespace Reminduck {
 
             this.show_welcome_view (Gtk.StackTransitionType.NONE);
 
-
-                    var mfn = Gtk.MediaFile.for_resource ("/io/github/ellie_commons/reminduck/quack.ogg");
-                    //print (mfn.t);
-                    //if (mfn != null) {
-                    mfn.play();
-
-
-
             this.close_request.connect (e => {
                 return before_destroy ();
             });
@@ -201,7 +193,7 @@ namespace Reminduck {
         }
 
         private bool before_destroy () {
-            int width, height;
+           int width, height;
 
             get_default_size (out width, out height);
 

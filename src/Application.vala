@@ -121,6 +121,13 @@ namespace Reminduck {
             if (timeout_id == 0) {
                 set_reminder_interval ();
             }
+
+
+                var mfn = Gtk.MediaFile.for_resource ("/io/github/ellie_commons/reminduck/quack.ogg");
+                    //print (mfn.t);
+                if (mfn != null) {
+                    mfn.play();
+                }
         }
         
         public override int command_line (ApplicationCommandLine command_line) {
@@ -208,9 +215,9 @@ namespace Reminduck {
 
                     var mfn = Gtk.MediaFile.for_resource ("/io/github/ellie_commons/reminduck/quack.ogg");
                     //print (mfn.t);
-                    //if (mfn != null) {
-                    mfn.play();
-                    //}
+                    if (mfn != null) {
+                        mfn.play_now ();
+                    }
 
 
                     if (reminder.recurrency_type != RecurrencyType.NONE) {

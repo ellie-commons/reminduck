@@ -43,8 +43,10 @@ public class Reminduck.Views.WelcomeView : Gtk.Box {
             _("See reminders you've created"
         ));
 
+        
 
-        add_css_class ("reminduck-welcome-box");
+        
+
 
     }
 }
