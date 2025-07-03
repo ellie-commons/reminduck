@@ -104,13 +104,6 @@ namespace Reminduck {
             if (this.main_window == null) {
                 this.main_window = new MainWindow ();
                 this.main_window.set_application (this);                
-                                
-                var provider = new Gtk.CssProvider ();                
-                Gtk.StyleContext.add_provider_for_display (
-                    Gdk.Display.get_default (),
-                    provider,
-                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-                );
 
                 if (!this.headless) {
                     this.main_window.show ();
@@ -212,6 +205,13 @@ namespace Reminduck {
                     notification.set_body (reminder.description);
                     notification.set_priority (GLib.NotificationPriority.URGENT);
                     this.send_notification ("notify.app", notification);
+
+                    var mfn = Gtk.MediaFile.for_resource ("/io/github/ellie_commons/reminduck/quack.ogg");
+                    //print (mfn.t);
+                    //if (mfn != null) {
+                    mfn.play();
+                    //}
+
 
                     if (reminder.recurrency_type != RecurrencyType.NONE) {
                         GLib.DateTime new_time = reminder.time;

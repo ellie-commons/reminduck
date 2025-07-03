@@ -30,9 +30,6 @@ namespace Reminduck {
         public Gtk.Settings gtk_settings;
         public Granite.Settings granite_settings;
 
-        Granite.Placeholder welcome_widget = null;
-        int? view_reminders_action_reference = null;
-
         Reminduck.Views.WelcomeView welcome_view;
         Reminduck.Views.ReminderEditor reminder_editor;
         Reminduck.Views.RemindersView reminders_view;
@@ -120,6 +117,14 @@ namespace Reminduck {
             child = handle;
 
             this.show_welcome_view (Gtk.StackTransitionType.NONE);
+
+
+                    var mfn = Gtk.MediaFile.for_resource ("/io/github/ellie_commons/reminduck/quack.ogg");
+                    //print (mfn.t);
+                    //if (mfn != null) {
+                    mfn.play();
+
+
 
             this.close_request.connect (e => {
                 return before_destroy ();

@@ -28,3 +28,13 @@
 .reminduck-headerbar-dark .back-button  {
     color: white;
 }
+
+
+/*https://github.com/elementary/granite/pull/762/files
+.default-decoration * {
+background-color : @BANANA_500;
+}
+
+.default-decoration:backdrop {
+background-color : @BANANA_300;
+}*/
