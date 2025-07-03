@@ -19,7 +19,7 @@
 * Authored by: Matheus Fantinel <matfantinel@gmail.com>
 */
 
-namespace Reminduck.Widgets.Views {
+namespace Reminduck.Views {
     public class ReminderEditor : Gtk.Box {
         public signal void reminder_created ();
         public signal void reminder_edited ();

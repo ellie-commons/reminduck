@@ -21,7 +21,7 @@
 
 using Gee;
 
-namespace Reminduck.Widgets.Views {
+namespace Reminduck.Views {
     public class RemindersView : Gtk.Box {
         public signal void add_request ();
         public signal void edit_request (Reminder reminder);

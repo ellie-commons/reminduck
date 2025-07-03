@@ -2,7 +2,9 @@
 
 public class Reminduck.Views.WelcomeView : Gtk.Box {
 
-    Granite.Placeholder welcome_widget;
+    public Granite.Placeholder welcome_widget;
+    public Gtk.Button reminders_view_button;
+    public Gtk.Button reminder_editor_button;
 
     construct {
 
@@ -29,16 +31,30 @@ public class Reminduck.Views.WelcomeView : Gtk.Box {
         };
         append (welcome_widget);
 
-        var reminder_editor = this.welcome_widget.append_button (
+        reminder_editor_button = this.welcome_widget.append_button (
                 new ThemedIcon ("document-new"),
                 _("New Reminder"),
                 _("Create a new reminder for a set date and time")
         );
 
-        var reminders_view = this.welcome_widget.append_button (
+        reminders_view_button = this.welcome_widget.append_button (
             new ThemedIcon ("accessories-text-editor"),
             _("View Reminders"),
             _("See reminders you've created"
         ));
+
+        image = new Gtk.Image () {
+                icon_name = "io.github.ellie_commons.reminduck",
+                pixel_size = 96,
+                valign = Gtk.Align.FILL
+            };
+
+        add_css_class ("reminduck-welcome-box");
+        append (image);
+        append (this.welcome_widget);
+
+
+
+
     }
 }

@@ -33,8 +33,9 @@ namespace Reminduck {
         Granite.Placeholder welcome_widget = null;
         int? view_reminders_action_reference = null;
 
-        Widgets.Views.ReminderEditor reminder_editor;
-        Widgets.Views.RemindersView reminders_view;
+        Reminduck.Views.WelcomeView welcome_view;
+        Reminduck.Views.ReminderEditor reminder_editor;
+        Reminduck.Views.RemindersView reminders_view;
 
         public MainWindow () {
             settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
@@ -93,54 +94,23 @@ namespace Reminduck {
             });
 
 
-            this.welcome_widget = new Granite.Placeholder ( _("QUACK! I'm Reminduck")) {
-                description = _("The duck that reminds you"),
-                valign = Gtk.Align.FILL
-            };
+            welcome_view = new Reminduck.Views.WelcomeView ();
 
-            var reminder_editor = this.welcome_widget.append_button (
-                new ThemedIcon ("document-new"),
-                _("New Reminder"),
-                _("Create a new reminder for a set date and time")
-            );
-            reminder_editor.clicked.connect (() => {
+
+            welcome_view.reminder_editor_button.clicked.connect (() => {
                 show_reminder_editor ();
             });
 
 
             //if (ReminduckApp.reminders.size > 0) {
-
-                var reminders_view = this.welcome_widget.append_button (
-                        new ThemedIcon ("accessories-text-editor"),
-                        _("View Reminders"),
-                        _("See reminders you've created"
-                ));
-
-
-                reminders_view.clicked.connect (() => {
+            welcome_view.reminders_view_button.clicked.connect (() => {
                         show_reminders_view (Gtk.StackTransitionType.SLIDE_LEFT);
                     });
             //}
 
-            var image = new Gtk.Image () {
-                icon_name = "io.github.ellie_commons.reminduck",
-                pixel_size = 96,
-                valign = Gtk.Align.FILL
-            };
 
-            var fields_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 24) {
-                margin_top = 24,
-                margin_bottom = 24,
-                margin_start = 24,
-                margin_end = 24,
-                valign = Gtk.Align.CENTER
-            };
 
-            fields_box.add_css_class ("reminduck-welcome-box");
-            fields_box.append (image);
-            fields_box.append (this.welcome_widget);
-
-            stack.add_named (fields_box, "welcome");
+            stack.add_named (welcome_view, "welcome");
 
             this.build_reminder_editor ();
             this.build_reminders_view ();
@@ -177,7 +147,7 @@ namespace Reminduck {
         }
 
         private void build_reminder_editor () {
-            this.reminder_editor = new Widgets.Views.ReminderEditor ();
+            this.reminder_editor = new Reminduck.Views.ReminderEditor ();
 
             this.reminder_editor.reminder_created.connect ((new_reminder) => {
                 ReminduckApp.reload_reminders ();                
@@ -193,7 +163,7 @@ namespace Reminduck {
         }
 
         private void build_reminders_view () {
-            this.reminders_view = new Widgets.Views.RemindersView ();
+            this.reminders_view = new Reminduck.Views.RemindersView ();
 
             this.reminders_view.add_request.connect (() => {
                 show_reminder_editor ();
