@@ -101,14 +101,9 @@ namespace Reminduck {
                 show_reminder_editor ();
             });
 
-
-            //if (ReminduckApp.reminders.size > 0) {
             welcome_view.reminders_view_button.clicked.connect (() => {
                         show_reminders_view (Gtk.StackTransitionType.SLIDE_LEFT);
-                    });
-            //}
-
-
+            });
 
             stack.add_named (welcome_view, "welcome");
 
@@ -131,26 +126,11 @@ namespace Reminduck {
             });
         }
 
-        private void update_view_reminders_welcome_action () {
-            if (ReminduckApp.reminders.size > 0) {
-                if (this.view_reminders_action_reference == null) {
- 
-
-                    this.welcome_widget.show ();
-                }
-            } else {
-                //if (this.view_reminders_action_reference != null) {
-                //    this.welcome_widget.remove_item (this.view_reminders_action_reference);
-                //}
-                this.view_reminders_action_reference = null;
-            }
-        }
-
         private void build_reminder_editor () {
             this.reminder_editor = new Reminduck.Views.ReminderEditor ();
 
             this.reminder_editor.reminder_created.connect ((new_reminder) => {
-                ReminduckApp.reload_reminders ();                
+                ReminduckApp.reload_reminders ();
                 show_reminders_view ();
             });
 
@@ -201,7 +181,14 @@ namespace Reminduck {
         }
 
         public void show_welcome_view (Gtk.StackTransitionType slide = Gtk.StackTransitionType.SLIDE_RIGHT) {
-            this.update_view_reminders_welcome_action ();
+            ReminduckApp.reload_reminders ();
+
+            if (ReminduckApp.reminders.size > 0) {
+                welcome_view.reminders_view_button.show ();
+            } else {
+                welcome_view.reminders_view_button.hide ();
+            }
+
             stack.set_transition_type (slide);
             stack.set_visible_child_name ("welcome");
             this.back_button.hide ();

@@ -43,18 +43,8 @@ public class Reminduck.Views.WelcomeView : Gtk.Box {
             _("See reminders you've created"
         ));
 
-        image = new Gtk.Image () {
-                icon_name = "io.github.ellie_commons.reminduck",
-                pixel_size = 96,
-                valign = Gtk.Align.FILL
-            };
 
         add_css_class ("reminduck-welcome-box");
-        append (image);
-        append (this.welcome_widget);
-
-
-
 
     }
 }
