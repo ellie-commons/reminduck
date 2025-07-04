@@ -19,5 +19,10 @@
       <summary>Whether this is the first time that Reminduck has opened</summary>
       <description>Used to determine whether or not to perform initial install steps</description>
     </key>
+    <key name="quack-sound" type="b">
+      <default>true</default>
+      <summary>Whether to do a quack sound for reminders</summary>
+      <description>If on, the duck will quack</description>
+    </key>
   </schema>
 </schemalist>
