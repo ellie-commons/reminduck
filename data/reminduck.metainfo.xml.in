@@ -14,6 +14,14 @@
     <p>And it quacks.</p>
   </description>
   <releases>
+    <release version="2.1.0" date="2025-07-05">
+      <description>
+        <ul>
+          <li>FINALLY a quack setting 🦆</li>
+          <li>Bugfix: Now "Show Reminders" should display correctly</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.0.5" date="2025-06-30">
       <description>
         <ul>
