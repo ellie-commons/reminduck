@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-05 21:31+0200\n"
+"POT-Creation-Date: 2025-07-05 21:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -135,7 +135,7 @@ msgid "Notifications"
 msgstr ""
 
 #: src/Widgets/SettingsPopover.vala:58
-msgid "Disable the DING sound"
+msgid "Disable the 'DING' sound"
 msgstr ""
 
 #: src/Widgets/SettingsPopover.vala:60
