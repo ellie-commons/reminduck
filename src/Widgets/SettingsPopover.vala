@@ -1,12 +1,25 @@
 
 
-public class Reminduck.Widgets.SettingsPopover : Granite.Popover {
+public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
     construct {
 
-        /* QUACK TOGGLE */
-        var quack_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
-        quack_toggle = new Gtk.Switch () {
+
+
+        var view = new Gtk.Box (Gtk.Orientation.VERTICAL, 18) {
+            margin_top = margin_bottom = margin_start = margin_end = 18,
+            vexpand = true,
+            hexpand = true
+        };
+
+
+        /* QUACK TOGGLE */
+        var quack_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+            halign = Gtk.Align.FILL,
+            hexpand = true
+        };
+
+        var quack_toggle = new Gtk.Switch () {
                 halign = Gtk.Align.END,
                 hexpand = true,
                 valign = Gtk.Align.CENTER,
@@ -14,20 +27,25 @@ public class Reminduck.Widgets.SettingsPopover : Granite.Popover {
 
         var quack_label = new Granite.HeaderLabel (_("Do a quack sound")) {
             mnemonic_widget = quack_toggle,
-            secondary_text = _("If enabled, the duck will quack when reminding you")
+            secondary_text = _("If enabled, the duck will quack when reminding you"),
+            halign = Gtk.Align.START
         };
 
         quack_box.append (quack_label);
         quack_box.append (quack_toggle);
-        append (quack_box);
+
+        view.append (quack_box);
 
 
         /* PERMISSION BOX */
-        var link = Granite.SettingsUri.PERMISSIONS;
+        var link = Granite.SettingsUri.NOTIFICATIONS;
         var linkname = _("Notifications");
 
 
-        var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+        var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+            halign = Gtk.Align.FILL
+        };
+
         var permissions_link = new Gtk.LinkButton.with_label (
                                                         link,
                                                         linkname
@@ -39,19 +57,24 @@ public class Reminduck.Widgets.SettingsPopover : Granite.Popover {
 
         var permissions_label = new Granite.HeaderLabel (_("Disable the DING sound")) {
             mnemonic_widget = permissions_link,
-            secondary_text = _("You can disable the system notification sounds for Reminduck in the settings")
+            secondary_text = _("You can disable the system notification sounds for Reminduck in the settings"),
+            halign = Gtk.Align.START,
+            hexpand = true
         };
+
         permissions_label.set_hexpand (true);
         permissions_box.append (permissions_label);
         permissions_box.append (permissions_link);
-        append (permissions_box);
+        view.append (permissions_box);
+
+        child = view;
 
         /* BIND */
-        Application.settings.bind (
+        var settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
+        settings.bind (
             "quack-sound",
             quack_toggle, "active",
             SettingsBindFlags.DEFAULT);
-        };
-
     }
 }
+

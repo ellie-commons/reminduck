@@ -64,8 +64,13 @@ namespace Reminduck {
             this.headerbar.title_widget = title_widget;
             this.headerbar.add_css_class ("default-decoration");
 
-            var popover = new Reminduck.SettingsPopover ();
-            headerbar.append (popover);
+            var popover = new Reminduck.Widgets.SettingsPopover ();
+            var popover_button = new Gtk.MenuButton () {
+                icon_name = "open-menu"
+            };
+            popover_button.popover = popover;
+
+            headerbar.pack_end (popover_button);
 
             set_titlebar (this.headerbar);
 

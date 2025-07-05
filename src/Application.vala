@@ -209,7 +209,7 @@ namespace Reminduck {
                     notification.set_priority (GLib.NotificationPriority.URGENT);
                     this.send_notification ("notify.app", notification);
 
-                    if (Application.settings.get_boolean("quack-sound")) {
+                    if (settings.get_boolean("quack-sound")) {
                         new Quack("/io/github/ellie_commons/reminduck/quack.ogg");
                     }
 
