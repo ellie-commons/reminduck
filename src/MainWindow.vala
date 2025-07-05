@@ -107,7 +107,7 @@ namespace Reminduck {
             });
 
             welcome_view.reminders_view_button.clicked.connect (() => {
-                        show_reminders_view (Gtk.StackTransitionType.SLIDE_LEFT);
+                show_reminders_view (Gtk.StackTransitionType.SLIDE_LEFT);
             });
 
             stack.add_named (welcome_view, "welcome");

@@ -67,6 +67,32 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
         permissions_box.append (permissions_link);
         view.append (permissions_box);
 
+
+
+
+        /* PERSISTENT TOGGLE */
+        var persist_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+            halign = Gtk.Align.FILL,
+            hexpand = true
+        };
+
+        var persist_toggle = new Gtk.Switch () {
+                halign = Gtk.Align.END,
+                hexpand = true,
+                valign = Gtk.Align.CENTER,
+        };
+
+        var persist_label = new Granite.HeaderLabel (_("Persistent notifications")) {
+            mnemonic_widget = quack_toggle,
+            secondary_text = _("If enabled, the duck will stay until (gently) dismissed"),
+            halign = Gtk.Align.START
+        };
+
+        persist_box.append (persist_label);
+        persist_box.append (persist_toggle);
+
+        view.append (persist_box);
+
         child = view;
 
         /* BIND */
@@ -75,6 +101,14 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
             "quack-sound",
             quack_toggle, "active",
             SettingsBindFlags.DEFAULT);
+
+            settings.bind (
+            "persistent",
+            persist_toggle, "active",
+            SettingsBindFlags.DEFAULT);
+
+
+
     }
 }
 

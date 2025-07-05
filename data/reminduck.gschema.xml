@@ -24,5 +24,10 @@
       <summary>Whether to do a quack sound for reminders</summary>
       <description>If on, the duck will quack</description>
     </key>
+    <key name="persistent" type="b">
+      <default>true</default>
+      <summary>Whether to keep notifications persistent</summary>
+      <description>If on, the duck will keep its notification</description>
+    </key>
   </schema>
 </schemalist>

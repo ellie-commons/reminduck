@@ -206,7 +206,13 @@ namespace Reminduck {
                 if (reminder.time.compare (new GLib.DateTime.now ()) <= 0) {
                     var notification = new Notification ("QUACK!");
                     notification.set_body (reminder.description);
-                    notification.set_priority (GLib.NotificationPriority.URGENT);
+
+                    if (settings.get_boolean ("persistent")) {
+                        notification.set_priority (GLib.NotificationPriority.URGENT);
+                    } else {
+                        notification.set_priority (GLib.NotificationPriority.NORMAL);
+                    }
+
                     this.send_notification ("notify.app", notification);
 
                     if (settings.get_boolean("quack-sound")) {
