@@ -74,6 +74,14 @@ namespace Reminduck {
                         granite_settings.prefers_color_scheme == DARK
                     );
             });
+
+
+
+            var mfn = Gtk.MediaFile.for_resource ("/io/github/ellie_commons/reminduck/quack.ogg");
+            mfn.play_now ();
+
+
+
         }
 
         public static int main(string[] args) {
@@ -121,13 +129,6 @@ namespace Reminduck {
             if (timeout_id == 0) {
                 set_reminder_interval ();
             }
-
-
-                var mfn = Gtk.MediaFile.for_resource ("/io/github/ellie_commons/reminduck/quack.ogg");
-                    //print (mfn.t);
-                if (mfn != null) {
-                    mfn.play();
-                }
         }
         
         public override int command_line (ApplicationCommandLine command_line) {

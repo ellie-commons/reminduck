@@ -36,7 +36,8 @@ executable(
         dependency('gee-0.8'),
         dependency('sqlite3'),
         dependency('granite-7'),
-        dependency('libportal')
+        dependency('libportal'),
+        dependency('gstreamer-1.0')
     ],
     install: true
 )
