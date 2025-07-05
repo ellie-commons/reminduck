@@ -55,7 +55,7 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
         permissions_link.tooltip_text = link;
         permissions_link.halign = Gtk.Align.END;
 
-        var permissions_label = new Granite.HeaderLabel (_("Disable the DING sound")) {
+        var permissions_label = new Granite.HeaderLabel (_("Disable the 'DING' sound")) {
             mnemonic_widget = permissions_link,
             secondary_text = _("You can disable the system notification sounds for Reminduck in the settings"),
             halign = Gtk.Align.START,
