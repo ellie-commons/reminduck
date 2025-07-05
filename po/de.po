@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-29 15:25+0200\n"
+"POT-Creation-Date: 2025-07-05 21:18+0200\n"
 "PO-Revision-Date: 2020-01-13 15:11+0100\n"
 "Last-Translator: Alexander Schneider <kokoskern@gmail.com>\n"
 "Language-Team: none\n"
@@ -12,63 +12,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/Application.vala:183
+#: src/Application.vala:179
 #, fuzzy
 msgid "Autostart Reminduck in background to send reminders"
 msgstr "Autostart von Badger im Hintergrund, um Erinnerungen zu versenden"
 
-#: src/MainWindow.vala:86
+#: src/MainWindow.vala:92
 msgid "Back"
 msgstr "Zurück"
 
-#: src/MainWindow.vala:96
-msgid "QUACK! I'm Reminduck"
-msgstr "QUAK! Ich bin Reminduck"
-
-#: src/MainWindow.vala:97
-msgid "The duck that reminds you"
-msgstr "Die Ente die dich erinnert"
-
-#: src/MainWindow.vala:103
-msgid "New Reminder"
-msgstr "Neue Erinnerung"
-
-#: src/MainWindow.vala:104
-msgid "Create a new reminder for a set date and time"
-msgstr "Erstelle neue Erinnerung für bestimmte Zeit und Datum"
-
-#: src/MainWindow.vala:115
-msgid "View Reminders"
-msgstr "Zeige Erinnerungen an"
-
-#: src/MainWindow.vala:116
-msgid "See reminders you've created"
-msgstr "Zeige bisher erstellte Erinnerungen an"
-
-#: src/Objects/Reminder.vala:45
+#: src/Objects/Reminder.vala:41
 msgid "Don't Repeat"
 msgstr "Nicht wiederholen"
 
-#: src/Objects/Reminder.vala:49
+#: src/Objects/Reminder.vala:45
 msgid "Every X minutes"
 msgstr "Alle X Minuten"
 
-#: src/Objects/Reminder.vala:51
+#: src/Objects/Reminder.vala:47
 #, c-format
 msgid "Every minute"
 msgid_plural "Every %d minutes"
 msgstr[0] "Jede Minute"
 msgstr[1] "Alle %d Minuten"
 
-#: src/Objects/Reminder.vala:55
+#: src/Objects/Reminder.vala:51
 msgid "Every day"
 msgstr "Jeden Tag"
 
-#: src/Objects/Reminder.vala:58
+#: src/Objects/Reminder.vala:54
 msgid "Every week"
 msgstr "Jede Woche"
 
-#: src/Objects/Reminder.vala:61
+#: src/Objects/Reminder.vala:57
 msgid "Every month"
 msgstr "Jeden Monat"
 
@@ -112,6 +88,59 @@ msgstr "Bearbeiten"
 #: src/Views/RemindersView.vala:137
 msgid "Delete"
 msgstr "Löschen"
+
+#: src/Views/WelcomeView.vala:28
+msgid "QUACK! I'm Reminduck"
+msgstr "QUAK! Ich bin Reminduck"
+
+#: src/Views/WelcomeView.vala:29
+msgid "The duck that reminds you"
+msgstr "Die Ente die dich erinnert"
+
+#: src/Views/WelcomeView.vala:36
+msgid "New Reminder"
+msgstr "Neue Erinnerung"
+
+#: src/Views/WelcomeView.vala:37
+msgid "Create a new reminder for a set date and time"
+msgstr "Erstelle neue Erinnerung für bestimmte Zeit und Datum"
+
+#: src/Views/WelcomeView.vala:42
+msgid "View Reminders"
+msgstr "Zeige Erinnerungen an"
+
+#: src/Views/WelcomeView.vala:43
+msgid "See reminders you've created"
+msgstr "Zeige bisher erstellte Erinnerungen an"
+
+#: src/Widgets/SettingsPopover.vala:28
+msgid "Do a quack sound"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:30
+msgid "If enabled, the duck will quack when reminding you"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:42
+msgid "Notifications"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:58
+msgid "Disable the DING sound"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:60
+msgid ""
+"You can disable the system notification sounds for Reminduck in the settings"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:85
+msgid "Persistent notifications"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:87
+msgid "If enabled, the duck will stay until (gently) dismissed"
+msgstr ""
 
 #~ msgid "Light mode"
 #~ msgstr "Heller Modus"

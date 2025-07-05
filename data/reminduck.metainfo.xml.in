@@ -18,6 +18,8 @@
       <description>
         <ul>
           <li>FINALLY a quack setting 🦆</li>
+          <li>Added a menu button with a popover</li>
+          <li>Added toggle to change notification persistency</li>
           <li>Bugfix: Now "Show Reminders" should display correctly</li>
         </ul>
       </description>
