@@ -19,7 +19,7 @@ public class Reminduck.Widgets.SettingsPopover : Granite.Popover {
 
         quack_box.append (quack_label);
         quack_box.append (quack_toggle);
-        append (quack_box)
+        append (quack_box);
 
 
         /* PERMISSION BOX */
@@ -53,5 +53,5 @@ public class Reminduck.Widgets.SettingsPopover : Granite.Popover {
             SettingsBindFlags.DEFAULT);
         };
 
-
+    }
 }

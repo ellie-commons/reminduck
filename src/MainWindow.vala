@@ -64,6 +64,9 @@ namespace Reminduck {
             this.headerbar.title_widget = title_widget;
             this.headerbar.add_css_class ("default-decoration");
 
+            var popover = new Reminduck.SettingsPopover ();
+            headerbar.append (popover);
+
             set_titlebar (this.headerbar);
 
             granite_settings = Granite.Settings.get_default ();

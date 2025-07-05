@@ -54,10 +54,9 @@ msgstr ""
 
 #: data/reminduck.metainfo.xml.in:14
 msgid "And it quacks."
-msgstr "Und es quakt."
+msgstr "Und sie quakt."
 
 #: data/reminduck.metainfo.xml.in:19
-#, fuzzy
 msgid ""
 "🦆🦆The quack is back!🦆🦆 A continuation of Reminduck, with the blessing of "
 "its original creator!"
