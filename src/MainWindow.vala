@@ -56,8 +56,8 @@ namespace Reminduck {
             };
 
 
-            title = "Reminduck";
-            Gtk.Label title_widget = new Gtk.Label ("Reminduck");
+            title = _("Reminduck");
+            Gtk.Label title_widget = new Gtk.Label (_("Reminduck"));
             title_widget.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
 
             this.headerbar = new Gtk.HeaderBar ();

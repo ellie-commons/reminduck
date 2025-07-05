@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-05 21:18+0200\n"
+"POT-Creation-Date: 2025-07-05 21:31+0200\n"
 "PO-Revision-Date: 2018-08-02 15:09-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -16,6 +16,11 @@ msgstr ""
 #, fuzzy
 msgid "Autostart Reminduck in background to send reminders"
 msgstr "Arranque automático do Badger em segundo plano para enviar lembretes"
+
+#: src/MainWindow.vala:59 src/MainWindow.vala:60
+#, fuzzy
+msgid "Reminduck"
+msgstr "QUAC! Eu sou o Reminduck"
 
 #: src/MainWindow.vala:92
 msgid "Back"
