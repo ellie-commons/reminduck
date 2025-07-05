@@ -77,11 +77,6 @@ namespace Reminduck {
 
 
 
-            var mfn = Gtk.MediaFile.for_resource ("/io/github/ellie_commons/reminduck/quack.ogg");
-            mfn.play_now ();
-
-
-
         }
 
         public static int main(string[] args) {
@@ -214,12 +209,9 @@ namespace Reminduck {
                     notification.set_priority (GLib.NotificationPriority.URGENT);
                     this.send_notification ("notify.app", notification);
 
-                    var mfn = Gtk.MediaFile.for_resource ("/io/github/ellie_commons/reminduck/quack.ogg");
-                    //print (mfn.t);
-                    if (mfn != null) {
-                        mfn.play_now ();
+                    if (Application.settings.get_boolean("quack-sound")) {
+                        new Quack("/io/github/ellie_commons/reminduck/quack.ogg");
                     }
-
 
                     if (reminder.recurrency_type != RecurrencyType.NONE) {
                         GLib.DateTime new_time = reminder.time;
@@ -275,4 +267,23 @@ namespace Reminduck {
             return true;
         }
     }
+
+
+        public class Quack : Object {
+            public Quack (string fn) {
+                var m = Gtk.MediaFile.for_resource(fn);
+                m.notify["ended"].connect(() => {
+                        print("stream ended %s\n", m.ended.to_string());
+                    });
+
+                m.notify["prepared"].connect(() => {
+                        var t = m.duration;
+                        var s = t/1000000;
+                        var ms = t % 1000000;
+                        print("Play for %jd.%06jd\n", s,ms);
+                    });
+                m.play();
+            }
+        }
+
 }

@@ -1,6 +1,5 @@
 sources = files (
     'Application.vala',
-    'Widgets/SettingsPopover.vala'
     'MainWindow.vala',
     'Services/Database.vala',
     'Objects/Reminder.vala',
