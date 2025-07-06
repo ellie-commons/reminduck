@@ -99,7 +99,7 @@ namespace Reminduck {
                     ask_autostart = false;
                 }
 
-                request_autostart ();
+                Reminduck.Utils.request_autostart ();
             }
 
             reload_reminders ();
@@ -168,21 +168,6 @@ namespace Reminduck {
             return 0;
         }
 
-        private static void request_autostart () {
-            Xdp.Portal portal = new Xdp.Portal ();
-            GenericArray<weak string> cmd = new GenericArray<weak string> ();
-            cmd.add ("io.github.ellie_commons.reminduck");
-            cmd.add ("--headless");
-
-            portal.request_background.begin (
-                null,
-                _("Autostart Reminduck in background to send reminders"),
-                cmd,
-                Xdp.BackgroundFlags.AUTOSTART,
-                null);
-
-            stdout.printf ("\n🚀 Requested autostart");
-        }
 
         public static void reload_reminders () {
             reminders = database.fetch_reminders ();

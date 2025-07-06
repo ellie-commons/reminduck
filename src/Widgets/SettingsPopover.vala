@@ -13,6 +13,15 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
         };
 
 
+        var overlay = new Gtk.Overlay ();
+        view.append (overlay);
+
+        var toast = new Granite.Toast (_("Request to system sent"));
+        overlay.add_overlay (toast);
+
+
+
+
         /* QUACK TOGGLE */
         var quack_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
             halign = Gtk.Align.FILL,
@@ -102,6 +111,62 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
         persist_box.append (persist_toggle);
 
         view.append (persist_box);
+
+        /* AUTOSTART */
+                var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+                    halign = Gtk.Align.FILL
+                };
+
+                ///TRANSLATORS: Button to autostart the application
+                var set_autostart = new Gtk.Button () {
+                    label = _("Set autostart")
+                };
+                //set_autostart.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+
+                set_autostart.clicked.connect (() => {
+                    debug ("Setting autostart");
+                    Reminduck.Utils.request_autostart ();
+                    toast.send_notification ();
+                });
+
+                ///TRANSLATORS: Button to remove the autostart for the application
+                var remove_autostart = new Gtk.Button () {
+                    label = _("Remove autostart")
+                };
+                //remove_autostart.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+
+                remove_autostart.clicked.connect (() => {
+                    debug ("Removing autostart");
+                    Reminduck.Utils.remove_autostart ();
+                    toast.send_notification ();
+                });
+
+                both_buttons.append (set_autostart);
+                both_buttons.append (remove_autostart);
+
+
+
+
+                var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+
+                var autostart_label = new Granite.HeaderLabel (_("Allow to start at login")) {
+                    mnemonic_widget = both_buttons,
+                    secondary_text = _("You can request the system to start this application automatically"),
+                    hexpand = true
+                };
+
+                autostart_box.append (autostart_label);
+                autostart_box.append (both_buttons);
+                view.append (autostart_box);
+
+
+
+
+
+
+
+
+
 
         child = view;
 
