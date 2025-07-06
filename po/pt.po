@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-06 15:45+0200\n"
+"POT-Creation-Date: 2025-07-06 15:48+0200\n"
 "PO-Revision-Date: 2018-08-02 15:09-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -161,7 +161,9 @@ msgid "Allow to start at login"
 msgstr ""
 
 #: src/Widgets/SettingsPopover.vala:154
-msgid "You can request the system to start this application automatically"
+msgid ""
+"You can request the system to start this application automatically (done on "
+"first launch already)"
 msgstr ""
 
 #: src/Services/Utils.vala:12

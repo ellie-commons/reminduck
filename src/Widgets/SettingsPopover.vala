@@ -151,7 +151,7 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
 
                 var autostart_label = new Granite.HeaderLabel (_("Allow to start at login")) {
                     mnemonic_widget = both_buttons,
-                    secondary_text = _("You can request the system to start this application automatically"),
+                    secondary_text = _("You can request the system to start this application automatically (done on first launch already)"),
                     hexpand = true
                 };
 
