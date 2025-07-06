@@ -16,10 +16,12 @@
   <releases>
     <release version="2.1.0" date="2025-07-06">
       <description>
+        <p>✨NEW IN THE POND✨</p>
         <ul>
-          <li>FINALLY a quack setting 🦆</li>
+          <li>FINALLY a quack setting 🦆 You can even preview the sound!</li>
           <li>Added a menu button with a popover</li>
           <li>Added toggle to change notification persistency</li>
+          <li>Added buttons to set/remove autostart</li>
           <li>Bugfix: Now "Show Reminders" should display correctly</li>
         </ul>
       </description>

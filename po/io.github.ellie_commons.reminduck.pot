@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-05 21:36+0200\n"
+"POT-Creation-Date: 2025-07-06 15:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: src/Application.vala:179
-msgid "Autostart Reminduck in background to send reminders"
-msgstr ""
-
-#: src/MainWindow.vala:59 src/MainWindow.vala:60
+#: src/MainWindow.vala:64 src/MainWindow.vala:65
 msgid "Reminduck"
 msgstr ""
 
-#: src/MainWindow.vala:92
+#: src/MainWindow.vala:97
 msgid "Back"
 msgstr ""
 
@@ -122,31 +118,61 @@ msgstr ""
 msgid "See reminders you've created"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:28
-msgid "Do a quack sound"
-msgstr ""
-
-#: src/Widgets/SettingsPopover.vala:30
-msgid "If enabled, the duck will quack when reminding you"
+#: src/Widgets/SettingsPopover.vala:19
+msgid "Request to system sent"
 msgstr ""
 
 #: src/Widgets/SettingsPopover.vala:42
+msgid "Do a quack sound"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:44
+msgid "If enabled, the duck will quack when reminding you"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:55
 msgid "Notifications"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:58
+#: src/Widgets/SettingsPopover.vala:71
 msgid "Disable the 'DING' sound"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:60
+#: src/Widgets/SettingsPopover.vala:73
 msgid ""
 "You can disable the system notification sounds for Reminduck in the settings"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:85
+#: src/Widgets/SettingsPopover.vala:104
 msgid "Persistent notifications"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:87
+#: src/Widgets/SettingsPopover.vala:106
 msgid "If enabled, the duck will stay until (gently) dismissed"
+msgstr ""
+
+#. /TRANSLATORS: Button to autostart the application
+#: src/Widgets/SettingsPopover.vala:122
+msgid "Set autostart"
+msgstr ""
+
+#. /TRANSLATORS: Button to remove the autostart for the application
+#: src/Widgets/SettingsPopover.vala:134
+msgid "Remove autostart"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:152
+msgid "Allow to start at login"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:154
+msgid "You can request the system to start this application automatically"
+msgstr ""
+
+#: src/Services/Utils.vala:12
+msgid "Autostart Reminduck in background to send reminders"
+msgstr ""
+
+#: src/Services/Utils.vala:28
+msgid "Remove Reminduck from autostart"
 msgstr ""
