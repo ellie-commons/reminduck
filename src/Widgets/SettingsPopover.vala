@@ -36,38 +36,43 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
 
         view.append (quack_box);
 
-
-        /* PERMISSION BOX */
-        var link = Granite.SettingsUri.NOTIFICATIONS;
-        var linkname = _("Notifications");
-
-
-        var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
-            halign = Gtk.Align.FILL
-        };
-
-        var permissions_link = new Gtk.LinkButton.with_label (
-                                                        link,
-                                                        linkname
-        );
-
-        // _("Applications → Permissions")
-        permissions_link.tooltip_text = link;
-        permissions_link.halign = Gtk.Align.END;
-
-        var permissions_label = new Granite.HeaderLabel (_("Disable the 'DING' sound")) {
-            mnemonic_widget = permissions_link,
-            secondary_text = _("You can disable the system notification sounds for Reminduck in the settings"),
-            halign = Gtk.Align.START,
-            hexpand = true
-        };
-
-        permissions_label.set_hexpand (true);
-        permissions_box.append (permissions_label);
-        permissions_box.append (permissions_link);
-        view.append (permissions_box);
+                /* PERMISSION BOX */
+                var link = Granite.SettingsUri.NOTIFICATIONS;
+                var linkname = _("Notifications");
 
 
+                var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+                    halign = Gtk.Align.FILL
+                };
+
+                var permissions_link = new Gtk.LinkButton.with_label (
+                                                                link,
+                                                                linkname
+                );
+
+                // _("Applications → Permissions")
+                permissions_link.tooltip_text = link;
+                permissions_link.halign = Gtk.Align.END;
+
+                var permissions_label = new Granite.HeaderLabel (_("Disable the 'DING' sound")) {
+                    mnemonic_widget = permissions_link,
+                    secondary_text = _("You can disable the system notification sounds for Reminduck in the settings"),
+                    halign = Gtk.Align.START,
+                    hexpand = true
+                };
+
+                permissions_label.set_hexpand (true);
+                permissions_box.append (permissions_label);
+                permissions_box.append (permissions_link);
+                view.append (permissions_box);
+
+            string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+            print ("\nEnvironment: " + desktop_environment + " detected!");
+
+            // Show only in Pantheon because others do not have an autostart panel
+            if (desktop_environment != "Pantheon") {
+                permissions_link.hide ();
+            }
 
 
         /* PERSISTENT TOGGLE */
