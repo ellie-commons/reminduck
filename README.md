@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="data/icons/hicolor/io.github.ellie_commons.reminduck.png" alt="Icon" />
+    <img src="data/icons/hicolor/48.png" alt="Icon" />
 </p>
 
 <h1 align="center">Reminduck</h1>

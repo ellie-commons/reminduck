@@ -19,20 +19,25 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
             hexpand = true
         };
 
-        var quack_toggle = new Gtk.Switch () {
-                halign = Gtk.Align.END,
-                hexpand = true,
-                valign = Gtk.Align.CENTER,
+        var quack_button = new Gtk.Button.from_icon_name ("media-playback-start");
+        quack_button.clicked.connect (() => {new Quack ();});
+
+        var quack_toggle = new Gtk.Switch ();
+        var minibox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+            halign = Gtk.Align.END,
+            hexpand = true
         };
+        minibox.append (quack_button);
+        minibox.append (quack_toggle);
 
         var quack_label = new Granite.HeaderLabel (_("Do a quack sound")) {
-            mnemonic_widget = quack_toggle,
+            mnemonic_widget = minibox,
             secondary_text = _("If enabled, the duck will quack when reminding you"),
             halign = Gtk.Align.START
         };
 
         quack_box.append (quack_label);
-        quack_box.append (quack_toggle);
+        quack_box.append (minibox);
 
         view.append (quack_box);
 

@@ -216,7 +216,7 @@ namespace Reminduck {
                     this.send_notification ("notify.app", notification);
 
                     if (settings.get_boolean("quack-sound")) {
-                        new Quack("/io/github/ellie_commons/reminduck/quack.ogg");
+                        new Quack();
                     }
 
                     if (reminder.recurrency_type != RecurrencyType.NONE) {
@@ -276,8 +276,8 @@ namespace Reminduck {
 
 
         public class Quack : Object {
-            public Quack (string fn) {
-                var m = Gtk.MediaFile.for_resource(fn);
+            public Quack () {
+                var m = Gtk.MediaFile.for_resource("/io/github/ellie_commons/reminduck/quack.ogg");
                 m.notify["ended"].connect(() => {
                         print("stream ended %s\n", m.ended.to_string());
                     });
