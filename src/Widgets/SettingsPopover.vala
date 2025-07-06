@@ -7,7 +7,7 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
 
 
         var view = new Gtk.Box (Gtk.Orientation.VERTICAL, 18) {
-            margin_top = margin_bottom = margin_start = margin_end = 18,
+            margin_bottom = margin_start = margin_end = 18,
             vexpand = true,
             hexpand = true
         };
@@ -151,7 +151,7 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
 
                 var autostart_label = new Granite.HeaderLabel (_("Allow to start at login")) {
                     mnemonic_widget = both_buttons,
-                    secondary_text = _("You can request the system to start this application automatically (done on first launch already)"),
+                    secondary_text = _("You can request the system to start this application automatically"),
                     hexpand = true
                 };
 
