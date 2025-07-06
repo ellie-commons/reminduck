@@ -38,6 +38,11 @@ namespace Reminduck {
             settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
             Intl.setlocale ();
 
+            set_default_size (
+                this.settings.get_int ("window-width"),
+                this.settings.get_int ("window-height")
+            );
+
             // Use reminduck styling
             var app_provider = new Gtk.CssProvider ();
             app_provider.load_from_resource ("/io/github/ellie_commons/reminduck/Application.css");
