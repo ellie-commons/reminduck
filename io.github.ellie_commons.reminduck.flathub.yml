@@ -12,6 +12,8 @@ finish-args:
   - '--device=dri'
   - '--socket=fallback-x11'
   - '--socket=wayland'
+  # Required to do a quack sound
+  - '--socket=pulseaudio'
 
 cleanup:
   -  '/include'
