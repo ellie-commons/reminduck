@@ -1,26 +1,3 @@
-# Install our icons in all the required sizes
-icon_sizes = ['16', '24', '32', '48', '64', '128']
-
-foreach i : icon_sizes
-    install_data(
-        'icons' / 'hicolor' / i + '.png',
-        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps',
-        rename: meson.project_name() + '.png'
-    )
-    install_data(
-        'icons' / 'hicolor@2' / i + '@2.png',
-        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i + '@2' / 'apps',
-        rename: meson.project_name() + '.png'
-    )
-endforeach
-
-install_data(
-    'icons' / 'scalable.svg',
-    install_dir: get_option('datadir') / 'icons' / 'scalable' / 'apps',
-    rename: meson.project_name() + '.svg'
-)
-
-
 i18n.merge_file(
     input: 'reminduck.desktop.in',
     output: meson.project_name() + '.desktop',
@@ -41,4 +18,27 @@ i18n.merge_file(
 install_data(
     'reminduck.gschema.xml',
     install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
+)
+
+
+# Install our icons in all the required sizes
+icon_sizes = ['16', '24', '32', '48', '64', '128', '256']
+
+foreach i : icon_sizes
+    install_data(
+        'icons' / 'hicolor' / i + '.png',
+        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps',
+        rename: meson.project_name() + '.png'
+    )
+    install_data(
+        'icons' / 'hicolor@2' / i + '@2.png',
+        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i + '@2' / 'apps',
+        rename: meson.project_name() + '.png'
+    )
+endforeach
+
+install_data(
+    'icons' / 'scalable.svg',
+    install_dir: get_option('datadir') / 'icons' / 'scalable' / 'apps',
+    rename: meson.project_name() + '.svg'
 )
