@@ -1,8 +1,8 @@
 
 
 public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
-    construct {
 
+    construct {
         var view = new Gtk.Box (Gtk.Orientation.VERTICAL, 18) {
             margin_bottom = margin_start = margin_end = 18,
             vexpand = true,

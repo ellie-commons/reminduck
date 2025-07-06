@@ -74,9 +74,6 @@ namespace Reminduck {
                         granite_settings.prefers_color_scheme == DARK
                     );
             });
-
-
-
         }
 
         public static int main(string[] args) {
@@ -259,7 +256,6 @@ namespace Reminduck {
         }
     }
 
-
         public class Quack : Object {
             public Quack () {
                 var m = Gtk.MediaFile.for_resource("/io/github/ellie_commons/reminduck/quack.ogg");
@@ -276,5 +272,4 @@ namespace Reminduck {
                 m.play();
             }
         }
-
 }

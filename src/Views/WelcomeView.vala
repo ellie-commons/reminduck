@@ -42,11 +42,5 @@ public class Reminduck.Views.WelcomeView : Gtk.Box {
             _("View Reminders"),
             _("See reminders you've created"
         ));
-
-        
-
-        
-
-
     }
 }

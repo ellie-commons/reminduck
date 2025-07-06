@@ -32,5 +32,4 @@ namespace Reminduck.Utils {
 
             stdout.printf ("\n🚀 Removed autostart");
         }
-
 }
