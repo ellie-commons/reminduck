@@ -39,7 +39,6 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         };
 
         var quack_button = new Gtk.Button.from_icon_name ("media-playback-start") {
-            label = _("Preview"),
             tooltip_text = _("Click to preview reminder sound")
         };
 
@@ -183,6 +182,17 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
             persist_toggle, "active",
             SettingsBindFlags.DEFAULT);
 
+
+            /*************************************************/
+
+            // Monies?
+        var support_button = new Gtk.LinkButton.with_label (
+            "https://ko-fi.com/teamcons",
+            _("Support us!")
+        );
+        support_button.halign = Gtk.Align.START;
+
+        centerbox.append (support_button);
 
 
     }

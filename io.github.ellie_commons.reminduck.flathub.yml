@@ -29,6 +29,7 @@ cleanup:
 
 modules:
 
+# Only till https://github.com/flathub/io.elementary.BaseApp/pull/32 gets merged
   - name: libportal
     buildsystem: meson
     config-opts:
