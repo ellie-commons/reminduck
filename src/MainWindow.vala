@@ -33,6 +33,7 @@ namespace Reminduck {
         Reminduck.Views.WelcomeView welcome_view;
         Reminduck.Views.ReminderEditor reminder_editor;
         Reminduck.Views.RemindersView reminders_view;
+        Reminduck.Views.SettingsView settings_view;
 
         public MainWindow () {
             settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
@@ -69,14 +70,6 @@ namespace Reminduck {
             this.headerbar.title_widget = title_widget;
             this.headerbar.add_css_class ("default-decoration");
 
-            var popover = new Reminduck.Widgets.SettingsPopover ();
-            var popover_button = new Gtk.MenuButton () {
-                icon_name = "open-menu"
-            };
-            popover_button.popover = popover;
-
-            headerbar.pack_end (popover_button);
-
             set_titlebar (this.headerbar);
 
             granite_settings = Granite.Settings.get_default ();
@@ -105,20 +98,11 @@ namespace Reminduck {
 
 
             welcome_view = new Reminduck.Views.WelcomeView ();
-
-
-            welcome_view.reminder_editor_button.clicked.connect (() => {
-                show_reminder_editor ();
-            });
-
-            welcome_view.reminders_view_button.clicked.connect (() => {
-                show_reminders_view (Gtk.StackTransitionType.SLIDE_LEFT);
-            });
-
             stack.add_named (welcome_view, "welcome");
 
             this.build_reminder_editor ();
             this.build_reminders_view ();
+            this.build_settings_view ();
 
             stack.halign = stack.valign = Gtk.Align.FILL;
             stack.hexpand = stack.vexpand = true;
@@ -130,6 +114,18 @@ namespace Reminduck {
             child = handle;
 
             this.show_welcome_view (Gtk.StackTransitionType.NONE);
+
+            welcome_view.reminder_editor_button.clicked.connect (() => {
+                show_reminder_editor ();
+            });
+
+            welcome_view.reminders_view_button.clicked.connect (() => {
+                show_reminders_view (Gtk.StackTransitionType.SLIDE_LEFT);
+            });
+
+            welcome_view.settings_view_button.clicked.connect (() => {
+                show_settings_view (Gtk.StackTransitionType.SLIDE_LEFT);
+            });
 
             this.close_request.connect (e => {
                 return before_destroy ();
@@ -175,6 +171,11 @@ namespace Reminduck {
             stack.add_named (this.reminders_view, "reminders_view");
         }
 
+        private void build_settings_view () {
+            this.settings_view = new Reminduck.Views.SettingsView ();
+            stack.add_named (this.settings_view, "settings_view");
+        }
+
         private void show_reminder_editor (Reminder? reminder = null) {
             stack.set_transition_type (Gtk.StackTransitionType.SLIDE_LEFT);
             stack.set_visible_child_name ("reminder_editor");
@@ -203,6 +204,12 @@ namespace Reminduck {
             stack.set_visible_child_name ("welcome");
             this.back_button.hide ();
             this.reminder_editor.reset_fields ();
+        }
+
+        private void show_settings_view (Gtk.StackTransitionType slide = Gtk.StackTransitionType.SLIDE_RIGHT) {
+            stack.set_transition_type (slide);
+            stack.set_visible_child_name ("settings_view");
+            this.back_button.show ();
         }
 
         private bool before_destroy () {

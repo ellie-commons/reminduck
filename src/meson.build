@@ -7,5 +7,5 @@ sources = files (
     'Views/ReminderEditor.vala',
     'Views/RemindersView.vala',
     'Views/WelcomeView.vala',
-    'Widgets/SettingsPopover.vala',
+    'Views/SettingsView.vala',
 )

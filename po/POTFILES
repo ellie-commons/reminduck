@@ -4,5 +4,5 @@ src/Objects/Reminder.vala
 src/Views/ReminderEditor.vala
 src/Views/RemindersView.vala
 src/Views/WelcomeView.vala
-src/Widgets/SettingsPopover.vala
+src/Views/SettingsView.vala
 src/Services/Utils.vala

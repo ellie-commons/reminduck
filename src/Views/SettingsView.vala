@@ -1,19 +1,36 @@
 
 
-public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
+public class Reminduck.Views.SettingsView : Gtk.Box {
 
     construct {
-        var view = new Gtk.Box (Gtk.Orientation.VERTICAL, 18) {
-            margin_bottom = margin_start = margin_end = 18,
-            vexpand = true,
-            hexpand = true
+        orientation = Gtk.Orientation.VERTICAL;
+        valign = Gtk.Align.FILL;
+        hexpand = vexpand = true;
+
+        var centerbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 18) {
+            hexpand = vexpand = true,
+            halign = Gtk.Align.CENTER,
+            valign = Gtk.Align.START,
+            margin_start = 24,
+            margin_end = 24,
+            margin_top = 12
         };
 
         var overlay = new Gtk.Overlay ();
-        view.append (overlay);
+        append (overlay);
 
         var toast = new Granite.Toast (_("Request to system sent"));
         overlay.add_overlay (toast);
+
+
+        var title = new Gtk.Label (_("Settings")) {
+                margin_top = 24,
+                margin_bottom = 12
+        };
+        title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
+
+        append (title);
+
 
         /* QUACK TOGGLE */
         var quack_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
@@ -41,7 +58,7 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
         quack_box.append (quack_label);
         quack_box.append (minibox);
 
-        view.append (quack_box);
+        centerbox.append (quack_box);
 
         /* PERMISSION BOX */
         var link = Granite.SettingsUri.NOTIFICATIONS;
@@ -71,7 +88,7 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
         permissions_label.set_hexpand (true);
         permissions_box.append (permissions_label);
         permissions_box.append (permissions_link);
-        view.append (permissions_box);
+        centerbox.append (permissions_box);
 
         string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
         print ("\nEnvironment: " + desktop_environment + " detected!");
@@ -103,7 +120,7 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
         persist_box.append (persist_label);
         persist_box.append (persist_toggle);
 
-        view.append (persist_box);
+        centerbox.append (persist_box);
 
         /* AUTOSTART */
         var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
@@ -146,9 +163,9 @@ public class Reminduck.Widgets.SettingsPopover : Gtk.Popover {
 
         autostart_box.append (autostart_label);
         autostart_box.append (both_buttons);
-        view.append (autostart_box);
+        centerbox.append (autostart_box);
 
-        child = view;
+        append (centerbox);
 
         /* BIND */
         var settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");

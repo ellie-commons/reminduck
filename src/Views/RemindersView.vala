@@ -21,8 +21,7 @@
 
 using Gee;
 
-namespace Reminduck.Views {
-    public class RemindersView : Gtk.Box {
+public class Reminduck.Views.RemindersView : Gtk.Box {
         public signal void add_request ();
         public signal void edit_request (Reminder reminder);
         public signal void reminder_deleted ();
@@ -158,5 +157,4 @@ namespace Reminduck.Views {
         private void on_edit (Reminder reminder) {
             this.edit_request (reminder);
         }
-    }
 }

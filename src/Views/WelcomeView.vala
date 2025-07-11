@@ -5,6 +5,7 @@ public class Reminduck.Views.WelcomeView : Gtk.Box {
     public Granite.Placeholder welcome_widget;
     public Gtk.Button reminders_view_button;
     public Gtk.Button reminder_editor_button;
+    public Gtk.Button settings_view_button;
 
     construct {
 
@@ -40,7 +41,14 @@ public class Reminduck.Views.WelcomeView : Gtk.Box {
         reminders_view_button = this.welcome_widget.append_button (
             new ThemedIcon ("accessories-text-editor"),
             _("View Reminders"),
-            _("See reminders you've created"
-        ));
+            _("See reminders you've created")
+        );
+
+        settings_view_button = this.welcome_widget.append_button (
+            new ThemedIcon ("open-menu"),
+            _("Settings"),
+            _("Tweak a few things")
+        );
+
     }
 }
