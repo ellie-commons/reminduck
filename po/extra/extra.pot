@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-11 23:33+0200\n"
+"POT-Creation-Date: 2025-07-11 23:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgid "Don't forget about your stuff in an adorably annoying way"
 msgstr ""
 
 #: data/reminduck.desktop.in:14
-msgid "Reminduck;Personal;Assistant;Reminders;"
+msgid "Reminduck;Personal;Assistant;Reminders;Remember;Duck;Quack;Cute;"
 msgstr ""
 
 #: data/reminduck.desktop.in:18

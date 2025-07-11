@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-11 23:33+0200\n"
+"POT-Creation-Date: 2025-07-11 23:49+0200\n"
 "PO-Revision-Date: 2019-11-29 18:21+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <vistausss@outlook.com>\n"
@@ -28,7 +28,8 @@ msgstr ""
 "herinnerd"
 
 #: data/reminduck.desktop.in:14
-msgid "Reminduck;Personal;Assistant;Reminders;"
+#, fuzzy
+msgid "Reminduck;Personal;Assistant;Reminders;Remember;Duck;Quack;Cute;"
 msgstr "Reminduck;Persoonlijk;Assistent;Herinneringen;"
 
 #: data/reminduck.desktop.in:18

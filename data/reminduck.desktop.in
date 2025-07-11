@@ -2,7 +2,7 @@
 Name=Reminduck
 GenericName=Reminders
 Comment=Don't forget about your stuff in an adorably annoying way
-Categories=Office;Utility;
+Categories=Office;
 Exec=io.github.ellie_commons.reminduck %U
 Icon=io.github.ellie_commons.reminduck
 
@@ -10,7 +10,7 @@ Terminal=false
 Type=Application
 X-GNOME-Gettext-Domain=reminduck
 X-GNOME-UsesNotifications=true
-Keywords=Reminduck;Personal;Assistant;Reminders;
+Keywords=Reminduck;Personal;Assistant;Reminders;Remember;Duck;Quack;Cute;
 Actions=NewReminder;
 
 [Desktop Action NewReminder]

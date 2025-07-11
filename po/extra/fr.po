@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-11 23:33+0200\n"
+"POT-Creation-Date: 2025-07-11 23:49+0200\n"
 "PO-Revision-Date: 2019-11-06 07:13+0100\n"
 "Last-Translator: Nathan Bonnemains\n"
 "Language-Team: none\n"
@@ -25,7 +25,8 @@ msgid "Don't forget about your stuff in an adorably annoying way"
 msgstr "N'oubliez rien de vos affaires de façon adorablement ennuyeuse"
 
 #: data/reminduck.desktop.in:14
-msgid "Reminduck;Personal;Assistant;Reminders;"
+#, fuzzy
+msgid "Reminduck;Personal;Assistant;Reminders;Remember;Duck;Quack;Cute;"
 msgstr "Reminduck;Personnel;Assistant;Rappels;"
 
 #: data/reminduck.desktop.in:18

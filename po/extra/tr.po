@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-11 23:33+0200\n"
+"POT-Creation-Date: 2025-07-11 23:49+0200\n"
 "PO-Revision-Date: 2019-11-04 14:49+0100\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -27,7 +27,7 @@ msgstr "Önemli işlerinizi sevimli ve sinir bozucu bir şekilde size hatırlat�
 
 #: data/reminduck.desktop.in:14
 #, fuzzy
-msgid "Reminduck;Personal;Assistant;Reminders;"
+msgid "Reminduck;Personal;Assistant;Reminders;Remember;Duck;Quack;Cute;"
 msgstr "Reminduck;Kişisel;Asistan;Yardımcı;Hatırlatıcı;Hatırlatıcılar"
 
 #: data/reminduck.desktop.in:18
