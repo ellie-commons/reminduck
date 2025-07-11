@@ -29,6 +29,9 @@
     color: white;
 }
 
+.advice  {
+    font-style: italic;
+}
 
 /*https://github.com/elementary/granite/pull/762/files
 .default-decoration * {

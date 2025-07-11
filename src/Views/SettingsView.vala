@@ -85,12 +85,14 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         permissions_link.tooltip_text = link;
         permissions_link.halign = Gtk.Align.END;
 
-        var permissions_label = new Granite.HeaderLabel (_("Disable the 'DING' sound")) {
+        var permissions_label = new Granite.HeaderLabel (_("You can disable the 'DING' sound in the system settings")) {
             mnemonic_widget = permissions_link,
-            secondary_text = _("You can disable the system notification sounds for Reminduck in the settings"),
             halign = Gtk.Align.START,
-            hexpand = true
+            hexpand = true,
+            valign = Gtk.Align.START,
+            margin_top = 0
         };
+        //permissions_label.add_css_class ("advice");
 
         permissions_label.set_hexpand (true);
         permissions_box.append (permissions_label);
