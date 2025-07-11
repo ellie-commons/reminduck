@@ -18,6 +18,7 @@
       <description>
         <ul>
           <li>Settings have been moved into their own view</li>
+          <li>Right click on the icon and choose "New reminder" to jump immediately in the editor</li>
         </ul>
       </description>
     </release>
