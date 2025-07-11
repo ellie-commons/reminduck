@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="data/icons/hicolor/48.png" alt="Icon" />
+    <img src="data/icons/hicolor/64.png" alt="Icon" />
 </p>
 
 <h1 align="center">Reminduck</h1>
@@ -24,9 +24,9 @@ _And it quacks._
 
 ## 🛣️ Roadmap
 
- - Currently dusting this off!!! (Help wanted)
- - Setting to have the app quack
- - Request autostart
+ - Change the deprecated widgets
+ - Clean everything up a bit and simplify
+ - Work on some old bugs
 
 
 ## 💝 Donations
@@ -56,11 +56,14 @@ On elementary OS or with its appcenter remote installed
 flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.reminduck.yml
 ```
 
+On other systems
+
+```bash
+flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir io.github.ellie_commons.reminduck.flathub.yml
+```
+
 ## ACKNOWLEDGMENTS
 
-(NOT YET IMPLEMENTED)
 Quack sound: https://pixabay.com/sound-effects/075176-duck-quack-40345/
 
 Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=40345">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=40345">Pixabay</a>
-
-
