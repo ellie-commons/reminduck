@@ -2,6 +2,8 @@
 
 public class Reminduck.Views.SettingsView : Gtk.Box {
 
+    GLib.Settings settings;
+
     construct {
         orientation = Gtk.Orientation.VERTICAL;
         valign = Gtk.Align.FILL;
@@ -12,7 +14,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
             halign = Gtk.Align.FILL,
             valign = Gtk.Align.START,
             margin_start = 24,
-            margin_end = 12,
+            margin_end = 24,
             margin_top = 12
         };
 
@@ -44,7 +46,9 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
         quack_button.clicked.connect (() => {new Quack ();});
 
-        var quack_toggle = new Gtk.Switch ();
+        var quack_toggle = new Gtk.Switch () {
+            valign = Gtk.Align.CENTER
+        };
         var minibox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             halign = Gtk.Align.END,
             hexpand = true
@@ -111,7 +115,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         var persist_toggle = new Gtk.Switch () {
                 halign = Gtk.Align.END,
                 hexpand = true,
-                valign = Gtk.Align.CENTER,
+                valign = Gtk.Align.CENTER
         };
 
         var persist_label = new Granite.HeaderLabel (_("Persistent notifications")) {
@@ -132,7 +136,8 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
         ///TRANSLATORS: Button to autostart the application
         var set_autostart = new Gtk.Button () {
-            label = _("Set autostart")
+            label = _("Set autostart"),
+            valign = Gtk.Align.CENTER
         };
 
         set_autostart.clicked.connect (() => {
@@ -143,7 +148,8 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
         ///TRANSLATORS: Button to remove the autostart for the application
         var remove_autostart = new Gtk.Button () {
-            label = _("Remove autostart")
+            label = _("Remove autostart"),
+            valign = Gtk.Align.CENTER
         };
         //remove_autostart.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
@@ -171,7 +177,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         append (centerbox);
 
         /* BIND */
-        var settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
+        settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
         settings.bind (
             "quack-sound",
             quack_toggle, "active",
@@ -185,19 +191,43 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
             /*************************************************/
 
+        var boxbottom = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
+            hexpand = true,
+            vexpand = false,
+            halign = Gtk.Align.FILL,
+            margin_bottom = 12,
+            margin_start = margin_end = 24
+        };
+
             // Monies?
         var support_button = new Gtk.LinkButton.with_label (
             "https://ko-fi.com/teamcons",
             _("Support us!")
         );
         support_button.halign = Gtk.Align.START;
-        ssupport_button.valign = Gtk.Align.END;
-        support_button.margin_start = 24;
-        support_button.margin_bottom = 12;
+        boxbottom.append (support_button);
 
-        append (support_button);
+        var reset_button = new Gtk.Button () {
+            halign = Gtk.Align.END,
+            hexpand = true,
+            label = _("Reset to Default"),
+            tooltip_text = _("Reset all settings to defaults")
+        };
+        boxbottom.append (reset_button);
+
+        append (boxbottom);
 
 
+        reset_button.clicked.connect (on_reset);
+    }
+
+    private void on_reset () {
+        debug ("Resetting settings…");
+
+        string[] keys = {"quack-sound", "persistent"};
+        foreach (var key in keys) {
+                settings.reset (key);
+        }
     }
 }
 
