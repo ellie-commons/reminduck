@@ -5,8 +5,14 @@ Comment=Don't forget about your stuff in an adorably annoying way
 Categories=Office;Utility;
 Exec=io.github.ellie_commons.reminduck %U
 Icon=io.github.ellie_commons.reminduck
+
 Terminal=false
 Type=Application
 X-GNOME-Gettext-Domain=reminduck
 X-GNOME-UsesNotifications=true
 Keywords=Reminduck;Personal;Assistant;Reminders;
+Actions=NewReminder;
+
+[Desktop Action NewReminder]
+Exec=io.github.ellie_commons.reminduck --new-reminder
+Name=New reminder

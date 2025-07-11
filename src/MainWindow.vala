@@ -178,7 +178,7 @@ namespace Reminduck {
             stack.add_named (this.settings_view, "settings_view");
         }
 
-        private void show_reminder_editor (Reminder? reminder = null) {
+        public void show_reminder_editor (Reminder? reminder = null) {
             stack.set_transition_type (Gtk.StackTransitionType.SLIDE_LEFT);
             stack.set_visible_child_name ("reminder_editor");
             this.back_button.show ();

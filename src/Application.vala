@@ -26,6 +26,7 @@ namespace Reminduck {
         public bool headless = false;
         public bool ask_autostart = false;
         private uint timeout_id = 0;
+        public bool new_reminder = false;
 
         public Granite.Settings granite_settings;
         public Gtk.Settings gtk_settings;
@@ -102,20 +103,34 @@ namespace Reminduck {
             reload_reminders ();
 
             if (this.main_window == null) {
+
                 this.main_window = new MainWindow ();
                 this.main_window.set_application (this);                
 
                 if (!this.headless) {
                     this.main_window.show ();
-                    this.main_window.show_welcome_view (Gtk.StackTransitionType.NONE);
+
+                    if (this.new_reminder) {
+                        this.main_window.show_reminder_editor ();
+                        this.new_reminder = false;
+
+                    } else {
+                        this.main_window.show_welcome_view (Gtk.StackTransitionType.NONE);                        
+                    }
+
                     this.main_window.present ();
                 }
             }
             
             if (this.main_window != null && !this.headless) {
-                this.main_window.show ();
-                this.main_window.show_welcome_view (Gtk.StackTransitionType.NONE);
-                this.main_window.present ();
+                    this.main_window.show ();
+                    if (this.new_reminder) {
+                        this.main_window.show_reminder_editor ();
+                        this.new_reminder = false;
+                    } else {
+                        this.main_window.show_welcome_view (Gtk.StackTransitionType.NONE);                        
+                    }
+                    this.main_window.present ();
             }
 
             if (timeout_id == 0) {
@@ -127,7 +142,7 @@ namespace Reminduck {
             stdout.printf ("\n💲️ Command line mode started");
     
             bool headless_mode = false;
-            OptionEntry[] options = new OptionEntry[2];
+            OptionEntry[] options = new OptionEntry[3];
             options[0] = {
                 "headless", 0, 0, OptionArg.NONE,
                 ref headless_mode, "Run without window", null
@@ -135,6 +150,10 @@ namespace Reminduck {
             options[1] = {
                 "request-autostart", 0, 0, OptionArg.NONE,
                 ref ask_autostart, "Request autostart permission", null
+            };
+            options[2] = {
+                "new-reminder", 0, 0, OptionArg.NONE,
+                ref new_reminder, "Immediately jump to reminder editor", null
             };
     
             // We have to make an extra copy of the array, since .parse assumes

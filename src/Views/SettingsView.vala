@@ -33,7 +33,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
 
         /* QUACK TOGGLE */
-        var quack_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+        var quack_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
             halign = Gtk.Align.FILL,
             hexpand = true
         };
@@ -69,7 +69,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         var linkname = _("Notifications");
 
 
-        var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+        var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
             halign = Gtk.Align.FILL
         };
 
@@ -104,7 +104,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
 
         /* PERSISTENT TOGGLE */
-        var persist_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+        var persist_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
             halign = Gtk.Align.FILL,
             hexpand = true
         };
