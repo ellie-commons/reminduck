@@ -14,6 +14,13 @@
     <p>And it quacks.</p>
   </description>
   <releases>
+    <release version="2.2.0" date="2025-07-12">
+      <description>
+        <ul>
+          <li>Settings have been moved into their own view</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.1.0" date="2025-07-06">
       <description>
         <p>✨NEW IN THE POND✨</p>
