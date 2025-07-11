@@ -1,0 +1,34 @@
+# Right before Stella (and ellie-commons) adopted Reminduck back from matfantinel
+id: com.github.matfantinel.reminduck
+runtime: io.elementary.Platform
+# I should try this with 7
+runtime-version: '8'
+sdk: io.elementary.Sdk
+command: com.github.matfantinel.reminduck
+
+finish-args:
+    - "--share=ipc"
+    - "--socket=fallback-x11"
+    - "--socket=wayland"
+    - "--system-talk-name=org.freedesktop.Accounts"
+    - "--filesystem=xdg-config/autostart:create"
+
+cleanup:
+  -  '/include'
+  -  '/lib/pkgconfig'
+  -  '/man'
+  -  '/share/doc'
+  -  '/share/gtk-doc'
+  -  '/share/man'
+  -  '/share/pkgconfig'
+  -  '/share/installed-tests'
+  -  '*.la'
+  -  '*.a'
+
+# Go back enough in time
+  - name: reminduck
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/ellie-commons/reminduck.git
+        commit: b9f2b8a20bc7126e8cc4e9f7aa9d4e35c03d5cdc
