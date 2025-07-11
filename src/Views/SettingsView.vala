@@ -38,7 +38,11 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
             hexpand = true
         };
 
-        var quack_button = new Gtk.Button.from_icon_name ("media-playback-start");
+        var quack_button = new Gtk.Button.from_icon_name ("media-playback-start") {
+            label = _("Preview"),
+            tooltip_text = _("Click to preview reminder sound")
+        };
+
         quack_button.clicked.connect (() => {new Quack ();});
 
         var quack_toggle = new Gtk.Switch ();

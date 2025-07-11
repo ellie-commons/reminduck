@@ -87,9 +87,11 @@ namespace Reminduck {
                 }
             });
 
-            this.back_button = new Gtk.Button.with_label (_("Back"));
+            this.back_button = new Gtk.Button.with_label (_("Back")) {
+                valign = Gtk.Align.CENTER,
+                tooltip_text = _("Click to return to main view")
+            };
             this.back_button.add_css_class ("back-button");
-            this.back_button.valign = Gtk.Align.CENTER;
             this.headerbar.pack_start (this.back_button);
 
             this.back_button.clicked.connect (() => {
