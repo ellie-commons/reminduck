@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-06 15:48+0200\n"
+"POT-Creation-Date: 2025-07-11 22:43+0200\n"
 "PO-Revision-Date: 2018-08-02 15:09-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -12,12 +12,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/MainWindow.vala:64 src/MainWindow.vala:65
+#: src/MainWindow.vala:65 src/MainWindow.vala:66
 #, fuzzy
 msgid "Reminduck"
 msgstr "QUAC! Eu sou o Reminduck"
 
-#: src/MainWindow.vala:97
+#: src/MainWindow.vala:90
 msgid "Back"
 msgstr "Voltar"
 
@@ -64,106 +64,112 @@ msgstr "Repetir"
 msgid "Save reminder"
 msgstr "Salvar lembrete"
 
-#: src/Views/RemindersView.vala:47
+#: src/Views/RemindersView.vala:46
 msgid "Your reminders"
 msgstr "Seus lembretes"
 
-#: src/Views/RemindersView.vala:57
+#: src/Views/RemindersView.vala:56
 msgid "Create another"
 msgstr "Criar novo"
 
-#: src/Views/RemindersView.vala:102
+#: src/Views/RemindersView.vala:101
 #, fuzzy, c-format
 msgid "Reminded: %s"
 msgstr "Lembrado: %s"
 
-#: src/Views/RemindersView.vala:118
+#: src/Views/RemindersView.vala:117
 msgid "Today"
 msgstr "Hoje"
 
-#: src/Views/RemindersView.vala:130
+#: src/Views/RemindersView.vala:129
 msgid "Edit"
 msgstr "Editar"
 
-#: src/Views/RemindersView.vala:137
+#: src/Views/RemindersView.vala:136
 msgid "Delete"
 msgstr "Excluir"
 
-#: src/Views/WelcomeView.vala:28
+#: src/Views/WelcomeView.vala:29
 msgid "QUACK! I'm Reminduck"
 msgstr "QUAC! Eu sou o Reminduck"
 
-#: src/Views/WelcomeView.vala:29
+#: src/Views/WelcomeView.vala:30
 msgid "The duck that reminds you"
 msgstr "O pato que lembra você"
 
-#: src/Views/WelcomeView.vala:36
+#: src/Views/WelcomeView.vala:37
 msgid "New Reminder"
 msgstr "Novo Lembrete"
 
-#: src/Views/WelcomeView.vala:37
+#: src/Views/WelcomeView.vala:38
 msgid "Create a new reminder for a set date and time"
 msgstr "Criar um novo lembrete"
 
-#: src/Views/WelcomeView.vala:42
+#: src/Views/WelcomeView.vala:43
 msgid "View Reminders"
 msgstr "Ver Lembretes"
 
-#: src/Views/WelcomeView.vala:43
+#: src/Views/WelcomeView.vala:44
 msgid "See reminders you've created"
 msgstr "Ver lembretes que você criou"
 
-#: src/Widgets/SettingsPopover.vala:19
+#: src/Views/WelcomeView.vala:49 src/Views/SettingsView.vala:26
+msgid "Settings"
+msgstr ""
+
+#: src/Views/WelcomeView.vala:50
+msgid "Tweak a few things"
+msgstr ""
+
+#: src/Views/SettingsView.vala:22
 msgid "Request to system sent"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:42
+#: src/Views/SettingsView.vala:52
 msgid "Do a quack sound"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:44
+#: src/Views/SettingsView.vala:54
 msgid "If enabled, the duck will quack when reminding you"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:55
+#: src/Views/SettingsView.vala:65
 msgid "Notifications"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:71
+#: src/Views/SettingsView.vala:81
 msgid "Disable the 'DING' sound"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:73
+#: src/Views/SettingsView.vala:83
 msgid ""
 "You can disable the system notification sounds for Reminduck in the settings"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:104
+#: src/Views/SettingsView.vala:114
 msgid "Persistent notifications"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:106
+#: src/Views/SettingsView.vala:116
 msgid "If enabled, the duck will stay until (gently) dismissed"
 msgstr ""
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Widgets/SettingsPopover.vala:122
+#: src/Views/SettingsView.vala:132
 msgid "Set autostart"
 msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Widgets/SettingsPopover.vala:134
+#: src/Views/SettingsView.vala:143
 msgid "Remove autostart"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:152
+#: src/Views/SettingsView.vala:158
 msgid "Allow to start at login"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:154
-msgid ""
-"You can request the system to start this application automatically (done on "
-"first launch already)"
+#: src/Views/SettingsView.vala:160
+msgid "You can request the system to start this application automatically"
 msgstr ""
 
 #: src/Services/Utils.vala:12
