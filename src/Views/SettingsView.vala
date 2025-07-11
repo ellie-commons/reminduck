@@ -7,12 +7,12 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         valign = Gtk.Align.FILL;
         hexpand = vexpand = true;
 
-        var centerbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 18) {
+        var centerbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 24) {
             hexpand = vexpand = true,
-            halign = Gtk.Align.CENTER,
+            halign = Gtk.Align.FILL,
             valign = Gtk.Align.START,
             margin_start = 24,
-            margin_end = 24,
+            margin_end = 12,
             margin_top = 12
         };
 
@@ -33,7 +33,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
 
         /* QUACK TOGGLE */
-        var quack_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+        var quack_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             halign = Gtk.Align.FILL,
             hexpand = true
         };
@@ -45,7 +45,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         quack_button.clicked.connect (() => {new Quack ();});
 
         var quack_toggle = new Gtk.Switch ();
-        var minibox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+        var minibox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             halign = Gtk.Align.END,
             hexpand = true
         };
@@ -68,7 +68,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         var linkname = _("Notifications");
 
 
-        var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+        var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             halign = Gtk.Align.FILL
         };
 
@@ -103,7 +103,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
 
         /* PERSISTENT TOGGLE */
-        var persist_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+        var persist_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             halign = Gtk.Align.FILL,
             hexpand = true
         };
@@ -126,7 +126,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         centerbox.append (persist_box);
 
         /* AUTOSTART */
-        var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+        var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             halign = Gtk.Align.FILL
         };
 
@@ -156,7 +156,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         both_buttons.append (set_autostart);
         both_buttons.append (remove_autostart);
 
-        var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+        var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
 
         var autostart_label = new Granite.HeaderLabel (_("Allow to start at login")) {
             mnemonic_widget = both_buttons,
@@ -191,8 +191,11 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
             _("Support us!")
         );
         support_button.halign = Gtk.Align.START;
+        ssupport_button.valign = Gtk.Align.END;
+        support_button.margin_start = 24;
+        support_button.margin_bottom = 12;
 
-        centerbox.append (support_button);
+        append (support_button);
 
 
     }
