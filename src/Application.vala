@@ -112,7 +112,6 @@ namespace Reminduck {
 
                     if (this.new_reminder) {
                         this.main_window.show_reminder_editor ();
-                        this.new_reminder = false;
 
                     } else {
                         this.main_window.show_welcome_view (Gtk.StackTransitionType.NONE);                        
@@ -126,7 +125,7 @@ namespace Reminduck {
                     this.main_window.show ();
                     if (this.new_reminder) {
                         this.main_window.show_reminder_editor ();
-                        this.new_reminder = false;
+
                     } else {
                         this.main_window.show_welcome_view (Gtk.StackTransitionType.NONE);                        
                     }
@@ -142,6 +141,8 @@ namespace Reminduck {
             stdout.printf ("\n💲️ Command line mode started");
     
             bool headless_mode = false;
+            bool switch_new_reminder = false;
+
             OptionEntry[] options = new OptionEntry[3];
             options[0] = {
                 "headless", 0, 0, OptionArg.NONE,
@@ -153,7 +154,7 @@ namespace Reminduck {
             };
             options[2] = {
                 "new-reminder", 0, 0, OptionArg.NONE,
-                ref new_reminder, "Immediately jump to reminder editor", null
+                ref switch_new_reminder, "Immediately jump to reminder editor", null
             };
     
             // We have to make an extra copy of the array, since .parse assumes
@@ -176,6 +177,7 @@ namespace Reminduck {
             }
     
             this.headless = headless_mode;
+            this.new_reminder = switch_new_reminder;
 
             stdout.printf(this.headless ? "\n✔️ Headless" : "\n️️️️ ✔️ Interface");
     
