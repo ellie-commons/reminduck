@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-11 23:49+0200\n"
+"POT-Creation-Date: 2025-07-12 00:58+0200\n"
 "PO-Revision-Date: 2019-10-12 16:21+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -122,7 +122,7 @@ msgstr "Hatırlatıcıları Görüntüle"
 msgid "See reminders you've created"
 msgstr "Oluşturulmuş hatırlatıcıları görüntüle"
 
-#: src/Views/WelcomeView.vala:49 src/Views/SettingsView.vala:26
+#: src/Views/WelcomeView.vala:49 src/Views/SettingsView.vala:28
 msgid "Settings"
 msgstr ""
 
@@ -130,63 +130,66 @@ msgstr ""
 msgid "Tweak a few things"
 msgstr ""
 
-#: src/Views/SettingsView.vala:22
+#: src/Views/SettingsView.vala:24
 msgid "Request to system sent"
 msgstr ""
 
-#: src/Views/SettingsView.vala:42
-msgid "Preview"
-msgstr ""
-
-#: src/Views/SettingsView.vala:43
+#: src/Views/SettingsView.vala:44
 msgid "Click to preview reminder sound"
 msgstr ""
 
-#: src/Views/SettingsView.vala:56
+#: src/Views/SettingsView.vala:59
 msgid "Do a quack sound"
 msgstr ""
 
-#: src/Views/SettingsView.vala:58
+#: src/Views/SettingsView.vala:61
 msgid "If enabled, the duck will quack when reminding you"
 msgstr ""
 
-#: src/Views/SettingsView.vala:69
+#: src/Views/SettingsView.vala:72
 msgid "Notifications"
 msgstr ""
 
-#: src/Views/SettingsView.vala:85
-msgid "Disable the 'DING' sound"
+#: src/Views/SettingsView.vala:88
+msgid "You can disable the 'DING' sound in the system settings"
 msgstr ""
 
-#: src/Views/SettingsView.vala:87
-msgid ""
-"You can disable the system notification sounds for Reminduck in the settings"
-msgstr ""
-
-#: src/Views/SettingsView.vala:118
+#: src/Views/SettingsView.vala:123
 msgid "Persistent notifications"
 msgstr ""
 
-#: src/Views/SettingsView.vala:120
+#: src/Views/SettingsView.vala:125
 msgid "If enabled, the duck will stay until (gently) dismissed"
 msgstr ""
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/SettingsView.vala:136
+#: src/Views/SettingsView.vala:141
 msgid "Set autostart"
 msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/SettingsView.vala:147
+#: src/Views/SettingsView.vala:153
 msgid "Remove autostart"
 msgstr ""
 
-#: src/Views/SettingsView.vala:162
+#: src/Views/SettingsView.vala:169
 msgid "Allow to start at login"
 msgstr ""
 
-#: src/Views/SettingsView.vala:164
+#: src/Views/SettingsView.vala:171
 msgid "You can request the system to start this application automatically"
+msgstr ""
+
+#: src/Views/SettingsView.vala:207
+msgid "Support us!"
+msgstr ""
+
+#: src/Views/SettingsView.vala:215
+msgid "Reset to Default"
+msgstr ""
+
+#: src/Views/SettingsView.vala:216
+msgid "Reset all settings to defaults"
 msgstr ""
 
 #: src/Services/Utils.vala:12
