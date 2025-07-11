@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-11 22:43+0200\n"
+"POT-Creation-Date: 2025-07-11 23:02+0200\n"
 "PO-Revision-Date: 2019-11-04 13:53+0100\n"
 "Last-Translator: Nathan Bonnemains\n"
 "Language-Team: none\n"
@@ -20,6 +20,10 @@ msgstr "COIN COIN ! Je suis Reminduck"
 #: src/MainWindow.vala:90
 msgid "Back"
 msgstr "Retour"
+
+#: src/MainWindow.vala:92
+msgid "Click to return to main view"
+msgstr ""
 
 #: src/Objects/Reminder.vala:41
 msgid "Don't Repeat"
@@ -125,50 +129,58 @@ msgstr ""
 msgid "Request to system sent"
 msgstr ""
 
-#: src/Views/SettingsView.vala:52
+#: src/Views/SettingsView.vala:42
+msgid "Preview"
+msgstr ""
+
+#: src/Views/SettingsView.vala:43
+msgid "Click to preview reminder sound"
+msgstr ""
+
+#: src/Views/SettingsView.vala:56
 msgid "Do a quack sound"
 msgstr ""
 
-#: src/Views/SettingsView.vala:54
+#: src/Views/SettingsView.vala:58
 msgid "If enabled, the duck will quack when reminding you"
 msgstr ""
 
-#: src/Views/SettingsView.vala:65
+#: src/Views/SettingsView.vala:69
 msgid "Notifications"
 msgstr ""
 
-#: src/Views/SettingsView.vala:81
+#: src/Views/SettingsView.vala:85
 msgid "Disable the 'DING' sound"
 msgstr ""
 
-#: src/Views/SettingsView.vala:83
+#: src/Views/SettingsView.vala:87
 msgid ""
 "You can disable the system notification sounds for Reminduck in the settings"
 msgstr ""
 
-#: src/Views/SettingsView.vala:114
+#: src/Views/SettingsView.vala:118
 msgid "Persistent notifications"
 msgstr ""
 
-#: src/Views/SettingsView.vala:116
+#: src/Views/SettingsView.vala:120
 msgid "If enabled, the duck will stay until (gently) dismissed"
 msgstr ""
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/SettingsView.vala:132
+#: src/Views/SettingsView.vala:136
 msgid "Set autostart"
 msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/SettingsView.vala:143
+#: src/Views/SettingsView.vala:147
 msgid "Remove autostart"
 msgstr ""
 
-#: src/Views/SettingsView.vala:158
+#: src/Views/SettingsView.vala:162
 msgid "Allow to start at login"
 msgstr ""
 
-#: src/Views/SettingsView.vala:160
+#: src/Views/SettingsView.vala:164
 msgid "You can request the system to start this application automatically"
 msgstr ""
 
