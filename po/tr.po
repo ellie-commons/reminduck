@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 00:58+0200\n"
+"POT-Creation-Date: 2025-07-12 11:59+0200\n"
 "PO-Revision-Date: 2019-10-12 16:21+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -14,190 +14,190 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 
 # Reminduck kelimesi özel isim olarak kabul edilip çevrilmemiştir. Vak sesi de şimdilik çevrilmemiştir.
-#: src/MainWindow.vala:65 src/MainWindow.vala:66
+#: src/MainWindow.vala:50 src/MainWindow.vala:51
 #, fuzzy
 msgid "Reminduck"
 msgstr "Merhaba! Ben Reminduck"
 
-#: src/MainWindow.vala:90
+#: src/MainWindow.vala:75
 msgid "Back"
 msgstr "Geri"
 
-#: src/MainWindow.vala:92
+#: src/MainWindow.vala:77
 msgid "Click to return to main view"
 msgstr ""
 
-#: src/Objects/Reminder.vala:41
+#: src/Objects/Reminder.vala:27
 msgid "Don't Repeat"
 msgstr "Tekrar Etme"
 
-#: src/Objects/Reminder.vala:45
+#: src/Objects/Reminder.vala:31
 msgid "Every X minutes"
 msgstr "Her X dakikada bir"
 
-#: src/Objects/Reminder.vala:47
+#: src/Objects/Reminder.vala:33
 #, c-format
 msgid "Every minute"
 msgid_plural "Every %d minutes"
 msgstr[0] "Her %d dakikada bir"
 
-#: src/Objects/Reminder.vala:51
+#: src/Objects/Reminder.vala:37
 msgid "Every day"
 msgstr "Her gün"
 
-#: src/Objects/Reminder.vala:54
+#: src/Objects/Reminder.vala:40
 msgid "Every week"
 msgstr "Her hafta"
 
-#: src/Objects/Reminder.vala:57
+#: src/Objects/Reminder.vala:43
 msgid "Every month"
 msgstr "Her ay"
 
-#: src/Views/ReminderEditor.vala:57
+#: src/Views/ReminderEditor.vala:44
 msgid "Create a new reminder"
 msgstr "Yeni hatırlatıcı oluştur"
 
-#: src/Views/ReminderEditor.vala:64
+#: src/Views/ReminderEditor.vala:51
 msgid "What do you want to be reminded of?"
 msgstr "Neyi hatırlamak istersin?"
 
-#: src/Views/ReminderEditor.vala:93
+#: src/Views/ReminderEditor.vala:80
 msgid "Repeat"
 msgstr "Tekrarla"
 
-#: src/Views/ReminderEditor.vala:98
+#: src/Views/ReminderEditor.vala:85
 msgid "Save reminder"
 msgstr "Hatırlatıcıyı kaydet"
 
 # Your kelimesi çeviri uyumu için kullanılmadı
-#: src/Views/RemindersView.vala:46
+#: src/Views/RemindersView.vala:33
 msgid "Your reminders"
 msgstr "Hatırlatıcılar"
 
 # Çeviri uyumu için Reminder kelimesi çeviriye eklendi
-#: src/Views/RemindersView.vala:56
+#: src/Views/RemindersView.vala:43
 msgid "Create another"
 msgstr "Yeni bir hatırlatıcı oluştur"
 
-#: src/Views/RemindersView.vala:101
+#: src/Views/RemindersView.vala:88
 #, c-format
 msgid "Reminded: %s"
 msgstr "Hatırlatıcı: %s"
 
-#: src/Views/RemindersView.vala:117
+#: src/Views/RemindersView.vala:104
 msgid "Today"
 msgstr "Bugün"
 
-#: src/Views/RemindersView.vala:129
+#: src/Views/RemindersView.vala:116
 msgid "Edit"
 msgstr "Düzenle"
 
-#: src/Views/RemindersView.vala:136
+#: src/Views/RemindersView.vala:123
 msgid "Delete"
 msgstr "Sil"
 
 # Reminduck kelimesi özel isim olarak kabul edilip çevrilmemiştir. Vak sesi de şimdilik çevrilmemiştir.
-#: src/Views/WelcomeView.vala:29
+#: src/Views/WelcomeView.vala:35
 msgid "QUACK! I'm Reminduck"
 msgstr "Merhaba! Ben Reminduck"
 
 # Serbest çeviri yapıldı
-#: src/Views/WelcomeView.vala:30
+#: src/Views/WelcomeView.vala:36
 msgid "The duck that reminds you"
 msgstr "Hatırlatıcı ördeğiniz"
 
-#: src/Views/WelcomeView.vala:37
+#: src/Views/WelcomeView.vala:43
 msgid "New Reminder"
 msgstr "Yeni Hatırlatıcı"
 
-#: src/Views/WelcomeView.vala:38
+#: src/Views/WelcomeView.vala:44
 msgid "Create a new reminder for a set date and time"
 msgstr "Belirtilen tarih ve saat için yeni hatırlatıcı oluştur"
 
-#: src/Views/WelcomeView.vala:43
+#: src/Views/WelcomeView.vala:49
 msgid "View Reminders"
 msgstr "Hatırlatıcıları Görüntüle"
 
-#: src/Views/WelcomeView.vala:44
+#: src/Views/WelcomeView.vala:50
 msgid "See reminders you've created"
 msgstr "Oluşturulmuş hatırlatıcıları görüntüle"
 
-#: src/Views/WelcomeView.vala:49 src/Views/SettingsView.vala:28
+#: src/Views/WelcomeView.vala:55 src/Views/SettingsView.vala:34
 msgid "Settings"
 msgstr ""
 
-#: src/Views/WelcomeView.vala:50
+#: src/Views/WelcomeView.vala:56
 msgid "Tweak a few things"
 msgstr ""
 
-#: src/Views/SettingsView.vala:24
+#: src/Views/SettingsView.vala:30
 msgid "Request to system sent"
 msgstr ""
 
-#: src/Views/SettingsView.vala:44
+#: src/Views/SettingsView.vala:50
 msgid "Click to preview reminder sound"
 msgstr ""
 
-#: src/Views/SettingsView.vala:59
+#: src/Views/SettingsView.vala:65
 msgid "Do a quack sound"
 msgstr ""
 
-#: src/Views/SettingsView.vala:61
+#: src/Views/SettingsView.vala:67
 msgid "If enabled, the duck will quack when reminding you"
 msgstr ""
 
-#: src/Views/SettingsView.vala:72
+#: src/Views/SettingsView.vala:78
 msgid "Notifications"
 msgstr ""
 
-#: src/Views/SettingsView.vala:88
+#: src/Views/SettingsView.vala:94
 msgid "You can disable the 'DING' sound in the system settings"
 msgstr ""
 
-#: src/Views/SettingsView.vala:123
+#: src/Views/SettingsView.vala:129
 msgid "Persistent notifications"
 msgstr ""
 
-#: src/Views/SettingsView.vala:125
+#: src/Views/SettingsView.vala:131
 msgid "If enabled, the duck will stay until (gently) dismissed"
 msgstr ""
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/SettingsView.vala:141
+#: src/Views/SettingsView.vala:147
 msgid "Set autostart"
 msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/SettingsView.vala:153
+#: src/Views/SettingsView.vala:159
 msgid "Remove autostart"
 msgstr ""
 
-#: src/Views/SettingsView.vala:169
+#: src/Views/SettingsView.vala:175
 msgid "Allow to start at login"
 msgstr ""
 
-#: src/Views/SettingsView.vala:171
+#: src/Views/SettingsView.vala:177
 msgid "You can request the system to start this application automatically"
 msgstr ""
 
-#: src/Views/SettingsView.vala:207
+#: src/Views/SettingsView.vala:213
 msgid "Support us!"
 msgstr ""
 
-#: src/Views/SettingsView.vala:215
+#: src/Views/SettingsView.vala:221
 msgid "Reset to Default"
 msgstr ""
 
-#: src/Views/SettingsView.vala:216
+#: src/Views/SettingsView.vala:222
 msgid "Reset all settings to defaults"
 msgstr ""
 
-#: src/Services/Utils.vala:12
+#: src/Services/Utils.vala:18
 #, fuzzy
 msgid "Autostart Reminduck in background to send reminders"
 msgstr "Hatırlatıcı göndermek için Badger'ı arka planda otomatik başlatma"
 
-#: src/Services/Utils.vala:28
+#: src/Services/Utils.vala:34
 msgid "Remove Reminduck from autostart"
 msgstr ""
 

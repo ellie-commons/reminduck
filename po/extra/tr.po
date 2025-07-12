@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-11 23:49+0200\n"
+"POT-Creation-Date: 2025-07-12 11:59+0200\n"
 "PO-Revision-Date: 2019-11-04 14:49+0100\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 msgid "Reminduck"
 msgstr "Reminduck"
 
-#: data/reminduck.desktop.in:4
+#: data/reminduck.desktop.in:4 data/reminduck.metainfo.xml.in:165
 msgid "Reminders"
 msgstr "Hatırlatıcılar"
 
@@ -245,24 +245,60 @@ msgstr "İlk Sürüm 🎉️"
 msgid "Matheus Fantinel + Stella"
 msgstr "Matheus Fantinel"
 
+#: data/reminduck.metainfo.xml.in:163
+msgid "Personal"
+msgstr ""
+
 #: data/reminduck.metainfo.xml.in:164
-msgid "The welcome view"
+msgid "Assistant"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:166
+msgid "Remember"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:167
+msgid "Duck"
 msgstr ""
 
 #: data/reminduck.metainfo.xml.in:168
+msgid "Quack"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:169
+msgid "Cute"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:170
+msgid "Utility"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:171
+msgid "Pantheon"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:172
+msgid "elementary OS"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:177
+msgid "The welcome view"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:181
 #, fuzzy
 msgid "Add new reminders"
 msgstr "Hatırlatıcılar"
 
-#: data/reminduck.metainfo.xml.in:172
+#: data/reminduck.metainfo.xml.in:185
 msgid "Add new reminders but in dark"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:176
+#: data/reminduck.metainfo.xml.in:189
 msgid "See current reminders"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:180
+#: data/reminduck.metainfo.xml.in:193
 msgid "See current reminders but in dark"
 msgstr ""
 

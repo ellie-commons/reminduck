@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-11 23:49+0200\n"
+"POT-Creation-Date: 2025-07-12 11:59+0200\n"
 "PO-Revision-Date: 2025-06-29 15:13+0200\n"
 "Last-Translator: Albano Battistella\n"
 "Language-Team: italian\n"
@@ -16,7 +16,7 @@ msgstr ""
 msgid "Reminduck"
 msgstr "Reminduck"
 
-#: data/reminduck.desktop.in:4
+#: data/reminduck.desktop.in:4 data/reminduck.metainfo.xml.in:165
 msgid "Reminders"
 msgstr "Promemoria"
 
@@ -236,23 +236,59 @@ msgstr "Rilascio iniziale 🦆"
 msgid "Matheus Fantinel + Stella"
 msgstr "Matheus Fantinel + Stella"
 
+#: data/reminduck.metainfo.xml.in:163
+msgid "Personal"
+msgstr ""
+
 #: data/reminduck.metainfo.xml.in:164
+msgid "Assistant"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:166
+msgid "Remember"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:167
+msgid "Duck"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:168
+msgid "Quack"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:169
+msgid "Cute"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:170
+msgid "Utility"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:171
+msgid "Pantheon"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:172
+msgid "elementary OS"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:177
 msgid "The welcome view"
 msgstr "La vista di benvenuto"
 
-#: data/reminduck.metainfo.xml.in:168
+#: data/reminduck.metainfo.xml.in:181
 msgid "Add new reminders"
 msgstr "Aggiunti nuovi promemoria"
 
-#: data/reminduck.metainfo.xml.in:172
+#: data/reminduck.metainfo.xml.in:185
 msgid "Add new reminders but in dark"
 msgstr "Aggiunti nuovi promemoria in modalità scura"
 
-#: data/reminduck.metainfo.xml.in:176
+#: data/reminduck.metainfo.xml.in:189
 msgid "See current reminders"
 msgstr "Visualizza i promemoria attuali"
 
-#: data/reminduck.metainfo.xml.in:180
+#: data/reminduck.metainfo.xml.in:193
 msgid "See current reminders but in dark"
 msgstr "Visualizza i promemoria correnti ma in modalità scura"
 
