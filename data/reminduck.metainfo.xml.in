@@ -159,6 +159,19 @@
       <color type="primary" scheme_preference="dark">#ad5f00</color>
     </branding>
 
+    <keywords>
+        <keyword>Personal</keyword>
+        <keyword>Assistant</keyword>
+        <keyword>Reminders</keyword>
+        <keyword>Remember</keyword>
+        <keyword>Duck</keyword>
+        <keyword>Quack</keyword>
+        <keyword>Cute</keyword>
+        <keyword>Utility</keyword>
+        <keyword>Pantheon</keyword>
+        <keyword>elementary OS</keyword>
+    </keywords>
+
   <screenshots>
     <screenshot type="default">
       <caption>The welcome view</caption>
