@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-12 11:59+0200\n"
-"PO-Revision-Date: 2025-06-29 11:25+0200\n"
+"PO-Revision-Date: 2025-07-12 16:25+0200\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -18,9 +18,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: src/MainWindow.vala:50 src/MainWindow.vala:51
-#, fuzzy
 msgid "Reminduck"
-msgstr "QUACK! Io sono Reminduck"
+msgstr "Reminduck"
 
 #: src/MainWindow.vala:75
 msgid "Back"
@@ -28,7 +27,7 @@ msgstr "Indietro"
 
 #: src/MainWindow.vala:77
 msgid "Click to return to main view"
-msgstr ""
+msgstr "Fare clic per tornare alla vista principale"
 
 #: src/Objects/Reminder.vala:27
 msgid "Don't Repeat"
@@ -124,79 +123,78 @@ msgstr "Visualizza i promemoria che hai creato"
 
 #: src/Views/WelcomeView.vala:55 src/Views/SettingsView.vala:34
 msgid "Settings"
-msgstr ""
+msgstr "Impostazioni"
 
 #: src/Views/WelcomeView.vala:56
 msgid "Tweak a few things"
-msgstr ""
+msgstr "Modificare alcune cose"
 
 #: src/Views/SettingsView.vala:30
 msgid "Request to system sent"
-msgstr ""
+msgstr "Richiesta al sistema inviata"
 
 #: src/Views/SettingsView.vala:50
 msgid "Click to preview reminder sound"
-msgstr ""
+msgstr "Fai clic per visualizzare l'anteprima del suono del promemoria"
 
 #: src/Views/SettingsView.vala:65
 msgid "Do a quack sound"
-msgstr ""
+msgstr "Emetti un suono da papera"
 
 #: src/Views/SettingsView.vala:67
 msgid "If enabled, the duck will quack when reminding you"
-msgstr ""
+msgstr "Se abilitato, la papera emetterà un suono gracchiante quando ti ricorderà"
 
 #: src/Views/SettingsView.vala:78
 msgid "Notifications"
-msgstr ""
+msgstr "Notifiche"
 
 #: src/Views/SettingsView.vala:94
 msgid "You can disable the 'DING' sound in the system settings"
-msgstr ""
+msgstr "È possibile disattivare il suono 'DING' nelle impostazioni di sistema"
 
 #: src/Views/SettingsView.vala:129
 msgid "Persistent notifications"
-msgstr ""
+msgstr "Notifiche persistenti"
 
 #: src/Views/SettingsView.vala:131
 msgid "If enabled, the duck will stay until (gently) dismissed"
-msgstr ""
+msgstr "Se abilitato, la papera rimarrà finché non verrà (delicatamente) licenziata"
 
 #. /TRANSLATORS: Button to autostart the application
 #: src/Views/SettingsView.vala:147
 msgid "Set autostart"
-msgstr ""
+msgstr "Imposta avvio automatico"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
 #: src/Views/SettingsView.vala:159
 msgid "Remove autostart"
-msgstr ""
+msgstr "Rimuovi l'avvio automatico"
 
 #: src/Views/SettingsView.vala:175
 msgid "Allow to start at login"
-msgstr ""
+msgstr "Consenti l'avvio all'accesso"
 
 #: src/Views/SettingsView.vala:177
 msgid "You can request the system to start this application automatically"
-msgstr ""
+msgstr "Puoi richiedere al sistema di avviare automaticamente questa applicazione"
 
 #: src/Views/SettingsView.vala:213
 msgid "Support us!"
-msgstr ""
+msgstr "Sostienici!"
 
 #: src/Views/SettingsView.vala:221
 msgid "Reset to Default"
-msgstr ""
+msgstr "Ripristina impostazioni predefinite"
 
 #: src/Views/SettingsView.vala:222
 msgid "Reset all settings to defaults"
-msgstr ""
+msgstr "Ripristina tutte le impostazioni ai valori predefiniti"
 
 #: src/Services/Utils.vala:18
-#, fuzzy
 msgid "Autostart Reminduck in background to send reminders"
 msgstr "Avvia automaticamente Reminduck in background per inviare promemoria"
 
 #: src/Services/Utils.vala:34
 msgid "Remove Reminduck from autostart"
-msgstr ""
+msgstr "Rimuovi Reminduck dall'avvio automatico"
