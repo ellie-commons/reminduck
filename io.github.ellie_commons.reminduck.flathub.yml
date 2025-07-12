@@ -50,8 +50,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/ellie-commons/reminduck.git
-        tag: 2.1.0
-        commit: f976064e30e3af37e5deb246562b8359af6679d3
+        tag: 2.2.0
+        commit: f50318f3a56f7dfe80421569d6b1358e07f2c314
         x-checker-data:
           type: git
           tag-pattern: '^([\d.]+)$'
