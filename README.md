@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-    <img src="data/screenshots/Main.png" alt="Screenshot" />
+    <img src="data/screenshots/Welcome.png" alt="Screenshot of the welcome window" />
 </p>
 
 Reminduck is a simple reminder app made to be quick and easy - it focuses on simple or recurrent reminders with set time and date and nothing else.
