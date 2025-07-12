@@ -219,7 +219,7 @@ namespace Reminduck {
                     this.send_notification ("notify.app", notification);
 
                     if (settings.get_boolean("quack-sound")) {
-                        new Quack();
+                        new Reminduck.Quack();
                     }
 
                     if (reminder.recurrency_type != RecurrencyType.NONE) {
@@ -276,21 +276,4 @@ namespace Reminduck {
             return true;
         }
     }
-
-        public class Quack : Object {
-            public Quack () {
-                var m = Gtk.MediaFile.for_resource("/io/github/ellie_commons/reminduck/quack.ogg");
-                m.notify["ended"].connect(() => {
-                        print("stream ended %s\n", m.ended.to_string());
-                    });
-
-                m.notify["prepared"].connect(() => {
-                        var t = m.duration;
-                        var s = t/1000000;
-                        var ms = t % 1000000;
-                        print("Play for %jd.%06jd\n", s,ms);
-                    });
-                m.play();
-            }
-        }
 }
