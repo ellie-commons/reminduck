@@ -3,20 +3,26 @@
 # This file is distributed under the same license as the io.github.ellie_commons.reminduck package.
 # Andrey Sudarikov <andrewsudarikov@gmail.com>, 2020.
 #
-#, fuzzy
+# SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
+# SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
+# SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
+# SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
+# SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-12 11:59+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Andrey Sudarikov <andrewsudarikov@gmail.com>\n"
-"Language-Team: None\n"
+"PO-Revision-Date: 2025-07-15 15:37+0300\n"
+"Last-Translator: Вячеслав <ma12@rambler.ru>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/MainWindow.vala:50 src/MainWindow.vala:51
 #, fuzzy
@@ -29,7 +35,7 @@ msgstr "Назад"
 
 #: src/MainWindow.vala:77
 msgid "Click to return to main view"
-msgstr ""
+msgstr "Нажмите, чтобы вернуться к основному виду"
 
 #: src/Objects/Reminder.vala:27
 msgid "Don't Repeat"
@@ -37,14 +43,15 @@ msgstr "Не повторять"
 
 #: src/Objects/Reminder.vala:31
 msgid "Every X minutes"
-msgstr "Каждые Х минут"
+msgstr "Через Х минут"
 
 #: src/Objects/Reminder.vala:33
 #, c-format
 msgid "Every minute"
 msgid_plural "Every %d minutes"
-msgstr[0] "Каждую минуту"
-msgstr[1] "Каждые %d минут(ы)"
+msgstr[0] "Каждая %d минута"
+msgstr[1] "Каждые %d минуты"
+msgstr[2] "Каждая %d минута"
 
 #: src/Objects/Reminder.vala:37
 msgid "Every day"
@@ -125,81 +132,89 @@ msgstr "Просмотрите созданные вами напоминани�
 
 #: src/Views/WelcomeView.vala:55 src/Views/SettingsView.vala:34
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: src/Views/WelcomeView.vala:56
 msgid "Tweak a few things"
-msgstr ""
+msgstr "Подправьте кое-что"
 
 #: src/Views/SettingsView.vala:30
 msgid "Request to system sent"
-msgstr ""
+msgstr "Отправлен запрос в систему"
 
 #: src/Views/SettingsView.vala:50
 msgid "Click to preview reminder sound"
-msgstr ""
+msgstr "Нажмите, чтобы прослушать кряканье"
 
 #: src/Views/SettingsView.vala:65
 msgid "Do a quack sound"
-msgstr ""
+msgstr "Издавать крякающий звук"
 
 #: src/Views/SettingsView.vala:67
 msgid "If enabled, the duck will quack when reminding you"
-msgstr ""
+msgstr "Если включено, утка будет крякать, напоминая вам"
 
 #: src/Views/SettingsView.vala:78
 msgid "Notifications"
-msgstr ""
+msgstr "Уведомления"
 
 #: src/Views/SettingsView.vala:94
 msgid "You can disable the 'DING' sound in the system settings"
 msgstr ""
+"Но можно изменить громкость или отключить звук уведомлений в системных "
+"настройках"
 
 #: src/Views/SettingsView.vala:129
 msgid "Persistent notifications"
-msgstr ""
+msgstr "Постоянные уведомления"
 
 #: src/Views/SettingsView.vala:131
 msgid "If enabled, the duck will stay until (gently) dismissed"
 msgstr ""
+"Если включено, утка-напоминалка будет оставаться на экране, пока не нажмёте "
+"крестик"
 
 #. /TRANSLATORS: Button to autostart the application
 #: src/Views/SettingsView.vala:147
 msgid "Set autostart"
-msgstr ""
+msgstr "Установить автозапуск"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
 #: src/Views/SettingsView.vala:159
 msgid "Remove autostart"
-msgstr ""
+msgstr "Отключить автозапуск"
 
 #: src/Views/SettingsView.vala:175
 msgid "Allow to start at login"
-msgstr ""
+msgstr "Разрешить запуск при входе в систему"
 
 #: src/Views/SettingsView.vala:177
 msgid "You can request the system to start this application automatically"
-msgstr ""
+msgstr "Вы можете запросить у системы автозапуск этого приложения"
 
 #: src/Views/SettingsView.vala:213
 msgid "Support us!"
-msgstr ""
+msgstr "Поддержите нас!"
 
 #: src/Views/SettingsView.vala:221
 msgid "Reset to Default"
-msgstr ""
+msgstr "Сброс к значению по умолчанию"
 
 #: src/Views/SettingsView.vala:222
 msgid "Reset all settings to defaults"
-msgstr ""
+msgstr "Сбросить все настройки до значений по умолчанию"
 
 #: src/Services/Utils.vala:18
 msgid "Autostart Reminduck in background to send reminders"
-msgstr ""
+msgstr "Автозапуск Remindduck в фоновом режиме для отправки напоминаний"
 
 #: src/Services/Utils.vala:34
 msgid "Remove Reminduck from autostart"
-msgstr ""
+msgstr "Удалить Remindduck из автозапуска"
+
+#: src/Application.vala:210
+msgid "QUACK!"
+msgstr "КРЯ!"
 
 #~ msgid "Light mode"
 #~ msgstr "Светлая тема"
