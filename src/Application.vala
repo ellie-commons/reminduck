@@ -207,7 +207,7 @@ namespace Reminduck {
             foreach(var reminder in reminders) {
                 //If reminder date < current date
                 if (reminder.time.compare (new GLib.DateTime.now ()) <= 0) {
-                    var notification = new Notification ("QUACK!");
+                    var notification = new Notification (_("QUACK!"));
                     notification.set_body (reminder.description);
 
                     if (settings.get_boolean ("persistent")) {
