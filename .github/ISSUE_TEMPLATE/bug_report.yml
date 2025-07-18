@@ -1,0 +1,94 @@
+name: Issue Report
+description: Report an unexpected behavior or failure (AKA a bug)
+type: "Bug"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+          * Please read these [Tips](https://docs.elementary.io/contributor-guide/feedback/reporting-issues)
+          * Be sure to search open and closed issues for duplicates
+          * Do not put [things in brackets] in your report title
+
+  - type: textarea
+    attributes:
+      label: What Happened?
+      description: A detailed description of unexpected behavior will help us address your issue more quickly. Do your best!
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: Explain the exact steps one would take to experience the issue. If applicable, add screenshots or screen recordings.
+      placeholder: |
+          1. Went here 
+          2. Did this 
+          3. Clicked that 
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: Explain how what happened is different from what you wanted to happen.
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: OS Version
+      description: The version of elementary OS you are using, or other operating system
+      options:
+        - 8.x (Circe)
+        - 7.x (Horus)
+        - 6.x (Odin/Jólnir)
+        - Other Linux
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: OS Architecture
+      description: The architecture of elementary OS you are using
+      options:
+        - amd64 (on most hardwares)
+        - arm64 (on Raspberry Pi, Apple Silicon, etc.)
+        - amd64 and arm64 (I have tested on both)
+        - Other Architecture (unofficial, community-supported)
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Session Type
+      options:
+        - Classic Session (X11, This is the default)
+        - Secure Session (Wayland)
+        - Classic and Secure Sessions (I have tested in both)
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Software Version
+      description: The version of the software you are using
+      options:
+        - Latest release (I have run all updates)
+        - Compiled from git
+        - Older release (I have not run all updates)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Log Output
+      description: |
+          * Fails without warning? Get and share debug logs by following: https://docs.elementary.io/contributor-guide/feedback/reporting-issues/debug-logs
+          * Unexpectedly quits or stops? Get and share crash logs by following: https://docs.elementary.io/contributor-guide/feedback/reporting-issues/inspecting-crashes
+      render: shell
+
+  - type: textarea
+    attributes:
+      label: Hardware Info
+      description: Relevant hardware information such as graphics drivers, unconventional setups, etc.
