@@ -6,12 +6,6 @@
 <p align="center">Remember your stuff in an adorably annoying way</p>
 
 <p align="center">
-  <a href="https://appcenter.elementary.io/io.github.ellie_commons.reminduck">
-    <img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" />
-  </a>
-</p>
-
-<p align="center">
     <img src="data/screenshots/Welcome.png" alt="Screenshot of the welcome window" />
 </p>
 
@@ -20,6 +14,13 @@ Reminduck is a simple reminder app made to be quick and easy - it focuses on sim
 It's perfect if all you want are simple or daily/weekly/monthly reminders. Anything more than that is not achievable by Reminduck right now - but you can help! Open an issue or a pull request if you have any ideas or requests.
 
 _And it quacks._
+
+## Installation
+
+You can download and install Jorts from various sources:
+
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.ellie_commons.reminduck) 
+[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.ellie_commons.reminduck)
 
 
 ## 🛣️ Roadmap
@@ -43,10 +44,6 @@ Stella, current main dev:
     <img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=2" width="150">
   </a>
 </p>
-
-
-
-
 
 ## 🏗️ Building
 
