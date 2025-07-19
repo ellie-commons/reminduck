@@ -17,7 +17,7 @@ _And it quacks._
 
 ## Installation
 
-You can download and install Jorts from various sources:
+You can download and install Reminduck from various sources:
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.ellie_commons.reminduck) 
 [<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.ellie_commons.reminduck)
