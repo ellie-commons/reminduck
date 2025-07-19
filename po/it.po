@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-12 11:59+0200\n"
-"PO-Revision-Date: 2025-07-12 16:25+0200\n"
+"PO-Revision-Date: 2025-07-19 19:25+0200\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -78,7 +78,7 @@ msgstr "I tuoi promemoria"
 
 #: src/Views/RemindersView.vala:43
 msgid "Create another"
-msgstr "Creane un altroreate another"
+msgstr "Creane un altro"
 
 #: src/Views/RemindersView.vala:88
 #, c-format
