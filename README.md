@@ -31,7 +31,7 @@ You can download and install Reminduck from various sources:
 ## 💝 Donations
 
 You can donate to various contributors:
- - Matfantinel, the initial creator of the app ([https://ko-fi.com/X8X7D99T6](https://github.com/matfantinel))
+ - Matfantinel, the initial creator of the app (https://github.com/matfantinel)
  - teamcons, the main devs and maintainers behind Cherrypick (https://ko-fi.com/teamcons)
 
 
