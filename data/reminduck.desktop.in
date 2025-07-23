@@ -5,6 +5,7 @@ Comment=Don't forget about your stuff in an adorably annoying way
 Categories=Office;
 Exec=io.github.ellie_commons.reminduck %U
 Icon=io.github.ellie_commons.reminduck
+SingleMainWindow=true
 
 Terminal=false
 Type=Application
