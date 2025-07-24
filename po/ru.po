@@ -107,7 +107,7 @@ msgstr "Удалить"
 
 #: src/Views/WelcomeView.vala:35
 msgid "QUACK! I'm Reminduck"
-msgstr "КРЯ! Меня зовут Reminduck"
+msgstr "КРЯ! Меня зовут НапоминУтка"
 
 #: src/Views/WelcomeView.vala:36
 msgid "The duck that reminds you"
