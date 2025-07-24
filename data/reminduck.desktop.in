@@ -15,5 +15,6 @@ Keywords=Reminduck;Personal;Assistant;Reminders;Remember;Duck;Quack;Cute;
 Actions=NewReminder;
 
 [Desktop Action NewReminder]
-Exec=io.github.ellie_commons.reminduck --new-reminder
 Name=New reminder
+Icon=list-add
+Exec=io.github.ellie_commons.reminduck --new-reminder
