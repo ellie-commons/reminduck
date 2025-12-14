@@ -105,13 +105,9 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         permissions_box.append (permissions_link);
         centerbox.append (permissions_box);
 
-        string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
-        print ("\nEnvironment: " + desktop_environment + " detected!");
-
-        // Show only in Pantheon because others do not have an autostart panel
-        if (desktop_environment != "Pantheon") {
-            permissions_link.hide ();
-        }
+        // Show link only in Pantheon because others do not have an autostart panel
+        var desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+        permissions_link.visible = (desktop_environment == "Pantheon");
 
 
         /* PERSISTENT TOGGLE */
