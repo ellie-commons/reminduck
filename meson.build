@@ -17,6 +17,8 @@ config_file = configure_file(
     configuration: config_data
 )
 
+config_data.set('version', meson.project_version())
+
 asresources = gnome.compile_resources(
     'as-resources',
     join_paths('data', 'reminduck.gresource.xml'),

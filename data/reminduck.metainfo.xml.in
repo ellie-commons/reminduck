@@ -189,23 +189,23 @@
   <screenshots>
     <screenshot type="default">
       <caption>The welcome view</caption>
-      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/Welcome.png</image>
+      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/@version@/data/screenshots/Welcome.png</image>
     </screenshot>
     <screenshot environment="pantheon">
       <caption>Add new reminders</caption>
-      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/Editor.png</image>
+      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/@version@/data/screenshots/Editor.png</image>
     </screenshot>
     <screenshot environment="pantheon:dark">
       <caption>Add new reminders but in dark</caption>
-      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/Editor-dark.png</image>
+      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/@version@/data/screenshots/Editor-dark.png</image>
     </screenshot>
     <screenshot environment="pantheon">
       <caption>See current reminders</caption>
-      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/List.png</image>
+      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/@version@/data/screenshots/List.png</image>
     </screenshot>
     <screenshot environment="pantheon:dark">
       <caption>See current reminders but in dark</caption>
-      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/master/data/screenshots/List-dark.png</image>
+      <image>https://raw.githubusercontent.com/ellie-commons/reminduck/@version@/data/screenshots/List-dark.png</image>
     </screenshot>
   </screenshots>
 </component>
