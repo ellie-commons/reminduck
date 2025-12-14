@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.ellie_commons.reminduck package.
+# Loc Huynh <huynhloc.contact@gmail.com>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.ellie_commons.reminduck\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 11:59+0200\n"
+"PO-Revision-Date: 2025-12-14 16:23+0700\n"
+"Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
+
+#: src/MainWindow.vala:50 src/MainWindow.vala:51
+msgid "Reminduck"
+msgstr "Reminduck"
+
+#: src/MainWindow.vala:75
+msgid "Back"
+msgstr "Quay lại"
+
+#: src/MainWindow.vala:77
+msgid "Click to return to main view"
+msgstr "Nhấn để quay lại màn hình chính"
+
+#: src/Objects/Reminder.vala:27
+msgid "Don't Repeat"
+msgstr "Không lặp lại"
+
+#: src/Objects/Reminder.vala:31
+msgid "Every X minutes"
+msgstr "Mỗi X phút"
+
+#: src/Objects/Reminder.vala:33
+#, c-format
+msgid "Every minute"
+msgid_plural "Every %d minutes"
+msgstr[0] "Mỗi %d phút"
+
+#: src/Objects/Reminder.vala:37
+msgid "Every day"
+msgstr "Hàng ngày"
+
+#: src/Objects/Reminder.vala:40
+msgid "Every week"
+msgstr "Hàng tuần"
+
+#: src/Objects/Reminder.vala:43
+msgid "Every month"
+msgstr "Hàng tháng"
+
+#: src/Views/ReminderEditor.vala:44
+msgid "Create a new reminder"
+msgstr "Tạo lời nhắc mới"
+
+#: src/Views/ReminderEditor.vala:51
+msgid "What do you want to be reminded of?"
+msgstr "Bạn muốn được nhắc về điều gì?"
+
+#: src/Views/ReminderEditor.vala:80
+msgid "Repeat"
+msgstr "Lặp lại"
+
+#: src/Views/ReminderEditor.vala:85
+msgid "Save reminder"
+msgstr "Lưu lời nhắc"
+
+#: src/Views/RemindersView.vala:33
+msgid "Your reminders"
+msgstr "Lời nhắc của bạn"
+
+#: src/Views/RemindersView.vala:43
+msgid "Create another"
+msgstr "Tạo thêm"
+
+#: src/Views/RemindersView.vala:88
+#, c-format
+msgid "Reminded: %s"
+msgstr "Đã nhắc: %s"
+
+#: src/Views/RemindersView.vala:104
+msgid "Today"
+msgstr "Hôm nay"
+
+#: src/Views/RemindersView.vala:116
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+#: src/Views/RemindersView.vala:123
+msgid "Delete"
+msgstr "Xóa"
+
+#: src/Views/WelcomeView.vala:35
+msgid "QUACK! I'm Reminduck"
+msgstr "QUẠC! Tôi là Reminduck"
+
+#: src/Views/WelcomeView.vala:36
+msgid "The duck that reminds you"
+msgstr "Chú vịt nhắc nhở bạn"
+
+#: src/Views/WelcomeView.vala:43
+msgid "New Reminder"
+msgstr "Lời nhắc mới"
+
+#: src/Views/WelcomeView.vala:44
+msgid "Create a new reminder for a set date and time"
+msgstr "Tạo lời nhắc mới cho ngày và giờ đã đặt"
+
+#: src/Views/WelcomeView.vala:49
+msgid "View Reminders"
+msgstr "Xem lời nhắc"
+
+#: src/Views/WelcomeView.vala:50
+msgid "See reminders you've created"
+msgstr "Xem các lời nhắc bạn đã tạo"
+
+#: src/Views/WelcomeView.vala:55 src/Views/SettingsView.vala:34
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: src/Views/WelcomeView.vala:56
+msgid "Tweak a few things"
+msgstr "Tinh chỉnh một vài thứ"
+
+#: src/Views/SettingsView.vala:30
+msgid "Request to system sent"
+msgstr "Yêu cầu đã được gửi tới hệ thống"
+
+#: src/Views/SettingsView.vala:50
+msgid "Click to preview reminder sound"
+msgstr "Nhấn để nghe thử âm thanh nhắc nhở"
+
+#: src/Views/SettingsView.vala:65
+msgid "Do a quack sound"
+msgstr "Phát tiếng quạc"
+
+#: src/Views/SettingsView.vala:67
+msgid "If enabled, the duck will quack when reminding you"
+msgstr "Nếu bật, chú vịt sẽ kêu quạc khi nhắc bạn"
+
+#: src/Views/SettingsView.vala:78
+msgid "Notifications"
+msgstr "Thông báo"
+
+#: src/Views/SettingsView.vala:94
+msgid "You can disable the 'DING' sound in the system settings"
+msgstr "Bạn có thể tắt âm thanh 'DING' trong cài đặt hệ thống"
+
+#: src/Views/SettingsView.vala:129
+msgid "Persistent notifications"
+msgstr "Thông báo cố định"
+
+#: src/Views/SettingsView.vala:131
+msgid "If enabled, the duck will stay until (gently) dismissed"
+msgstr "Nếu bật, chú vịt sẽ ở lại cho đến khi được đóng (nhẹ nhàng)"
+
+#. /TRANSLATORS: Button to autostart the application
+#: src/Views/SettingsView.vala:147
+msgid "Set autostart"
+msgstr "Đặt tự khởi động"
+
+#. /TRANSLATORS: Button to remove the autostart for the application
+#: src/Views/SettingsView.vala:159
+msgid "Remove autostart"
+msgstr "Gỡ tự khởi động"
+
+#: src/Views/SettingsView.vala:175
+msgid "Allow to start at login"
+msgstr "Cho phép khởi động khi đăng nhập"
+
+#: src/Views/SettingsView.vala:177
+msgid "You can request the system to start this application automatically"
+msgstr "Bạn có thể yêu cầu hệ thống tự động khởi động ứng dụng này"
+
+#: src/Views/SettingsView.vala:213
+msgid "Support us!"
+msgstr "Ủng hộ chúng tôi!"
+
+#: src/Views/SettingsView.vala:221
+msgid "Reset to Default"
+msgstr "Đặt lại mặc định"
+
+#: src/Views/SettingsView.vala:222
+msgid "Reset all settings to defaults"
+msgstr "Đặt lại tất cả cài đặt về mặc định"
+
+#: src/Services/Utils.vala:18
+msgid "Autostart Reminduck in background to send reminders"
+msgstr "Tự khởi động Reminduck trong nền để gửi lời nhắc"
+
+#: src/Services/Utils.vala:34
+msgid "Remove Reminduck from autostart"
+msgstr "Gỡ Reminduck khỏi tự khởi động"
