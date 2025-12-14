@@ -6,8 +6,12 @@
  */
 
 public class Reminduck.Quack : Object {
-    public Quack () {
-        var m = Gtk.MediaFile.for_resource ("/io/github/ellie_commons/reminduck/quack.ogg");
+    public Quack (QuackType? type = QuackType.DEFAULT) {
+        if (type == QuackType.NONE) {
+            return;
+        }
+
+        var m = Gtk.MediaFile.for_resource (type.to_resource_path ());
 
         m.notify["ended"].connect (() => {
             print ("stream ended %s\n", m.ended.to_string ());
@@ -21,6 +25,20 @@ public class Reminduck.Quack : Object {
         });
 
         m.play ();
+    }
+}
 
+public enum Reminduck.QuackType {
+    NONE,
+    DEFAULT,
+    PLASTIC;
+
+    public string to_resource_path () {
+        switch (this) {
+            case NONE: return "";
+            case DEFAULT: return "/io/github/ellie_commons/reminduck/quack.ogg";
+            case PLASTIC: return "/io/github/ellie_commons/reminduck/plastic_quack.ogg";
+            default: return "/io/github/ellie_commons/reminduck/quack.ogg";
+        }
     }
 }
