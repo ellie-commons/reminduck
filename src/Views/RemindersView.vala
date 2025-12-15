@@ -42,7 +42,7 @@ public class Reminduck.Views.RemindersView : Gtk.Box {
 
             var add_new_button = new Gtk.Button.with_label (_("Create another"));
             add_new_button.halign = Gtk.Align.CENTER;
-            add_new_button.add_css_class ("suggested-action");
+            add_new_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             add_new_button.activate.connect (add_reminder);
             add_new_button.clicked.connect (add_reminder);
 

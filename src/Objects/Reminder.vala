@@ -19,6 +19,7 @@ namespace Reminduck {
         EVERY_DAY,
         EVERY_WEEK,
         EVERY_MONTH,
+        // EVERY_X_HOURS
         NONE;
 
         public string to_friendly_string (int? interval = null) {

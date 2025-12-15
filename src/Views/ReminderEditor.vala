@@ -19,6 +19,7 @@ namespace Reminduck.Views {
         Gtk.Box recurrency_switch_container;
         Gtk.Switch recurrency_switch;
         Gtk.ComboBox recurrency_combobox;
+        Gtk.Revealer recurrency_revealer;
         Gtk.SpinButton recurrency_interval;
         Gtk.Button save_button;
 
@@ -47,9 +48,10 @@ namespace Reminduck.Views {
             };
             this.title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
-            this.reminder_input = new Gtk.Entry ();
-            this.reminder_input.placeholder_text = _("What do you want to be reminded of?");
-            this.reminder_input.show_emoji_icon = true;
+            this.reminder_input = new Gtk.Entry () {
+                placeholder_text = _("What do you want to be reminded of?"),
+                show_emoji_icon = true
+            };
 
             this.date_picker = new Granite.DatePicker.with_format (
                 Granite.DateTime.get_default_date_format (false, true, true)
@@ -84,7 +86,7 @@ namespace Reminduck.Views {
 
             this.save_button = new Gtk.Button.with_label (_("Save reminder"));
             this.save_button.halign = Gtk.Align.END;
-            this.save_button.add_css_class ("suggested-action");
+            this.save_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             this.save_button.activate.connect (on_save);
             this.save_button.clicked.connect (on_save);
             this.save_button.set_sensitive (false);
@@ -111,14 +113,16 @@ namespace Reminduck.Views {
             });
 
             this.recurrency_switch.notify["active"].connect (() => {
-                if (this.recurrency_switch.get_active ()) {
-                    this.recurrency_combobox.show ();
+                if (this.recurrency_switch.active) {
                     this.recurrency_combobox.changed ();
-                } else {
-                    this.recurrency_combobox.hide ();
-                    this.recurrency_interval.hide ();
                 }
             });
+
+            this.recurrency_switch.bind_property (
+                "active",
+                recurrency_revealer, "reveal_child",
+                GLib.BindingFlags.SYNC_CREATE
+            );
 
             this.recurrency_combobox.changed.connect (() => {
                 var selected_option = this.recurrency_combobox.get_active ();
@@ -159,19 +163,28 @@ namespace Reminduck.Views {
                 list_store.set (iter, 0, recurrency_options[i]);
             }
 
-            this.recurrency_combobox = new Gtk.ComboBox.with_model (list_store);
+            recurrency_combobox = new Gtk.ComboBox.with_model (list_store);
 
             Gtk.CellRendererText cell = new Gtk.CellRendererText ();
-            this.recurrency_combobox.pack_start (cell, false);
+            recurrency_combobox.pack_start (cell, false);
 
-            this.recurrency_combobox.set_attributes (cell, "text", 0);
+            recurrency_combobox.set_attributes (cell, "text", 0);
 
-            this.recurrency_switch_container.append (this.recurrency_combobox);
 
-            this.recurrency_interval = new Gtk.SpinButton.with_range (0, 1000, 1);
-            this.recurrency_interval.value = 30;
+            recurrency_interval = new Gtk.SpinButton.with_range (0, 1000, 1) {
+                value = 30
+            };
 
-            this.recurrency_switch_container.append (this.recurrency_interval);
+            var recurrency_hidden_box = new Gtk.Box (HORIZONTAL, 0);
+            recurrency_hidden_box.append (recurrency_combobox);
+            recurrency_hidden_box.append (recurrency_interval);
+
+            recurrency_revealer = new Gtk.Revealer () {
+                child = recurrency_hidden_box,
+                transition_type = Gtk.RevealerTransitionType.SLIDE_RIGHT
+            };
+
+            this.recurrency_switch_container.append (recurrency_revealer);
         }
 
         public bool validate () {
@@ -239,8 +252,6 @@ namespace Reminduck.Views {
             this.time_picker.time = this.date_picker.date;
             this.recurrency_switch.set_active (false);
             this.recurrency_combobox.set_active ((int)RecurrencyType.EVERY_X_MINUTES);
-            this.recurrency_combobox.hide ();
-            this.recurrency_interval.hide ();
         }
 
         private void on_save () {

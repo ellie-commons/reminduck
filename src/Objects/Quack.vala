@@ -36,7 +36,7 @@ public enum Reminduck.QuackType {
     public string to_resource_path () {
         switch (this) {
             case NONE: return "";
-            case DEFAULT: return "/io/github/ellie_commons/reminduck/quack.ogg";
+            case DEFAULT: return "/io/github/ellie_commons/reminduck/default_quack.ogg";
             case PLASTIC: return "/io/github/ellie_commons/reminduck/plastic_quack.ogg";
             default: return "/io/github/ellie_commons/reminduck/quack.ogg";
         }
