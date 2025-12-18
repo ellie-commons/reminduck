@@ -22,19 +22,12 @@ public class Reminduck.Views.RemindersView : Gtk.Box {
             hexpand = vexpand = true;
             margin_start = 24;
             margin_end = 24;
-        }
 
-        public RemindersView () {
-            this.build_ui ();
-        }
-
-        public void build_ui () {
-
-            this.title = new Gtk.Label (_("Your reminders")) {
+            title = new Gtk.Label (_("Your reminders")) {
                 margin_top = 24,
                 margin_bottom = 12
             };
-            this.title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
+            title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
             append (this.title);
 

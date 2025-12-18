@@ -140,6 +140,7 @@ namespace Reminduck.Views {
 
         public void edit_reminder (Reminder? existing_reminder) {
             if (existing_reminder != null) {
+
                 reminder = existing_reminder;
 
                 reminder_input.text = reminder.description;
@@ -147,7 +148,10 @@ namespace Reminduck.Views {
                 time_picker.time = reminder.time;
 
                 repeatbox.recurrency_type = reminder.recurrency_type;
-                repeatbox.interval = reminder.recurrency_interval;
+
+                if (reminder.recurrency_type != RecurrencyType.NONE) {
+                    repeatbox.interval = reminder.recurrency_interval;
+                }
 
             } else {
                 reminder = new Reminder ();

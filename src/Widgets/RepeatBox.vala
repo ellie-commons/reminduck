@@ -8,14 +8,12 @@
 
 public class Reminduck.Repeatbox : Gtk.Box {
 
-    public signal void changed ();
-
     public RecurrencyType recurrency_type {
         get {
             if (!recurrency_switch.active) {
                 return RecurrencyType.NONE;
             }
-            return this.dropdown.selected;
+            return dropdown.selected;
         }
 
         set {
@@ -23,6 +21,7 @@ public class Reminduck.Repeatbox : Gtk.Box {
                 recurrency_switch.active = false;
                 return;
             }
+            recurrency_switch.active = true;
             dropdown.set_selected (value);
         }
     }
@@ -83,14 +82,11 @@ public class Reminduck.Repeatbox : Gtk.Box {
             GLib.BindingFlags.DEFAULT
         );
 
-        recurrency_switch.activate.connect (() => {changed ();});
-
         dropdown.notify["selected"].connect (() => {
-            print (dropdown.selected.to_string ());
+            debug (dropdown.selected.to_string ());
             var selected_option = dropdown.selected;
             var if_every_x_selected = selected_option == RecurrencyType.EVERY_X_MINUTES;
             interval_revealer.reveal_child = if_every_x_selected;
-            changed ();
         });
     }
 
