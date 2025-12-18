@@ -12,7 +12,6 @@ namespace Reminduck {
         Gtk.Button back_button;
 
         private GLib.Settings settings;
-        public Gtk.Settings gtk_settings;
         public Granite.Settings granite_settings;
 
         Reminduck.Views.WelcomeView welcome_view;
@@ -51,12 +50,12 @@ namespace Reminduck {
             Gtk.Label title_widget = new Gtk.Label (_("Reminduck"));
             title_widget.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
 
-            this.headerbar = new Gtk.HeaderBar ();
-            this.headerbar.title_widget = title_widget;
-            this.headerbar.add_css_class ("default-decoration");
-
-            set_titlebar (this.headerbar);
-
+            headerbar = new Gtk.HeaderBar () {
+                title_widget = title_widget
+            };
+            headerbar.add_css_class ("default-decoration");
+            set_titlebar (headerbar);
+ 
             granite_settings = Granite.Settings.get_default ();
                 if (granite_settings.prefers_color_scheme == DARK) {
                     this.headerbar.add_css_class ("reminduck-headerbar-dark");

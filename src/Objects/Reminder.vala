@@ -47,5 +47,14 @@ namespace Reminduck {
                     assert_not_reached ();
             }
         }
+
+        public static string[] choices () {
+            return {
+                RecurrencyType.EVERY_X_MINUTES.to_friendly_string (),
+                RecurrencyType.EVERY_DAY.to_friendly_string (),
+                RecurrencyType.EVERY_WEEK.to_friendly_string (),
+                RecurrencyType.EVERY_MONTH.to_friendly_string ()
+            };
+        }
     }
 }
