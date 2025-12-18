@@ -170,7 +170,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
         var autostart_label = new Granite.HeaderLabel (_("Allow to start at login")) {
             mnemonic_widget = both_buttons,
-            secondary_text = _("You can request the system to start this application automatically"),
+            secondary_text = _("Request the system to start the application in the background when you log in"),
             hexpand = true
         };
 
