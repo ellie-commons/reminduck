@@ -3,6 +3,6 @@
   <gresource prefix="/io/github/ellie_commons/reminduck">
     <file alias="Application.css">Application.css</file>
     <file alias="default_quack.ogg">sounds/default_quack.ogg</file>
-    <file alias="plastic_quack.ogg">sounds/plastic_quack.mp3</file>
+    <file alias="plastic_quack.ogg">sounds/plastic_quack.ogg</file>
   </gresource>
 </gresources>
