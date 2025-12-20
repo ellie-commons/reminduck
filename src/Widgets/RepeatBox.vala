@@ -83,7 +83,6 @@ public class Reminduck.Repeatbox : Gtk.Box {
 
         on_selected_change ();
         dropdown.notify["selected"].connect (on_selected_change);
-        interval_spin.value_changed.connect (on_minutes_at_one);
     }
 
     private void on_selected_change () {
@@ -94,43 +93,42 @@ public class Reminduck.Repeatbox : Gtk.Box {
             case RecurrencyType.EVERY_X_MINUTES:
                 interval_spin.adjustment.step_increment = 30;
                 interval_spin.adjustment.upper = 1440;
+                interval_spin.value_changed.connect (set_minutes_watch);
                 return;
 
             case RecurrencyType.EVERY_DAY:
                 interval_spin.adjustment.step_increment = 1;
                 interval_spin.adjustment.upper = 30;
+                interval_spin.value_changed.disconnect (set_minutes_watch);
                 return;
 
             case RecurrencyType.EVERY_WEEK:
                 interval_spin.adjustment.step_increment = 1;
                 interval_spin.adjustment.upper = 4;
+                interval_spin.value_changed.disconnect (set_minutes_watch);
                 return;
 
             case RecurrencyType.EVERY_MONTH:
                 interval_spin.adjustment.step_increment = 1;
                 interval_spin.adjustment.upper = 12;
+                interval_spin.value_changed.disconnect (set_minutes_watch);
                 return;
         }
     }
 
-    private void on_minutes_at_one () {
+    // User may be at 1 minutes, then click "+" and jump to 31, 61... Thats no good
+    private void set_minutes_watch () {
         debug ("On minutes at one");
         if (interval_spin.value != 1) {return;}
 
-        var selected_option = dropdown.selected;
-        var if_every_x_selected = selected_option == RecurrencyType.EVERY_X_MINUTES;
-
-        if (if_every_x_selected) {
-            interval_spin.value_changed.connect (adjust_minutes);
-        }
+        // value is at one. Keep an eye out to adjust 31
+        interval_spin.value_changed.connect (adjust_minutes);
     }
 
     private void adjust_minutes () {
         debug (dropdown.selected.to_string ());
-        var selected_option = dropdown.selected;
-        var if_every_x_selected = selected_option == RecurrencyType.EVERY_X_MINUTES;
 
-        if (if_every_x_selected && interval_spin.value == 31) {
+        if (interval_spin.value == 31) {
             interval_spin.value = 30;
         }
         // Crisis averted, stop keeping watch
