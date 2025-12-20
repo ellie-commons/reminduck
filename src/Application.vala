@@ -30,7 +30,7 @@ namespace Reminduck {
 
         public Granite.Settings granite_settings;
         public Gtk.Settings gtk_settings;
-        public GLib.Settings settings;
+        public static GLib.Settings settings;
 
         public MainWindow main_window { get; private set; default = null; }
         public static Reminduck.Database database;
@@ -85,7 +85,7 @@ namespace Reminduck {
             stdout.printf ("\n✔️ Activated");
             database.verify_database ();
 
-            this.settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
+            settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
             // On first run, request autostart
             if (settings.get_boolean ("first-run") || ask_autostart) {
 
@@ -205,6 +205,12 @@ namespace Reminduck {
             
             Gee.ArrayList<string> reminders_to_delete = new Gee.ArrayList<string> ();
             foreach(var reminder in reminders) {
+
+                //TODO: Get rid of the 0's. Remove after a while
+                if (reminder.recurrency_interval == 0) {
+                    reminder.recurrency_interval = 1;
+                }
+
                 //If reminder date < current date
                 if (reminder.time.compare (new GLib.DateTime.now ()) <= 0) {
                     var notification = new Notification (_("QUACK!"));
@@ -236,13 +242,13 @@ namespace Reminduck {
                                     new_time = reminder.time.add_minutes (reminder.recurrency_interval);
                                     break;
                                 case RecurrencyType.EVERY_DAY:
-                                    new_time = reminder.time.add_days (1);
+                                    new_time = reminder.time.add_days (reminder.recurrency_interval);
                                     break;
                                 case RecurrencyType.EVERY_WEEK:
-                                    new_time = reminder.time.add_weeks (1);
+                                    new_time = reminder.time.add_weeks (reminder.recurrency_interval);
                                     break;
                                 case RecurrencyType.EVERY_MONTH:
-                                    new_time = reminder.time.add_months (1);
+                                    new_time = reminder.time.add_months (reminder.recurrency_interval);
                                     break;
                                 default:
                                     break;
@@ -254,6 +260,7 @@ namespace Reminduck {
                                 new_reminder.time = new_time;
                                 new_reminder.description = reminder.description;
                                 new_reminder.recurrency_type = reminder.recurrency_type;
+                                new_reminder.recurrency_interval = reminder.recurrency_interval;
 
                                 database.upsert_reminder (new_reminder);
                                 break;

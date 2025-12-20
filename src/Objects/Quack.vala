@@ -7,10 +7,6 @@
 
 public class Reminduck.Quack : Object {
     public Quack (QuackType? type = QuackType.DEFAULT) {
-        if (type == QuackType.NONE) {
-            return;
-        }
-
         var m = Gtk.MediaFile.for_resource (type.to_resource_path ());
 
         m.notify["ended"].connect (() => {
@@ -29,16 +25,29 @@ public class Reminduck.Quack : Object {
 }
 
 public enum Reminduck.QuackType {
-    NONE,
     DEFAULT,
     PLASTIC;
 
     public string to_resource_path () {
         switch (this) {
-            case NONE: return "";
             case DEFAULT: return "/io/github/ellie_commons/reminduck/default_quack.ogg";
             case PLASTIC: return "/io/github/ellie_commons/reminduck/plastic_quack.ogg";
             default: return "/io/github/ellie_commons/reminduck/quack.ogg";
         }
+    }
+
+    public string to_friendly_name () {
+        switch (this) {
+            case DEFAULT: return _("Default Duck");
+            case PLASTIC: return _("Plastic Duck");
+            default: return _("Default Duck");
+        }
+    }
+
+    public static string[] choices () {
+        return {
+            DEFAULT.to_friendly_name (),
+            PLASTIC.to_friendly_name ()
+        };
     }
 }

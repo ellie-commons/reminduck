@@ -171,12 +171,7 @@ namespace Reminduck.Views {
                 reminder.description = reminder_input.text;
                 reminder.time = mount_datetime (date_picker.date, time_picker.time);
                 reminder.recurrency_type = repeatbox.recurrency_type;
-
-                if (repeatbox.recurrency_type != RecurrencyType.EVERY_X_MINUTES) {
-                    reminder.recurrency_interval = 0;
-                } else {
-                    reminder.recurrency_interval = (int)repeatbox.interval;
-                }
+                reminder.recurrency_interval = (int)repeatbox.interval;
 
                 var result = ReminduckApp.database.upsert_reminder (reminder);
 

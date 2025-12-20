@@ -6,6 +6,7 @@ sources = files (
     'Objects/Reminder.vala',
     'Objects/Quack.vala',
     'Widgets/RepeatBox.vala',
+    'Widgets/QuackBox.vala',
     'Views/ReminderEditor.vala',
     'Views/RemindersView.vala',
     'Views/WelcomeView.vala',

@@ -19,7 +19,6 @@ namespace Reminduck {
         EVERY_DAY,
         EVERY_WEEK,
         EVERY_MONTH,
-        // EVERY_X_HOURS
         NONE;
 
         public string to_friendly_string (int? interval = null) {
@@ -35,13 +34,13 @@ namespace Reminduck {
                     }
 
                 case EVERY_DAY:
-                    return _("Every day");
+                    return _("Day");
 
                 case EVERY_WEEK:
-                    return _("Every week");
+                    return _("Week");
 
                 case EVERY_MONTH:
-                    return _("Every month");
+                    return _("Month");
 
                 default:
                     assert_not_reached ();

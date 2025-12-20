@@ -32,11 +32,8 @@ public class Reminduck.Repeatbox : Gtk.Box {
     }
 
     Gtk.Switch recurrency_switch;
-
     Gtk.Revealer recurrency_revealer;
     Gtk.DropDown dropdown;
-
-    Gtk.Revealer interval_revealer;
     Gtk.SpinButton interval_spin;
 
     construct {
@@ -48,22 +45,24 @@ public class Reminduck.Repeatbox : Gtk.Box {
             active = false
         };
 
+        ///TRANSLATORS: If your language doesnt match "Every XX Minutes/Month/etc" pattern please tell me!!!!!! So i can adapt it for your lang
+        var every_label = new Gtk.Label (_("Every")) {
+            margin_end = 10,
+        };
+        every_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
+
         dropdown = new Gtk.DropDown.from_strings (RecurrencyType.choices ());
         dropdown.set_selected (RecurrencyType.EVERY_DAY); // Enums are fucking magic
 
         // 60 minutes * 24  hrs = Maximum 1440 minutes. Next up may as well use days
         interval_spin = new Gtk.SpinButton.with_range (1, 1440, 1) {
-            value = 30
-        };
-
-        interval_revealer = new Gtk.Revealer () {
-            child = interval_spin,
-            transition_type = Gtk.RevealerTransitionType.SLIDE_RIGHT
+            value = 1
         };
 
         var recurrency_hidden_box = new Gtk.Box (HORIZONTAL, 0);
+        recurrency_hidden_box.append (every_label);
+        recurrency_hidden_box.append (interval_spin);
         recurrency_hidden_box.append (dropdown);
-        recurrency_hidden_box.append (interval_revealer);
 
         recurrency_revealer = new Gtk.Revealer () {
             child = recurrency_hidden_box,
@@ -82,17 +81,51 @@ public class Reminduck.Repeatbox : Gtk.Box {
             GLib.BindingFlags.DEFAULT
         );
 
-        dropdown.notify["selected"].connect (() => {
-            debug (dropdown.selected.to_string ());
-            var selected_option = dropdown.selected;
-            var if_every_x_selected = selected_option == RecurrencyType.EVERY_X_MINUTES;
-            interval_revealer.reveal_child = if_every_x_selected;
-        });
+        on_selected_change ();
+        dropdown.notify["selected"].connect (on_selected_change);
+        interval_spin.value_changed.connect (on_minutes_at_one);
+    }
+
+    private void on_selected_change () {
+        debug (dropdown.selected.to_string ());
+        var selected_option = dropdown.selected;
+        var if_every_x_selected = selected_option == RecurrencyType.EVERY_X_MINUTES;
+
+        if (if_every_x_selected) {
+            interval_spin.adjustment.step_increment = 30;
+
+        } else {
+            interval_spin.adjustment.step_increment = 1;
+        }
+    }
+
+    private void on_minutes_at_one () {
+        debug ("On minutes at one");
+        if (interval_spin.value != 1) {return;}
+
+        var selected_option = dropdown.selected;
+        var if_every_x_selected = selected_option == RecurrencyType.EVERY_X_MINUTES;
+
+        if (if_every_x_selected) {
+            interval_spin.value_changed.connect (adjust_minutes);
+        }
+    }
+
+    private void adjust_minutes () {
+        debug (dropdown.selected.to_string ());
+        var selected_option = dropdown.selected;
+        var if_every_x_selected = selected_option == RecurrencyType.EVERY_X_MINUTES;
+
+        if (if_every_x_selected && interval_spin.value == 31) {
+            interval_spin.value = 30;
+        }
+        // Crisis averted, stop keeping watch
+        interval_spin.value_changed.disconnect (adjust_minutes);
     }
 
     public void reset () {
         recurrency_switch.active = false;
-        dropdown.set_selected (0);
-        interval_spin.value = 30;
+        dropdown.set_selected (RecurrencyType.EVERY_DAY);
+        interval_spin.value = 1;
     }
 }

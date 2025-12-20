@@ -8,8 +8,6 @@
 
 public class Reminduck.Views.SettingsView : Gtk.Box {
 
-    GLib.Settings settings;
-
     construct {
         orientation = Gtk.Orientation.VERTICAL;
         valign = Gtk.Align.FILL;
@@ -181,13 +179,12 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         append (centerbox);
 
         /* BIND */
-        settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
-        settings.bind (
+        ReminduckApp.settings.bind (
             "quack-sound",
             quack_toggle, "active",
             SettingsBindFlags.DEFAULT);
 
-        settings.bind (
+        ReminduckApp.settings.bind (
             "persistent",
             persist_toggle, "active",
             SettingsBindFlags.DEFAULT);
@@ -230,7 +227,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
         string[] keys = {"quack-sound", "persistent"};
         foreach (var key in keys) {
-                settings.reset (key);
+                ReminduckApp.settings.reset (key);
         }
     }
 }

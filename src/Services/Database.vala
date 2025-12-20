@@ -148,6 +148,11 @@ public class Reminduck.Database {
 
             reminder.recurrency_interval = int.parse (v[4]);
 
+            //TODO: Get rid of the 0's. Remove after a while
+            if (reminder.recurrency_interval == 0) {
+                    reminder.recurrency_interval = 1;
+            }
+
             result.add (reminder);
             return 0;
         }, out errmsg);
@@ -160,7 +165,7 @@ public class Reminduck.Database {
     }
 
     public bool delete_reminder (string row_id) {
-        var query = """DELETE FROM reminders WHERE rowid = """+ row_id + """;""";
+        var query = """DELETE FROM reminders WHERE rowid = """ + row_id + """;""";
 
         Sqlite.Database db;
         open_database (out db);
