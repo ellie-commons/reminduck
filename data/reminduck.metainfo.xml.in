@@ -26,6 +26,7 @@
       </description>
       <issues>
         <issue url="https://github.com/ellie-commons/reminduck/issues/55">Reminder every x amount of time</issue>
+        <issue url="https://github.com/ellie-commons/reminduck/issues/60">Year Reminder option</issue>
       </issues>
     </release>
     <release version="2.2.1" date="2025-07-12">
