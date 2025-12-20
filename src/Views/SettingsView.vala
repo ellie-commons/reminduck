@@ -132,13 +132,13 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         centerbox.append (persist_box);
 
         /* AUTOSTART */
-        var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
+        var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
             halign = Gtk.Align.FILL
         };
 
         ///TRANSLATORS: Button to autostart the application
         var set_autostart = new Gtk.Button () {
-            label = _("Set autostart"),
+            label = _("Enable"),
             valign = Gtk.Align.CENTER
         };
 
@@ -150,7 +150,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
         ///TRANSLATORS: Button to remove the autostart for the application
         var remove_autostart = new Gtk.Button () {
-            label = _("Remove autostart"),
+            label = _("Disable"),
             valign = Gtk.Align.CENTER
         };
         //remove_autostart.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
@@ -166,7 +166,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
         var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
 
-        var autostart_label = new Granite.HeaderLabel (_("Allow to start at login")) {
+        var autostart_label = new Granite.HeaderLabel (_("Autostart in the background")) {
             mnemonic_widget = both_buttons,
             secondary_text = _("Request the system to start the application in the background when you log in"),
             hexpand = true
