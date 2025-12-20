@@ -91,7 +91,7 @@ public class Reminduck.Repeatbox : Gtk.Box {
 
         switch (selected_option) {
             case RecurrencyType.EVERY_X_MINUTES:
-                interval_spin.adjustment.step_increment = 30;
+                interval_spin.adjustment.step_increment = 5;
                 interval_spin.adjustment.upper = 1440;
                 interval_spin.value_changed.connect (set_minutes_watch);
                 return;
@@ -116,20 +116,20 @@ public class Reminduck.Repeatbox : Gtk.Box {
         }
     }
 
-    // User may be at 1 minutes, then click "+" and jump to 31, 61... Thats no good
+    // User may be at 1 minutes, then click "+" and jump to 6, 11... Thats no good
     private void set_minutes_watch () {
         debug ("On minutes at one");
         if (interval_spin.value != 1) {return;}
 
-        // value is at one. Keep an eye out to adjust 31
+        // value is at one. Keep an eye out to adjust 6
         interval_spin.value_changed.connect (adjust_minutes);
     }
 
     private void adjust_minutes () {
         debug (dropdown.selected.to_string ());
 
-        if (interval_spin.value == 31) {
-            interval_spin.value = 30;
+        if (interval_spin.value == 6) {
+            interval_spin.value = 5;
         }
         // Crisis averted, stop keeping watch
         interval_spin.value_changed.disconnect (adjust_minutes);
