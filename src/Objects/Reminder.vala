@@ -28,7 +28,7 @@ namespace Reminduck {
 
                 case EVERY_X_MINUTES:
                     if (interval == null || interval == 0) {
-                        return _("Every X minutes");
+                        return _("Minutes");
                     } else {
                         return GLib.ngettext ("Every minute", "Every %d minutes", interval).printf (interval);
                     }
