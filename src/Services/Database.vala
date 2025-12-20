@@ -37,7 +37,7 @@ public class Reminduck.Database {
         db.exec (query);
     }
 
-    public void verify_database () {
+    public void verify_database (bool? plsbump = false) {
          string path = Environment.get_user_data_dir () + "/.local/share/io.github.ellie_commons.reminduck";
             File tmp = File.new_for_path (path);
             if (tmp.query_file_type (0) != FileType.DIRECTORY) {
@@ -45,6 +45,24 @@ public class Reminduck.Database {
             }
 
             initialize_database ();
+
+        //FIXME: up this because now hours are in position 1, bump it
+        if (plsbump) {
+            print ("Database needs some updates. Proceeding.");
+
+            var all_to_update = this.fetch_reminders ();
+            foreach (var reminder in all_to_update) {
+                print ("\n" + reminder.description + ": " + reminder.recurrency_type.to_friendly_string ());
+
+                if (reminder.recurrency_type >= 1) {
+                    reminder.recurrency_type = reminder.recurrency_type + 1;
+                    print ("// Now %s".printf (reminder.recurrency_type.to_friendly_string ()));
+
+                    upsert_reminder (reminder);
+                }
+
+            }
+        }
     }
 
     //  private void create_new_columns() {
@@ -148,9 +166,9 @@ public class Reminduck.Database {
 
             reminder.recurrency_interval = int.parse (v[4]);
 
-            //TODO: Get rid of the 0's. Remove after a while
+            //FIXME: Get rid of the 0's. Remove after a while
             if (reminder.recurrency_interval == 0) {
-                    reminder.recurrency_interval = 1;
+                reminder.recurrency_interval = 1;
             }
 
             result.add (reminder);

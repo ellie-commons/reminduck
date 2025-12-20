@@ -16,6 +16,7 @@ namespace Reminduck {
 
     public enum RecurrencyType {
         EVERY_X_MINUTES,
+        EVERY_X_HOURS,
         EVERY_DAY,
         EVERY_WEEK,
         EVERY_MONTH,
@@ -23,8 +24,7 @@ namespace Reminduck {
 
         public string to_friendly_string (int? interval = null) {
             switch (this) {
-                case NONE:
-                    return _("Don't Repeat");
+                case NONE: return _("Don't Repeat");
 
                 case EVERY_X_MINUTES:
                     if (interval == null || interval == 0) {
@@ -33,14 +33,10 @@ namespace Reminduck {
                         return GLib.ngettext ("Every minute", "Every %d minutes", interval).printf (interval);
                     }
 
-                case EVERY_DAY:
-                    return _("Day");
-
-                case EVERY_WEEK:
-                    return _("Week");
-
-                case EVERY_MONTH:
-                    return _("Month");
+                case EVERY_X_HOURS: return _("Hour");
+                case EVERY_DAY: return _("Day");
+                case EVERY_WEEK: return _("Week");
+                case EVERY_MONTH: return _("Month");
 
                 default:
                     assert_not_reached ();
@@ -50,6 +46,7 @@ namespace Reminduck {
         public static string[] choices () {
             return {
                 RecurrencyType.EVERY_X_MINUTES.to_friendly_string (),
+                RecurrencyType.EVERY_X_HOURS.to_friendly_string (),
                 RecurrencyType.EVERY_DAY.to_friendly_string (),
                 RecurrencyType.EVERY_WEEK.to_friendly_string (),
                 RecurrencyType.EVERY_MONTH.to_friendly_string ()

@@ -96,6 +96,12 @@ public class Reminduck.Repeatbox : Gtk.Box {
                 interval_spin.value_changed.connect (set_minutes_watch);
                 return;
 
+            case RecurrencyType.EVERY_X_HOURS:
+                interval_spin.adjustment.step_increment = 1;
+                interval_spin.adjustment.upper = 24;
+                interval_spin.value_changed.disconnect (set_minutes_watch);
+                return;
+
             case RecurrencyType.EVERY_DAY:
                 interval_spin.adjustment.step_increment = 1;
                 interval_spin.adjustment.upper = 30;

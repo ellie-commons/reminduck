@@ -75,17 +75,9 @@ namespace Reminduck {
                         granite_settings.prefers_color_scheme == DARK
                     );
             });
-        }
-
-        public static int main(string[] args) {
-            return new ReminduckApp ().run (args);
-        }
-
-        protected override void activate () {
-            stdout.printf ("\n✔️ Activated");
-            database.verify_database ();
 
             settings = new GLib.Settings ("io.github.ellie_commons.reminduck.state");
+
             // On first run, request autostart
             if (settings.get_boolean ("first-run") || ask_autostart) {
 
@@ -99,6 +91,22 @@ namespace Reminduck {
 
                 Reminduck.Utils.request_autostart ();
             }
+
+            var plsbump = false;
+            if (!settings.get_boolean ("bumped")) {
+                plsbump = true;
+                settings.set_boolean ("bumped", true);
+            }
+
+            database.verify_database (plsbump);
+        }
+
+        public static int main(string[] args) {
+            return new ReminduckApp ().run (args);
+        }
+
+        protected override void activate () {
+            stdout.printf ("\n✔️ Activated");
 
             reload_reminders ();
 
@@ -206,11 +214,6 @@ namespace Reminduck {
             Gee.ArrayList<string> reminders_to_delete = new Gee.ArrayList<string> ();
             foreach(var reminder in reminders) {
 
-                //TODO: Get rid of the 0's. Remove after a while
-                if (reminder.recurrency_interval == 0) {
-                    reminder.recurrency_interval = 1;
-                }
-
                 //If reminder date < current date
                 if (reminder.time.compare (new GLib.DateTime.now ()) <= 0) {
                     var notification = new Notification (_("QUACK!"));
@@ -241,6 +244,11 @@ namespace Reminduck {
                                 case RecurrencyType.EVERY_X_MINUTES:
                                     new_time = reminder.time.add_minutes (reminder.recurrency_interval);
                                     break;
+
+                                case RecurrencyType.EVERY_X_HOURS:
+                                    new_time = reminder.time.add_hours (reminder.recurrency_interval); 
+                                    break;
+
                                 case RecurrencyType.EVERY_DAY:
                                     new_time = reminder.time.add_days (reminder.recurrency_interval);
                                     break;
