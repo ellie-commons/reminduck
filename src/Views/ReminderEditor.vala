@@ -15,9 +15,7 @@ namespace Reminduck.Views {
         Gtk.Entry reminder_input;
         Granite.DatePicker date_picker;
         Granite.TimePicker time_picker;
-
         Reminduck.Repeatbox repeatbox;
-
         Gtk.Button save_button;
 
         Reminder reminder;
@@ -53,14 +51,14 @@ namespace Reminduck.Views {
             );
 
             var date_time_container = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            date_time_container.append (this.date_picker);
-            date_time_container.append (this.time_picker);
+            date_time_container.append (date_picker);
+            date_time_container.append (time_picker);
 
             var fields_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
                 valign = Gtk.Align.CENTER,
                 vexpand = true
             };
-            fields_box.append (this.reminder_input);
+            fields_box.append (reminder_input);
             fields_box.append (date_time_container);
 
             var label = new Gtk.Label (_("Repeat")) {
