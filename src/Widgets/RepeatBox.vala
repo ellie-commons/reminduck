@@ -55,7 +55,7 @@ public class Reminduck.Repeatbox : Gtk.Box {
         dropdown.set_selected (RecurrencyType.EVERY_DAY); // Enums are fucking magic
 
         // 60 minutes * 24  hrs = Maximum 1440 minutes. Next up may as well use days
-        interval_spin = new Gtk.SpinButton.with_range (1, 1440, 1) {
+        interval_spin = new Gtk.SpinButton.with_range (1, 30, 1) {
             value = 1
         };
 
@@ -89,13 +89,27 @@ public class Reminduck.Repeatbox : Gtk.Box {
     private void on_selected_change () {
         debug (dropdown.selected.to_string ());
         var selected_option = dropdown.selected;
-        var if_every_x_selected = selected_option == RecurrencyType.EVERY_X_MINUTES;
 
-        if (if_every_x_selected) {
-            interval_spin.adjustment.step_increment = 30;
+        switch (selected_option) {
+            case RecurrencyType.EVERY_X_MINUTES:
+                interval_spin.adjustment.step_increment = 30;
+                interval_spin.adjustment.upper = 1440;
+                return;
 
-        } else {
-            interval_spin.adjustment.step_increment = 1;
+            case RecurrencyType.EVERY_DAY:
+                interval_spin.adjustment.step_increment = 1;
+                interval_spin.adjustment.upper = 30;
+                return;
+
+            case RecurrencyType.EVERY_WEEK:
+                interval_spin.adjustment.step_increment = 1;
+                interval_spin.adjustment.upper = 4;
+                return;
+
+            case RecurrencyType.EVERY_MONTH:
+                interval_spin.adjustment.step_increment = 1;
+                interval_spin.adjustment.upper = 12;
+                return;
         }
     }
 
