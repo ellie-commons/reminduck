@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 11:59+0200\n"
+"POT-Creation-Date: 2025-12-20 22:57+0100\n"
 "PO-Revision-Date: 2019-11-29 18:21+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <vistausss@outlook.com>\n"
@@ -17,7 +17,7 @@ msgstr ""
 msgid "Reminduck"
 msgstr "Reminduck"
 
-#: data/reminduck.desktop.in:4 data/reminduck.metainfo.xml.in:165
+#: data/reminduck.desktop.in:4 data/reminduck.metainfo.xml.in:108
 msgid "Reminders"
 msgstr "Herinneringen"
 
@@ -27,12 +27,12 @@ msgstr ""
 "Vergeet nooit meer een taak, en wordt op schattige doch irritante manier "
 "herinnerd"
 
-#: data/reminduck.desktop.in:14
+#: data/reminduck.desktop.in:15
 #, fuzzy
 msgid "Reminduck;Personal;Assistant;Reminders;Remember;Duck;Quack;Cute;"
 msgstr "Reminduck;Persoonlijk;Assistent;Herinneringen;"
 
-#: data/reminduck.desktop.in:18
+#: data/reminduck.desktop.in:19
 #, fuzzy
 msgid "New reminder"
 msgstr "Herinneringen"
@@ -69,54 +69,78 @@ msgstr ""
 msgid "And it quacks."
 msgstr "En het kwaakt."
 
-#: data/reminduck.metainfo.xml.in:20
-msgid "Settings have been moved into their own view"
+#: data/reminduck.metainfo.xml.in:19
+msgid "✨Pond Info News✨"
 msgstr ""
 
 #: data/reminduck.metainfo.xml.in:21
+msgid "Cleaner code and user interface"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:22
+msgid "Added repeat x every hours"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:23
+msgid "Added more control for when repeating quacks"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:24
+msgid "Added vietnamese translations thanks to @hthienloc!"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:35
+msgid "Updated russian translations thanks to @ma12vlad"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:42
+msgid "Settings have been moved into their own view"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:43
 msgid ""
 "Right click on the icon and choose \"New reminder\" to jump immediately in "
 "the editor"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:27
+#: data/reminduck.metainfo.xml.in:49
 msgid "✨NEW IN THE POND✨"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:29
+#: data/reminduck.metainfo.xml.in:51
 msgid "FINALLY a quack setting 🦆 You can even preview the sound!"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:30
+#: data/reminduck.metainfo.xml.in:52
 msgid "Added a menu button with a popover"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:31
+#: data/reminduck.metainfo.xml.in:53
 msgid "Added toggle to change notification persistency"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:32
+#: data/reminduck.metainfo.xml.in:54
 msgid "Added buttons to set/remove autostart"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:33
+#: data/reminduck.metainfo.xml.in:55
 msgid "Bugfix: Now \"Show Reminders\" should display correctly"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:40
+#: data/reminduck.metainfo.xml.in:62
 msgid "Repaired autostart feature"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:41
+#: data/reminduck.metainfo.xml.in:63
 #, fuzzy
 msgid "Updated IT translation by @albanobattistella"
 msgstr "- 🇮🇹 Bijgewerkte italiaanse vertaling (@albanobattistella)"
 
-#: data/reminduck.metainfo.xml.in:42
+#: data/reminduck.metainfo.xml.in:64
 msgid "Corrections for appcenter"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:48
+#: data/reminduck.metainfo.xml.in:70
 #, fuzzy
 msgid ""
 "🦆🦆The quack is back!🦆🦆 A continuation of Reminduck, with the blessing of "
@@ -125,187 +149,167 @@ msgstr ""
 "De kwakzalver is terug! Een vervolg op Reminduck, met de zegen van de "
 "originele maker!"
 
-#: data/reminduck.metainfo.xml.in:50
+#: data/reminduck.metainfo.xml.in:72
 msgid "Adapted to modern libraries (GTK4, Flatpak)"
 msgstr "Aangepast aan moderne bibliotheken (GTK4, Flatpak)"
 
-#: data/reminduck.metainfo.xml.in:51
+#: data/reminduck.metainfo.xml.in:73
 msgid "Make the whole window grabbable"
 msgstr "Maak het hele venster grijpbaar"
 
-#: data/reminduck.metainfo.xml.in:52
+#: data/reminduck.metainfo.xml.in:74
 msgid "No quack sound yet but that will come"
 msgstr "Nog geen kwakgeluid, maar dat komt nog wel"
 
-#: data/reminduck.metainfo.xml.in:58
-msgid "Add \"Office\" category to launcher"
-msgstr "Categorie \"Office\" toevoegen aan launcher"
-
-#: data/reminduck.metainfo.xml.in:64
-msgid "- Support for elementary OS 6.0 Odin!"
-msgstr "- Ondersteuning voor elementair OS 6.0 Odin!"
-
-#: data/reminduck.metainfo.xml.in:65 data/reminduck.metainfo.xml.in:73
-msgid "- 🇮🇹 Updated italian translation (@albanobattistella)"
-msgstr "- 🇮🇹 Bijgewerkte italiaanse vertaling (@albanobattistella)"
-
-#: data/reminduck.metainfo.xml.in:72
-msgid "- 🇩🇪 German translation (@Technipion)"
-msgstr "- 🇩🇪 Duitse vertaling (@Technipion)"
-
-#: data/reminduck.metainfo.xml.in:80
-msgid "🐞 Enable translations on Flatpak"
-msgstr "Vertalingen inschakelen op Flatpak"
-
-#: data/reminduck.metainfo.xml.in:87
-msgid "🗃️ Flatpak Support!"
-msgstr "🗃️ Flatpak-ondersteuning!"
-
-#: data/reminduck.metainfo.xml.in:94
-msgid "🌑 Dark-mode toggle on the header bar"
-msgstr "🌑 Schakelaar voor donkere modus op de kopbalk"
-
-#: data/reminduck.metainfo.xml.in:95
-msgid ""
-"🔔 Notifications now stick around until you close them, to make sure you "
-"don't miss your quacks"
-msgstr ""
-"Meldingen blijven nu hangen tot je ze sluit, zodat je je kwakzalvers niet "
-"mist"
-
-#: data/reminduck.metainfo.xml.in:96
-msgid "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
-msgstr ""
-"🌟 Ondersteuning voor extra GTK-thema's, waardoor Reminduck distro-"
-"agnostisch wordt"
-
-#: data/reminduck.metainfo.xml.in:97
-#, fuzzy
-msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
-msgstr "🇹🇷 Turkse vertaling (met dank aan libreajans)"
-
-#: data/reminduck.metainfo.xml.in:98
-msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
-msgstr "🇮🇹 Italiaanse vertaling (Mirko Brombin | @mirkobrombin)"
-
-#: data/reminduck.metainfo.xml.in:105
-msgid ""
-"🐥️ New Icon! - hopefully this one looks better than the previous one. With "
-"great help from Nararyans R.I. (@Fatih20)"
-msgstr ""
-"🐥️ Nieuw pictogram! - Hopelijk ziet deze er beter uit dan de vorige. Met "
-"geweldige hulp van Nararyans R.I. (@Fatih20)"
-
-#: data/reminduck.metainfo.xml.in:106
-msgid "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
-msgstr ""
-"💁‍ Verbeterde compatibiliteit met vertalingen (Corentin Noël | @tintou)"
-
-#: data/reminduck.metainfo.xml.in:107
-msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
-msgstr "🇨🇵️ Franse vertaling (Nathan Bonnemains | @NathanBnm)"
-
-#: data/reminduck.metainfo.xml.in:114
-msgid ""
-"🔁️ Recurrent reminders - you can now have reminders that show up in set "
-"periods of time: every day, week, month, or a set interval"
-msgstr ""
-"🔁️ Herhalingen - je kunt herinneringen nu herhalen: elke dag, week, maand of "
-"elke x minuten"
-
-#: data/reminduck.metainfo.xml.in:115
-msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
-msgstr ""
-"🌟️ Algemene uiterlijke verbeteringen om het instellen van kwaakjes "
-"aangenamer te maken"
-
-#: data/reminduck.metainfo.xml.in:116
-msgid "🌃️ Dark Mode is now prettier"
-msgstr "🌃️ Mooier donker thema"
-
-#: data/reminduck.metainfo.xml.in:117
-msgid "🇹🇷 Turkish translation (libreajans)"
-msgstr "🇹🇷 Turkse vertaling (met dank aan libreajans)"
-
-#: data/reminduck.metainfo.xml.in:118
-msgid "🇳🇱 Dutch translation (Vistaus)"
-msgstr "🇹🇷 Nederlandse vertaling (met dank aan Vistaus)"
-
-#: data/reminduck.metainfo.xml.in:125
-msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
-msgstr "Ondersteuning voor het onofficiële donkere thema"
-
-#: data/reminduck.metainfo.xml.in:126
-msgid "This should also make it work with other dark GTK themes"
-msgstr ""
-"Hierdoor zou Reminduck ook beter moeten werken onder andere donkere GTK-"
-"thema's"
-
-#: data/reminduck.metainfo.xml.in:132
-msgid "Initial Release 🦆"
-msgstr "Eerste uitgave 🎉️"
-
-#: data/reminduck.metainfo.xml.in:149
+#: data/reminduck.metainfo.xml.in:92
 #, fuzzy
 msgid "Matheus Fantinel + Stella"
 msgstr "Matheus Fantinel"
 
-#: data/reminduck.metainfo.xml.in:163
+#: data/reminduck.metainfo.xml.in:106
 msgid "Personal"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:164
+#: data/reminduck.metainfo.xml.in:107
 msgid "Assistant"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:166
+#: data/reminduck.metainfo.xml.in:109
 msgid "Remember"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:167
+#: data/reminduck.metainfo.xml.in:110
 msgid "Duck"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:168
+#: data/reminduck.metainfo.xml.in:111
 msgid "Quack"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:169
+#: data/reminduck.metainfo.xml.in:112
 msgid "Cute"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:170
+#: data/reminduck.metainfo.xml.in:113
 msgid "Utility"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:171
+#: data/reminduck.metainfo.xml.in:114
 msgid "Pantheon"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:172
+#: data/reminduck.metainfo.xml.in:115
 msgid "elementary OS"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:177
+#: data/reminduck.metainfo.xml.in:120
 msgid "The welcome view"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:181
+#: data/reminduck.metainfo.xml.in:124
 #, fuzzy
 msgid "Add new reminders"
 msgstr "Herinneringen"
 
-#: data/reminduck.metainfo.xml.in:185
+#: data/reminduck.metainfo.xml.in:128
 msgid "Add new reminders but in dark"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:189
+#: data/reminduck.metainfo.xml.in:132
 msgid "See current reminders"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:193
+#: data/reminduck.metainfo.xml.in:136
 msgid "See current reminders but in dark"
 msgstr ""
+
+#~ msgid "Add \"Office\" category to launcher"
+#~ msgstr "Categorie \"Office\" toevoegen aan launcher"
+
+#~ msgid "- Support for elementary OS 6.0 Odin!"
+#~ msgstr "- Ondersteuning voor elementair OS 6.0 Odin!"
+
+#~ msgid "- 🇮🇹 Updated italian translation (@albanobattistella)"
+#~ msgstr "- 🇮🇹 Bijgewerkte italiaanse vertaling (@albanobattistella)"
+
+#~ msgid "- 🇩🇪 German translation (@Technipion)"
+#~ msgstr "- 🇩🇪 Duitse vertaling (@Technipion)"
+
+#~ msgid "🐞 Enable translations on Flatpak"
+#~ msgstr "Vertalingen inschakelen op Flatpak"
+
+#~ msgid "🗃️ Flatpak Support!"
+#~ msgstr "🗃️ Flatpak-ondersteuning!"
+
+#~ msgid "🌑 Dark-mode toggle on the header bar"
+#~ msgstr "🌑 Schakelaar voor donkere modus op de kopbalk"
+
+#~ msgid ""
+#~ "🔔 Notifications now stick around until you close them, to make sure you "
+#~ "don't miss your quacks"
+#~ msgstr ""
+#~ "Meldingen blijven nu hangen tot je ze sluit, zodat je je kwakzalvers niet "
+#~ "mist"
+
+#~ msgid ""
+#~ "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
+#~ msgstr ""
+#~ "🌟 Ondersteuning voor extra GTK-thema's, waardoor Reminduck distro-"
+#~ "agnostisch wordt"
+
+#, fuzzy
+#~ msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
+#~ msgstr "🇹🇷 Turkse vertaling (met dank aan libreajans)"
+
+#~ msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
+#~ msgstr "🇮🇹 Italiaanse vertaling (Mirko Brombin | @mirkobrombin)"
+
+#~ msgid ""
+#~ "🐥️ New Icon! - hopefully this one looks better than the previous one. "
+#~ "With great help from Nararyans R.I. (@Fatih20)"
+#~ msgstr ""
+#~ "🐥️ Nieuw pictogram! - Hopelijk ziet deze er beter uit dan de vorige. Met "
+#~ "geweldige hulp van Nararyans R.I. (@Fatih20)"
+
+#~ msgid ""
+#~ "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
+#~ msgstr ""
+#~ "💁‍ Verbeterde compatibiliteit met vertalingen (Corentin Noël | @tintou)"
+
+#~ msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
+#~ msgstr "🇨🇵️ Franse vertaling (Nathan Bonnemains | @NathanBnm)"
+
+#~ msgid ""
+#~ "🔁️ Recurrent reminders - you can now have reminders that show up in set "
+#~ "periods of time: every day, week, month, or a set interval"
+#~ msgstr ""
+#~ "🔁️ Herhalingen - je kunt herinneringen nu herhalen: elke dag, week, maand "
+#~ "of elke x minuten"
+
+#~ msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
+#~ msgstr ""
+#~ "🌟️ Algemene uiterlijke verbeteringen om het instellen van kwaakjes "
+#~ "aangenamer te maken"
+
+#~ msgid "🌃️ Dark Mode is now prettier"
+#~ msgstr "🌃️ Mooier donker thema"
+
+#~ msgid "🇹🇷 Turkish translation (libreajans)"
+#~ msgstr "🇹🇷 Turkse vertaling (met dank aan libreajans)"
+
+#~ msgid "🇳🇱 Dutch translation (Vistaus)"
+#~ msgstr "🇹🇷 Nederlandse vertaling (met dank aan Vistaus)"
+
+#~ msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
+#~ msgstr "Ondersteuning voor het onofficiële donkere thema"
+
+#~ msgid "This should also make it work with other dark GTK themes"
+#~ msgstr ""
+#~ "Hierdoor zou Reminduck ook beter moeten werken onder andere donkere GTK-"
+#~ "thema's"
+
+#~ msgid "Initial Release 🦆"
+#~ msgstr "Eerste uitgave 🎉️"
 
 #~ msgid "io.github.ellie_commons.reminduck"
 #~ msgstr "io.github.ellie_commons.reminduck"

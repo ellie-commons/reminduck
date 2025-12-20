@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 11:59+0200\n"
+"POT-Creation-Date: 2025-12-20 22:57+0100\n"
 "PO-Revision-Date: 2025-07-16 08:18+0300\n"
 "Last-Translator: Владислав Малышев <ma12@rambler.ru>\n"
 "Language-Team: \n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Reminduck"
 msgstr ""
 
-#: data/reminduck.desktop.in:4 data/reminduck.metainfo.xml.in:165
+#: data/reminduck.desktop.in:4 data/reminduck.metainfo.xml.in:108
 msgid "Reminders"
 msgstr "Напоминания"
 
@@ -31,11 +31,11 @@ msgstr "Напоминания"
 msgid "Don't forget about your stuff in an adorably annoying way"
 msgstr "Не забывайте о своих делах восхитительно раздражающим образом"
 
-#: data/reminduck.desktop.in:14
+#: data/reminduck.desktop.in:15
 msgid "Reminduck;Personal;Assistant;Reminders;Remember;Duck;Quack;Cute;"
 msgstr "Reminduck;Персональный;Помощник;Напоминания;Напоминать;Утка;Кря;Милый;"
 
-#: data/reminduck.desktop.in:18
+#: data/reminduck.desktop.in:19
 msgid "New reminder"
 msgstr "New reminder"
 
@@ -67,11 +67,35 @@ msgstr ""
 msgid "And it quacks."
 msgstr "И крякает."
 
-#: data/reminduck.metainfo.xml.in:20
+#: data/reminduck.metainfo.xml.in:19
+msgid "✨Pond Info News✨"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:21
+msgid "Cleaner code and user interface"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:22
+msgid "Added repeat x every hours"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:23
+msgid "Added more control for when repeating quacks"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:24
+msgid "Added vietnamese translations thanks to @hthienloc!"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:35
+msgid "Updated russian translations thanks to @ma12vlad"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in:42
 msgid "Settings have been moved into their own view"
 msgstr "Настройки были перенесены в их отдельное представление"
 
-#: data/reminduck.metainfo.xml.in:21
+#: data/reminduck.metainfo.xml.in:43
 msgid ""
 "Right click on the icon and choose \"New reminder\" to jump immediately in "
 "the editor"
@@ -79,47 +103,47 @@ msgstr ""
 "Щелкните ПКМ на значке и выберите \"Новое напоминание\", чтобы сразу перейти "
 "в редактор"
 
-#: data/reminduck.metainfo.xml.in:27
+#: data/reminduck.metainfo.xml.in:49
 msgid "✨NEW IN THE POND✨"
 msgstr "✨НОВОЕ В ПРУДУ✨"
 
-#: data/reminduck.metainfo.xml.in:29
+#: data/reminduck.metainfo.xml.in:51
 msgid "FINALLY a quack setting 🦆 You can even preview the sound!"
 msgstr ""
 "НАКОНЕЦ-то появилась простая настройка🦆 вы даже можете предварительно "
 "прослушать звук!"
 
-#: data/reminduck.metainfo.xml.in:30
+#: data/reminduck.metainfo.xml.in:52
 msgid "Added a menu button with a popover"
 msgstr "Добавлена кнопка меню с всплывающим окном"
 
-#: data/reminduck.metainfo.xml.in:31
+#: data/reminduck.metainfo.xml.in:53
 msgid "Added toggle to change notification persistency"
 msgstr "Добавлен переключатель для изменения постоянства уведомлений"
 
-#: data/reminduck.metainfo.xml.in:32
+#: data/reminduck.metainfo.xml.in:54
 msgid "Added buttons to set/remove autostart"
 msgstr "Добавлены кнопки для установки/ отключения автозапуска"
 
-#: data/reminduck.metainfo.xml.in:33
+#: data/reminduck.metainfo.xml.in:55
 msgid "Bugfix: Now \"Show Reminders\" should display correctly"
 msgstr ""
 "Исправлена ошибка: теперь \"Показывать напоминания\" должно отображаться "
 "корректно"
 
-#: data/reminduck.metainfo.xml.in:40
+#: data/reminduck.metainfo.xml.in:62
 msgid "Repaired autostart feature"
 msgstr "Исправлена функция автозапуска"
 
-#: data/reminduck.metainfo.xml.in:41
+#: data/reminduck.metainfo.xml.in:63
 msgid "Updated IT translation by @albanobattistella"
 msgstr "Обновленный перевод от @albanobattistella"
 
-#: data/reminduck.metainfo.xml.in:42
+#: data/reminduck.metainfo.xml.in:64
 msgid "Corrections for appcenter"
 msgstr "Исправления для центра приложений"
 
-#: data/reminduck.metainfo.xml.in:48
+#: data/reminduck.metainfo.xml.in:70
 msgid ""
 "🦆🦆The quack is back!🦆🦆 A continuation of Reminduck, with the blessing of "
 "its original creator!"
@@ -127,179 +151,160 @@ msgstr ""
 "🦆🦆Кряканье вернулось!🦆🦆 Продолжение Remindduck, с благословения его "
 "создателя!"
 
-#: data/reminduck.metainfo.xml.in:50
+#: data/reminduck.metainfo.xml.in:72
 msgid "Adapted to modern libraries (GTK4, Flatpak)"
 msgstr "Адаптирован к современным библиотекам (GTK4, Flatpak)"
 
-#: data/reminduck.metainfo.xml.in:51
+#: data/reminduck.metainfo.xml.in:73
 msgid "Make the whole window grabbable"
 msgstr "Сделайте все окно доступным для захвата"
 
-#: data/reminduck.metainfo.xml.in:52
+#: data/reminduck.metainfo.xml.in:74
 msgid "No quack sound yet but that will come"
 msgstr "Кряканья пока нет, но это произойдет"
 
-#: data/reminduck.metainfo.xml.in:58
-msgid "Add \"Office\" category to launcher"
-msgstr "Добавлена категория \"Офис\" в меню пуск"
-
-#: data/reminduck.metainfo.xml.in:64
-msgid "- Support for elementary OS 6.0 Odin!"
-msgstr "- Поддержка elementary OS 6.0 Odin!"
-
-#: data/reminduck.metainfo.xml.in:65 data/reminduck.metainfo.xml.in:73
-msgid "- 🇮🇹 Updated italian translation (@albanobattistella)"
-msgstr "- 🇮🇹  Обновлён перевод на итальянский (@albanobattistella)"
-
-#: data/reminduck.metainfo.xml.in:72
-msgid "- 🇩🇪 German translation (@Technipion)"
-msgstr "- 🇩🇪 Обновлён перевод на немецкий (@Technipion)"
-
-#: data/reminduck.metainfo.xml.in:80
-msgid "🐞 Enable translations on Flatpak"
-msgstr "🐞 Включены переводы в Flatpak"
-
-#: data/reminduck.metainfo.xml.in:87
-msgid "🗃️ Flatpak Support!"
-msgstr "🗃️ Поддержка Flatpak!"
-
-#: data/reminduck.metainfo.xml.in:94
-msgid "🌑 Dark-mode toggle on the header bar"
-msgstr "🌑 Переключатель темного режима на панели заголовка"
-
-#: data/reminduck.metainfo.xml.in:95
-msgid ""
-"🔔 Notifications now stick around until you close them, to make sure you "
-"don't miss your quacks"
-msgstr ""
-"🔔 Уведомления теперь сохраняются до тех пор, пока вы их не закроете, чтобы "
-"вы не пропустили свои кряки"
-
-#: data/reminduck.metainfo.xml.in:96
-msgid "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
-msgstr ""
-"🌟 Поддержка дополнительных тем GTK, что делает Remindduck независимым от "
-"дистрибутива"
-
-#: data/reminduck.metainfo.xml.in:97
-msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
-msgstr "🇪🇸 Перевод на испанский (Alejandro Elí | @onerbs)"
-
-#: data/reminduck.metainfo.xml.in:98
-msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
-msgstr "🇮🇹 Перевод на итальянский (Mirko Brombin | @mirkobrombin)"
-
-#: data/reminduck.metainfo.xml.in:105
-msgid ""
-"🐥️ New Icon! - hopefully this one looks better than the previous one. With "
-"great help from Nararyans R.I. (@Fatih20)"
-msgstr ""
-"🐥️ ️ Новая иконка! - надеюсь, эта выглядит лучше, чем предыдущая. С огромной "
-"помощью Nararyans R.I. (@Fatih20)"
-
-#: data/reminduck.metainfo.xml.in:106
-msgid "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
-msgstr "💁‍ Улучшена совместимость с переводами (Corentin Noël | @tintou)"
-
-#: data/reminduck.metainfo.xml.in:107
-msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
-msgstr "🇨🇵️ Перевод на француский (Nathan Bonnemains | @NathanBnm)"
-
-#: data/reminduck.metainfo.xml.in:114
-msgid ""
-"🔁️ Recurrent reminders - you can now have reminders that show up in set "
-"periods of time: every day, week, month, or a set interval"
-msgstr ""
-"🔁️ Повторяющиеся напоминания - теперь вы можете получать напоминания, "
-"которые отображаются через определенные промежутки времени: каждый день, "
-"неделю, месяц или через определенный интервал"
-
-#: data/reminduck.metainfo.xml.in:115
-msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
-msgstr ""
-"🌟️ Общие улучшения пользовательского интерфейса, чтобы сделать настройки "
-"quacks более приятными"
-
-#: data/reminduck.metainfo.xml.in:116
-msgid "🌃️ Dark Mode is now prettier"
-msgstr "🌃️ Темный режим стал еще красивее"
-
-#: data/reminduck.metainfo.xml.in:117
-msgid "🇹🇷 Turkish translation (libreajans)"
-msgstr "🇹🇷 Перевод на турецкий (libreajans)"
-
-#: data/reminduck.metainfo.xml.in:118
-msgid "🇳🇱 Dutch translation (Vistaus)"
-msgstr "🇳🇱 Перевод на датский (Vistaus)"
-
-#: data/reminduck.metainfo.xml.in:125
-msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
-msgstr "Поддержите неофициальную настройку \"Предпочитаю темную тему\" ️🌝️"
-
-#: data/reminduck.metainfo.xml.in:126
-msgid "This should also make it work with other dark GTK themes"
-msgstr "Это также должно заставить его работать с другими темными темами GTK"
-
-#: data/reminduck.metainfo.xml.in:132
-msgid "Initial Release 🦆"
-msgstr "Первоначальный выпуск 🦆"
-
-#: data/reminduck.metainfo.xml.in:149
+#: data/reminduck.metainfo.xml.in:92
 msgid "Matheus Fantinel + Stella"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:163
+#: data/reminduck.metainfo.xml.in:106
 msgid "Personal"
 msgstr "Персональный"
 
-#: data/reminduck.metainfo.xml.in:164
+#: data/reminduck.metainfo.xml.in:107
 msgid "Assistant"
 msgstr "Помощник"
 
-#: data/reminduck.metainfo.xml.in:166
+#: data/reminduck.metainfo.xml.in:109
 msgid "Remember"
 msgstr "Напоминание"
 
-#: data/reminduck.metainfo.xml.in:167
+#: data/reminduck.metainfo.xml.in:110
 msgid "Duck"
 msgstr "Утка"
 
-#: data/reminduck.metainfo.xml.in:168
+#: data/reminduck.metainfo.xml.in:111
 msgid "Quack"
 msgstr "Кря"
 
-#: data/reminduck.metainfo.xml.in:169
+#: data/reminduck.metainfo.xml.in:112
 msgid "Cute"
 msgstr "Милый"
 
-#: data/reminduck.metainfo.xml.in:170
+#: data/reminduck.metainfo.xml.in:113
 msgid "Utility"
 msgstr "Утилита"
 
-#: data/reminduck.metainfo.xml.in:171
+#: data/reminduck.metainfo.xml.in:114
 msgid "Pantheon"
 msgstr "Пантеон"
 
-#: data/reminduck.metainfo.xml.in:172
+#: data/reminduck.metainfo.xml.in:115
 msgid "elementary OS"
 msgstr ""
 
-#: data/reminduck.metainfo.xml.in:177
+#: data/reminduck.metainfo.xml.in:120
 msgid "The welcome view"
 msgstr "Приветственный вид"
 
-#: data/reminduck.metainfo.xml.in:181
+#: data/reminduck.metainfo.xml.in:124
 msgid "Add new reminders"
 msgstr "Добавляйте новые напоминания"
 
-#: data/reminduck.metainfo.xml.in:185
+#: data/reminduck.metainfo.xml.in:128
 msgid "Add new reminders but in dark"
 msgstr "Добавляйте новые напоминания в тёмной теме"
 
-#: data/reminduck.metainfo.xml.in:189
+#: data/reminduck.metainfo.xml.in:132
 msgid "See current reminders"
 msgstr "Просмотр текущих напоминаний"
 
-#: data/reminduck.metainfo.xml.in:193
+#: data/reminduck.metainfo.xml.in:136
 msgid "See current reminders but in dark"
 msgstr "Смотрите текущие напоминания в тёмной теме"
+
+#~ msgid "Add \"Office\" category to launcher"
+#~ msgstr "Добавлена категория \"Офис\" в меню пуск"
+
+#~ msgid "- Support for elementary OS 6.0 Odin!"
+#~ msgstr "- Поддержка elementary OS 6.0 Odin!"
+
+#~ msgid "- 🇮🇹 Updated italian translation (@albanobattistella)"
+#~ msgstr "- 🇮🇹  Обновлён перевод на итальянский (@albanobattistella)"
+
+#~ msgid "- 🇩🇪 German translation (@Technipion)"
+#~ msgstr "- 🇩🇪 Обновлён перевод на немецкий (@Technipion)"
+
+#~ msgid "🐞 Enable translations on Flatpak"
+#~ msgstr "🐞 Включены переводы в Flatpak"
+
+#~ msgid "🗃️ Flatpak Support!"
+#~ msgstr "🗃️ Поддержка Flatpak!"
+
+#~ msgid "🌑 Dark-mode toggle on the header bar"
+#~ msgstr "🌑 Переключатель темного режима на панели заголовка"
+
+#~ msgid ""
+#~ "🔔 Notifications now stick around until you close them, to make sure you "
+#~ "don't miss your quacks"
+#~ msgstr ""
+#~ "🔔 Уведомления теперь сохраняются до тех пор, пока вы их не закроете, "
+#~ "чтобы вы не пропустили свои кряки"
+
+#~ msgid ""
+#~ "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
+#~ msgstr ""
+#~ "🌟 Поддержка дополнительных тем GTK, что делает Remindduck независимым от "
+#~ "дистрибутива"
+
+#~ msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
+#~ msgstr "🇪🇸 Перевод на испанский (Alejandro Elí | @onerbs)"
+
+#~ msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
+#~ msgstr "🇮🇹 Перевод на итальянский (Mirko Brombin | @mirkobrombin)"
+
+#~ msgid ""
+#~ "🐥️ New Icon! - hopefully this one looks better than the previous one. "
+#~ "With great help from Nararyans R.I. (@Fatih20)"
+#~ msgstr ""
+#~ "🐥️ ️ Новая иконка! - надеюсь, эта выглядит лучше, чем предыдущая. С "
+#~ "огромной помощью Nararyans R.I. (@Fatih20)"
+
+#~ msgid ""
+#~ "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
+#~ msgstr "💁‍ Улучшена совместимость с переводами (Corentin Noël | @tintou)"
+
+#~ msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
+#~ msgstr "🇨🇵️ Перевод на француский (Nathan Bonnemains | @NathanBnm)"
+
+#~ msgid ""
+#~ "🔁️ Recurrent reminders - you can now have reminders that show up in set "
+#~ "periods of time: every day, week, month, or a set interval"
+#~ msgstr ""
+#~ "🔁️ Повторяющиеся напоминания - теперь вы можете получать напоминания, "
+#~ "которые отображаются через определенные промежутки времени: каждый день, "
+#~ "неделю, месяц или через определенный интервал"
+
+#~ msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
+#~ msgstr ""
+#~ "🌟️ Общие улучшения пользовательского интерфейса, чтобы сделать настройки "
+#~ "quacks более приятными"
+
+#~ msgid "🌃️ Dark Mode is now prettier"
+#~ msgstr "🌃️ Темный режим стал еще красивее"
+
+#~ msgid "🇹🇷 Turkish translation (libreajans)"
+#~ msgstr "🇹🇷 Перевод на турецкий (libreajans)"
+
+#~ msgid "🇳🇱 Dutch translation (Vistaus)"
+#~ msgstr "🇳🇱 Перевод на датский (Vistaus)"
+
+#~ msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
+#~ msgstr "Поддержите неофициальную настройку \"Предпочитаю темную тему\" ️🌝️"
+
+#~ msgid "This should also make it work with other dark GTK themes"
+#~ msgstr ""
+#~ "Это также должно заставить его работать с другими темными темами GTK"
+
+#~ msgid "Initial Release 🦆"
+#~ msgstr "Первоначальный выпуск 🦆"
