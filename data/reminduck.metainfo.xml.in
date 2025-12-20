@@ -16,8 +16,10 @@
   <releases>
     <release version="2.3.0" date="2025-07-12">
       <description>
+        <p>✨Pond Info News✨</p>
         <ul>
           <li>Cleaner code and user interface</li>
+          <li>Added repeat x every hours</li>
           <li>Added more control for when repeating quacks</li>
           <li>Added vietnamese translations thanks to @hthienloc!</li>
         </ul>

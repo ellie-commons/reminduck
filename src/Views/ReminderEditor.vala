@@ -76,7 +76,8 @@ namespace Reminduck.Views {
 
             save_button = new Gtk.Button.with_label (_("Save reminder")) {
                 halign = Gtk.Align.END,
-                sensitive = false
+                sensitive = false,
+                margin_top = 12
             };
             save_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             save_button.clicked.connect (on_save);
