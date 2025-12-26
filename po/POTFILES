@@ -3,6 +3,7 @@ src/MainWindow.vala
 src/Objects/Quack.vala
 src/Objects/Reminder.vala
 src/Widgets/QuackBox.vala
+src/Widgets/RepeatBox.vala
 src/Views/ReminderEditor.vala
 src/Views/RemindersView.vala
 src/Views/WelcomeView.vala
