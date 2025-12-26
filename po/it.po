@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-07-19 19:25+0200\n"
-"POT-Creation-Date: 2025-12-26 20:10+0100\n"
+"POT-Creation-Date: 2025-12-26 20:56+0100\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
@@ -112,21 +112,26 @@ msgstr "È possibile disattivare i suoni di notifica del sistema nelle impostazi
 msgid "Every"
 msgstr "Ogni"
 
-#: src/Views/ReminderEditor.vala:35
-msgid "Create a new reminder"
-msgstr "Crea un nuovo promemoria"
-
-#: src/Views/ReminderEditor.vala:42
+#: src/Views/ReminderEditor.vala:45
 msgid "What do you want to be reminded of?"
 msgstr "Cosa vuoi che ti venga ricordato?"
 
-#: src/Views/ReminderEditor.vala:66
+#: src/Views/ReminderEditor.vala:69
 msgid "Repeat"
 msgstr "Ripeti"
 
-#: src/Views/ReminderEditor.vala:77
+#: src/Views/ReminderEditor.vala:90
 msgid "Save reminder"
 msgstr "Salva promemoria"
+
+#: src/Views/ReminderEditor.vala:173
+#, fuzzy
+msgid "Edit reminder"
+msgstr "Salva promemoria"
+
+#: src/Views/ReminderEditor.vala:178
+msgid "Create a new reminder"
+msgstr "Crea un nuovo promemoria"
 
 #: src/Views/RemindersView.vala:29
 msgid "Your reminders"

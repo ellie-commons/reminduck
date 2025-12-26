@@ -12,12 +12,15 @@
 public class Reminduck.Views.ReminderEditor : Gtk.Box {
     public signal void reminder_created ();
     public signal void reminder_edited ();
+    public signal void reminder_deleted ();
 
     Gtk.Label title;
     Gtk.Entry reminder_input;
     Granite.DatePicker date_picker;
     Granite.TimePicker time_picker;
-    Reminduck.Repeatbox repeatbox;
+    Reminduck.RepeatBox RepeatBox;
+
+    Gtk.Button delete_button;
     Gtk.Button save_button;
 
     Reminder reminder;
@@ -32,7 +35,7 @@ public class Reminduck.Views.ReminderEditor : Gtk.Box {
         margin_end = 24;
         reminder = new Reminder ();
 
-        title = new Gtk.Label (_("Create a new reminder")) {
+        title = new Gtk.Label ("") {
             margin_top = 24,
             margin_bottom = 12
         };
@@ -70,22 +73,39 @@ public class Reminduck.Views.ReminderEditor : Gtk.Box {
         label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
 
         fields_box.append (label);
-        repeatbox = new Repeatbox ();
+        RepeatBox = new RepeatBox ();
 
-        fields_box.append (repeatbox);
+        fields_box.append (RepeatBox);
 
-        save_button = new Gtk.Button.with_label (_("Save reminder")) {
+        var buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 9) {
             halign = Gtk.Align.END,
-            sensitive = false,
             margin_top = 12
         };
-        save_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
-        save_button.clicked.connect (on_save);
 
-        fields_box.append (this.save_button);
+        delete_button = new Gtk.Button.from_icon_name ("user-trash-full-symbolic") {
+            height_request = 24
+        };
+        delete_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+
+        save_button = new Gtk.Button.with_label (_("Save reminder")) {
+            height_request = 24,
+            sensitive = false
+        };
+        save_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+
+        buttons.append (delete_button);
+        buttons.append (save_button);
+
+        fields_box.append (buttons);
 
         append (title);
         append (fields_box);
+
+        save_button.grab_focus ();
+
+        /* ---------------- CONNECTS AND BINDS ---------------- */
+        delete_button.clicked.connect (on_delete);
+        save_button.clicked.connect (on_save);
 
         this.reminder_input.changed.connect (() => {
             this.touched = true;
@@ -96,25 +116,21 @@ public class Reminduck.Views.ReminderEditor : Gtk.Box {
             this.save_button.clicked ();
         });
 
-        this.date_picker.changed.connect (() => {
-            this.validate ();
-        });
-
-        this.time_picker.changed.connect (() => {
-            this.validate ();
-        });
+        this.date_picker.changed.connect (() => {this.validate ();});
+        this.time_picker.changed.connect (() => {this.validate ();});
     }
 
     public bool validate () {
         var result = true;
 
-        if (this.reminder_input.get_text () == null || this.reminder_input.get_text ().length <= 0) {
+        if (this.reminder_input.text == null || this.reminder_input.text.chomp () == "") {
             if (this.touched) {
                 this.reminder_input.add_css_class (Granite.STYLE_CLASS_ERROR);
             }
 
-            this.save_button.set_sensitive (false);
+            save_button.sensitive = false;
             result = false;
+
         } else {
             this.reminder_input.remove_css_class (Granite.STYLE_CLASS_ERROR);
         }
@@ -148,31 +164,42 @@ public class Reminduck.Views.ReminderEditor : Gtk.Box {
             date_picker.date = reminder.time;
             time_picker.time = reminder.time;
 
-            repeatbox.recurrency_type = reminder.recurrency_type;
+            RepeatBox.recurrency_type = reminder.recurrency_type;
 
             if (reminder.recurrency_type != RecurrencyType.NONE) {
-                repeatbox.interval = reminder.recurrency_interval;
+                RepeatBox.interval = reminder.recurrency_interval;
             }
+
+            title.label = _("Edit reminder");
+            delete_button.visible = true;
 
         } else {
             reminder = new Reminder ();
+            title.label = _("Create a new reminder");
+            delete_button.visible = false;
             reset_fields ();
         }
+    }
+
+    private void on_delete () {
+        ReminduckApp.database.delete_reminder (reminder.rowid);
+        reminder_deleted ();
+        reminder_edited ();
     }
 
     public void reset_fields () {
         reminder_input.text = "";
         date_picker.date = new GLib.DateTime.now_local ().add_minutes (15);
         time_picker.time = this.date_picker.date;
-        repeatbox.reset ();
+        RepeatBox.reset ();
     }
 
     private void on_save () {
         if (validate ()) {
             reminder.description = reminder_input.text;
             reminder.time = mount_datetime (date_picker.date, time_picker.time);
-            reminder.recurrency_type = repeatbox.recurrency_type;
-            reminder.recurrency_interval = (int)repeatbox.interval;
+            reminder.recurrency_type = RepeatBox.recurrency_type;
+            reminder.recurrency_interval = (int)RepeatBox.interval;
 
             var result = ReminduckApp.database.upsert_reminder (reminder);
 

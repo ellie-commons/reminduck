@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-26 19:10+0100\n"
+"POT-Creation-Date: 2025-12-26 20:56+0100\n"
 "PO-Revision-Date: 2021-11-17 17:14+0100\n"
 "Last-Translator: ONDO ALVELLË\n"
 "Language-Team: none\n"
@@ -112,21 +112,26 @@ msgstr ""
 msgid "Every"
 msgstr "Cada"
 
-#: src/Views/ReminderEditor.vala:35
-msgid "Create a new reminder"
-msgstr "Crea un recordatori nou"
-
-#: src/Views/ReminderEditor.vala:42
+#: src/Views/ReminderEditor.vala:45
 msgid "What do you want to be reminded of?"
 msgstr "Què vols que et recordi?"
 
-#: src/Views/ReminderEditor.vala:66
+#: src/Views/ReminderEditor.vala:69
 msgid "Repeat"
 msgstr "Repeteix"
 
-#: src/Views/ReminderEditor.vala:77
+#: src/Views/ReminderEditor.vala:90
 msgid "Save reminder"
 msgstr "Desa el recordatori"
+
+#: src/Views/ReminderEditor.vala:173
+#, fuzzy
+msgid "Edit reminder"
+msgstr "Desa el recordatori"
+
+#: src/Views/ReminderEditor.vala:178
+msgid "Create a new reminder"
+msgstr "Crea un recordatori nou"
 
 #: src/Views/RemindersView.vala:29
 msgid "Your reminders"

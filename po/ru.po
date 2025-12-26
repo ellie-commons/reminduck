@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Вячеслав <ma12@rambler.ru>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-07-15 15:37+0300\n"
-"POT-Creation-Date: 2025-12-26 19:10+0100\n"
+"POT-Creation-Date: 2025-12-26 20:56+0100\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
@@ -119,21 +119,26 @@ msgstr "Но можно изменить громкость или отключ�
 msgid "Every"
 msgstr "Каждый"
 
-#: src/Views/ReminderEditor.vala:35
-msgid "Create a new reminder"
-msgstr "Создать напоминание"
-
-#: src/Views/ReminderEditor.vala:42
+#: src/Views/ReminderEditor.vala:45
 msgid "What do you want to be reminded of?"
 msgstr "О чем вам напоминть?"
 
-#: src/Views/ReminderEditor.vala:66
+#: src/Views/ReminderEditor.vala:69
 msgid "Repeat"
 msgstr "Повторить"
 
-#: src/Views/ReminderEditor.vala:77
+#: src/Views/ReminderEditor.vala:90
 msgid "Save reminder"
 msgstr "Сохранить напоминание"
+
+#: src/Views/ReminderEditor.vala:173
+#, fuzzy
+msgid "Edit reminder"
+msgstr "Сохранить напоминание"
+
+#: src/Views/ReminderEditor.vala:178
+msgid "Create a new reminder"
+msgstr "Создать напоминание"
 
 #: src/Views/RemindersView.vala:29
 msgid "Your reminders"

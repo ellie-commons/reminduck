@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Alexander Schneider <kokoskern@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2020-01-13 15:11+0100\n"
-"POT-Creation-Date: 2025-12-26 19:10+0100\n"
+"POT-Creation-Date: 2025-12-26 20:56+0100\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
@@ -112,21 +112,25 @@ msgstr "Sie können die Systembenachrichtigungstöne in den Systemeinstellungen 
 msgid "Every"
 msgstr "Jeden"
 
-#: src/Views/ReminderEditor.vala:35
-msgid "Create a new reminder"
-msgstr "Erstelle eine neue Erinnerung"
-
-#: src/Views/ReminderEditor.vala:42
+#: src/Views/ReminderEditor.vala:45
 msgid "What do you want to be reminded of?"
 msgstr "An was möchtest Du erinnert werden?"
 
-#: src/Views/ReminderEditor.vala:66
+#: src/Views/ReminderEditor.vala:69
 msgid "Repeat"
 msgstr "Wiederhole"
 
-#: src/Views/ReminderEditor.vala:77
+#: src/Views/ReminderEditor.vala:90
 msgid "Save reminder"
 msgstr "Speichere Erinnerung"
+
+#: src/Views/ReminderEditor.vala:173
+msgid "Edit reminder"
+msgstr "Erinnerung speichern"
+
+#: src/Views/ReminderEditor.vala:178
+msgid "Create a new reminder"
+msgstr "Erstelle eine neue Erinnerung"
 
 #: src/Views/RemindersView.vala:29
 msgid "Your reminders"

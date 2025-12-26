@@ -11,7 +11,7 @@
  * 
  * There are two dropdowns, one with a singular version one with a plural version, they switch up place depending what to use
  */
-public class Reminduck.Repeatbox : Gtk.Box {
+public class Reminduck.RepeatBox : Gtk.Box {
 
     public RecurrencyType recurrency_type {
         get {

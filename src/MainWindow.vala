@@ -135,6 +135,7 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
             show_reminders_view ();
         });
 
+        this.reminder_editor.reminder_deleted.connect (on_reminder_deleted);
         stack.add_named (this.reminder_editor, "reminder_editor");
     }
 
@@ -149,15 +150,7 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
             show_reminder_editor (reminder);
         });
 
-        this.reminders_view.reminder_deleted.connect (() => {
-            ReminduckApp.reload_reminders ();
-            if (ReminduckApp.reminders.size == 0) {
-                show_welcome_view ();
-            } else {
-                this.reminders_view.build_reminders_list ();
-            }
-        });
-
+        this.reminders_view.reminder_deleted.connect (on_reminder_deleted);
         stack.add_named (this.reminders_view, "reminders_view");
     }
 
@@ -200,6 +193,15 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
         stack.set_transition_type (slide);
         stack.set_visible_child_name ("settings_view");
         this.back_button.show ();
+    }
+
+    private void on_reminder_deleted () {
+        ReminduckApp.reload_reminders ();
+        if (ReminduckApp.reminders.size == 0) {
+            show_welcome_view ();
+        } else {
+            this.reminders_view.build_reminders_list ();
+        }
     }
 
     private bool before_destroy () {
