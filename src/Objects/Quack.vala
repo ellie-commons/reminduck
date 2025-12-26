@@ -5,6 +5,9 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
+ /**
+ * An object playing a sound upon creation
+ */
 public class Reminduck.Quack : Object {
     public Quack (QuackType? type = QuackType.DEFAULT) {
         var m = Gtk.MediaFile.for_resource (type.to_resource_path ());
@@ -24,6 +27,9 @@ public class Reminduck.Quack : Object {
     }
 }
 
+/**
+ * Allows specifying which sound to play (NOT IMPLEMENTED YET)
+ */
 public enum Reminduck.QuackType {
     DEFAULT,
     PLASTIC;

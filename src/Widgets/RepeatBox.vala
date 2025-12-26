@@ -5,7 +5,12 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-
+/**
+ * A specialized horizontal box used by the ReminderEditor to set repeating reminders
+ * Use recurrency_type and interval to retrieve values
+ * 
+ * There are two dropdowns, one with a singular version one with a plural version, they switch up place depending what to use
+ */
 public class Reminduck.Repeatbox : Gtk.Box {
 
     public RecurrencyType recurrency_type {

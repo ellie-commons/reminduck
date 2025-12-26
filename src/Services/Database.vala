@@ -37,8 +37,12 @@ public class Reminduck.Database {
         db.exec (query);
     }
 
+    /**
+    * Check we have everything
+    * We can sneak updates in the database model here
+    */
     public void verify_database (bool? plsbump = false) {
-         string path = Environment.get_user_data_dir () + "/.local/share/io.github.ellie_commons.reminduck";
+        string path = Environment.get_user_data_dir () + "/.local/share/io.github.ellie_commons.reminduck";
             File tmp = File.new_for_path (path);
             if (tmp.query_file_type (0) != FileType.DIRECTORY) {
                 GLib.DirUtils.create_with_parents (path, 0775);
@@ -88,6 +92,9 @@ public class Reminduck.Database {
     //      }
     //  }
 
+    /**
+     * Update a reminder. If it doesnt have a spot yet, also save it
+     */
     public bool upsert_reminder (Reminder reminder) {
         var is_new = reminder.rowid == null;
         string prepared_query_str = "";
@@ -143,6 +150,9 @@ public class Reminduck.Database {
         return true;
     }
 
+    /**
+     * Used to populate the RemindersView
+     */
     public ArrayList<Reminder> fetch_reminders () {
         var result = new ArrayList<Reminder> ();
 

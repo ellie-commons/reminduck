@@ -8,6 +8,9 @@
 
 using Gee;
 
+/**
+ * A giant list generated from reminders saved in the Database
+ */
 public class Reminduck.Views.RemindersView : Gtk.Box {
         public signal void add_request ();
         public signal void edit_request (Reminder reminder);

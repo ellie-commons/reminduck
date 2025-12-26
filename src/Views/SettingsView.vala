@@ -38,7 +38,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         append (title);
 
 
-        /* QUACK TOGGLE */
+        /* ---------------- QUACK TOGGLE ---------------- */
         var quack_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             halign = Gtk.Align.FILL,
             hexpand = true
@@ -71,7 +71,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
         centerbox.append (quack_box);
 
-        /* PERMISSION BOX */
+        /* ---------------- PERMISSION BOX ---------------- */
         var link = Granite.SettingsUri.NOTIFICATIONS;
         var linkname = _("Notifications");
 
@@ -108,7 +108,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         permissions_link.visible = (desktop_environment == "Pantheon");
 
 
-        /* PERSISTENT TOGGLE */
+        /* ---------------- PERSISTENT TOGGLE ---------------- */
         var persist_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             halign = Gtk.Align.FILL,
             hexpand = true
@@ -178,20 +178,8 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
         append (centerbox);
 
-        /* BIND */
-        ReminduckApp.settings.bind (
-            "quack-sound",
-            quack_toggle, "active",
-            SettingsBindFlags.DEFAULT);
 
-        ReminduckApp.settings.bind (
-            "persistent",
-            persist_toggle, "active",
-            SettingsBindFlags.DEFAULT);
-
-
-            /*************************************************/
-
+        /* ---------------- BOTTOM BAR ---------------- */
         var boxbottom = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             hexpand = true,
             vexpand = false,
@@ -218,6 +206,17 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
         append (boxbottom);
 
+
+        /* ---------------- CONNECTS AND BINDS ---------------- */
+        ReminduckApp.settings.bind (
+            "quack-sound",
+            quack_toggle, "active",
+            SettingsBindFlags.DEFAULT);
+
+        ReminduckApp.settings.bind (
+            "persistent",
+            persist_toggle, "active",
+            SettingsBindFlags.DEFAULT);
 
         reset_button.clicked.connect (on_reset);
     }
