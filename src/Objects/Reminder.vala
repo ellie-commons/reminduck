@@ -24,6 +24,7 @@ namespace Reminduck {
 
         public string to_friendly_string (int? interval = 0) {
             switch (this) {
+                ///TRANSLATORS: [0] is singular form, [1] is plural form. These are displayed as menu items
                 case NONE: return _("Don't Repeat");
                 case EVERY_X_MINUTES: return GLib.ngettext ("Minute", "Minutes", interval);
                 case EVERY_X_HOURS: return GLib.ngettext ("Hour", "Hours", interval);

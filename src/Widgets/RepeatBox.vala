@@ -51,8 +51,13 @@ public class Reminduck.Repeatbox : Gtk.Box {
         };
         every_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
 
-        dropdown = new Gtk.DropDown.from_strings (RecurrencyType.choices (2));
-        dropdown.set_selected (RecurrencyType.EVERY_DAY); // Enums are fucking magic
+        dropdown = new Gtk.DropDown.from_strings (RecurrencyType.choices (1)) {
+            selected = RecurrencyType.EVERY_DAY, // Enums are fucking magic
+            width_request = 96
+        };
+        var dropdown_plural = new Gtk.DropDown.from_strings (RecurrencyType.choices (2)) {
+            width_request = 96
+        };
 
         // 60 minutes * 24  hrs = Maximum 1440 minutes. Next up may as well use days
         interval_spin = new Gtk.SpinButton.with_range (1, 30, 1) {
@@ -63,6 +68,7 @@ public class Reminduck.Repeatbox : Gtk.Box {
         recurrency_hidden_box.append (every_label);
         recurrency_hidden_box.append (interval_spin);
         recurrency_hidden_box.append (dropdown);
+        recurrency_hidden_box.append (dropdown_plural);
 
         recurrency_revealer = new Gtk.Revealer () {
             child = recurrency_hidden_box,
@@ -83,14 +89,21 @@ public class Reminduck.Repeatbox : Gtk.Box {
 
         on_selected_change ();
         dropdown.notify["selected"].connect (on_selected_change);
-        interval_spin.notify["value"].connect (on_spin_changed);
+        interval_spin.changed.connect (on_spin_changed);
+
+        /* Two dropdowns, both brothers, yet both opposites, doomed to never meet, in an eternal cycle */
+        dropdown.bind_property ("visible",
+                            dropdown_plural, "visible",
+                            GLib.BindingFlags.INVERT_BOOLEAN | GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.BIDIRECTIONAL);
+
+        dropdown.bind_property ("selected",
+                            dropdown_plural, "selected",
+                            GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.BIDIRECTIONAL);
     }
 
     private void on_spin_changed () {
         debug ("Spin changed!");
-        //  print ("SPIN");
-        //  dropdown = new Gtk.DropDown.from_strings (
-        //      RecurrencyType.choices ((int)interval_spin.value));
+        dropdown.visible = (interval_spin.value == 1);
     }
 
     private void on_selected_change () {
