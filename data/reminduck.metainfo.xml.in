@@ -21,6 +21,7 @@
           <li>Cleaner code and user interface</li>
           <li>Added repeat x every hours</li>
           <li>Added more control for when repeating quacks</li>
+          <li>Allow deleting from the editor</li>
           <li>Added vietnamese translations thanks to @hthienloc!</li>
           <li>Updated italian translations thanks to @albanobattistella!</li>
         </ul>

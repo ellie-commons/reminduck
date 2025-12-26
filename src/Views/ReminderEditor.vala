@@ -77,18 +77,15 @@ public class Reminduck.Views.ReminderEditor : Gtk.Box {
 
         fields_box.append (repeatbox);
 
-        var buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 9) {
+        var buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             halign = Gtk.Align.END,
             margin_top = 12
         };
 
-        delete_button = new Gtk.Button.from_icon_name ("user-trash-full-symbolic") {
-            height_request = 24
-        };
+        delete_button = new Gtk.Button.with_label (_("Delete"));
         delete_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         save_button = new Gtk.Button.with_label (_("Save reminder")) {
-            height_request = 24,
             sensitive = false
         };
         save_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);

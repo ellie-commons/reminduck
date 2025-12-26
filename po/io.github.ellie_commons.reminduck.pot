@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-26 20:56+0100\n"
+"POT-Creation-Date: 2025-12-26 21:16+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -120,15 +120,19 @@ msgstr ""
 msgid "Repeat"
 msgstr ""
 
-#: src/Views/ReminderEditor.vala:90
+#: src/Views/ReminderEditor.vala:85 src/Views/RemindersView.vala:119
+msgid "Delete"
+msgstr ""
+
+#: src/Views/ReminderEditor.vala:88
 msgid "Save reminder"
 msgstr ""
 
-#: src/Views/ReminderEditor.vala:173
+#: src/Views/ReminderEditor.vala:170
 msgid "Edit reminder"
 msgstr ""
 
-#: src/Views/ReminderEditor.vala:178
+#: src/Views/ReminderEditor.vala:175
 msgid "Create a new reminder"
 msgstr ""
 
@@ -151,10 +155,6 @@ msgstr ""
 
 #: src/Views/RemindersView.vala:112
 msgid "Edit"
-msgstr ""
-
-#: src/Views/RemindersView.vala:119
-msgid "Delete"
 msgstr ""
 
 #: src/Views/WelcomeView.vala:34
