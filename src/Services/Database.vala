@@ -8,8 +8,9 @@
 using Gee;
 
 public class Reminduck.Database {
+
     private string get_database_path () {
-        return Environment.get_user_data_dir () + "/.local/share/io.github.ellie_commons.reminduck/database.db";
+        return Environment.get_user_data_dir () + "/database.db";
     }
 
     private void open_database (out Sqlite.Database database) {
@@ -42,13 +43,33 @@ public class Reminduck.Database {
     * We can sneak updates in the database model here
     */
     public void verify_database (bool? plsbump = false) {
-        string path = Environment.get_user_data_dir () + "/.local/share/io.github.ellie_commons.reminduck";
-            File tmp = File.new_for_path (path);
-            if (tmp.query_file_type (0) != FileType.DIRECTORY) {
-                GLib.DirUtils.create_with_parents (path, 0775);
-            }
 
-            initialize_database ();
+        // Make sure data directory is here
+        File datadir = File.new_for_path (Environment.get_user_data_dir ());
+        if (datadir.query_file_type (0) != FileType.DIRECTORY) {
+            GLib.DirUtils.create_with_parents (Environment.get_user_data_dir (), 0775);
+        }
+
+        // If the old database is still there, move it
+        string old_path = Environment.get_user_data_dir () + "/.local/share/io.github.ellie_commons.reminduck/database.db";
+        File checkpath = File.new_for_path (old_path);
+        File new_path = File.new_for_path (get_database_path ());
+        
+        print ("Old database file: " + old_path + ": Exists: " + checkpath.query_exists (null).to_string ());
+        print ("\nNew database file: " + get_database_path () + ": Exists: " + new_path.query_exists (null).to_string ());
+
+        // The DB is in the wrong location so move it
+        if (checkpath.query_exists ()) {
+            try {
+                print ("\nMoving DB...\n");
+                checkpath.move (new_path, FileCopyFlags.OVERWRITE);
+
+            } catch (Error e) {
+                critical (e.message);
+            }
+        }
+
+        initialize_database ();
 
         //FIXME: up this because now hours are in position 1, bump it
         if (plsbump) {
