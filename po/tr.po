@@ -21,9 +21,8 @@ msgstr "QUACK!"
 # Reminduck kelimesi özel isim olarak kabul edilip çevrilmemiştir. Vak sesi de şimdilik çevrilmemiştir.
 #: src/MainWindow.vala:49
 #: src/MainWindow.vala:50
-#, fuzzy
 msgid "Reminduck"
-msgstr "Merhaba! Ben Reminduck"
+msgstr "Reminduck"
 
 #: src/MainWindow.vala:74
 msgid "Back"
@@ -50,26 +49,31 @@ msgstr "Tekrar Etme"
 msgid "Minute"
 msgid_plural "Minutes"
 msgstr[0] "Dakika"
+msgstr[1] "Dakika"
 
 #: src/Objects/Reminder.vala:29
 msgid "Hour"
 msgid_plural "Hours"
 msgstr[0] "Saat"
+msgstr[1] "Saat"
 
 #: src/Objects/Reminder.vala:30
 msgid "Day"
 msgid_plural "Days"
 msgstr[0] "Gün"
+msgstr[1] "Gün"
 
 #: src/Objects/Reminder.vala:31
 msgid "Week"
 msgid_plural "Weeks"
 msgstr[0] "Hafta"
+msgstr[1] "Hafta"
 
 #: src/Objects/Reminder.vala:32
 msgid "Month"
 msgid_plural "Months"
 msgstr[0] "Ay"
+msgstr[1] "Ay"
 
 #. minibox.append (quack_toggle);
 #: src/Widgets/QuackBox.vala:28

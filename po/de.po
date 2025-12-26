@@ -47,31 +47,31 @@ msgstr "Nicht wiederholen"
 msgid "Minute"
 msgid_plural "Minutes"
 msgstr[0] "Minute"
-msgstr[1] ""
+msgstr[1] "Minuten"
 
 #: src/Objects/Reminder.vala:29
 msgid "Hour"
 msgid_plural "Hours"
 msgstr[0] "Stunde"
-msgstr[1] ""
+msgstr[1] "Stunden"
 
 #: src/Objects/Reminder.vala:30
 msgid "Day"
 msgid_plural "Days"
 msgstr[0] "Tag"
-msgstr[1] ""
+msgstr[1] "Tagen"
 
 #: src/Objects/Reminder.vala:31
 msgid "Week"
 msgid_plural "Weeks"
 msgstr[0] "Woche"
-msgstr[1] ""
+msgstr[1] "Wochen"
 
 #: src/Objects/Reminder.vala:32
 msgid "Month"
 msgid_plural "Months"
 msgstr[0] "Monat"
-msgstr[1] ""
+msgstr[1] "Monaten"
 
 #. minibox.append (quack_toggle);
 #: src/Widgets/QuackBox.vala:28

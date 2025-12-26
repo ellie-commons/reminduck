@@ -19,9 +19,8 @@ msgstr "QUACK!"
 
 #: src/MainWindow.vala:49
 #: src/MainWindow.vala:50
-#, fuzzy
 msgid "Reminduck"
-msgstr "QUAC! Eu sou o Reminduck"
+msgstr "Reminduck"
 
 #: src/MainWindow.vala:74
 msgid "Back"
@@ -48,31 +47,31 @@ msgstr "Não repetir"
 msgid "Minute"
 msgid_plural "Minutes"
 msgstr[0] "Minuto"
-msgstr[1] ""
+msgstr[1] "Minutos"
 
 #: src/Objects/Reminder.vala:29
 msgid "Hour"
 msgid_plural "Hours"
 msgstr[0] "Hora"
-msgstr[1] ""
+msgstr[1] "Horas"
 
 #: src/Objects/Reminder.vala:30
 msgid "Day"
 msgid_plural "Days"
 msgstr[0] "Dia"
-msgstr[1] ""
+msgstr[1] "Dias"
 
 #: src/Objects/Reminder.vala:31
 msgid "Week"
 msgid_plural "Weeks"
 msgstr[0] "Semana"
-msgstr[1] ""
+msgstr[1] "Semanas"
 
 #: src/Objects/Reminder.vala:32
 msgid "Month"
 msgid_plural "Months"
 msgstr[0] "Mês"
-msgstr[1] ""
+msgstr[1] "Mês"
 
 #. minibox.append (quack_toggle);
 #: src/Widgets/QuackBox.vala:28
