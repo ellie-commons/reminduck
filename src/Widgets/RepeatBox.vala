@@ -51,7 +51,7 @@ public class Reminduck.Repeatbox : Gtk.Box {
         };
         every_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
 
-        dropdown = new Gtk.DropDown.from_strings (RecurrencyType.choices ());
+        dropdown = new Gtk.DropDown.from_strings (RecurrencyType.choices (1));
         dropdown.set_selected (RecurrencyType.EVERY_DAY); // Enums are fucking magic
 
         // 60 minutes * 24  hrs = Maximum 1440 minutes. Next up may as well use days
@@ -83,6 +83,14 @@ public class Reminduck.Repeatbox : Gtk.Box {
 
         on_selected_change ();
         dropdown.notify["selected"].connect (on_selected_change);
+        interval_spin.notify["value"].connect (on_spin_changed);
+    }
+
+    private void on_spin_changed () {
+        debug ("Spin changed!");
+        //  print ("SPIN");
+        //  dropdown = new Gtk.DropDown.from_strings (
+        //      RecurrencyType.choices ((int)interval_spin.value));
     }
 
     private void on_selected_change () {
