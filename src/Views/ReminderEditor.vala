@@ -18,7 +18,7 @@ public class Reminduck.Views.ReminderEditor : Gtk.Box {
     Gtk.Entry reminder_input;
     Granite.DatePicker date_picker;
     Granite.TimePicker time_picker;
-    Reminduck.RepeatBox RepeatBox;
+    Reminduck.RepeatBox repeatbox;
 
     Gtk.Button delete_button;
     Gtk.Button save_button;
@@ -73,9 +73,9 @@ public class Reminduck.Views.ReminderEditor : Gtk.Box {
         label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
 
         fields_box.append (label);
-        RepeatBox = new RepeatBox ();
+        repeatbox = new Reminduck.RepeatBox ();
 
-        fields_box.append (RepeatBox);
+        fields_box.append (repeatbox);
 
         var buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 9) {
             halign = Gtk.Align.END,
@@ -164,10 +164,10 @@ public class Reminduck.Views.ReminderEditor : Gtk.Box {
             date_picker.date = reminder.time;
             time_picker.time = reminder.time;
 
-            RepeatBox.recurrency_type = reminder.recurrency_type;
+            repeatbox.recurrency_type = reminder.recurrency_type;
 
             if (reminder.recurrency_type != RecurrencyType.NONE) {
-                RepeatBox.interval = reminder.recurrency_interval;
+                repeatbox.interval = reminder.recurrency_interval;
             }
 
             title.label = _("Edit reminder");
@@ -191,15 +191,15 @@ public class Reminduck.Views.ReminderEditor : Gtk.Box {
         reminder_input.text = "";
         date_picker.date = new GLib.DateTime.now_local ().add_minutes (15);
         time_picker.time = this.date_picker.date;
-        RepeatBox.reset ();
+        repeatbox.reset ();
     }
 
     private void on_save () {
         if (validate ()) {
             reminder.description = reminder_input.text;
             reminder.time = mount_datetime (date_picker.date, time_picker.time);
-            reminder.recurrency_type = RepeatBox.recurrency_type;
-            reminder.recurrency_interval = (int)RepeatBox.interval;
+            reminder.recurrency_type = repeatbox.recurrency_type;
+            reminder.recurrency_interval = (int)repeatbox.interval;
 
             var result = ReminduckApp.database.upsert_reminder (reminder);
 
