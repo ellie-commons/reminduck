@@ -1,9 +1,9 @@
-id: io.github.ellie_commons.reminduck
+app-id: io.github.ellie_commons.reminduck
 # elementary SDK is not available on Flathub, so use the elementary BaseApp instead
 base: io.elementary.BaseApp
-base-version: 'circe-24.08'
+base-version: 'circe-25.08'
 runtime: org.gnome.Platform
-runtime-version: '48'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: io.github.ellie_commons.reminduck
 
@@ -33,8 +33,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/ellie-commons/reminduck.git
-        tag: 2.2.0
-        commit: f50318f3a56f7dfe80421569d6b1358e07f2c314
+        tag: 2.3.0
+        commit: 58f564ae70739b280d170ebe5c1c4e69ec844785
         x-checker-data:
           type: git
           tag-pattern: '^([\d.]+)$'
