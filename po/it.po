@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-07-19 19:25+0200\n"
-"POT-Creation-Date: 2025-12-26 19:10+0100\n"
+"POT-Creation-Date: 2025-12-26 20:10+0100\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
@@ -48,31 +48,31 @@ msgstr "Non ripetere"
 msgid "Minute"
 msgid_plural "Minutes"
 msgstr[0] "Minuto"
-msgstr[1] "Minutos"
+msgstr[1] "Minuti"
 
 #: src/Objects/Reminder.vala:30
 msgid "Hour"
 msgid_plural "Hours"
 msgstr[0] "Ora"
-msgstr[1] "Oras"
+msgstr[1] "Ore"
 
 #: src/Objects/Reminder.vala:31
 msgid "Day"
 msgid_plural "Days"
 msgstr[0] "Giorno"
-msgstr[1] "Giornos"
+msgstr[1] "Giorni"
 
 #: src/Objects/Reminder.vala:32
 msgid "Week"
 msgid_plural "Weeks"
 msgstr[0] "Settimana"
-msgstr[1] "Settimanas"
+msgstr[1] "Settimane"
 
 #: src/Objects/Reminder.vala:33
 msgid "Month"
 msgid_plural "Months"
 msgstr[0] "Mese"
-msgstr[1] "Meses"
+msgstr[1] "Mesi"
 
 #. minibox.append (quack_toggle);
 #: src/Widgets/QuackBox.vala:29
@@ -92,7 +92,7 @@ msgstr "Fai clic per visualizzare l'anteprima del suono del promemoria"
 
 #: src/Widgets/QuackBox.vala:56
 msgid "Choose your quack"
-msgstr "Scegliete il vostro ciarlatano"
+msgstr "Scegliete il vostro quack"
 
 #: src/Widgets/QuackBox.vala:58
 msgid "Which will be your champion?"
@@ -104,9 +104,8 @@ msgid "Notifications"
 msgstr "Notifiche"
 
 #: src/Widgets/QuackBox.vala:86
-#, fuzzy
 msgid "You can disable system notification sounds in the system settings"
-msgstr "È possibile disattivare il suono 'DING' nelle impostazioni di sistema"
+msgstr "È possibile disattivare i suoni di notifica del sistema nelle impostazioni di sistema"
 
 #. /TRANSLATORS: If your language doesnt match "Every XX Minutes/Month/etc" pattern please tell me!!!!!! So i can adapt it for your lang
 #: src/Widgets/RepeatBox.vala:54
@@ -218,9 +217,8 @@ msgid "Autostart in the background"
 msgstr "Avvia automaticamente in background"
 
 #: src/Views/SettingsView.vala:171
-#, fuzzy
 msgid "Request the system to start the application in the background when you log in"
-msgstr "Puoi richiedere al sistema di avviare automaticamente questa applicazione"
+msgstr "Richiedi al sistema di avviare l'applicazione in background quando accedi"
 
 #: src/Views/SettingsView.vala:194
 msgid "Support us!"
