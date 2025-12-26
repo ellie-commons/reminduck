@@ -113,32 +113,32 @@ public class Reminduck.Repeatbox : Gtk.Box {
         switch (selected_option) {
             case RecurrencyType.EVERY_X_MINUTES:
                 interval_spin.adjustment.step_increment = 5;
-                interval_spin.adjustment.upper = 1440;
+                interval_spin.adjustment.upper = 1440;                      // One day
                 interval_spin.value_changed.connect (set_minutes_watch);
                 set_minutes_watch ();
                 return;
 
             case RecurrencyType.EVERY_X_HOURS:
                 interval_spin.adjustment.step_increment = 1;
-                interval_spin.adjustment.upper = 24;
+                interval_spin.adjustment.upper = 72;                        // Three days
                 interval_spin.value_changed.disconnect (set_minutes_watch);
                 return;
 
             case RecurrencyType.EVERY_DAY:
                 interval_spin.adjustment.step_increment = 1;
-                interval_spin.adjustment.upper = 30;
+                interval_spin.adjustment.upper = 90;                        // Three months
                 interval_spin.value_changed.disconnect (set_minutes_watch);
                 return;
 
             case RecurrencyType.EVERY_WEEK:
                 interval_spin.adjustment.step_increment = 1;
-                interval_spin.adjustment.upper = 4;
+                interval_spin.adjustment.upper = 48;                            // One year
                 interval_spin.value_changed.disconnect (set_minutes_watch);
                 return;
 
             case RecurrencyType.EVERY_MONTH:
                 interval_spin.adjustment.step_increment = 1;
-                interval_spin.adjustment.upper = 12;
+                interval_spin.adjustment.upper = 12;                            // One year
                 interval_spin.value_changed.disconnect (set_minutes_watch);
                 return;
         }
