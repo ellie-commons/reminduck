@@ -1,27 +1,16 @@
-# Russian translation for Reminduck.
-# Copyright (C) 2020 Andrey Sudarikov
-# This file is distributed under the same license as the io.github.ellie_commons.reminduck package.
-# Andrey Sudarikov <andrewsudarikov@gmail.com>, 2020.
-#
-# SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
-# SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
-# SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
-# SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
-# SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ru\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Last-Translator: Вячеслав <ma12@rambler.ru>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2025-07-15 15:37+0300\n"
+"POT-Creation-Date: 2025-12-26 17:56+0100\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-20 22:57+0100\n"
-"PO-Revision-Date: 2025-07-15 15:37+0300\n"
-"Last-Translator: Вячеслав <ma12@rambler.ru>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
-"Language: ru\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.5\n"
 
 #. If reminder date < current date
@@ -29,9 +18,10 @@ msgstr ""
 msgid "QUACK!"
 msgstr "КРЯ!"
 
-#: src/MainWindow.vala:49 src/MainWindow.vala:50
+#: src/MainWindow.vala:49
+#: src/MainWindow.vala:50
 msgid "Reminduck"
-msgstr ""
+msgstr "Reminduck"
 
 #: src/MainWindow.vala:74
 msgid "Back"
@@ -41,77 +31,87 @@ msgstr "Назад"
 msgid "Click to return to main view"
 msgstr "Нажмите, чтобы вернуться к основному виду"
 
-#: src/Objects/Quack.vala:41 src/Objects/Quack.vala:43
+#: src/Objects/Quack.vala:41
+#: src/Objects/Quack.vala:43
 msgid "Default Duck"
-msgstr ""
+msgstr "Утка по умолчанию"
 
 #: src/Objects/Quack.vala:42
 msgid "Plastic Duck"
-msgstr ""
+msgstr "Пластиковая утка"
 
 #: src/Objects/Reminder.vala:27
 msgid "Don't Repeat"
 msgstr "Не повторять"
 
-#: src/Objects/Reminder.vala:31
-msgid "Minutes"
-msgstr ""
+#: src/Objects/Reminder.vala:28
+msgid "Minute"
+msgid_plural "Minutes"
+msgstr[0] "Минута"
+msgstr[1] ""
+msgstr[2] ""
 
-#: src/Objects/Reminder.vala:33
-#, c-format
-msgid "Every minute"
-msgid_plural "Every %d minutes"
-msgstr[0] "Каждая %d минута"
-msgstr[1] "Каждые %d минуты"
-msgstr[2] "Каждая %d минута"
-
-#: src/Objects/Reminder.vala:36
+#: src/Objects/Reminder.vala:29
 msgid "Hour"
-msgstr ""
+msgid_plural "Hours"
+msgstr[0] "Час"
+msgstr[1] ""
+msgstr[2] ""
 
-#: src/Objects/Reminder.vala:37
+#: src/Objects/Reminder.vala:30
 msgid "Day"
-msgstr ""
+msgid_plural "Days"
+msgstr[0] "День"
+msgstr[1] ""
+msgstr[2] ""
 
-#: src/Objects/Reminder.vala:38
+#: src/Objects/Reminder.vala:31
 msgid "Week"
-msgstr ""
+msgid_plural "Weeks"
+msgstr[0] "Неделя"
+msgstr[1] ""
+msgstr[2] ""
 
-#: src/Objects/Reminder.vala:39
+#: src/Objects/Reminder.vala:32
 msgid "Month"
-msgstr ""
+msgid_plural "Months"
+msgstr[0] "Месяц"
+msgstr[1] ""
+msgstr[2] ""
 
 #. minibox.append (quack_toggle);
-#: src/Widgets/QuackBox.vala:28 src/Views/SettingsView.vala:63
+#: src/Widgets/QuackBox.vala:28
+#: src/Views/SettingsView.vala:63
 msgid "Do a quack sound"
 msgstr "Издавать крякающий звук"
 
-#: src/Widgets/QuackBox.vala:30 src/Views/SettingsView.vala:65
+#: src/Widgets/QuackBox.vala:30
+#: src/Views/SettingsView.vala:65
 msgid "If enabled, the duck will quack when reminding you"
 msgstr "Если включено, утка будет крякать, напоминая вам"
 
-#: src/Widgets/QuackBox.vala:44 src/Views/SettingsView.vala:48
+#: src/Widgets/QuackBox.vala:44
+#: src/Views/SettingsView.vala:48
 msgid "Click to preview reminder sound"
 msgstr "Нажмите, чтобы прослушать кряканье"
 
 #: src/Widgets/QuackBox.vala:55
 msgid "Choose your quack"
-msgstr ""
+msgstr "Выбирайте шарлатана"
 
 #: src/Widgets/QuackBox.vala:57
 msgid "Which will be your champion?"
-msgstr ""
+msgstr "Кто станет вашим чемпионом?"
 
-#: src/Widgets/QuackBox.vala:69 src/Views/SettingsView.vala:76
+#: src/Widgets/QuackBox.vala:69
+#: src/Views/SettingsView.vala:76
 msgid "Notifications"
 msgstr "Уведомления"
 
 #: src/Widgets/QuackBox.vala:85
 #, fuzzy
 msgid "You can disable system notification sounds in the system settings"
-msgstr ""
-"Но можно изменить громкость или отключить звук уведомлений в системных "
-"настройках"
+msgstr "Но можно изменить громкость или отключить звук уведомлений в системных настройках"
 
 #: src/Views/ReminderEditor.vala:33
 msgid "Create a new reminder"
@@ -178,7 +178,8 @@ msgstr "Смотреть напоминания"
 msgid "See reminders you've created"
 msgstr "Просмотрите созданные вами напоминания"
 
-#: src/Views/WelcomeView.vala:55 src/Views/SettingsView.vala:32
+#: src/Views/WelcomeView.vala:55
+#: src/Views/SettingsView.vala:32
 msgid "Settings"
 msgstr "Настройки"
 
@@ -192,9 +193,7 @@ msgstr "Отправлен запрос в систему"
 
 #: src/Views/SettingsView.vala:92
 msgid "You can disable the 'DING' sound in the system settings"
-msgstr ""
-"Но можно изменить громкость или отключить звук уведомлений в системных "
-"настройках"
+msgstr "Но можно изменить громкость или отключить звук уведомлений в системных настройках"
 
 #: src/Views/SettingsView.vala:123
 msgid "Persistent notifications"
@@ -202,19 +201,17 @@ msgstr "Постоянные уведомления"
 
 #: src/Views/SettingsView.vala:125
 msgid "If enabled, the duck will stay until (gently) dismissed"
-msgstr ""
-"Если включено, утка-напоминалка будет оставаться на экране, пока не нажмёте "
-"крестик"
+msgstr "Если включено, утка-напоминалка будет оставаться на экране, пока не нажмёте крестик"
 
 #. /TRANSLATORS: Button to autostart the application
 #: src/Views/SettingsView.vala:141
 msgid "Enable"
-msgstr ""
+msgstr "Включить"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
 #: src/Views/SettingsView.vala:153
 msgid "Disable"
-msgstr ""
+msgstr "Отключить"
 
 #: src/Views/SettingsView.vala:169
 #, fuzzy
@@ -223,8 +220,7 @@ msgstr "Автозапуск Remindduck в фоновом режиме для о
 
 #: src/Views/SettingsView.vala:171
 #, fuzzy
-msgid ""
-"Request the system to start the application in the background when you log in"
+msgid "Request the system to start the application in the background when you log in"
 msgstr "Вы можете запросить у системы автозапуск этого приложения"
 
 #: src/Views/SettingsView.vala:206
@@ -246,6 +242,13 @@ msgstr "Автозапуск Remindduck в фоновом режиме для о
 #: src/Services/Utils.vala:34
 msgid "Remove Reminduck from autostart"
 msgstr "Удалить Remindduck из автозапуска"
+
+#, c-format
+#~ msgid "Every minute"
+#~ msgid_plural "Every %d minutes"
+#~ msgstr[0] "Каждая %d минута"
+#~ msgstr[1] "Каждые %d минуты"
+#~ msgstr[2] "Каждая %d минута"
 
 #~ msgid "Every X minutes"
 #~ msgstr "Через Х минут"

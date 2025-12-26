@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-20 22:57+0100\n"
+"POT-Creation-Date: 2025-12-26 17:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,32 +47,35 @@ msgstr ""
 msgid "Don't Repeat"
 msgstr ""
 
-#: src/Objects/Reminder.vala:31
-msgid "Minutes"
-msgstr ""
-
-#: src/Objects/Reminder.vala:33
-#, c-format
-msgid "Every minute"
-msgid_plural "Every %d minutes"
+#: src/Objects/Reminder.vala:28
+msgid "Minute"
+msgid_plural "Minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Objects/Reminder.vala:36
+#: src/Objects/Reminder.vala:29
 msgid "Hour"
-msgstr ""
+msgid_plural "Hours"
+msgstr[0] ""
+msgstr[1] ""
 
-#: src/Objects/Reminder.vala:37
+#: src/Objects/Reminder.vala:30
 msgid "Day"
-msgstr ""
+msgid_plural "Days"
+msgstr[0] ""
+msgstr[1] ""
 
-#: src/Objects/Reminder.vala:38
+#: src/Objects/Reminder.vala:31
 msgid "Week"
-msgstr ""
+msgid_plural "Weeks"
+msgstr[0] ""
+msgstr[1] ""
 
-#: src/Objects/Reminder.vala:39
+#: src/Objects/Reminder.vala:32
 msgid "Month"
-msgstr ""
+msgid_plural "Months"
+msgstr[0] ""
+msgstr[1] ""
 
 #. minibox.append (quack_toggle);
 #: src/Widgets/QuackBox.vala:28 src/Views/SettingsView.vala:63

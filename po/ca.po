@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-20 22:57+0100\n"
+"POT-Creation-Date: 2025-12-26 17:56+0100\n"
 "PO-Revision-Date: 2021-11-17 17:14+0100\n"
 "Last-Translator: ONDO ALVELLË\n"
 "Language-Team: none\n"
@@ -48,32 +48,35 @@ msgstr ""
 msgid "Don't Repeat"
 msgstr "No el repeteixis"
 
-#: src/Objects/Reminder.vala:31
-msgid "Minutes"
-msgstr ""
+#: src/Objects/Reminder.vala:28
+msgid "Minute"
+msgid_plural "Minutes"
+msgstr[0] ""
+msgstr[1] ""
 
-#: src/Objects/Reminder.vala:33
-#, c-format
-msgid "Every minute"
-msgid_plural "Every %d minutes"
-msgstr[0] "Cada minut"
-msgstr[1] "Cada %d minuts"
-
-#: src/Objects/Reminder.vala:36
+#: src/Objects/Reminder.vala:29
 msgid "Hour"
-msgstr ""
+msgid_plural "Hours"
+msgstr[0] ""
+msgstr[1] ""
 
-#: src/Objects/Reminder.vala:37
+#: src/Objects/Reminder.vala:30
 msgid "Day"
-msgstr ""
+msgid_plural "Days"
+msgstr[0] ""
+msgstr[1] ""
 
-#: src/Objects/Reminder.vala:38
+#: src/Objects/Reminder.vala:31
 msgid "Week"
-msgstr ""
+msgid_plural "Weeks"
+msgstr[0] ""
+msgstr[1] ""
 
-#: src/Objects/Reminder.vala:39
+#: src/Objects/Reminder.vala:32
 msgid "Month"
-msgstr ""
+msgid_plural "Months"
+msgstr[0] ""
+msgstr[1] ""
 
 #. minibox.append (quack_toggle);
 #: src/Widgets/QuackBox.vala:28 src/Views/SettingsView.vala:63
@@ -231,6 +234,12 @@ msgstr ""
 #: src/Services/Utils.vala:34
 msgid "Remove Reminduck from autostart"
 msgstr ""
+
+#, c-format
+#~ msgid "Every minute"
+#~ msgid_plural "Every %d minutes"
+#~ msgstr[0] "Cada minut"
+#~ msgstr[1] "Cada %d minuts"
 
 #~ msgid "Every X minutes"
 #~ msgstr "Cada X minuts"
