@@ -5,9 +5,12 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
+ /**
+ * An object playing a sound upon creation
+ */
 public class Reminduck.Quack : Object {
-    public Quack () {
-        var m = Gtk.MediaFile.for_resource ("/io/github/ellie_commons/reminduck/quack.ogg");
+    public Quack (QuackType? type = QuackType.DEFAULT) {
+        var m = Gtk.MediaFile.for_resource (type.to_resource_path ());
 
         m.notify["ended"].connect (() => {
             print ("stream ended %s\n", m.ended.to_string ());
@@ -21,6 +24,36 @@ public class Reminduck.Quack : Object {
         });
 
         m.play ();
+    }
+}
 
+/**
+ * Allows specifying which sound to play (NOT IMPLEMENTED YET)
+ */
+public enum Reminduck.QuackType {
+    DEFAULT,
+    PLASTIC;
+
+    public string to_resource_path () {
+        switch (this) {
+            case DEFAULT: return "/io/github/ellie_commons/reminduck/default_quack.ogg";
+            case PLASTIC: return "/io/github/ellie_commons/reminduck/plastic_quack.ogg";
+            default: return "/io/github/ellie_commons/reminduck/quack.ogg";
+        }
+    }
+
+    public string to_friendly_name () {
+        switch (this) {
+            case DEFAULT: return _("Default Duck");
+            case PLASTIC: return _("Plastic Duck");
+            default: return _("Default Duck");
+        }
+    }
+
+    public static string[] choices () {
+        return {
+            DEFAULT.to_friendly_name (),
+            PLASTIC.to_friendly_name ()
+        };
     }
 }

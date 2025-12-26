@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 11:59+0200\n"
+"POT-Creation-Date: 2025-12-26 19:10+0100\n"
 "PO-Revision-Date: 2021-11-17 17:14+0100\n"
 "Last-Translator: ONDO ALVELLË\n"
 "Language-Team: none\n"
@@ -18,178 +18,217 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/MainWindow.vala:50 src/MainWindow.vala:51
-#, fuzzy
-msgid "Reminduck"
-msgstr "NYEC! Soc Reminduck"
+#. If reminder date < current date
+#: src/Application.vala:219
+msgid "QUACK!"
+msgstr ""
 
-#: src/MainWindow.vala:75
+#: src/MainWindow.vala:45 src/MainWindow.vala:46
+msgid "Reminduck"
+msgstr "Reminduck"
+
+#: src/MainWindow.vala:70
 msgid "Back"
 msgstr "Enrere"
 
-#: src/MainWindow.vala:77
+#: src/MainWindow.vala:72
 msgid "Click to return to main view"
 msgstr ""
 
-#: src/Objects/Reminder.vala:27
+#: src/Objects/Quack.vala:47 src/Objects/Quack.vala:49
+msgid "Default Duck"
+msgstr ""
+
+#: src/Objects/Quack.vala:48
+msgid "Plastic Duck"
+msgstr ""
+
+#. /TRANSLATORS: [0] is singular form, [1] is plural form. These are displayed as menu items
+#: src/Objects/Reminder.vala:28
 msgid "Don't Repeat"
 msgstr "No el repeteixis"
 
+#: src/Objects/Reminder.vala:29
+msgid "Minute"
+msgid_plural "Minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Objects/Reminder.vala:30
+msgid "Hour"
+msgid_plural "Hours"
+msgstr[0] ""
+msgstr[1] ""
+
 #: src/Objects/Reminder.vala:31
-msgid "Every X minutes"
-msgstr "Cada X minuts"
+msgid "Day"
+msgid_plural "Days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Objects/Reminder.vala:32
+msgid "Week"
+msgid_plural "Weeks"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/Objects/Reminder.vala:33
-#, c-format
-msgid "Every minute"
-msgid_plural "Every %d minutes"
-msgstr[0] "Cada minut"
-msgstr[1] "Cada %d minuts"
+msgid "Month"
+msgid_plural "Months"
+msgstr[0] ""
+msgstr[1] ""
 
-#: src/Objects/Reminder.vala:37
-msgid "Every day"
-msgstr "Cada dia"
+#. minibox.append (quack_toggle);
+#: src/Widgets/QuackBox.vala:29 src/Views/SettingsView.vala:63
+msgid "Do a quack sound"
+msgstr ""
 
-#: src/Objects/Reminder.vala:40
-msgid "Every week"
-msgstr "Cada setmana"
+#: src/Widgets/QuackBox.vala:31 src/Views/SettingsView.vala:65
+msgid "If enabled, the duck will quack when reminding you"
+msgstr ""
 
-#: src/Objects/Reminder.vala:43
-msgid "Every month"
-msgstr "Cada mes"
+#: src/Widgets/QuackBox.vala:45 src/Views/SettingsView.vala:48
+msgid "Click to preview reminder sound"
+msgstr ""
 
-#: src/Views/ReminderEditor.vala:44
+#: src/Widgets/QuackBox.vala:56
+msgid "Choose your quack"
+msgstr ""
+
+#: src/Widgets/QuackBox.vala:58
+msgid "Which will be your champion?"
+msgstr ""
+
+#: src/Widgets/QuackBox.vala:70 src/Views/SettingsView.vala:76
+msgid "Notifications"
+msgstr ""
+
+#: src/Widgets/QuackBox.vala:86
+msgid "You can disable system notification sounds in the system settings"
+msgstr ""
+
+#. /TRANSLATORS: If your language doesnt match "Every XX Minutes/Month/etc" pattern please tell me!!!!!! So i can adapt it for your lang
+#: src/Widgets/RepeatBox.vala:54
+msgid "Every"
+msgstr "Cada"
+
+#: src/Views/ReminderEditor.vala:35
 msgid "Create a new reminder"
 msgstr "Crea un recordatori nou"
 
-#: src/Views/ReminderEditor.vala:51
+#: src/Views/ReminderEditor.vala:42
 msgid "What do you want to be reminded of?"
 msgstr "Què vols que et recordi?"
 
-#: src/Views/ReminderEditor.vala:80
+#: src/Views/ReminderEditor.vala:66
 msgid "Repeat"
 msgstr "Repeteix"
 
-#: src/Views/ReminderEditor.vala:85
+#: src/Views/ReminderEditor.vala:77
 msgid "Save reminder"
 msgstr "Desa el recordatori"
 
-#: src/Views/RemindersView.vala:33
+#: src/Views/RemindersView.vala:29
 msgid "Your reminders"
 msgstr "Els teus recordatoris"
 
-#: src/Views/RemindersView.vala:43
+#: src/Views/RemindersView.vala:39
 msgid "Create another"
 msgstr "Crea'n un altre"
 
-#: src/Views/RemindersView.vala:88
+#: src/Views/RemindersView.vala:84
 #, c-format
 msgid "Reminded: %s"
 msgstr "Recordat: %s"
 
-#: src/Views/RemindersView.vala:104
+#: src/Views/RemindersView.vala:100
 msgid "Today"
 msgstr "Avui"
 
-#: src/Views/RemindersView.vala:116
+#: src/Views/RemindersView.vala:112
 msgid "Edit"
 msgstr "Edita"
 
-#: src/Views/RemindersView.vala:123
+#: src/Views/RemindersView.vala:119
 msgid "Delete"
 msgstr "Esborra"
 
-#: src/Views/WelcomeView.vala:35
+#: src/Views/WelcomeView.vala:34
 msgid "QUACK! I'm Reminduck"
 msgstr "NYEC! Soc Reminduck"
 
-#: src/Views/WelcomeView.vala:36
+#: src/Views/WelcomeView.vala:35
 msgid "The duck that reminds you"
 msgstr "L'ànec que et recorda coses"
 
-#: src/Views/WelcomeView.vala:43
+#: src/Views/WelcomeView.vala:42
 msgid "New Reminder"
 msgstr "Recordatori nou"
 
-#: src/Views/WelcomeView.vala:44
+#: src/Views/WelcomeView.vala:43
 msgid "Create a new reminder for a set date and time"
 msgstr "Crea un recordatori nou per una data i hora concreta"
 
-#: src/Views/WelcomeView.vala:49
+#: src/Views/WelcomeView.vala:48
 msgid "View Reminders"
 msgstr "Mostra els recordatoris"
 
-#: src/Views/WelcomeView.vala:50
+#: src/Views/WelcomeView.vala:49
 msgid "See reminders you've created"
 msgstr "Mostra els recordatoris que heu creat"
 
-#: src/Views/WelcomeView.vala:55 src/Views/SettingsView.vala:34
+#: src/Views/WelcomeView.vala:54 src/Views/SettingsView.vala:32
 msgid "Settings"
 msgstr ""
 
-#: src/Views/WelcomeView.vala:56
+#: src/Views/WelcomeView.vala:55
 msgid "Tweak a few things"
 msgstr ""
 
-#: src/Views/SettingsView.vala:30
+#: src/Views/SettingsView.vala:28
 msgid "Request to system sent"
 msgstr ""
 
-#: src/Views/SettingsView.vala:50
-msgid "Click to preview reminder sound"
-msgstr ""
-
-#: src/Views/SettingsView.vala:65
-msgid "Do a quack sound"
-msgstr ""
-
-#: src/Views/SettingsView.vala:67
-msgid "If enabled, the duck will quack when reminding you"
-msgstr ""
-
-#: src/Views/SettingsView.vala:78
-msgid "Notifications"
-msgstr ""
-
-#: src/Views/SettingsView.vala:94
+#: src/Views/SettingsView.vala:92
 msgid "You can disable the 'DING' sound in the system settings"
 msgstr ""
 
-#: src/Views/SettingsView.vala:129
+#: src/Views/SettingsView.vala:123
 msgid "Persistent notifications"
 msgstr ""
 
-#: src/Views/SettingsView.vala:131
+#: src/Views/SettingsView.vala:125
 msgid "If enabled, the duck will stay until (gently) dismissed"
 msgstr ""
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/SettingsView.vala:147
-msgid "Set autostart"
+#: src/Views/SettingsView.vala:141
+msgid "Enable"
 msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/SettingsView.vala:159
-msgid "Remove autostart"
+#: src/Views/SettingsView.vala:153
+msgid "Disable"
 msgstr ""
 
-#: src/Views/SettingsView.vala:175
-msgid "Allow to start at login"
+#: src/Views/SettingsView.vala:169
+msgid "Autostart in the background"
 msgstr ""
 
-#: src/Views/SettingsView.vala:177
-msgid "You can request the system to start this application automatically"
+#: src/Views/SettingsView.vala:171
+msgid ""
+"Request the system to start the application in the background when you log in"
 msgstr ""
 
-#: src/Views/SettingsView.vala:213
+#: src/Views/SettingsView.vala:194
 msgid "Support us!"
 msgstr ""
 
-#: src/Views/SettingsView.vala:221
+#: src/Views/SettingsView.vala:202
 msgid "Reset to Default"
 msgstr ""
 
-#: src/Views/SettingsView.vala:222
+#: src/Views/SettingsView.vala:203
 msgid "Reset all settings to defaults"
 msgstr ""
 
@@ -200,6 +239,21 @@ msgstr ""
 #: src/Services/Utils.vala:34
 msgid "Remove Reminduck from autostart"
 msgstr ""
+
+#, c-format
+#~ msgid "Every minute"
+#~ msgid_plural "Every %d minutes"
+#~ msgstr[0] "Cada minut"
+#~ msgstr[1] "Cada %d minuts"
+
+#~ msgid "Every X minutes"
+#~ msgstr "Cada X minuts"
+
+#~ msgid "Every week"
+#~ msgstr "Cada setmana"
+
+#~ msgid "Every month"
+#~ msgstr "Cada mes"
 
 #~ msgid "Light mode"
 #~ msgstr "Mode clar"

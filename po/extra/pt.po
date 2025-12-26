@@ -1,22 +1,24 @@
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: pt\n"
+"Language-Team: none\n"
+"Last-Translator: Automatically generated\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2019-11-04 14:49+0100\n"
+"POT-Creation-Date: 2025-12-20 22:57+0100\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-12 11:59+0200\n"
-"PO-Revision-Date: 2019-11-04 14:49+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: pt\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/reminduck.desktop.in:3 data/reminduck.metainfo.xml.in:7
+#: data/reminduck.desktop.in:3
+#: data/reminduck.metainfo.xml.in:7
 msgid "Reminduck"
 msgstr "Reminduck"
 
-#: data/reminduck.desktop.in:4 data/reminduck.metainfo.xml.in:165
+#: data/reminduck.desktop.in:4
+#: data/reminduck.metainfo.xml.in:108
 msgid "Reminders"
 msgstr "Lembretes"
 
@@ -24,12 +26,12 @@ msgstr "Lembretes"
 msgid "Don't forget about your stuff in an adorably annoying way"
 msgstr "Lembre-se de suas coisas de uma maneira adoravelmente irritante"
 
-#: data/reminduck.desktop.in:14
+#: data/reminduck.desktop.in:15
 #, fuzzy
 msgid "Reminduck;Personal;Assistant;Reminders;Remember;Duck;Quack;Cute;"
 msgstr "Reminduck;Personal;Assistant;Reminders;"
 
-#: data/reminduck.desktop.in:18
+#: data/reminduck.desktop.in:19
 #, fuzzy
 msgid "New reminder"
 msgstr "Lembretes"
@@ -39,259 +41,227 @@ msgid "Remember your stuff in an adorably annoying way"
 msgstr "Lembre-se de suas coisas de uma maneira adoravelmente irritante"
 
 #: data/reminduck.metainfo.xml.in:10
-msgid ""
-"A simple reminder app made to be quick and easy - Reminduck focuses on "
-"simple or recurrent reminders with set time and date and nothing else."
-msgstr ""
-"Uma aplicação de lembretes simples feita para ser rápida e fácil - o "
-"Reminduck concentra-se em lembretes simples ou recorrentes com hora e data "
-"definidas e nada mais."
+msgid "A simple reminder app made to be quick and easy - Reminduck focuses on simple or recurrent reminders with set time and date and nothing else."
+msgstr "Uma aplicação de lembretes simples feita para ser rápida e fácil - o Reminduck concentra-se em lembretes simples ou recorrentes com hora e data definidas e nada mais."
 
 #: data/reminduck.metainfo.xml.in:12
-msgid ""
-"It's perfect if all you want are simple or daily/weekly/monthly reminders. "
-"Anything more than that is not achievable by Reminduck right now - but you "
-"can help! Open an issue or a pull request if you have any ideas or requests."
-msgstr ""
-"É perfeito se tudo o que pretende são lembretes simples ou diários/semanais/"
-"mensais. Mais do que isso não é possível para o Reminduck neste momento - "
-"mas você pode ajudar! Abra uma issue ou um pull request se tiver alguma "
-"ideia ou pedido."
+msgid "It's perfect if all you want are simple or daily/weekly/monthly reminders. Anything more than that is not achievable by Reminduck right now - but you can help! Open an issue or a pull request if you have any ideas or requests."
+msgstr "É perfeito se tudo o que pretende são lembretes simples ou diários/semanais/mensais. Mais do que isso não é possível para o Reminduck neste momento - mas você pode ajudar! Abra uma issue ou um pull request se tiver alguma ideia ou pedido."
 
 #: data/reminduck.metainfo.xml.in:14
 msgid "And it quacks."
 msgstr "E grasna."
 
-#: data/reminduck.metainfo.xml.in:20
-msgid "Settings have been moved into their own view"
-msgstr ""
+#: data/reminduck.metainfo.xml.in:19
+msgid "✨Pond Info News✨"
+msgstr "✨Pond Info News✨"
 
 #: data/reminduck.metainfo.xml.in:21
-msgid ""
-"Right click on the icon and choose \"New reminder\" to jump immediately in "
-"the editor"
-msgstr ""
+msgid "Cleaner code and user interface"
+msgstr "Código e interface de utilizador mais limpos"
 
-#: data/reminduck.metainfo.xml.in:27
+#: data/reminduck.metainfo.xml.in:22
+msgid "Added repeat x every hours"
+msgstr "Adicionado repetir x a cada hora"
+
+#: data/reminduck.metainfo.xml.in:23
+msgid "Added more control for when repeating quacks"
+msgstr "Adicionado mais controlo sobre a repetição de quacks"
+
+#: data/reminduck.metainfo.xml.in:24
+msgid "Added vietnamese translations thanks to @hthienloc!"
+msgstr "Adicionadas traduções em vietnamita graças a @hthienloc!"
+
+#: data/reminduck.metainfo.xml.in:35
+msgid "Updated russian translations thanks to @ma12vlad"
+msgstr "Traduções russas actualizadas graças a @ma12vlad"
+
+#: data/reminduck.metainfo.xml.in:42
+msgid "Settings have been moved into their own view"
+msgstr "As definições foram movidas para a sua própria vista"
+
+#: data/reminduck.metainfo.xml.in:43
+msgid "Right click on the icon and choose \"New reminder\" to jump immediately in the editor"
+msgstr "Clique com o botão direito do rato no ícone e selecione \"Novo lembrete\" para entrar imediatamente no editor"
+
+#: data/reminduck.metainfo.xml.in:49
 msgid "✨NEW IN THE POND✨"
-msgstr ""
+msgstr "✨NOVO NA LAGOA✨"
 
-#: data/reminduck.metainfo.xml.in:29
+#: data/reminduck.metainfo.xml.in:51
 msgid "FINALLY a quack setting 🦆 You can even preview the sound!"
-msgstr ""
+msgstr "FINALMENTE uma definição de grasnido 🦆 Até podes pré-visualizar o som!"
 
-#: data/reminduck.metainfo.xml.in:30
+#: data/reminduck.metainfo.xml.in:52
 msgid "Added a menu button with a popover"
-msgstr ""
+msgstr "Adicionado um botão de menu com um popover"
 
-#: data/reminduck.metainfo.xml.in:31
+#: data/reminduck.metainfo.xml.in:53
 msgid "Added toggle to change notification persistency"
-msgstr ""
+msgstr "Adicionada uma opção para alterar a persistência da notificação"
 
-#: data/reminduck.metainfo.xml.in:32
+#: data/reminduck.metainfo.xml.in:54
 msgid "Added buttons to set/remove autostart"
-msgstr ""
+msgstr "Adicionados botões para definir/remover o arranque automático"
 
-#: data/reminduck.metainfo.xml.in:33
+#: data/reminduck.metainfo.xml.in:55
 msgid "Bugfix: Now \"Show Reminders\" should display correctly"
-msgstr ""
+msgstr "Correção de erros: Agora \"Mostrar Lembretes\" deve ser apresentado corretamente"
 
-#: data/reminduck.metainfo.xml.in:40
+#: data/reminduck.metainfo.xml.in:62
 msgid "Repaired autostart feature"
-msgstr ""
+msgstr "Função de arranque automático reparada"
 
-#: data/reminduck.metainfo.xml.in:41
+#: data/reminduck.metainfo.xml.in:63
 #, fuzzy
 msgid "Updated IT translation by @albanobattistella"
 msgstr "- 🇮🇹 Tradução italiana actualizada (@albanobattistella)"
 
-#: data/reminduck.metainfo.xml.in:42
+#: data/reminduck.metainfo.xml.in:64
 msgid "Corrections for appcenter"
-msgstr ""
+msgstr "Correcções para appcenter"
 
-#: data/reminduck.metainfo.xml.in:48
+#: data/reminduck.metainfo.xml.in:70
 #, fuzzy
-msgid ""
-"🦆🦆The quack is back!🦆🦆 A continuation of Reminduck, with the blessing of "
-"its original creator!"
-msgstr ""
-"O charlatão está de volta! Uma continuação do Reminduck, com a bênção do seu "
-"criador original!"
+msgid "🦆🦆The quack is back!🦆🦆 A continuation of Reminduck, with the blessing of its original creator!"
+msgstr "O charlatão está de volta! Uma continuação do Reminduck, com a bênção do seu criador original!"
 
-#: data/reminduck.metainfo.xml.in:50
+#: data/reminduck.metainfo.xml.in:72
 msgid "Adapted to modern libraries (GTK4, Flatpak)"
 msgstr "Adaptado a bibliotecas modernas (GTK4, Flatpak)"
 
-#: data/reminduck.metainfo.xml.in:51
+#: data/reminduck.metainfo.xml.in:73
 msgid "Make the whole window grabbable"
 msgstr "Tornar toda a janela agarrável"
 
-#: data/reminduck.metainfo.xml.in:52
+#: data/reminduck.metainfo.xml.in:74
 msgid "No quack sound yet but that will come"
 msgstr "Ainda não há som de grasnido, mas isso virá"
 
-#: data/reminduck.metainfo.xml.in:58
-msgid "Add \"Office\" category to launcher"
-msgstr "Adicionar a categoria \"Office\" ao lançador"
-
-#: data/reminduck.metainfo.xml.in:64
-msgid "- Support for elementary OS 6.0 Odin!"
-msgstr "- Suporte para Elementary OS 6.0 Odin!"
-
-#: data/reminduck.metainfo.xml.in:65 data/reminduck.metainfo.xml.in:73
-msgid "- 🇮🇹 Updated italian translation (@albanobattistella)"
-msgstr "- 🇮🇹 Tradução italiana actualizada (@albanobattistella)"
-
-#: data/reminduck.metainfo.xml.in:72
-msgid "- 🇩🇪 German translation (@Technipion)"
-msgstr "- 🇩🇪 Tradução para alemão (@Technipion)"
-
-#: data/reminduck.metainfo.xml.in:80
-msgid "🐞 Enable translations on Flatpak"
-msgstr "Ativar traduções no Flatpak"
-
-#: data/reminduck.metainfo.xml.in:87
-msgid "🗃️ Flatpak Support!"
-msgstr "🗃️ Suporte Flatpak!"
-
-#: data/reminduck.metainfo.xml.in:94
-msgid "🌑 Dark-mode toggle on the header bar"
-msgstr "Alternar o modo escuro na barra de cabeçalho"
-
-#: data/reminduck.metainfo.xml.in:95
-msgid ""
-"🔔 Notifications now stick around until you close them, to make sure you "
-"don't miss your quacks"
-msgstr ""
-"🔔 As notificações mantêm-se até serem fechadas, para garantir que não "
-"perdes os teus quacks"
-
-#: data/reminduck.metainfo.xml.in:96
-msgid "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
-msgstr ""
-"Suporte para temas GTK adicionais, tornando o Reminduck agnóstico em relação "
-"às distros"
-
-#: data/reminduck.metainfo.xml.in:97
-msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
-msgstr "🇪🇸 Tradução para espanhol (Alejandro Elí | @onerbs)"
-
-#: data/reminduck.metainfo.xml.in:98
-msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
-msgstr "🇮🇹 Tradução para italiano (Mirko Brombin | @mirkobrombin)"
-
-#: data/reminduck.metainfo.xml.in:105
-msgid ""
-"🐥️ New Icon! - hopefully this one looks better than the previous one. With "
-"great help from Nararyans R.I. (@Fatih20)"
-msgstr ""
-"🐥️ Novo ícone! - Esperamos que este fique melhor do que o anterior. Com a "
-"grande ajuda de Nararyans R.I. (@Fatih20)"
-
-#: data/reminduck.metainfo.xml.in:106
-msgid "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
-msgstr "💁‍ Maior compatibilidade com as traduções (Corentin Noël | @tintou)"
-
-#: data/reminduck.metainfo.xml.in:107
-msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
-msgstr "🇨🇵️ Tradução para francês (Nathan Bonnemains | @NathanBnm)"
-
-#: data/reminduck.metainfo.xml.in:114
-msgid ""
-"🔁️ Recurrent reminders - you can now have reminders that show up in set "
-"periods of time: every day, week, month, or a set interval"
-msgstr ""
-"🔁️ Lembretes recorrentes - pode agora ter lembretes que aparecem em períodos "
-"de tempo definidos: todos os dias, semanas, meses ou num intervalo definido"
-
-#: data/reminduck.metainfo.xml.in:115
-msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
-msgstr ""
-"🌟️ Melhorias gerais na interface do utilizador para tornar mais agradável a "
-"configuração de quacks"
-
-#: data/reminduck.metainfo.xml.in:116
-msgid "🌃️ Dark Mode is now prettier"
-msgstr "🌃️ O Modo escuro é agora mais bonito"
-
-#: data/reminduck.metainfo.xml.in:117
-msgid "🇹🇷 Turkish translation (libreajans)"
-msgstr "🇹🇷 Tradução para turco (libreajans)"
-
-#: data/reminduck.metainfo.xml.in:118
-msgid "🇳🇱 Dutch translation (Vistaus)"
-msgstr "🇳🇱 Tradução para neerlandês (Vistaus)"
-
-#: data/reminduck.metainfo.xml.in:125
-msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
-msgstr "Suporta a definição não oficial \"Preferir tema escuro\" 🌝️"
-
-#: data/reminduck.metainfo.xml.in:126
-msgid "This should also make it work with other dark GTK themes"
-msgstr "Isto também deve fazer com que funcione com outros temas GTK escuros"
-
-#: data/reminduck.metainfo.xml.in:132
-msgid "Initial Release 🦆"
-msgstr "Lançamento inicial 🦆"
-
-#: data/reminduck.metainfo.xml.in:149
+#: data/reminduck.metainfo.xml.in:92
 #, fuzzy
 msgid "Matheus Fantinel + Stella"
 msgstr "Matheus Fantinel"
 
-#: data/reminduck.metainfo.xml.in:163
+#: data/reminduck.metainfo.xml.in:106
 msgid "Personal"
-msgstr ""
+msgstr "Pessoal"
 
-#: data/reminduck.metainfo.xml.in:164
+#: data/reminduck.metainfo.xml.in:107
 msgid "Assistant"
-msgstr ""
+msgstr "Assistente"
 
-#: data/reminduck.metainfo.xml.in:166
+#: data/reminduck.metainfo.xml.in:109
 msgid "Remember"
-msgstr ""
+msgstr "Recordar"
 
-#: data/reminduck.metainfo.xml.in:167
+#: data/reminduck.metainfo.xml.in:110
 msgid "Duck"
-msgstr ""
+msgstr "Pato"
 
-#: data/reminduck.metainfo.xml.in:168
+#: data/reminduck.metainfo.xml.in:111
 msgid "Quack"
-msgstr ""
+msgstr "Quack"
 
-#: data/reminduck.metainfo.xml.in:169
+#: data/reminduck.metainfo.xml.in:112
 msgid "Cute"
-msgstr ""
+msgstr "Giro"
 
-#: data/reminduck.metainfo.xml.in:170
+#: data/reminduck.metainfo.xml.in:113
 msgid "Utility"
-msgstr ""
+msgstr "Utilidade"
 
-#: data/reminduck.metainfo.xml.in:171
+#: data/reminduck.metainfo.xml.in:114
 msgid "Pantheon"
-msgstr ""
+msgstr "Panteão"
 
-#: data/reminduck.metainfo.xml.in:172
+#: data/reminduck.metainfo.xml.in:115
 msgid "elementary OS"
-msgstr ""
+msgstr "SO elementar"
 
-#: data/reminduck.metainfo.xml.in:177
+#: data/reminduck.metainfo.xml.in:120
 msgid "The welcome view"
-msgstr ""
+msgstr "A vista de boas-vindas"
 
-#: data/reminduck.metainfo.xml.in:181
+#: data/reminduck.metainfo.xml.in:124
 #, fuzzy
 msgid "Add new reminders"
 msgstr "Lembretes"
 
-#: data/reminduck.metainfo.xml.in:185
+#: data/reminduck.metainfo.xml.in:128
 msgid "Add new reminders but in dark"
-msgstr ""
+msgstr "Adicionar novos lembretes mas no escuro"
 
-#: data/reminduck.metainfo.xml.in:189
+#: data/reminduck.metainfo.xml.in:132
 msgid "See current reminders"
-msgstr ""
+msgstr "Ver lembretes actuais"
 
-#: data/reminduck.metainfo.xml.in:193
+#: data/reminduck.metainfo.xml.in:136
 msgid "See current reminders but in dark"
-msgstr ""
+msgstr "Ver lembretes actuais mas no escuro"
+
+#~ msgid "Add \"Office\" category to launcher"
+#~ msgstr "Adicionar a categoria \"Office\" ao lançador"
+
+#~ msgid "- Support for elementary OS 6.0 Odin!"
+#~ msgstr "- Suporte para Elementary OS 6.0 Odin!"
+
+#~ msgid "- 🇮🇹 Updated italian translation (@albanobattistella)"
+#~ msgstr "- 🇮🇹 Tradução italiana actualizada (@albanobattistella)"
+
+#~ msgid "- 🇩🇪 German translation (@Technipion)"
+#~ msgstr "- 🇩🇪 Tradução para alemão (@Technipion)"
+
+#~ msgid "🐞 Enable translations on Flatpak"
+#~ msgstr "Ativar traduções no Flatpak"
+
+#~ msgid "🗃️ Flatpak Support!"
+#~ msgstr "🗃️ Suporte Flatpak!"
+
+#~ msgid "🌑 Dark-mode toggle on the header bar"
+#~ msgstr "Alternar o modo escuro na barra de cabeçalho"
+
+#~ msgid "🔔 Notifications now stick around until you close them, to make sure you don't miss your quacks"
+#~ msgstr "🔔 As notificações mantêm-se até serem fechadas, para garantir que não perdes os teus quacks"
+
+#~ msgid "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
+#~ msgstr "Suporte para temas GTK adicionais, tornando o Reminduck agnóstico em relação às distros"
+
+#~ msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
+#~ msgstr "🇪🇸 Tradução para espanhol (Alejandro Elí | @onerbs)"
+
+#~ msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
+#~ msgstr "🇮🇹 Tradução para italiano (Mirko Brombin | @mirkobrombin)"
+
+#~ msgid "🐥️ New Icon! - hopefully this one looks better than the previous one. With great help from Nararyans R.I. (@Fatih20)"
+#~ msgstr "🐥️ Novo ícone! - Esperamos que este fique melhor do que o anterior. Com a grande ajuda de Nararyans R.I. (@Fatih20)"
+
+#~ msgid "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
+#~ msgstr "💁‍ Maior compatibilidade com as traduções (Corentin Noël | @tintou)"
+
+#~ msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
+#~ msgstr "🇨🇵️ Tradução para francês (Nathan Bonnemains | @NathanBnm)"
+
+#~ msgid "🔁️ Recurrent reminders - you can now have reminders that show up in set periods of time: every day, week, month, or a set interval"
+#~ msgstr "🔁️ Lembretes recorrentes - pode agora ter lembretes que aparecem em períodos de tempo definidos: todos os dias, semanas, meses ou num intervalo definido"
+
+#~ msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
+#~ msgstr "🌟️ Melhorias gerais na interface do utilizador para tornar mais agradável a configuração de quacks"
+
+#~ msgid "🌃️ Dark Mode is now prettier"
+#~ msgstr "🌃️ O Modo escuro é agora mais bonito"
+
+#~ msgid "🇹🇷 Turkish translation (libreajans)"
+#~ msgstr "🇹🇷 Tradução para turco (libreajans)"
+
+#~ msgid "🇳🇱 Dutch translation (Vistaus)"
+#~ msgstr "🇳🇱 Tradução para neerlandês (Vistaus)"
+
+#~ msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
+#~ msgstr "Suporta a definição não oficial \"Preferir tema escuro\" 🌝️"
+
+#~ msgid "This should also make it work with other dark GTK themes"
+#~ msgstr "Isto também deve fazer com que funcione com outros temas GTK escuros"
+
+#~ msgid "Initial Release 🦆"
+#~ msgstr "Lançamento inicial 🦆"

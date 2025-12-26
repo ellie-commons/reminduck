@@ -29,5 +29,10 @@
       <summary>Whether to keep notifications persistent</summary>
       <description>If on, the duck will keep its notification</description>
     </key>
+    <key name="bumped" type="b">
+      <default>false</default>
+      <summary>Whether recurrencyType has been bumped to fit for Hours</summary>
+      <description>Make space for hours</description>
+    </key>
   </schema>
 </schemalist>

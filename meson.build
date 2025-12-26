@@ -1,6 +1,6 @@
 project('io.github.ellie_commons.reminduck', 
 'vala', 'c', 
-version: '2.2.0')
+version: '2.3.0')
 
 gnome = import('gnome')
 i18n = import('i18n')
@@ -9,6 +9,7 @@ i18n = import('i18n')
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
 config_data = configuration_data()
+config_data.set('version', meson.project_version())
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 config_file = configure_file(

@@ -5,7 +5,6 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-
 public class Reminduck.Views.WelcomeView : Gtk.Box {
 
     public Granite.Placeholder welcome_widget;

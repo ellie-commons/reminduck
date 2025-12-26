@@ -8,6 +8,9 @@
 
 using Gee;
 
+/**
+ * A giant list generated from reminders saved in the Database
+ */
 public class Reminduck.Views.RemindersView : Gtk.Box {
         public signal void add_request ();
         public signal void edit_request (Reminder reminder);
@@ -22,19 +25,12 @@ public class Reminduck.Views.RemindersView : Gtk.Box {
             hexpand = vexpand = true;
             margin_start = 24;
             margin_end = 24;
-        }
 
-        public RemindersView () {
-            this.build_ui ();
-        }
-
-        public void build_ui () {
-
-            this.title = new Gtk.Label (_("Your reminders")) {
+            title = new Gtk.Label (_("Your reminders")) {
                 margin_top = 24,
                 margin_bottom = 12
             };
-            this.title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
+            title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
             append (this.title);
 
@@ -42,7 +38,7 @@ public class Reminduck.Views.RemindersView : Gtk.Box {
 
             var add_new_button = new Gtk.Button.with_label (_("Create another"));
             add_new_button.halign = Gtk.Align.CENTER;
-            add_new_button.add_css_class ("suggested-action");
+            add_new_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
             add_new_button.activate.connect (add_reminder);
             add_new_button.clicked.connect (add_reminder);
 

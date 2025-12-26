@@ -57,3 +57,5 @@ flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --insta
 Quack sound: https://pixabay.com/sound-effects/075176-duck-quack-40345/
 
 Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=40345">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=40345">Pixabay</a>
+
+Ducktoy https://quicksounds.com/sound/22456/duck-toy-sound
