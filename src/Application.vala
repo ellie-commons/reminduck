@@ -188,8 +188,7 @@ namespace Reminduck {
             this.new_reminder = switch_new_reminder;
 
             stdout.printf(this.headless ? "\n✔️ Headless" : "\n️️️️ ✔️ Interface");
-    
-            hold ();
+
             activate ();
             return 0;
         }
