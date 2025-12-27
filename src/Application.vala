@@ -59,6 +59,8 @@ namespace Reminduck {
 
         public override void startup () {
             base.startup ();
+            Gtk.init ();
+            Granite.init ();
 
             // Follow dark and light, use bananana
             granite_settings = Granite.Settings.get_default ();
