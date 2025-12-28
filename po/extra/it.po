@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Albano Battistella\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-06-29 15:13+0200\n"
-"POT-Creation-Date: 2025-12-20 22:57+0100\n"
+"POT-Creation-Date: 2025-12-28 10:57+0100\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
@@ -27,14 +27,12 @@ msgid "Don't forget about your stuff in an adorably annoying way"
 msgstr "Ricordati dei tuoi promemoria in un modo adorabile"
 
 #: data/reminduck.desktop.in:15
-#, fuzzy
 msgid "Reminduck;Personal;Assistant;Reminders;Remember;Duck;Quack;Cute;"
-msgstr "Reminduck;Persinale;Assistente;Promemoria;"
+msgstr "Reminduck;Assistente;Personale;Promemoria;Ricorda;Papera;Quack;Carina;"
 
 #: data/reminduck.desktop.in:19
-#, fuzzy
 msgid "New reminder"
-msgstr "Aggiunti nuovi promemoria"
+msgstr "Nuovo promemoria"
 
 #: data/reminduck.metainfo.xml.in:8
 msgid "Remember your stuff in an adorably annoying way"
@@ -113,9 +111,8 @@ msgid "Repaired autostart feature"
 msgstr "Riparata la funzione di avvio automatico"
 
 #: data/reminduck.metainfo.xml.in:63
-#, fuzzy
 msgid "Updated IT translation by @albanobattistella"
-msgstr "- 🇮🇹 Traduzione italiana aggiornata (@albanobattistella)"
+msgstr "- 🇮🇹 Traduzione IT aggiornata da @albanobattistella"
 
 #: data/reminduck.metainfo.xml.in:64
 msgid "Corrections for appcenter"
@@ -123,7 +120,7 @@ msgstr "Correzioni per appcenter"
 
 #: data/reminduck.metainfo.xml.in:70
 msgid "🦆🦆The quack is back!🦆🦆 A continuation of Reminduck, with the blessing of its original creator!"
-msgstr "🦆🦆Il ciarlare è tornato!🦆🦆 Una continuazione di Reminduck, con la benedizione del suo creatore originale!"
+msgstr "🦆🦆Il quack è tornato!🦆🦆 Una continuazione di Reminduck, con la benedizione del suo creatore originale!"
 
 #: data/reminduck.metainfo.xml.in:72
 msgid "Adapted to modern libraries (GTK4, Flatpak)"
@@ -135,7 +132,7 @@ msgstr "Rendere l'intera finestra afferrabile"
 
 #: data/reminduck.metainfo.xml.in:74
 msgid "No quack sound yet but that will come"
-msgstr "Non c'è ancora il suono del ciarlare, ma arriverà"
+msgstr "Non c'è ancora il suono del quack, ma arriverà"
 
 #: data/reminduck.metainfo.xml.in:92
 msgid "Matheus Fantinel + Stella"
@@ -155,7 +152,7 @@ msgstr "Ricorda"
 
 #: data/reminduck.metainfo.xml.in:110
 msgid "Duck"
-msgstr "Anatra"
+msgstr "Papera"
 
 #: data/reminduck.metainfo.xml.in:111
 msgid "Quack"
@@ -163,7 +160,7 @@ msgstr "Quack"
 
 #: data/reminduck.metainfo.xml.in:112
 msgid "Cute"
-msgstr "Carino"
+msgstr "Carina"
 
 #: data/reminduck.metainfo.xml.in:113
 msgid "Utility"
