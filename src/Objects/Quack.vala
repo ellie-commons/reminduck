@@ -9,21 +9,26 @@
  * An object playing a sound upon creation
  */
 public class Reminduck.Quack : Object {
+    public signal void started ();
+    public signal void ended ();
+
     public Quack (QuackType? type = QuackType.DEFAULT) {
-        var m = Gtk.MediaFile.for_resource (type.to_resource_path ());
+        var mediafile = Gtk.MediaFile.for_resource (type.to_resource_path ());
 
-        m.notify["ended"].connect (() => {
-            print ("stream ended %s\n", m.ended.to_string ());
-        });
-
-        m.notify["prepared"].connect (() => {
-            var t = m.duration;
+        mediafile.notify["prepared"].connect (() => {
+            var t = mediafile.duration;
             var s = t / 1000000;
             var ms = t % 1000000;
             print ("Play for %jd.%06jd\n", s, ms);
+            started ();
         });
 
-        m.play ();
+        mediafile.notify["ended"].connect (() => {
+            print ("stream ended %s\n", mediafile.ended.to_string ());
+            ended ();
+        });
+
+        mediafile.play ();
     }
 }
 
@@ -32,12 +37,16 @@ public class Reminduck.Quack : Object {
  */
 public enum Reminduck.QuackType {
     DEFAULT,
-    PLASTIC;
+    PLASTIC,
+    HORDE,
+    CYBER,
+    RANDOM;
 
     public string to_resource_path () {
         switch (this) {
             case DEFAULT: return "/io/github/ellie_commons/reminduck/default_quack.ogg";
             case PLASTIC: return "/io/github/ellie_commons/reminduck/plastic_quack.ogg";
+            case RANDOM: return random ().to_resource_path ();
             default: return "/io/github/ellie_commons/reminduck/quack.ogg";
         }
     }
@@ -46,6 +55,7 @@ public enum Reminduck.QuackType {
         switch (this) {
             case DEFAULT: return _("Default Duck");
             case PLASTIC: return _("Plastic Duck");
+            case RANDOM: return _("Random Duck");
             default: return _("Default Duck");
         }
     }
@@ -53,7 +63,16 @@ public enum Reminduck.QuackType {
     public static string[] choices () {
         return {
             DEFAULT.to_friendly_name (),
-            PLASTIC.to_friendly_name ()
+            PLASTIC.to_friendly_name (),
+            RANDOM.to_friendly_name ()
         };
+    }
+
+    private static QuackType random () {
+        QuackType[] possibilities = {
+            DEFAULT,
+            PLASTIC
+        };
+        return possibilities[Random.int_range (0, possibilities.length)];
     }
 }
