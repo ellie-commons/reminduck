@@ -1,4 +1,4 @@
-# Right before Stella (and ellie-commons) adopted Reminduck back from matfantinel
+# Right before Stella (and elly-codes) adopted Reminduck back from matfantinel
 id: com.github.matfantinel.reminduck
 runtime: io.elementary.Platform
 # I should try this with 7
@@ -30,5 +30,5 @@ cleanup:
     buildsystem: meson
     sources:
       - type: git
-        url: https://github.com/ellie-commons/reminduck.git
+        url: https://github.com/elly-codes/reminduck.git
         commit: b9f2b8a20bc7126e8cc4e9f7aa9d4e35c03d5cdc

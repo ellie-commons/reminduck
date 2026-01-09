@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2011-2019 Matheus Fantinel
  *                          2025 Stella & Charlie (teamcons.carrd.co)
- *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2025 Contributions from the ellie_Commons community (github.com/elly-codes/)
  */
 
  /**
@@ -44,10 +44,10 @@ public enum Reminduck.QuackType {
 
     public string to_resource_path () {
         switch (this) {
-            case DEFAULT: return "/io/github/ellie_commons/reminduck/default_quack.ogg";
-            case PLASTIC: return "/io/github/ellie_commons/reminduck/plastic_quack.ogg";
+            case DEFAULT: return "/io.github.elly_codes.reminduck/default_quack.ogg";
+            case PLASTIC: return "/io.github.elly_codes.reminduck/plastic_quack.ogg";
             case RANDOM: return random ().to_resource_path ();
-            default: return "/io/github/ellie_commons/reminduck/quack.ogg";
+            default: return "/io.github.elly_codes.reminduck/quack.ogg";
         }
     }
 

@@ -1,11 +1,11 @@
-app-id: io.github.ellie_commons.reminduck
+app-id: io.github.elly_codes.reminduck
 # elementary SDK is not available on Flathub, so use the elementary BaseApp instead
 base: io.elementary.BaseApp
 base-version: 'circe-25.08'
 runtime: org.gnome.Platform
 runtime-version: '49'
 sdk: org.gnome.Sdk
-command: io.github.ellie_commons.reminduck
+command: io.github.elly_codes.reminduck
 
 finish-args:
   - '--share=ipc'
@@ -32,7 +32,7 @@ modules:
     buildsystem: meson
     sources:
       - type: git
-        url: https://github.com/ellie-commons/reminduck.git
+        url: https://github.com/elly-codes/reminduck.git
         tag: 2.3.0
         commit: 58f564ae70739b280d170ebe5c1c4e69ec844785
         x-checker-data:

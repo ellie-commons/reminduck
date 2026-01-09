@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
   <schema
-    path="/io/github/ellie_commons/reminduck/state/"
-    id="io.github.ellie_commons.reminduck.state"
-    gettext-domain="io.github.ellie_commons.reminduck">
+    path="/io.github.elly_codes.reminduck/state/"
+    id="io.github.elly_codes.reminduck.state"
+    gettext-domain="io.github.elly_codes.reminduck">
     <key name="window-width" type="i">
       <default>600</default>
       <summary>The saved width of the window.</summary>
