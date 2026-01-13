@@ -1,4 +1,4 @@
-app-id: io.github.elly_code.reminduck
+id: io.github.elly_code.reminduck
 runtime: io.elementary.Platform
 runtime-version: '8.2'
 sdk: io.elementary.Sdk
