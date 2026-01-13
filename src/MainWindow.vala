@@ -13,6 +13,7 @@
 public class Reminduck.MainWindow : Gtk.ApplicationWindow {
     Gtk.Stack stack;
     Gtk.HeaderBar headerbar;
+    Gtk.Revealer back_revealer;
     Gtk.Button back_button;
 
     private GLib.Settings settings;
@@ -71,8 +72,15 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
             valign = Gtk.Align.CENTER,
             tooltip_text = _("Click to return to main view")
         };
-        this.back_button.add_css_class ("back-button");
-        this.headerbar.pack_start (this.back_button);
+        this.back_button.add_css_class (Granite.STYLE_CLASS_BACK_BUTTON);
+
+        back_revealer = new Gtk.Revealer () {
+            child = back_button,
+            reveal_child = false,
+            transition_type = Gtk.RevealerTransitionType.SWING_LEFT
+        };
+
+        this.headerbar.pack_start (back_revealer);
 
         this.back_button.clicked.connect (() => {
             this.show_welcome_view ();
@@ -162,7 +170,7 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
     public void show_reminder_editor (Reminder? reminder = null) {
         stack.set_transition_type (Gtk.StackTransitionType.SLIDE_LEFT);
         stack.set_visible_child_name ("reminder_editor");
-        this.back_button.show ();
+        back_revealer.reveal_child = true;
         this.reminder_editor.edit_reminder (reminder);
     }
 
@@ -170,7 +178,7 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
         stack.set_transition_type (slide);
         stack.set_visible_child_name ("reminders_view");
         this.reminders_view.build_reminders_list ();
-        this.back_button.show ();
+        back_revealer.reveal_child = true;
         this.reminder_editor.reset_fields ();
     }
 
@@ -185,14 +193,14 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
 
         stack.set_transition_type (slide);
         stack.set_visible_child_name ("welcome");
-        this.back_button.hide ();
+        back_revealer.reveal_child = false;
         this.reminder_editor.reset_fields ();
     }
 
     private void show_settings_view (Gtk.StackTransitionType slide = Gtk.StackTransitionType.SLIDE_RIGHT) {
         stack.set_transition_type (slide);
         stack.set_visible_child_name ("settings_view");
-        this.back_button.show ();
+        back_revealer.reveal_child = true;
     }
 
     private void on_reminder_deleted () {
