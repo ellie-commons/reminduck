@@ -11,18 +11,21 @@
  * Individual views may request the window to change to another view
  */
 public class Reminduck.MainWindow : Gtk.ApplicationWindow {
+
+    private GLib.Settings settings;
+    public Granite.Settings granite_settings;
+
     Gtk.Stack stack;
     Gtk.HeaderBar headerbar;
     Gtk.Revealer back_revealer;
     Gtk.Button back_button;
 
-    private GLib.Settings settings;
-    public Granite.Settings granite_settings;
-
     Reminduck.Views.WelcomeView welcome_view;
     Reminduck.Views.ReminderEditor reminder_editor;
     Reminduck.Views.RemindersView reminders_view;
     Reminduck.Views.SettingsView settings_view;
+
+    private enum View {WELCOME, EDIT, ALL, TWEAK}
 
     construct {
         Intl.setlocale ();
@@ -92,6 +95,7 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
             hexpand = vexpand = true,
             halign = Gtk.Align.FILL,
             valign = Gtk.Align.FILL,
+            transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT
         };
 
         welcome_view = new Reminduck.Views.WelcomeView ();
@@ -100,9 +104,6 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
         this.build_reminder_editor ();
         this.build_reminders_view ();
         this.build_settings_view ();
-
-        stack.halign = stack.valign = Gtk.Align.FILL;
-        stack.hexpand = stack.vexpand = true;
 
         var handle = new Gtk.WindowHandle () {
             child = stack

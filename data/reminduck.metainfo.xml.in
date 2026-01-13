@@ -14,6 +14,13 @@
     <p>And it quacks.</p>
   </description>
   <releases>
+    <release version="2.3.1" date="2026-01-13">
+      <description>
+        <ul>
+          <li>Updated russian translations thanks to @ma12vlad</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.3.0" date="2025-12-26">
       <description>
         <p>✨Pond Info News✨</p>

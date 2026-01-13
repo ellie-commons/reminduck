@@ -1,6 +1,6 @@
 project('io.github.elly_code.reminduck', 
 'vala', 'c', 
-version: '2.3.0')
+version: '2.3.1')
 
 gnome = import('gnome')
 i18n = import('i18n')
