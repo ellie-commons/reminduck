@@ -13,6 +13,13 @@
 
     <p>And it quacks.</p>
   </description>
+  <provides>
+    <id>io.github.ellie_commons.reminduck</id>
+    <binary>io.github.ellie_commons.reminduck</binary>
+  </provides>
+  <replaces>
+    <id>io.github.ellie_commons.reminduck</id>
+  </replaces>
   <releases>
     <release version="2.3.1" date="2026-01-13">
       <description>
