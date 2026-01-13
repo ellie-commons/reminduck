@@ -33,8 +33,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/elly-code/reminduck.git
-        tag: 2.3.0
-        commit: 58f564ae70739b280d170ebe5c1c4e69ec844785
+        tag: 2.3.1
+        commit: 5a7ed806b77ca86a4f71ae1a431d72df37abf7b3
         x-checker-data:
           type: git
           tag-pattern: '^([\d.]+)$'
