@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2011-2019 Matheus Fantinel
  *                          2025 Stella & Charlie (teamcons.carrd.co)
- *                          2025 Contributions from the ellie_Commons community (github.com/elly-codes/)
+ *                          2025 Contributions from the ellie_Commons community (github.com/elly-code/)
  */
 
 public class Reminduck.Views.WelcomeView : Gtk.Box {
@@ -25,7 +25,7 @@ public class Reminduck.Views.WelcomeView : Gtk.Box {
         add_css_class ("reminduck-welcome-box");
 
         var image = new Gtk.Image () {
-            icon_name = "io.github.elly_codes.reminduck",
+            icon_name = "io.github.elly_code.reminduck",
             pixel_size = 96,
             valign = Gtk.Align.FILL
         };

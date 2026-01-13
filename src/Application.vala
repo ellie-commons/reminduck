@@ -37,7 +37,7 @@ namespace Reminduck {
    
         public ReminduckApp () {
             Object (
-                application_id: "io.github.elly_codes.reminduck",
+                application_id: "io.github.elly_code.reminduck",
                 flags: ApplicationFlags.HANDLES_COMMAND_LINE
             );
         }
@@ -78,7 +78,7 @@ namespace Reminduck {
                     );
             });
 
-            settings = new GLib.Settings ("io.github.elly_codes.reminduck.state");
+            settings = new GLib.Settings ("io.github.elly_code.reminduck.state");
 
             // On first run, request autostart
             if (settings.get_boolean ("first-run") || ask_autostart) {

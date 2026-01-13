@@ -260,5 +260,5 @@ msgstr "Visualizza i promemoria correnti ma in modalità scura"
 #~ msgid "Initial Release 🦆"
 #~ msgstr "Rilascio iniziale 🦆"
 
-#~ msgid "io.github.elly_codes.reminduck"
-#~ msgstr "io.github.elly_codes.reminduck"
+#~ msgid "io.github.elly_code.reminduck"
+#~ msgstr "io.github.elly_code.reminduck"

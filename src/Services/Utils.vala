@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2011-2019 Matheus Fantinel
  *                          2025 Stella & Charlie (teamcons.carrd.co)
- *                          2025 Contributions from the ellie_Commons community (github.com/elly-codes/)
+ *                          2025 Contributions from the ellie_Commons community (github.com/elly-code/)
  */
 
 namespace Reminduck.Utils {
@@ -10,7 +10,7 @@ namespace Reminduck.Utils {
         private static void request_autostart () {
             Xdp.Portal portal = new Xdp.Portal ();
             GenericArray<weak string> cmd = new GenericArray<weak string> ();
-            cmd.add ("io.github.elly_codes.reminduck");
+            cmd.add ("io.github.elly_code.reminduck");
             cmd.add ("--headless");
 
             portal.request_background.begin (
@@ -26,7 +26,7 @@ namespace Reminduck.Utils {
         private static void remove_autostart () {
             Xdp.Portal portal = new Xdp.Portal ();
             GenericArray<weak string> cmd = new GenericArray<weak string> ();
-            cmd.add ("io.github.elly_codes.reminduck");
+            cmd.add ("io.github.elly_code.reminduck");
             cmd.add ("--headless");
 
             portal.request_background.begin (

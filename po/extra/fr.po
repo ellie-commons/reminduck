@@ -266,5 +266,5 @@ msgstr "Voir les rappels en cours mais dans l'obscurité"
 #~ msgid "Initial Release 🦆"
 #~ msgstr "Version initiale 🦆"
 
-#~ msgid "io.github.elly_codes.reminduck"
-#~ msgstr "io.github.elly_codes.reminduck"
+#~ msgid "io.github.elly_code.reminduck"
+#~ msgstr "io.github.elly_code.reminduck"
