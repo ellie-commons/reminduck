@@ -111,6 +111,7 @@
     <url type="bugtracker">https://github.com/elly-code/reminduck/issues</url>
     <url type="help">https://github.com/elly-code/reminduck/issues</url>
     <url type="donation">https://ko-fi.com/teamcons</url>
+    <url type="vcs-browser">https://github.com/elly-code/reminduck</url>
 
     <branding>
       <color type="primary" scheme_preference="light">#fff394</color>
