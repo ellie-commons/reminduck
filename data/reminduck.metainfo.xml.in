@@ -13,6 +13,8 @@
 
     <p>And it quacks.</p>
   </description>
+
+  <launchable type="desktop-id">io.github.elly_code.reminduck.desktop</launchable>
   <provides>
     <id>io.github.ellie_commons.reminduck</id>
     <binary>io.github.ellie_commons.reminduck</binary>
@@ -20,6 +22,7 @@
   <replaces>
     <id>io.github.ellie_commons.reminduck</id>
   </replaces>
+
   <releases>
     <release version="2.3.1" date="2026-01-13">
       <description>
@@ -92,9 +95,6 @@
       </description>
     </release>
   </releases>
-  <provides>
-    <binary>io.github.elly_code.reminduck</binary>
-  </provides>
     <content_rating type="oars-1.1"/>
     <translation type="gettext" source_locale="en_GB">io.github.elly_code.reminduck</translation>
     <recommends>
@@ -103,7 +103,6 @@
       <control>touch</control>
     </recommends>
 
-    <launchable type="desktop-id">io.github.elly_code.reminduck.desktop</launchable>
     <developer id="io.github.elly-code">
         <name>Matheus Fantinel + Stella</name>
     </developer>
