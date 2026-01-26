@@ -15,13 +15,6 @@
   </description>
 
   <launchable type="desktop-id">io.github.ellie_commons.reminduck.desktop</launchable>
-  <provides>
-    <id>io.github.ellie_commons.reminduck</id>
-    <binary>io.github.ellie_commons.reminduck</binary>
-  </provides>
-  <replaces>
-    <id>io.github.ellie_commons.reminduck</id>
-  </replaces>
 
   <releases>
     <release version="2.3.1" date="2026-01-13">
@@ -103,15 +96,15 @@
       <control>touch</control>
     </recommends>
 
-    <developer id="io.github.ellie-commons">
+    <developer id="io.github.elly-code">
         <name>Matheus Fantinel + Stella</name>
     </developer>
     <project_group>ellie-commons</project_group>
-    <url type="homepage">https://github.com/ellie-commons/reminduck</url>
-    <url type="bugtracker">https://github.com/ellie-commons/reminduck/issues</url>
-    <url type="help">https://github.com/ellie-commons/reminduck/issues</url>
+    <url type="homepage">https://github.com/elly-code/reminduck</url>
+    <url type="bugtracker">https://github.com/elly-code/reminduck/issues</url>
+    <url type="help">https://github.com/elly-code/reminduck/issues</url>
     <url type="donation">https://ko-fi.com/teamcons</url>
-    <url type="vcs-browser">https://github.com/ellie-commons/reminduck</url>
+    <url type="vcs-browser">https://github.com/elly-code/reminduck</url>
 
     <branding>
       <color type="primary" scheme_preference="light">#fff394</color>
