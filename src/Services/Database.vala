@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2011-2019 Matheus Fantinel
  *                          2025 Stella & Charlie (teamcons.carrd.co)
- *                          2025 Contributions from the ellie_Commons community (github.com/elly-code/)
+ *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
 using Gee;
@@ -51,7 +51,7 @@ public class Reminduck.Database {
         }
 
         // If the old database is still there, move it
-        string old_path = Environment.get_user_data_dir () + "/.local/share/io.github.elly_code.reminduck/database.db";
+        string old_path = Environment.get_user_data_dir () + "/.local/share/io.github.ellie_commons.reminduck/database.db";
         File checkpath = File.new_for_path (old_path);
         File new_path = File.new_for_path (get_database_path ());
         
