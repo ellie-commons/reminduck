@@ -142,12 +142,12 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
         this.reminder_editor = new Reminduck.Views.ReminderEditor ();
 
         this.reminder_editor.reminder_created.connect ((new_reminder) => {
-            ReminduckApp.reload_reminders ();
+            Application.reload_reminders ();
             show_reminders_view ();
         });
 
         this.reminder_editor.reminder_edited.connect ((edited_file) => {
-            ReminduckApp.reload_reminders ();
+            Application.reload_reminders ();
             show_reminders_view ();
         });
 
@@ -191,9 +191,9 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
     }
 
     public void show_welcome_view (Gtk.StackTransitionType slide = Gtk.StackTransitionType.SLIDE_RIGHT) {
-        ReminduckApp.reload_reminders ();
+        Application.reload_reminders ();
 
-        if (ReminduckApp.reminders.size > 0) {
+        if (Application.reminders.size > 0) {
             welcome_view.reminders_view_button.show ();
         } else {
             welcome_view.reminders_view_button.hide ();
@@ -212,8 +212,8 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
     }
 
     private void on_reminder_deleted () {
-        ReminduckApp.reload_reminders ();
-        if (ReminduckApp.reminders.size == 0) {
+        Application.reload_reminders ();
+        if (Application.reminders.size == 0) {
             show_welcome_view ();
         } else {
             this.reminders_view.build_reminders_list ();

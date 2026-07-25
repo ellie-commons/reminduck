@@ -72,7 +72,7 @@ public class Reminduck.Views.RemindersView : Gtk.Box {
             }
 
             var index = 0;
-            foreach (var reminder in ReminduckApp.reminders) {
+            foreach (var reminder in Application.reminders) {
                 var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
                 box.margin_top = 2;
                 box.add_css_class ("list-item");
@@ -133,7 +133,7 @@ public class Reminduck.Views.RemindersView : Gtk.Box {
         }
 
         private void on_delete (Reminder reminder) {
-            ReminduckApp.database.delete_reminder (reminder.rowid);
+            Application.database.delete_reminder (reminder.rowid);
             this.reminder_deleted ();
         }
 

@@ -179,7 +179,7 @@ public class Reminduck.Views.ReminderEditor : Gtk.Box {
     }
 
     private void on_delete () {
-        ReminduckApp.database.delete_reminder (reminder.rowid);
+        Application.database.delete_reminder (reminder.rowid);
         reminder_deleted ();
         reminder_edited ();
     }
@@ -198,7 +198,7 @@ public class Reminduck.Views.ReminderEditor : Gtk.Box {
             reminder.recurrency_type = repeatbox.recurrency_type;
             reminder.recurrency_interval = (int)repeatbox.interval;
 
-            var result = ReminduckApp.database.upsert_reminder (reminder);
+            var result = Application.database.upsert_reminder (reminder);
 
             if (result) {
                 reminder_created ();

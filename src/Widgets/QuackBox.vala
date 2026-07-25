@@ -126,7 +126,7 @@ public class Reminduck.QuackBox : Gtk.Box {
                                     revealer, "reveal_child",
                                     GLib.BindingFlags.DEFAULT);
 
-        ReminduckApp.settings.bind (
+        Application.settings.bind (
             "quack-sound",
             quack_toggle, "active",
             SettingsBindFlags.DEFAULT);

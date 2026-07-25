@@ -54,9 +54,11 @@ public class Reminduck.Database {
         string old_path = Environment.get_user_data_dir () + "/.local/share/io.github.elly_code.reminduck/database.db";
         File checkpath = File.new_for_path (old_path);
         File new_path = File.new_for_path (get_database_path ());
-        
+
         print ("Old database file: " + old_path + ": Exists: " + checkpath.query_exists (null).to_string ());
         print ("\nNew database file: " + get_database_path () + ": Exists: " + new_path.query_exists (null).to_string ());
+
+        print ("\nEverything is safe at " + get_database_path ());
 
         // The DB is in the wrong location so move it
         if (checkpath.query_exists ()) {

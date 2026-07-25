@@ -207,12 +207,12 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
 
         /* ---------------- CONNECTS AND BINDS ---------------- */
-        ReminduckApp.settings.bind (
+        Application.settings.bind (
             KEY_QUACK_SOUND,
             quack_toggle, "active",
             SettingsBindFlags.DEFAULT);
 
-        ReminduckApp.settings.bind (
+        Application.settings.bind (
             KEY_PERSISTENT_NOTIFICATION,
             persist_toggle, "active",
             SettingsBindFlags.DEFAULT);
@@ -225,7 +225,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
         string[] keys = {KEY_QUACK_SOUND, KEY_PERSISTENT_NOTIFICATION};
         foreach (var key in keys) {
-                ReminduckApp.settings.reset (key);
+                Application.settings.reset (key);
         }
     }
 
