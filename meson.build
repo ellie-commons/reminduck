@@ -1,7 +1,7 @@
 project(
     'reminduck', 
     ['c', 'vala'],                # The floor is vala
-    version: '2.3.1',                       # Versioning: first should follow Gtk version, second and third depending how proud you are of the update
+    version: '2.4.0',                       # Versioning: first should follow Gtk version, second and third depending how proud you are of the update
     license: 'GPL-3.0-or-later',
     meson_version: '>= 1.1'                 # Use meson.option instead of meson_options.txt
     )

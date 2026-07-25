@@ -24,10 +24,18 @@
   </replaces>
 
   <releases>
+    <release version="2.4.0" date="2026-01-13">
+      <description>
+        <ul>
+          <li>Translation into croatian thanks to Milotype!</li>
+          <li>Updated swedish translation thanks to Yeager!</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.3.1" date="2026-01-13">
       <description>
         <ul>
-          <li>Organization change</li>
+          <li>Organization change: Now under elly-code</li>
         </ul>
       </description>
     </release>
