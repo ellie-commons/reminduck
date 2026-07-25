@@ -4,6 +4,9 @@
   <id>@APP_ID@</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
+  <launchable type="desktop-id">@APP_ID@.desktop</launchable>
+  <translation type="gettext">@APP_ID@</translation>
+
   <name>Reminduck</name>
   <summary>Remember your stuff in an adorably annoying way</summary>
   <description>
@@ -14,7 +17,6 @@
     <p>And it quacks.</p>
   </description>
 
-  <launchable type="desktop-id">@APP_ID@.desktop</launchable>
   <provides>
       <id>@ALTERNATE_APP_ID@</id>
       <binary>@ALTERNATE_APP_ID@</binary>
@@ -22,6 +24,65 @@
   <replaces>
       <id>@ALTERNATE_APP_ID</id>
   </replaces>
+
+
+    <content_rating type="oars-1.1"/>
+    <recommends>
+      <control>keyboard</control>
+      <control>pointing</control>
+      <control>touch</control>
+    </recommends>
+
+    <developer id="io.github.elly-code">
+        <name>Matheus Fantinel + Stella and Charlie</name>
+    </developer>
+    <project_group>elly-code</project_group>
+    <url type="homepage">https://github.com/@PUBLISHER@/@APP_NAME@</url>
+    <url type="bugtracker">https://github.com/@PUBLISHER@/@APP_NAME@/issues</url>
+    <url type="help">https://github.com/@PUBLISHER@/@APP_NAME@/issues</url>
+    <url type="donation">https://ko-fi.com/teamcons/tip</url>
+    <url type="vcs-browser">https://github.com/@PUBLISHER@/@APP_NAME@</url>
+
+    <branding>
+      <color type="primary" scheme_preference="light">#fff394</color>
+      <color type="primary" scheme_preference="dark">#ad5f00</color>
+    </branding>
+
+    <keywords>
+        <keyword>Personal</keyword>
+        <keyword>Assistant</keyword>
+        <keyword>Reminders</keyword>
+        <keyword>Remember</keyword>
+        <keyword>Duck</keyword>
+        <keyword>Quack</keyword>
+        <keyword>Cute</keyword>
+        <keyword>Utility</keyword>
+        <keyword>Pantheon</keyword>
+        <keyword>elementary OS</keyword>
+    </keywords>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>The welcome view</caption>
+      <image>https://raw.githubusercontent.com/@PUBLISHER@/@APP_NAME@/@APP_VERSION@/data/screenshots/Welcome.png</image>
+    </screenshot>
+    <screenshot environment="pantheon">
+      <caption>Add new reminders</caption>
+      <image>https://raw.githubusercontent.com/@PUBLISHER@/@APP_NAME@/@APP_VERSION@/data/screenshots/Editor.png</image>
+    </screenshot>
+    <screenshot environment="pantheon:dark">
+      <caption>Add new reminders but in dark</caption>
+      <image>https://raw.githubusercontent.com/@PUBLISHER@/@APP_NAME@/@APP_VERSION@/data/screenshots/Editor-dark.png</image>
+    </screenshot>
+    <screenshot environment="pantheon">
+      <caption>See current reminders</caption>
+      <image>https://raw.githubusercontent.com/@PUBLISHER@/@APP_NAME@/@APP_VERSION@/data/screenshots/List.png</image>
+    </screenshot>
+    <screenshot environment="pantheon:dark">
+      <caption>See current reminders but in dark</caption>
+      <image>https://raw.githubusercontent.com/@PUBLISHER@/@APP_NAME@/@APP_VERSION@/data/screenshots/List-dark.png</image>
+    </screenshot>
+  </screenshots>
 
   <releases>
     <release version="2.4.0" date="2026-01-13">
@@ -103,62 +164,4 @@
       </description>
     </release>
   </releases>
-    <content_rating type="oars-1.1"/>
-    <translation type="gettext" source_locale="en_GB">io.github.elly_code.reminduck</translation>
-    <recommends>
-      <control>keyboard</control>
-      <control>pointing</control>
-      <control>touch</control>
-    </recommends>
-
-    <developer id="io.github.elly-code">
-        <name>Matheus Fantinel + Stella and Charlie</name>
-    </developer>
-    <project_group>elly-code</project_group>
-    <url type="homepage">https://github.com/elly-code/@APP_NAME@</url>
-    <url type="bugtracker">https://github.com/elly-code/@APP_NAME@/issues</url>
-    <url type="help">https://github.com/elly-code/@APP_NAME@/issues</url>
-    <url type="donation">https://ko-fi.com/teamcons</url>
-    <url type="vcs-browser">https://github.com/elly-code/@APP_NAME@</url>
-
-    <branding>
-      <color type="primary" scheme_preference="light">#fff394</color>
-      <color type="primary" scheme_preference="dark">#ad5f00</color>
-    </branding>
-
-    <keywords>
-        <keyword>Personal</keyword>
-        <keyword>Assistant</keyword>
-        <keyword>Reminders</keyword>
-        <keyword>Remember</keyword>
-        <keyword>Duck</keyword>
-        <keyword>Quack</keyword>
-        <keyword>Cute</keyword>
-        <keyword>Utility</keyword>
-        <keyword>Pantheon</keyword>
-        <keyword>elementary OS</keyword>
-    </keywords>
-
-  <screenshots>
-    <screenshot type="default">
-      <caption>The welcome view</caption>
-      <image>https://raw.githubusercontent.com/elly-code/@APP_NAME@/@APP_VERSION@/data/screenshots/Welcome.png</image>
-    </screenshot>
-    <screenshot environment="pantheon">
-      <caption>Add new reminders</caption>
-      <image>https://raw.githubusercontent.com/elly-code/@APP_NAME@/@APP_VERSION@/data/screenshots/Editor.png</image>
-    </screenshot>
-    <screenshot environment="pantheon:dark">
-      <caption>Add new reminders but in dark</caption>
-      <image>https://raw.githubusercontent.com/elly-code/@APP_NAME@/@APP_VERSION@/data/screenshots/Editor-dark.png</image>
-    </screenshot>
-    <screenshot environment="pantheon">
-      <caption>See current reminders</caption>
-      <image>https://raw.githubusercontent.com/elly-code/@APP_NAME@/@APP_VERSION@/data/screenshots/List.png</image>
-    </screenshot>
-    <screenshot environment="pantheon:dark">
-      <caption>See current reminders but in dark</caption>
-      <image>https://raw.githubusercontent.com/elly-code/@APP_NAME@/@APP_VERSION@/data/screenshots/List-dark.png</image>
-    </screenshot>
-  </screenshots>
 </component>
