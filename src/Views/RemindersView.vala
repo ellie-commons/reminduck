@@ -16,7 +16,7 @@ public class Reminduck.Views.RemindersView : Gtk.Box {
         public signal void edit_request (Reminder reminder);
         public signal void reminder_deleted ();
 
-        Gtk.Label title;
+        Granite.HeaderLabel title;
         Gtk.ListBox reminders_list;
 
         construct {
@@ -26,11 +26,11 @@ public class Reminduck.Views.RemindersView : Gtk.Box {
             margin_start = 24;
             margin_end = 24;
 
-            title = new Gtk.Label (_("Your reminders")) {
+            title = new Granite.HeaderLabel (_("Your reminders")) {
                 margin_top = 24,
-                margin_bottom = 12
+                margin_bottom = 12,
+                size = Granite.HeaderLabel.Size.H2
             };
-            title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
             append (this.title);
 
@@ -38,7 +38,7 @@ public class Reminduck.Views.RemindersView : Gtk.Box {
 
             var add_new_button = new Gtk.Button.with_label (_("Create another"));
             add_new_button.halign = Gtk.Align.CENTER;
-            add_new_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+            add_new_button.add_css_class (Granite.CssClass.SUGGESTED);
             add_new_button.activate.connect (add_reminder);
             add_new_button.clicked.connect (add_reminder);
 

@@ -46,14 +46,17 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
         );
 
         title = _("Reminduck");
-        Gtk.Label title_widget = new Gtk.Label (_("Reminduck"));
-        title_widget.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
+        var title_text = _("Reminduck");
 
 #if DEVEL
         title = _("Reminduck (Development)");
-        title_widget.label = _("Reminduck (Development)");
+        title_text = _("Reminduck (Development)")
         add_css_class (STYLE_DEVEL);
 #endif
+
+        var title_widget = new Granite.HeaderLabel (title_text) {
+            size = Granite.HeaderLabel.Size.H4
+        };
 
         headerbar = new Gtk.HeaderBar () {
             title_widget = title_widget
@@ -76,11 +79,10 @@ public class Reminduck.MainWindow : Gtk.ApplicationWindow {
             }
         });
 
-        this.back_button = new Gtk.Button.with_label (_("Back")) {
+        this.back_button = new Granite.BackButton (_("Back")) {
             valign = Gtk.Align.CENTER,
             tooltip_text = _("Click to return to main view")
         };
-        this.back_button.add_css_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
         back_revealer = new Gtk.Revealer () {
             child = back_button,

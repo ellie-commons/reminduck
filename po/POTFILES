@@ -1,11 +1,15 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/reminduck.desktop.in.in
+data/reminduck.metainfo.xml.in.in
 src/Application.vala
 src/MainWindow.vala
 src/Objects/Quack.vala
 src/Objects/Reminder.vala
-src/Widgets/QuackBox.vala
-src/Widgets/RepeatBox.vala
+src/Services/Utils.vala
 src/Views/ReminderEditor.vala
 src/Views/RemindersView.vala
-src/Views/WelcomeView.vala
 src/Views/SettingsView.vala
-src/Services/Utils.vala
+src/Views/WelcomeView.vala
+src/Widgets/QuackBox.vala
+src/Widgets/RepeatBox.vala

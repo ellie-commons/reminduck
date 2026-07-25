@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.elly_code.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-27 15:24+0200\n"
+"POT-Creation-Date: 2026-07-25 23:48+0200\n"
 "PO-Revision-Date: 2025-07-15 15:37+0300\n"
 "Last-Translator: Вячеслав <ma12@rambler.ru>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -14,20 +14,238 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.5\n"
 
-#. If reminder date < current date
-#: src/Application.vala:220
-msgid "QUACK!"
-msgstr "КРЯ!"
-
+#: data/reminduck.desktop.in.in:6 data/reminduck.metainfo.xml.in.in:7
 #: src/MainWindow.vala:48 src/MainWindow.vala:49
 msgid "Reminduck"
 msgstr "Reminduck"
 
-#: src/MainWindow.vala:73
+#: data/reminduck.desktop.in.in:7 data/reminduck.metainfo.xml.in.in:124
+msgid "Reminders"
+msgstr "Напоминания"
+
+#: data/reminduck.desktop.in.in:8
+msgid "Don't forget about your stuff in an adorably annoying way"
+msgstr "Не забывайте о своих делах восхитительно раздражающим образом"
+
+#: data/reminduck.desktop.in.in:16
+msgid "Reminduck;Personal;Assistant;Reminders;Remember;Duck;Quack;Cute;"
+msgstr "Reminduck;Персональный;Помощник;Напоминания;Напоминать;Утка;Кря;Милый;"
+
+#: data/reminduck.desktop.in.in:22
+msgid "New reminder"
+msgstr "New reminder"
+
+#: data/reminduck.metainfo.xml.in.in:8
+msgid "Remember your stuff in an adorably annoying way"
+msgstr "Запоминайте свои вещи восхитительным образом"
+
+#: data/reminduck.metainfo.xml.in.in:10
+msgid ""
+"A simple reminder app made to be quick and easy - Reminduck focuses on "
+"simple or recurrent reminders with set time and date and nothing else."
+msgstr ""
+"Простое приложение для напоминаний, созданное для быстрого и удобного "
+"использования - Remindduck фокусируется на одократных или повторяющихся "
+"напоминаниях по времени и дате и ни на чём другом."
+
+#: data/reminduck.metainfo.xml.in.in:12
+msgid ""
+"It's perfect if all you want are simple or daily/weekly/monthly reminders. "
+"Anything more than that is not achievable by Reminduck right now - but you "
+"can help! Open an issue or a pull request if you have any ideas or requests."
+msgstr ""
+"Программы  идеальна, если вам нужны только простые или ежедневные / "
+"еженедельные / ежемесячные напоминания. На данный момент Remindduck не может "
+"сделать ничего большего, но вы можете помочь! Если у вас есть какие-либо "
+"идеи или предложения, отправьте запрос на исправление проблемы. запросы."
+
+#: data/reminduck.metainfo.xml.in.in:14
+msgid "And it quacks."
+msgstr "И крякает."
+
+#: data/reminduck.metainfo.xml.in.in:30
+msgid "Organization change"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in.in:36
+msgid "✨Pond Info News✨"
+msgstr "✨ Новости Пруд Инфо✨"
+
+#: data/reminduck.metainfo.xml.in.in:38
+msgid "Cleaner code and user interface"
+msgstr "Более чистый код и пользовательский интерфейс"
+
+#: data/reminduck.metainfo.xml.in.in:39
+msgid "Added repeat x every hours"
+msgstr "Повторяйте х каждые часов"
+
+#: data/reminduck.metainfo.xml.in.in:40
+msgid "Added more control for when repeating quacks"
+msgstr "Добавлено больше контроля за повторением кряканья"
+
+#: data/reminduck.metainfo.xml.in.in:41
+msgid "Allow deleting from the editor"
+msgstr ""
+
+#: data/reminduck.metainfo.xml.in.in:42
+msgid "Added vietnamese translations thanks to @hthienloc!"
+msgstr "Добавлены переводы на вьетнамский язык благодаря @hthienloc!"
+
+#: data/reminduck.metainfo.xml.in.in:43
+#, fuzzy
+msgid "Updated italian translations thanks to @albanobattistella!"
+msgstr "- 🇮🇹  Обновлён перевод на итальянский (@albanobattistella)"
+
+#: data/reminduck.metainfo.xml.in.in:54
+msgid "Updated russian translations thanks to @ma12vlad"
+msgstr "Обновленные русские переводы благодаря @ma12vlad"
+
+#: data/reminduck.metainfo.xml.in.in:61
+msgid "Settings have been moved into their own view"
+msgstr "Настройки были перенесены в их отдельное представление"
+
+#: data/reminduck.metainfo.xml.in.in:62
+msgid ""
+"Right click on the icon and choose \"New reminder\" to jump immediately in "
+"the editor"
+msgstr ""
+"Щелкните ПКМ на значке и выберите \"Новое напоминание\", чтобы сразу перейти "
+"в редактор"
+
+#: data/reminduck.metainfo.xml.in.in:68
+msgid "✨NEW IN THE POND✨"
+msgstr "✨НОВОЕ В ПРУДУ✨"
+
+#: data/reminduck.metainfo.xml.in.in:70
+msgid "FINALLY a quack setting 🦆 You can even preview the sound!"
+msgstr ""
+"НАКОНЕЦ-то появилась простая настройка🦆 вы даже можете предварительно "
+"прослушать звук!"
+
+#: data/reminduck.metainfo.xml.in.in:71
+msgid "Added a menu button with a popover"
+msgstr "Добавлена кнопка меню с всплывающим окном"
+
+#: data/reminduck.metainfo.xml.in.in:72
+msgid "Added toggle to change notification persistency"
+msgstr "Добавлен переключатель для изменения постоянства уведомлений"
+
+#: data/reminduck.metainfo.xml.in.in:73
+msgid "Added buttons to set/remove autostart"
+msgstr "Добавлены кнопки для установки/ отключения автозапуска"
+
+#: data/reminduck.metainfo.xml.in.in:74
+msgid "Bugfix: Now \"Show Reminders\" should display correctly"
+msgstr ""
+"Исправлена ошибка: теперь \"Показывать напоминания\" должно отображаться "
+"корректно"
+
+#: data/reminduck.metainfo.xml.in.in:81
+msgid "Repaired autostart feature"
+msgstr "Исправлена функция автозапуска"
+
+#: data/reminduck.metainfo.xml.in.in:82
+msgid "Updated IT translation by @albanobattistella"
+msgstr "Обновленный перевод от @albanobattistella"
+
+#: data/reminduck.metainfo.xml.in.in:83
+msgid "Corrections for appcenter"
+msgstr "Исправления для центра приложений"
+
+#: data/reminduck.metainfo.xml.in.in:89
+msgid ""
+"🦆🦆The quack is back!🦆🦆 A continuation of Reminduck, with the blessing of "
+"its original creator!"
+msgstr ""
+"🦆🦆Кряканье вернулось!🦆🦆 Продолжение Remindduck, с благословения его "
+"создателя!"
+
+#: data/reminduck.metainfo.xml.in.in:91
+msgid "Adapted to modern libraries (GTK4, Flatpak)"
+msgstr "Адаптирован к современным библиотекам (GTK4, Flatpak)"
+
+#: data/reminduck.metainfo.xml.in.in:92
+msgid "Make the whole window grabbable"
+msgstr "Сделайте все окно доступным для захвата"
+
+#: data/reminduck.metainfo.xml.in.in:93
+msgid "No quack sound yet but that will come"
+msgstr "Кряканья пока нет, но это произойдет"
+
+#: data/reminduck.metainfo.xml.in.in:107
+#, fuzzy
+msgid "Matheus Fantinel + Stella and Charlie"
+msgstr "Матеус Фантинель + Стелла"
+
+#: data/reminduck.metainfo.xml.in.in:122
+msgid "Personal"
+msgstr "Персональный"
+
+#: data/reminduck.metainfo.xml.in.in:123
+msgid "Assistant"
+msgstr "Помощник"
+
+#: data/reminduck.metainfo.xml.in.in:125
+msgid "Remember"
+msgstr "Напоминание"
+
+#: data/reminduck.metainfo.xml.in.in:126
+msgid "Duck"
+msgstr "Утка"
+
+#: data/reminduck.metainfo.xml.in.in:127
+msgid "Quack"
+msgstr "Кря"
+
+#: data/reminduck.metainfo.xml.in.in:128
+msgid "Cute"
+msgstr "Милый"
+
+#: data/reminduck.metainfo.xml.in.in:129
+msgid "Utility"
+msgstr "Утилита"
+
+#: data/reminduck.metainfo.xml.in.in:130
+msgid "Pantheon"
+msgstr "Пантеон"
+
+#: data/reminduck.metainfo.xml.in.in:131
+msgid "elementary OS"
+msgstr "элементарная ОС"
+
+#: data/reminduck.metainfo.xml.in.in:136
+msgid "The welcome view"
+msgstr "Приветственный вид"
+
+#: data/reminduck.metainfo.xml.in.in:140
+msgid "Add new reminders"
+msgstr "Добавляйте новые напоминания"
+
+#: data/reminduck.metainfo.xml.in.in:144
+msgid "Add new reminders but in dark"
+msgstr "Добавляйте новые напоминания в тёмной теме"
+
+#: data/reminduck.metainfo.xml.in.in:148
+msgid "See current reminders"
+msgstr "Просмотр текущих напоминаний"
+
+#: data/reminduck.metainfo.xml.in.in:152
+msgid "See current reminders but in dark"
+msgstr "Смотрите текущие напоминания в тёмной теме"
+
+#: src/Application.vala:220
+msgid "QUACK!"
+msgstr "КРЯ!"
+
+#: src/MainWindow.vala:52 src/MainWindow.vala:53
+msgid "Reminduck (Development)"
+msgstr ""
+
+#: src/MainWindow.vala:82
 msgid "Back"
 msgstr "Назад"
 
-#: src/MainWindow.vala:75
+#: src/MainWindow.vala:84
 msgid "Click to return to main view"
 msgstr "Нажмите, чтобы вернуться к основному виду"
 
@@ -43,7 +261,7 @@ msgstr "Пластиковая утка"
 msgid "Random Duck"
 msgstr ""
 
-#. /TRANSLATORS: [0] is singular form, [1] is plural form. These are displayed as menu items
+#. TRANSLATORS: [0] is singular form, [1] is plural form. These are displayed as menu items
 #: src/Objects/Reminder.vala:28
 msgid "Don't Repeat"
 msgstr "Не повторять"
@@ -83,42 +301,13 @@ msgstr[0] "Месяц"
 msgstr[1] ""
 msgstr[2] ""
 
-#. minibox.append (quack_toggle);
-#: src/Widgets/QuackBox.vala:29 src/Views/SettingsView.vala:63
-msgid "Do a quack sound"
-msgstr "Издавать крякающий звук"
+#: src/Services/Utils.vala:18
+msgid "Autostart Reminduck in background to send reminders"
+msgstr "Автозапуск Remindduck в фоновом режиме для отправки напоминаний"
 
-#: src/Widgets/QuackBox.vala:31 src/Views/SettingsView.vala:65
-msgid "If enabled, the duck will quack when reminding you"
-msgstr "Если включено, утка будет крякать, напоминая вам"
-
-#: src/Widgets/QuackBox.vala:45 src/Views/SettingsView.vala:48
-msgid "Click to preview reminder sound"
-msgstr "Нажмите, чтобы прослушать кряканье"
-
-#: src/Widgets/QuackBox.vala:56
-msgid "Choose your quack"
-msgstr "Выбирайте шарлатана"
-
-#: src/Widgets/QuackBox.vala:58
-msgid "Which will be your champion?"
-msgstr "Кто станет вашим чемпионом?"
-
-#: src/Widgets/QuackBox.vala:70 src/Views/SettingsView.vala:76
-msgid "Notifications"
-msgstr "Уведомления"
-
-#: src/Widgets/QuackBox.vala:86
-#, fuzzy
-msgid "You can disable system notification sounds in the system settings"
-msgstr ""
-"Но можно изменить громкость или отключить звук уведомлений в системных "
-"настройках"
-
-#. /TRANSLATORS: If your language doesnt match "Every XX Minutes/Month/etc" pattern please tell me!!!!!! So i can adapt it for your lang
-#: src/Widgets/RepeatBox.vala:54
-msgid "Every"
-msgstr "Каждый"
+#: src/Services/Utils.vala:34
+msgid "Remove Reminduck from autostart"
+msgstr "Удалить Remindduck из автозапуска"
 
 #: src/Views/ReminderEditor.vala:45
 msgid "What do you want to be reminded of?"
@@ -166,6 +355,79 @@ msgstr "Сегодня"
 msgid "Edit"
 msgstr "Править"
 
+#: src/Views/SettingsView.vala:35
+msgid "Request to system sent"
+msgstr "Отправлен запрос в систему"
+
+#: src/Views/SettingsView.vala:39 src/Views/WelcomeView.vala:54
+msgid "Settings"
+msgstr "Настройки"
+
+#: src/Views/SettingsView.vala:55 src/Widgets/QuackBox.vala:45
+msgid "Click to preview reminder sound"
+msgstr "Нажмите, чтобы прослушать кряканье"
+
+#: src/Views/SettingsView.vala:70 src/Widgets/QuackBox.vala:29
+msgid "Do a quack sound"
+msgstr "Издавать крякающий звук"
+
+#: src/Views/SettingsView.vala:72 src/Widgets/QuackBox.vala:31
+msgid "If enabled, the duck will quack when reminding you"
+msgstr "Если включено, утка будет крякать, напоминая вам"
+
+#: src/Views/SettingsView.vala:83 src/Widgets/QuackBox.vala:70
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: src/Views/SettingsView.vala:99
+msgid "You can disable the 'DING' sound in the system settings"
+msgstr ""
+"Но можно изменить громкость или отключить звук уведомлений в системных "
+"настройках"
+
+#: src/Views/SettingsView.vala:130
+msgid "Persistent notifications"
+msgstr "Постоянные уведомления"
+
+#: src/Views/SettingsView.vala:132
+msgid "If enabled, the duck will stay until (gently) dismissed"
+msgstr ""
+"Если включено, утка-напоминалка будет оставаться на экране, пока не нажмёте "
+"крестик"
+
+#. TRANSLATORS: Button to autostart the application
+#: src/Views/SettingsView.vala:148
+msgid "Enable"
+msgstr "Включить"
+
+#. TRANSLATORS: Button to remove the autostart for the application
+#: src/Views/SettingsView.vala:156
+msgid "Disable"
+msgstr "Отключить"
+
+#: src/Views/SettingsView.vala:168
+#, fuzzy
+msgid "Autostart in the background"
+msgstr "Автозапуск Remindduck в фоновом режиме для отправки напоминаний"
+
+#: src/Views/SettingsView.vala:170
+#, fuzzy
+msgid ""
+"Request the system to start the application in the background when you log in"
+msgstr "Вы можете запросить у системы автозапуск этого приложения"
+
+#: src/Views/SettingsView.vala:193
+msgid "Support us!"
+msgstr "Поддержите нас!"
+
+#: src/Views/SettingsView.vala:201
+msgid "Reset to Default"
+msgstr "Сброс к значению по умолчанию"
+
+#: src/Views/SettingsView.vala:202
+msgid "Reset all settings to defaults"
+msgstr "Сбросить все настройки до значений по умолчанию"
+
 #: src/Views/WelcomeView.vala:34
 msgid "QUACK! I'm Reminduck"
 msgstr "КРЯ! Меня зовут Reminduck"
@@ -190,74 +452,29 @@ msgstr "Смотреть напоминания"
 msgid "See reminders you've created"
 msgstr "Просмотрите созданные вами напоминания"
 
-#: src/Views/WelcomeView.vala:54 src/Views/SettingsView.vala:32
-msgid "Settings"
-msgstr "Настройки"
-
 #: src/Views/WelcomeView.vala:55
 msgid "Tweak a few things"
 msgstr "Подправьте кое-что"
 
-#: src/Views/SettingsView.vala:28
-msgid "Request to system sent"
-msgstr "Отправлен запрос в систему"
+#: src/Widgets/QuackBox.vala:56
+msgid "Choose your quack"
+msgstr "Выбирайте шарлатана"
 
-#: src/Views/SettingsView.vala:92
-msgid "You can disable the 'DING' sound in the system settings"
+#: src/Widgets/QuackBox.vala:58
+msgid "Which will be your champion?"
+msgstr "Кто станет вашим чемпионом?"
+
+#: src/Widgets/QuackBox.vala:86
+#, fuzzy
+msgid "You can disable system notification sounds in the system settings"
 msgstr ""
 "Но можно изменить громкость или отключить звук уведомлений в системных "
 "настройках"
 
-#: src/Views/SettingsView.vala:123
-msgid "Persistent notifications"
-msgstr "Постоянные уведомления"
-
-#: src/Views/SettingsView.vala:125
-msgid "If enabled, the duck will stay until (gently) dismissed"
-msgstr ""
-"Если включено, утка-напоминалка будет оставаться на экране, пока не нажмёте "
-"крестик"
-
-#. /TRANSLATORS: Button to autostart the application
-#: src/Views/SettingsView.vala:141
-msgid "Enable"
-msgstr "Включить"
-
-#. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/SettingsView.vala:153
-msgid "Disable"
-msgstr "Отключить"
-
-#: src/Views/SettingsView.vala:169
-#, fuzzy
-msgid "Autostart in the background"
-msgstr "Автозапуск Remindduck в фоновом режиме для отправки напоминаний"
-
-#: src/Views/SettingsView.vala:171
-#, fuzzy
-msgid ""
-"Request the system to start the application in the background when you log in"
-msgstr "Вы можете запросить у системы автозапуск этого приложения"
-
-#: src/Views/SettingsView.vala:194
-msgid "Support us!"
-msgstr "Поддержите нас!"
-
-#: src/Views/SettingsView.vala:202
-msgid "Reset to Default"
-msgstr "Сброс к значению по умолчанию"
-
-#: src/Views/SettingsView.vala:203
-msgid "Reset all settings to defaults"
-msgstr "Сбросить все настройки до значений по умолчанию"
-
-#: src/Services/Utils.vala:18
-msgid "Autostart Reminduck in background to send reminders"
-msgstr "Автозапуск Remindduck в фоновом режиме для отправки напоминаний"
-
-#: src/Services/Utils.vala:34
-msgid "Remove Reminduck from autostart"
-msgstr "Удалить Remindduck из автозапуска"
+#. TRANSLATORS: If your language doesnt match "Every XX Minutes/Month/etc" pattern please tell me!!!!!! So i can adapt it for your lang
+#: src/Widgets/RepeatBox.vala:58
+msgid "Every"
+msgstr "Каждый"
 
 #, c-format
 #~ msgid "Every minute"

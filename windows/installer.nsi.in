@@ -1,0 +1,167 @@
+!include "MUI2.nsh"
+!include WinMessages.nsh
+
+
+;----------
+; Custom defines
+
+	!define APP_NAME "@APP_NAME@"
+	!define APP_ID "@APP_ID@"
+	!define APP_VERSION "@APP_VERSION@"
+	!define NICENAME "@NICENAME@"
+	!define PUBLISHER "@PUBLISHER@"
+
+;------------------------------
+Name Jorts
+
+VIAddVersionKey /LANG=0 "ProductName" "${APP_NAME}"
+VIAddVersionKey /LANG=0 "FileVersion" "${APP_VERSION}"
+VIAddVersionKey /LANG=0 "ProductVersion" "${APP_VERSION}"
+VIAddVersionKey /LANG=0 "FileDescription" "https://github.com/${PUBLISHER}/${APP_NAME}"
+VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3 ${PUBLISHER}"
+VIProductVersion "${APP_VERSION}.0"
+
+Outfile "Jorts-Installer.exe"
+InstallDir "$LOCALAPPDATA\Programs\${APP_ID}"
+
+# We do not need admin here
+RequestExecutionLevel user
+
+# Set the title of the installer window
+Caption "${NICENAME} Installer"
+BrandingText "${NICENAME} version ${APP_VERSION}, ${PUBLISHER}"
+
+# Set the title and text on the welcome page
+!define MUI_WELCOMEPAGE_TITLE "Welcome to ${NICENAME} Installer"
+!define MUI_WELCOMEPAGE_TEXT "This thing will guide you through the installation of ${NICENAME}."
+!define MUI_INSTFILESPAGE_TEXT "Please wait while ${NICENAME} is being installed."
+!define MUI_ICON "windows\icons\install.ico"
+!define MUI_UNICON "windows\icons\uninstall.ico"
+
+!define MUI_FINISHPAGE_LINK "This software is open source!"
+!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/${PUBLISHER}/${APP_NAME}"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\bin\${APP_ID}.exe"
+
+!insertmacro MUI_PAGE_WELCOME
+!insertmacro MUI_PAGE_DIRECTORY
+!insertmacro MUI_PAGE_INSTFILES
+!insertmacro MUI_PAGE_FINISH
+!insertmacro MUI_UNPAGE_CONFIRM
+!insertmacro MUI_UNPAGE_INSTFILES
+!insertmacro MUI_UNPAGE_FINISH
+!insertmacro MUI_LANGUAGE "English"
+
+;------------------------------
+!macro GetCleanDir INPUTDIR
+  ; ATTENTION: USE ON YOUR OWN RISK!
+  ; Please report bugs here: http://stefan.bertels.org/
+  !define Index_GetCleanDir 'GetCleanDir_Line${__LINE__}'
+  Push $R0
+  Push $R1
+  StrCpy $R0 "${INPUTDIR}"
+  StrCmp $R0 "" ${Index_GetCleanDir}-finish
+  StrCpy $R1 "$R0" "" -1
+  StrCmp "$R1" "\" ${Index_GetCleanDir}-finish
+  StrCpy $R0 "$R0\"
+${Index_GetCleanDir}-finish:
+  Pop $R1
+  Exch $R0
+  !undef Index_GetCleanDir
+!macroend
+
+;------------------------------
+; similar to "RMDIR /r DIRECTORY", but does not remove DIRECTORY itself
+; example: !insertmacro RemoveFilesAndSubDirs "$INSTDIR"
+!macro RemoveFilesAndSubDirs DIRECTORY
+  ; ATTENTION: USE ON YOUR OWN RISK!
+  ; Please report bugs here: http://stefan.bertels.org/
+  !define Index_RemoveFilesAndSubDirs 'RemoveFilesAndSubDirs_${__LINE__}'
+
+  Push $R0
+  Push $R1
+  Push $R2
+
+  !insertmacro GetCleanDir "${DIRECTORY}"
+  Pop $R2
+  FindFirst $R0 $R1 "$R2*.*"
+${Index_RemoveFilesAndSubDirs}-loop:
+  StrCmp $R1 "" ${Index_RemoveFilesAndSubDirs}-done
+  StrCmp $R1 "." ${Index_RemoveFilesAndSubDirs}-next
+  StrCmp $R1 ".." ${Index_RemoveFilesAndSubDirs}-next
+  IfFileExists "$R2$R1\*.*" ${Index_RemoveFilesAndSubDirs}-directory
+  ; file
+  Delete "$R2$R1"
+  goto ${Index_RemoveFilesAndSubDirs}-next
+${Index_RemoveFilesAndSubDirs}-directory:
+  ; directory
+  RMDir /r "$R2$R1"
+${Index_RemoveFilesAndSubDirs}-next:
+  FindNext $R0 $R1
+  Goto ${Index_RemoveFilesAndSubDirs}-loop
+${Index_RemoveFilesAndSubDirs}-done:
+  FindClose $R0
+
+  Pop $R2
+  Pop $R1
+  Pop $R0
+  !undef Index_RemoveFilesAndSubDirs
+!macroend
+
+;------------------------------
+Section "Install"
+  SetOutPath "$INSTDIR"
+  File /r "deploy\*"
+  CreateDirectory $SMPROGRAMS\${NICENAME}
+
+  ; fonts. We install to local fonts to not trip up admin rights, and register for local user
+  SetOutPath "$LOCALAPPDATA\Microsoft\Windows\Fonts"
+  File /r "data\fonts\RedactedScript-Regular.ttf"
+  WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts" "Redacted Script Regular (TrueType)" "$LOCALAPPDATA\Microsoft\Windows\Fonts\RedactedScript-Regular.ttf"
+  SetOutPath "$INSTDIR"
+
+  ; Start menu
+  CreateShortCut "$SMPROGRAMS\${NICENAME}\${NICENAME}.lnk" "$INSTDIR\bin\${APP_ID}.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
+  
+  ; Autostart
+  CreateShortCut "$SMPROGRAMS\Startup\${NICENAME}.lnk" "$INSTDIR\bin\${APP_ID}.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
+  
+  WriteRegStr HKCU "Software\${APP_ID}" "" $INSTDIR
+  WriteUninstaller "$INSTDIR\Uninstall.exe"
+  
+  ; Add to Add/Remove programs list
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_ID}" "DisplayName" "${NICENAME}"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_ID}" "DisplayIcon" "$INSTDIR\icons\icon.ico"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_ID}" "InstallLocation" "$INSTDIR\"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_ID}" "UninstallString" "$INSTDIR\Uninstall.exe"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_ID}" "Publisher" "${PUBLISHER}"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_ID}" "URLInfoAbout" "https://github.com/${PUBLISHER}/${APP_NAME}"
+  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_ID}" "EstimatedSize" "0x00028294" ;164,5 MB
+SectionEnd
+
+;------------------------------
+Section "Uninstall"
+
+  ; Remove Start Menu shortcut
+  Delete "$SMPROGRAMS\${NICENAME}\${NICENAME}.lnk"
+  Delete "$SMPROGRAMS\Startup\${NICENAME}.lnk"
+
+  ; Remove uninstaller
+  Delete "$INSTDIR\Uninstall.exe"
+  
+  ; Remove files and folders
+  !insertmacro RemoveFilesAndSubDirs "$INSTDIR"
+
+  ; Remove directories used
+  RMDir $SMPROGRAMS\${NICENAME}
+  RMDir "$INSTDIR"
+
+  ; Remove font
+  Delete "$LOCALAPPDATA\Microsoft\Windows\Fonts\RedactedScript-Regular.ttf"
+  DeleteRegKey HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts\Redacted Script Regular (TrueType)"
+
+  ; Remove registry keys
+  DeleteRegKey HKCU "Software\${APP_ID}"
+  DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_ID}"
+
+SectionEnd
+

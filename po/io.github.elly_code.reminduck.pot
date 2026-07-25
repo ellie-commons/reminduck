@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the io.github.elly_code.reminduck package.
-# ONDO ALVELLË, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
@@ -9,52 +9,45 @@ msgstr ""
 "Project-Id-Version: io.github.elly_code.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-07-25 23:48+0200\n"
-"PO-Revision-Date: 2021-11-17 17:14+0100\n"
-"Last-Translator: ONDO ALVELLË\n"
-"Language-Team: none\n"
-"Language: ca\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: data/reminduck.desktop.in.in:6 data/reminduck.metainfo.xml.in.in:7
 #: src/MainWindow.vala:48 src/MainWindow.vala:49
 msgid "Reminduck"
-msgstr "Reminduck"
+msgstr ""
 
 #: data/reminduck.desktop.in.in:7 data/reminduck.metainfo.xml.in.in:124
 msgid "Reminders"
-msgstr "Recordatoris"
+msgstr ""
 
 #: data/reminduck.desktop.in.in:8
 msgid "Don't forget about your stuff in an adorably annoying way"
-msgstr "Recorda-ho tot d'una manera adorablement molesta"
+msgstr ""
 
 #: data/reminduck.desktop.in.in:16
-#, fuzzy
 msgid "Reminduck;Personal;Assistant;Reminders;Remember;Duck;Quack;Cute;"
-msgstr "Reminduck;Personal;Assistant;Reminders"
+msgstr ""
 
 #: data/reminduck.desktop.in.in:22
-#, fuzzy
 msgid "New reminder"
-msgstr "Recordatori nou"
+msgstr ""
 
 #: data/reminduck.metainfo.xml.in.in:8
-#, fuzzy
 msgid "Remember your stuff in an adorably annoying way"
-msgstr "Recorda-ho tot d'una manera adorablement molesta."
+msgstr ""
 
 #: data/reminduck.metainfo.xml.in.in:10
-#, fuzzy
 msgid ""
 "A simple reminder app made to be quick and easy - Reminduck focuses on "
 "simple or recurrent reminders with set time and date and nothing else."
 msgstr ""
-"Reminduck és una aplicació simple de recordatoris feta per ser ràpida i "
-"fàcil. Es basa en recordatoris simples o recurrents amb una data i hora "
-"específica i res més."
 
 #: data/reminduck.metainfo.xml.in.in:12
 msgid ""
@@ -62,13 +55,10 @@ msgid ""
 "Anything more than that is not achievable by Reminduck right now - but you "
 "can help! Open an issue or a pull request if you have any ideas or requests."
 msgstr ""
-"És perfecte si el que necessites són recordatoris simples o diaris/setmanals/"
-"mensuals. Reminduck no pot fer res més ara mateix; però pots ajudar! Obre un "
-"'issue' o una 'pull request' si tens idees o sol·licituds."
 
 #: data/reminduck.metainfo.xml.in.in:14
 msgid "And it quacks."
-msgstr "I nyequeja."
+msgstr ""
 
 #: data/reminduck.metainfo.xml.in.in:30
 msgid "Organization change"
@@ -171,9 +161,8 @@ msgid "No quack sound yet but that will come"
 msgstr ""
 
 #: data/reminduck.metainfo.xml.in.in:107
-#, fuzzy
 msgid "Matheus Fantinel + Stella and Charlie"
-msgstr "Matheus Fantinel"
+msgstr ""
 
 #: data/reminduck.metainfo.xml.in.in:122
 msgid "Personal"
@@ -216,18 +205,16 @@ msgid "The welcome view"
 msgstr ""
 
 #: data/reminduck.metainfo.xml.in.in:140
-#, fuzzy
 msgid "Add new reminders"
-msgstr "Mostra els recordatoris"
+msgstr ""
 
 #: data/reminduck.metainfo.xml.in.in:144
 msgid "Add new reminders but in dark"
 msgstr ""
 
 #: data/reminduck.metainfo.xml.in.in:148
-#, fuzzy
 msgid "See current reminders"
-msgstr "Els teus recordatoris"
+msgstr ""
 
 #: data/reminduck.metainfo.xml.in.in:152
 msgid "See current reminders but in dark"
@@ -243,7 +230,7 @@ msgstr ""
 
 #: src/MainWindow.vala:82
 msgid "Back"
-msgstr "Enrere"
+msgstr ""
 
 #: src/MainWindow.vala:84
 msgid "Click to return to main view"
@@ -264,7 +251,7 @@ msgstr ""
 #. TRANSLATORS: [0] is singular form, [1] is plural form. These are displayed as menu items
 #: src/Objects/Reminder.vala:28
 msgid "Don't Repeat"
-msgstr "No el repeteixis"
+msgstr ""
 
 #: src/Objects/Reminder.vala:29
 msgid "Minute"
@@ -306,49 +293,48 @@ msgstr ""
 
 #: src/Views/ReminderEditor.vala:45
 msgid "What do you want to be reminded of?"
-msgstr "Què vols que et recordi?"
+msgstr ""
 
 #: src/Views/ReminderEditor.vala:69
 msgid "Repeat"
-msgstr "Repeteix"
+msgstr ""
 
 #: src/Views/ReminderEditor.vala:85 src/Views/RemindersView.vala:119
 msgid "Delete"
-msgstr "Esborra"
+msgstr ""
 
 #: src/Views/ReminderEditor.vala:88
 msgid "Save reminder"
-msgstr "Desa el recordatori"
+msgstr ""
 
 #: src/Views/ReminderEditor.vala:170
-#, fuzzy
 msgid "Edit reminder"
-msgstr "Desa el recordatori"
+msgstr ""
 
 #: src/Views/ReminderEditor.vala:175
 msgid "Create a new reminder"
-msgstr "Crea un recordatori nou"
+msgstr ""
 
 #: src/Views/RemindersView.vala:29
 msgid "Your reminders"
-msgstr "Els teus recordatoris"
+msgstr ""
 
 #: src/Views/RemindersView.vala:39
 msgid "Create another"
-msgstr "Crea'n un altre"
+msgstr ""
 
 #: src/Views/RemindersView.vala:84
 #, c-format
 msgid "Reminded: %s"
-msgstr "Recordat: %s"
+msgstr ""
 
 #: src/Views/RemindersView.vala:100
 msgid "Today"
-msgstr "Avui"
+msgstr ""
 
 #: src/Views/RemindersView.vala:112
 msgid "Edit"
-msgstr "Edita"
+msgstr ""
 
 #: src/Views/SettingsView.vala:35
 msgid "Request to system sent"
@@ -419,27 +405,27 @@ msgstr ""
 
 #: src/Views/WelcomeView.vala:34
 msgid "QUACK! I'm Reminduck"
-msgstr "NYEC! Soc Reminduck"
+msgstr ""
 
 #: src/Views/WelcomeView.vala:35
 msgid "The duck that reminds you"
-msgstr "L'ànec que et recorda coses"
+msgstr ""
 
 #: src/Views/WelcomeView.vala:42
 msgid "New Reminder"
-msgstr "Recordatori nou"
+msgstr ""
 
 #: src/Views/WelcomeView.vala:43
 msgid "Create a new reminder for a set date and time"
-msgstr "Crea un recordatori nou per una data i hora concreta"
+msgstr ""
 
 #: src/Views/WelcomeView.vala:48
 msgid "View Reminders"
-msgstr "Mostra els recordatoris"
+msgstr ""
 
 #: src/Views/WelcomeView.vala:49
 msgid "See reminders you've created"
-msgstr "Mostra els recordatoris que heu creat"
+msgstr ""
 
 #: src/Views/WelcomeView.vala:55
 msgid "Tweak a few things"
@@ -460,102 +446,4 @@ msgstr ""
 #. TRANSLATORS: If your language doesnt match "Every XX Minutes/Month/etc" pattern please tell me!!!!!! So i can adapt it for your lang
 #: src/Widgets/RepeatBox.vala:58
 msgid "Every"
-msgstr "Cada"
-
-#~ msgid "io.github.elly_code.reminduck"
-#~ msgstr "io.github.elly_code.reminduck"
-
-#~ msgid "🐞 Enable translations on Flatpak"
-#~ msgstr "🐞 Activa transicions a Flatpak"
-
-#~ msgid "🗃️ Flatpak Support!"
-#~ msgstr "🗃️ Suport per Flatpak!"
-
-#~ msgid "🌑 Dark-mode toggle on the header bar"
-#~ msgstr "🌑 Commutador de modes fosc i clar a la barra d'encapçalament."
-
-#~ msgid ""
-#~ "🔔 Notifications now stick around until you close them, to make sure you "
-#~ "don't miss your quacks"
-#~ msgstr ""
-#~ "🔔 Les notificacions ara persisteixen fins que les tanques, per assegurar-"
-#~ "se que no et perds els nyecs"
-
-#~ msgid ""
-#~ "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
-#~ msgstr ""
-#~ "🌟 Suport per temes GTK addicionals, cosa que fa que Reminduck es pugui "
-#~ "utilitzar en qualsevol distribució"
-
-#~ msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
-#~ msgstr "🇪🇸 Traducció al castellà (Alejandro Eli | @onerbs)"
-
-#~ msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
-#~ msgstr "🇮🇹 Traducció a l'italià (Mirko Brombin | @mirkobrombin)"
-
-#~ msgid ""
-#~ "🐥️ New Icon! - hopefully this one looks better than the previous one. "
-#~ "With great help from Nararyans R.I. (@Fatih20)"
-#~ msgstr ""
-#~ "🐥️ Icona nova! Espero que aquest tingui un aspecte millor que l'anterior. "
-#~ "Amb la fantàstica ajuda de Nararyans R.I. (@Fatih20)"
-
-#~ msgid ""
-#~ "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
-#~ msgstr ""
-#~ "💁‍ S'ha augmentat la compatibilitat amb les traduccions (Corentin Noël | "
-#~ "@tintou)"
-
-#~ msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
-#~ msgstr "🇨🇵️ Traducció al francès (Nathan Bonnemains | @NathanBnm)"
-
-#~ msgid ""
-#~ "🔁️ Recurrent reminders - you can now have reminders that show up in set "
-#~ "periods of time: every day, week, month, or a set interval"
-#~ msgstr ""
-#~ "🔁️ Recordatoris recurrents: ara pots tenir recordatoris que apareixen en "
-#~ "intervals de temps determinats: cada dia, setmana, mes o altres"
-
-#~ msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
-#~ msgstr ""
-#~ "🌟️ Millores d'interfície en general per tal que configurar els "
-#~ "recordatoris sigui més bonic"
-
-#~ msgid "🌃️ Dark Mode is now prettier"
-#~ msgstr "🌃️ El mode fosc és més bonic"
-
-#~ msgid "🇹🇷 Turkish translation (libreajans)"
-#~ msgstr "🇹🇷 Traducció al turc (libreajans)"
-
-#~ msgid "🇳🇱 Dutch translation (Vistaus)"
-#~ msgstr "🇳🇱 Traducció a l'holandès (Vistaus)"
-
-#~ msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
-#~ msgstr "Suport per la configuració no oficial \"Prefereix el tema fosc\" 🌝️"
-
-#~ msgid "This should also make it work with other dark GTK themes"
-#~ msgstr "En principi també hauria de funcionar amb altres temes GTK foscos"
-
-#~ msgid "Initial Release 🦆"
-#~ msgstr "🦆 Versió inicial"
-
-#, c-format
-#~ msgid "Every minute"
-#~ msgid_plural "Every %d minutes"
-#~ msgstr[0] "Cada minut"
-#~ msgstr[1] "Cada %d minuts"
-
-#~ msgid "Every X minutes"
-#~ msgstr "Cada X minuts"
-
-#~ msgid "Every week"
-#~ msgstr "Cada setmana"
-
-#~ msgid "Every month"
-#~ msgstr "Cada mes"
-
-#~ msgid "Light mode"
-#~ msgstr "Mode clar"
-
-#~ msgid "Dark mode"
-#~ msgstr "Mode fosc"
+msgstr ""

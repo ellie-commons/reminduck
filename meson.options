@@ -1,0 +1,8 @@
+option('profile',
+    type : 'combo',
+    choices : ['linux', 'windows'],
+    value : 'linux',
+    description : 'What we build for. Switched on automatically on windows machines'
+)
+option('development', type: 'boolean', value: false, description: 'If this is a development build')
+option('legacy-rdnn', type: 'boolean', value: false, description: 'If this uses the legacy RDNN')

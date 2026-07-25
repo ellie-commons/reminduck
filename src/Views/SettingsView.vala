@@ -8,11 +8,18 @@
 
 public class Reminduck.Views.SettingsView : Gtk.Box {
 
-    construct {
-        orientation = Gtk.Orientation.VERTICAL;
-        valign = Gtk.Align.FILL;
-        hexpand = vexpand = true;
+    Granite.Toast toast;
 
+    public SettingsView () {
+        Object (
+            orientation: Gtk.Orientation.VERTICAL,
+            valign: Gtk.Align.FILL,
+            hexpand: true,
+            vexpand: true
+        );
+    }
+
+    construct {
         var centerbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 24) {
             hexpand = vexpand = true,
             halign = Gtk.Align.FILL,
@@ -25,15 +32,15 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         var overlay = new Gtk.Overlay ();
         append (overlay);
 
-        var toast = new Granite.Toast (_("Request to system sent"));
+        toast = new Granite.Toast (_("Request to system sent"));
         overlay.add_overlay (toast);
 
 
-        var title = new Gtk.Label (_("Settings")) {
+        var title = new Granite.HeaderLabel (_("Settings")) {
                 margin_top = 24,
-                margin_bottom = 12
+                margin_bottom = 12,
+                size = Granite.HeaderLabel.Size.H2
         };
-        title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
         append (title);
 
@@ -137,32 +144,24 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
         };
 
         ///TRANSLATORS: Button to autostart the application
-        var set_autostart = new Gtk.Button () {
+        var button_set_autostart = new Gtk.Button () {
             label = _("Enable"),
             valign = Gtk.Align.CENTER
         };
 
-        set_autostart.clicked.connect (() => {
-            debug ("Setting autostart");
-            Reminduck.Utils.request_autostart ();
-            toast.send_notification ();
-        });
+        button_set_autostart.clicked.connect (set_autostart);
 
         ///TRANSLATORS: Button to remove the autostart for the application
-        var remove_autostart = new Gtk.Button () {
+        var button_remove_autostart = new Gtk.Button () {
             label = _("Disable"),
             valign = Gtk.Align.CENTER
         };
         //remove_autostart.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-        remove_autostart.clicked.connect (() => {
-            debug ("Removing autostart");
-            Reminduck.Utils.remove_autostart ();
-            toast.send_notification ();
-        });
+        button_remove_autostart.clicked.connect (remove_autostart);
 
-        both_buttons.append (set_autostart);
-        both_buttons.append (remove_autostart);
+        both_buttons.append (button_set_autostart);
+        both_buttons.append (button_remove_autostart);
 
         var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
 
@@ -190,7 +189,7 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
             // Monies?
         var support_button = new Gtk.LinkButton.with_label (
-            "https://ko-fi.com/teamcons",
+            DONATE_LINK,
             _("Support us!")
         );
         support_button.halign = Gtk.Align.START;
@@ -209,12 +208,12 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
 
         /* ---------------- CONNECTS AND BINDS ---------------- */
         ReminduckApp.settings.bind (
-            "quack-sound",
+            KEY_QUACK_SOUND,
             quack_toggle, "active",
             SettingsBindFlags.DEFAULT);
 
         ReminduckApp.settings.bind (
-            "persistent",
+            KEY_PERSISTENT_NOTIFICATION,
             persist_toggle, "active",
             SettingsBindFlags.DEFAULT);
 
@@ -224,10 +223,22 @@ public class Reminduck.Views.SettingsView : Gtk.Box {
     private void on_reset () {
         debug ("Resetting settings…");
 
-        string[] keys = {"quack-sound", "persistent"};
+        string[] keys = {KEY_QUACK_SOUND, KEY_PERSISTENT_NOTIFICATION};
         foreach (var key in keys) {
                 ReminduckApp.settings.reset (key);
         }
+    }
+
+    private void set_autostart () {
+        debug ("Setting autostart");
+        Reminduck.Utils.request_autostart ();
+        toast.send_notification ();
+    }
+
+    private void remove_autostart () {
+        debug ("Removing autostart");
+        Reminduck.Utils.remove_autostart ();
+        toast.send_notification ();
     }
 }
 

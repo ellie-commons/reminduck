@@ -41,20 +41,24 @@ public class Reminduck.RepeatBox : Gtk.Box {
     Gtk.DropDown dropdown;
     Gtk.SpinButton interval_spin;
 
-    construct {
-        orientation = Gtk.Orientation.HORIZONTAL;
-        spacing = 5;
+    public RepeatBox () {
+        Object (
+            orientation: Gtk.Orientation.HORIZONTAL,
+            spacing: SPACING_STANDARD
+        );
+    }
 
+    construct {
         recurrency_switch = new Gtk.Switch () {
-            margin_end = 10,
+            margin_end = SPACING_DOUBLE,
             active = false
         };
 
         ///TRANSLATORS: If your language doesnt match "Every XX Minutes/Month/etc" pattern please tell me!!!!!! So i can adapt it for your lang
-        var every_label = new Gtk.Label (_("Every")) {
-            margin_end = 10,
+        var every_label = new Granite.HeaderLabel (_("Every")) {
+            margin_end = SPACING_DOUBLE,
+            size = Granite.HeaderLabel.Size.H4
         };
-        every_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
 
         dropdown = new Gtk.DropDown.from_strings (RecurrencyType.choices (1)) {
             selected = RecurrencyType.EVERY_DAY, // Enums are fucking magic

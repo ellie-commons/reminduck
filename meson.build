@@ -1,18 +1,22 @@
 project(
     'reminduck', 
-    'vala', 'c', 
-    version: '2.3.1',
-    license: 'GPL-3.0-or-later'
+    ['c', 'vala'],                # The floor is vala
+    version: '2.3.1',                       # Versioning: first should follow Gtk version, second and third depending how proud you are of the update
+    license: 'GPL-3.0-or-later',
+    meson_version: '>= 1.1'                 # Use meson.option instead of meson_options.txt
     )
 
 app_name = meson.project_name()
+app_version = meson.project_version()
+
 correct_app_id = 'io.github.elly_code.' + app_name
 correct_app_path = '/io/github/elly_code/' + app_name
 
 legacy_app_id = 'io.github.ellie_commons.' +  app_name
 legacy_app_path = '/io/github/ellie_commons/' + app_name
 
-app_version = meson.project_version()
+nicename = 'Reminduck'
+publisher = 'elly-code'
 
 if get_option('legacy-rdnn')
     app_id = legacy_app_id
@@ -27,51 +31,95 @@ else
 endif
 
 
-vala_flags = []
+#================================
+# Preparation
 
-development_build = get_option('development')
-if development_build
+prefix = get_option('prefix')
+datadir = get_option('datadir')
+
+development = get_option('development')
+if development
   app_id +=  '.devel'
-  vala_flags += ['--define', 'DEVEL']
+  add_project_arguments('--define=DEVEL', '--define=LATTE', language: 'vala')
+
 endif
 
-
-#================================
 gnome = import('gnome')
 i18n = import('i18n')
+add_project_arguments(
+    '-DGETTEXT_PACKAGE="@0@"'.format (app_id),           # 
+    '-DG_LOG_DOMAIN="@0@"'.format (app_id),              # Dev builds add the app_id to G_MESSAGES_DEBUG
+    '-w',                                                       # Because of Vala we get ten thousand warnings we can do nothing about
+    language:'c'
+    )
 
-# Windows needs icons, special arguments, and skip libportal
-windows_build = get_option('windows_build')
-if build_machine.system() == 'windows'
-    windows_build = true
+
+# Play nice with clang
+# https://gitlab.gnome.org/GNOME/vala/-/issues/1413#note_1707480
+if meson.get_compiler ('c').get_id () == 'clang'
+    add_project_arguments('-Wno-incompatible-function-pointer-types', language: 'c')
 endif
 
-if windows_build
-    vala_flags += ['--define', 'WINDOWS']
+#================================
+# OS and Ports related
+
+linux = get_option('profile') == 'linux'
+windows = get_option('profile') == 'windows'
+
+# Here is to autodetect and adjust
+# Remember however that people may do cross compiling, so do not assume by default it is for linux
+# So avoid else conditions adding linux stuff
+build_machine_system = build_machine.system()
+
+if build_machine_system == 'windows'
+    windows = true
 endif
 
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
+# Here is to adjust the project accordingly to stuff
+# Porting efforts: add your OS here
 
+if windows
+    add_project_arguments('--define=WINDOWS', language: 'vala')
+    appstream = false
+    libportal = false
+
+else
+    # Ideal case, Linux, with all the things
+    appstream = true
+    libportal = true
+
+endif
 
 
 #================================
 # Add subfolders for Meson to look
 
-config_data = configuration_data()
-config_data.set('APP_NAME', app_name)
-config_data.set('APP_ID', app_id)
-config_data.set('APP_PATH', app_path)
-config_data.set('APP_VERSION', app_version)
-config_data.set('ALTERNATE_APP_ID', alternate_app_id)
-config_data.set('LOCALEDIR', get_option('prefix') / get_option('localedir'))
+config_data = configuration_data(
+    {
+        'APP_NAME': app_name,
+        'APP_ID': app_id,
+        'APP_PATH': app_path,
+        'APP_VERSION': app_version,
+        'NICENAME': nicename,
+        'PUBLISHER': publisher,
+        'ALTERNATE_APP_ID': alternate_app_id,
+        'LOCALEDIR': prefix / get_option('localedir')
+        }
+    )
 
 subdir('po')
 subdir('data')
 subdir('src')
 
+if windows
+    subdir('windows')
+endif
+
+#subdir('tests')
+
 
 gnome.post_install(
-  glib_compile_schemas: true,
-  gtk_update_icon_cache: true,
-  update_desktop_database: true
-  )
+    glib_compile_schemas: true,
+    gtk_update_icon_cache: true,
+    update_desktop_database: true
+    )
